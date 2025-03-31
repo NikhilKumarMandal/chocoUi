@@ -1,6 +1,5 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import Navbar1 from "../compoForUser/Navbar/Navbar1"
-import Navbar2 from "../compoForUser/Navbar/Navbar1"
+import Bento from "../compoForUser/Bento/Bento";
 import Navbar3 from "../compoForUser/Navbar/Navbar1"
 import HeroDesign1 from "../compoForUser/HeroSection/HeroDesign1"
 
@@ -22,7 +21,7 @@ const NavbarComForUser = () => {
     },
     {
       title: "CTA Navbar",
-      component: <Navbar2 />,
+      component: <Bento/>,
       code: `
       <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
         <h1 className="text-xl font-bold">Brand</h1>

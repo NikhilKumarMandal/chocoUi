@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import NavbarComForUser from "./pages/Navbar.jsx";
+import NavbarComForUser from "./pages/NavbarPage.jsx";
 import DocsComponent from "./components/Docs/Docs.jsx";
 
 const router = createBrowserRouter(
