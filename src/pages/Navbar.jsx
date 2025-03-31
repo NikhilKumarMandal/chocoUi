@@ -2,12 +2,13 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import Navbar1 from "../compoForUser/Navbar/Navbar1"
 import Navbar2 from "../compoForUser/Navbar/Navbar1"
 import Navbar3 from "../compoForUser/Navbar/Navbar1"
+import HeroDesign1 from "../compoForUser/HeroSection/HeroDesign1"
 
 const NavbarComForUser = () => {
   const navbarVariants = [
     {
       title: "Simple Navbar",
-      component: <Navbar1/>,
+      component: <HeroDesign1/>,
       code: `
       <nav className="flex items-center justify-between p-4 bg-blue-500 text-white">
         <h1 className="text-xl font-bold">Brand</h1>
