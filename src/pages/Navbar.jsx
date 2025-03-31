@@ -22,7 +22,7 @@ const NavbarComForUser = () => {
     },
     {
       title: "CTA Navbar",
-      component: <Navbar2/>,
+      component: <Navbar2 />,
       code: `
       <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
         <h1 className="text-xl font-bold">Brand</h1>
@@ -32,7 +32,7 @@ const NavbarComForUser = () => {
     },
     {
       title: "Search Navbar",
-      component: <Navbar3/> ,
+      component: <Navbar3 />,
       code: `
       <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container flex justify-between h-16 mx-auto">
@@ -85,7 +85,11 @@ const NavbarComForUser = () => {
       </p>
       <div className="mt-6 space-y-6">
         {navbarVariants.map((variant, index) => (
-          <PreviewComponent key={index} title={variant.title} code={variant.code}>
+          <PreviewComponent
+            key={index}
+            title={variant.title}
+            code={variant.code}
+          >
             {variant.component}
           </PreviewComponent>
         ))}
@@ -94,5 +98,4 @@ const NavbarComForUser = () => {
   );
 };
 
-
-export default NavbarComForUser
+export default NavbarComForUser;

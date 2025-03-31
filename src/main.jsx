@@ -1,27 +1,34 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import Layout from './Layout.jsx'
-import LandingPage from './pages/LandingPage.jsx'
-import NavbarComForUser from './pages/Navbar.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Layout from "./Layout.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
+import NavbarComForUser from "./pages/Navbar.jsx";
+import DocsComponent from "./components/Docs/Docs.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       {/* Landing Page Route */}
-      <Route path='/' element={<LandingPage/>} />
-      
+      <Route path="/" element={<LandingPage />} />
+
       {/* Routes with Sidebar Layout */}
-      <Route path='/dashboard' element={<Layout />}>
-      <Route path='navbar' element={<NavbarComForUser/>} />
+      <Route path="/dashboard" element={<Layout />}>
+        <Route path="navbar" element={<NavbarComForUser />} />
       </Route>
+      <Route path="/docs" element={<DocsComponent />} />
     </>
   )
-)
+);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-)
+  </StrictMode>
+);
