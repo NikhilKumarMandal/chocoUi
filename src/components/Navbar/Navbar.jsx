@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <nav className="w-full h-16 flex items-center justify-between border-b border-black px-4 md:px-8 lg:px-16 relative">
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <nav className="w-full h-16 flex items-center justify-between border-b border-black px-4 md:px-8 lg:px-16 relative">
       {/* Logo */}
       <p className="text-lg font-bold">ChocoUI</p>
 
@@ -17,8 +17,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/" className="text-black hover:underline">
-            Documentation
+          <NavLink to="/docs" className="text-black hover:underline">
+            Docs
           </NavLink>
         </li>
         <li>
@@ -87,7 +87,7 @@ function Navbar() {
         </ul>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
