@@ -10,7 +10,7 @@ import {
 import Layout from "./Layout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import NavbarComForUser from "./pages/Navbar.jsx";
-import DocsComponent from "./components/Docs/Docs.jsx";
+import { DocsPage } from "./pages/DocsPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
       <Route path="/dashboard" element={<Layout />}>
         <Route path="navbar" element={<NavbarComForUser />} />
       </Route>
-      <Route path="/docs" element={<DocsComponent />} />
+      <Route path="/docs" element={<DocsPage />} />
     </>
   )
 );
