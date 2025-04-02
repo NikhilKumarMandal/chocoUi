@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Footer2() {
+export default function Footer2() {
   return (
-    <>
+
     <footer className="bg-gradient-to-br from-gray-900 to-black text-gray-200 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -217,7 +217,7 @@ function Footer2() {
                   placeholder="Your Email"
                   className="w-full bg-gray-700 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-purple-600 text-sm"
                 />
-                <button className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md py-3 px-6 text-sm font-semibold hover:from-purple-600 hover:to-indigo-700 transition-colors">
+                <button type='button' className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md py-3 px-6 text-sm font-semibold hover:from-purple-600 hover:to-indigo-700 transition-colors">
                   Subscribe
                 </button>
               </form>
@@ -227,13 +227,10 @@ function Footer2() {
           {/* Bottom Bar */}
           <div className="mt-12 pt-8 border-t border-gray-700 text-center">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Company X. All rights reserved.
+              © 2025 Company X. All rights reserved.
             </p>
           </div>
         </div>
       </footer>
-    </>
   )
 }
-
-export default Footer2

@@ -1,13 +1,12 @@
 import React from 'react'
 
-function Footer3() {
+export default function Footer3() {
   return (
-    <>
     <footer className="bg-gray-800 text-gray-300 py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           {/* Copyright Text */}
           <p className="text-sm mb-4">
-            © {new Date().getFullYear()} Company Name. All rights reserved.
+            © 2025 Company Name. All rights reserved.
           </p>
 
           {/* Social Icons */}
@@ -81,8 +80,6 @@ function Footer3() {
           </div>
         </div>
       </footer>
-    </>
   )
 }
 
-export default Footer3

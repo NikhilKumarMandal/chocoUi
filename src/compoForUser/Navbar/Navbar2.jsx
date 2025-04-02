@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar2() {
+export default function Navbar2() {
   return (
     <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container flex justify-between h-16 mx-auto">
@@ -34,4 +34,3 @@ function Navbar2() {
   )
 }
 
-export default Navbar2

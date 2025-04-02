@@ -29,9 +29,9 @@ function Sidebar() {
           {[
             { name: "Home", path: "/" },
             { name: "Navbar", path: "/dashboard/navbar" },
-            { name: "Footer", path: "/settings" },
-            { name: "Cards", path: "/notifications" },
-            { name: "Button", path: "/messages" },
+            { name: "Footer", path: "/dashboard/footer" },
+            { name: "Bento", path: "/dashboard/bento" },
+            { name: "Cards", path: "/dashboard/card" },
           ].map((item) => (
             <Link
               key={item.name}
