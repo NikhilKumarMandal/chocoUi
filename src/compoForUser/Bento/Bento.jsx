@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Bento() {
+export default function Bento() {
   return (
     <div className="grid gap-4 p-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
       <div className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] sm:col-span-1 md:col-span-2 shadow-lg">
@@ -29,4 +29,3 @@ function Bento() {
   )
 }
 
-export default Bento

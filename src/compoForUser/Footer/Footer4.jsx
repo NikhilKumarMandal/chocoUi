@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Footer4() {
+export default function Footer4() {
   return (
     <>
     <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 py-10 relative overflow-hidden">
@@ -62,4 +62,3 @@ function Footer4() {
   )
 }
 
-export default Footer4

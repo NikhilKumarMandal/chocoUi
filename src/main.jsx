@@ -9,19 +9,22 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import NavbarComForUser from "./pages/Navbar.jsx";
+import NavbarComForUser from "./pages/NavbarPage.jsx";
 import { DocsPage } from "./pages/DocsPage.jsx";
-
+import BentoPage from "./pages/BentoPage.jsx";
+import FooterPage from "./pages/FooterPage.jsx"
+import CardPage from "./pages/CardPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      {/* Landing Page Route */}
       <Route path="/" element={<LandingPage />} />
 
-      {/* Routes with Sidebar Layout */}
       <Route path="/dashboard" element={<Layout />}>
         <Route path="navbar" element={<NavbarComForUser />} />
+        <Route path="bento" element={<BentoPage/>} />
+        <Route path="footer" element={<FooterPage/>} />
+        <Route path="card" element={<CardPage/>} />
       </Route>
       <Route path="/docs" element={<DocsPage />} />
     </>
