@@ -1,4 +1,4 @@
-import Card1 from "../compoForUser/Card/Card1"
+import Card1 from "../UIComponents/Card/Card1"
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function CardPage() {
