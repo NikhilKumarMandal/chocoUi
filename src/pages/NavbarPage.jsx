@@ -1,6 +1,6 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import Navbar1 from "../compoForUser/Navbar/Navbar1"
-import Navbar2 from "../compoForUser/Navbar/Navbar1"
+import Navbar1 from "../UIComponents/Navbar/Navbar1"
+import Navbar2 from "../UIComponents/Navbar/Navbar2"
 
 
 export default function NavbarComForUser() {

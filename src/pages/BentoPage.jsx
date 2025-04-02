@@ -1,5 +1,5 @@
 import React from 'react'
-import Bento from '../compoForUser/Bento/Bento'
+import Bento from '../UIComponents/Bento/Bento'
 import PreviewComponent from '../components/PreviewCom/PreviewComponent';
 
 function BentoPage() {

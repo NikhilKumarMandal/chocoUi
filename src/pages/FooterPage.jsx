@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer2 from "../compoForUser/Footer/Footer2"
-import Footer3 from "../compoForUser/Footer/Footer3"
+import Footer2 from "../UIComponents/Footer/Footer2"
+import Footer3 from "../UIComponents/Footer/Footer3"
 import PreviewComponent from '../components/PreviewCom/PreviewComponent';
 
 function FooterPage() {
