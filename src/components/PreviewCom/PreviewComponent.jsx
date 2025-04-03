@@ -37,9 +37,11 @@ export default function PreviewComponent({ title, codeSnippets = [], children })
         ))}
       </div>
 
-      <div className="p-4 mt-4 relative w-full overflow-x-auto">
-        {activeTab === "preview" ? (
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 w-full">{children}</div>
+<div className="p-4 mt-4 relative w-full flex justify-center">
+  {activeTab === "preview" ? (
+    <div className="flex flex-wrap justify-center items-center gap-6 w-full max-w-4xl mx-auto">
+      {children}
+    </div>
         ) : (
           <div className="relative w-full">
             <div className="mb-2 flex justify-between items-center">
