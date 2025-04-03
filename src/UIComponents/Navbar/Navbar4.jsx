@@ -1,0 +1,48 @@
+import React from "react";
+
+const Navbar4 = () => {
+  return (
+    <>
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center h-16">
+            <nav className="flex items-center space-x-4 sm:space-x-8">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Portfolio
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Contact
+              </a>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+};
+
+export default Navbar4;
