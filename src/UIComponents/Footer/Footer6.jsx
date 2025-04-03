@@ -13,7 +13,7 @@ function Footer6() {
               <div className="lg:w-1/3 space-y-8">
                 <div>
                   <a href="#" className="text-2xl font-bold tracking-tighter">
-                    GLASS<span className="text-gray-500">UI</span>
+                    Choco<span className="text-gray-500">UI</span>
                   </a>
                 </div>
 
