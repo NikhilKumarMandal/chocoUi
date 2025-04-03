@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Types() {
+export default function Types() {
      const words = ["Choco", "Prize", "Money"];
   const typingDelay = 200;
   const erasingDelay = 200;
@@ -43,4 +43,3 @@ function Types() {
   )
 }
 
-export default Types
