@@ -1,13 +1,13 @@
 import React from 'react'
-import Footer2 from "../UIComponents/Footer/Footer2"
-import Footer3 from "../UIComponents/Footer/Footer3"
+import Footer5 from "../UIComponents/Footer/Footer5"
+import Footer6 from "../UIComponents/Footer/Footer6"
 import PreviewComponent from '../components/PreviewCom/PreviewComponent';
 
 function FooterPage() {
     const FooterVariants = [
         {
             title: "Footer1",
-            component: <Footer2/>,
+            component: <Footer5/>,
             codeSnippets: [
                 {
                     language: "html",
@@ -289,7 +289,7 @@ function FooterPage() {
         },
         {
             title: "Footer 2",
-            component: <Footer3 />,
+            component: <Footer6 />,
             codeSnippets: [
                 {
                     language: "html",
