@@ -15,9 +15,6 @@ import BentoPage from "./pages/BentoPage.jsx";
 import FooterPage from "./pages/FooterPage.jsx"
 import CardPage from "./pages/CardPage.jsx";
 
-
-
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
