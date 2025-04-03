@@ -32,7 +32,6 @@
   font-style: normal;
 }
 
-/* Add this to your CSS file */
 @keyframes float {
     0%, 100% {
       transform: translateY(0);
@@ -42,17 +41,10 @@
     }
   }
   
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
 
-
-  /* src/index.css */
-/* html, body, a, button {
-  cursor: none !important;
-} */
-
-/* src/index.css or your global CSS */
 html.has-scroll-smooth {
   overflow: hidden;
 }
