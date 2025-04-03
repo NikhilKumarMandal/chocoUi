@@ -1,12 +1,12 @@
 import React from 'react'
 import Bento from '../UIComponents/Bento/Bento'
 import PreviewComponent from '../components/PreviewCom/PreviewComponent';
-
+import Types from '../UIComponents/animations/Types';
 function BentoPage() {
     const bentoVariants = [
         {
             title: "Bento",
-            component: <Bento />,
+            component: <Types />,
             codeSnippets: [
                 {
                     language: "html",
