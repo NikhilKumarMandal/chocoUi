@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Breadcrumb1() {
   return (
     <nav aria-label="breadcrumb" className="w-full p-4 dark:bg-gray-100 dark:text-gray-800">
