@@ -1,5 +1,5 @@
 import React from "react";
-import Footer5 from "../UIComponents/Footer/Footer5";
+import Footer4 from "../UIComponents/Footer/Footer4";
 import Footer6 from "../UIComponents/Footer/Footer6";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
@@ -7,7 +7,7 @@ function FooterPage() {
   const FooterVariants = [
     {
       title: "Footer1",
-      component: <Footer5 />,
+      component: <Footer4 />,
       codeSnippets: [
         {
           language: "html",
@@ -425,6 +425,7 @@ function FooterPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
+            isFullWidth={true}
           >
             {variant.component}
           </PreviewComponent>
