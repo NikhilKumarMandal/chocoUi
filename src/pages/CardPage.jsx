@@ -1,15 +1,15 @@
-import Card1 from "../UIComponents/Card/Card1"
+import Card1 from "../UIComponents/Card/Card1";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function CardPage() {
-    const cardsVariants = [
+  const cardsVariants = [
+    {
+      title: "Card 1",
+      component: <Card1 />,
+      codeSnippets: [
         {
-            title: "Card 1",
-            component: <Card1 />,
-            codeSnippets: [
-                {
-                    language: "html",
-                    code: `<div class="max-w-sm p-6 border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
+          language: "html",
+          code: `<div class="max-w-sm p-6 border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
         <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#152f3d]">Choco UI</h5>
         </a>
@@ -20,11 +20,11 @@ function CardPage() {
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
         </a>
-    </div>`
-                },
-                {
-                    language: "jsx",
-                    code: `export default function Card1() {
+    </div>`,
+        },
+        {
+          language: "jsx",
+          code: `export default function Card1() {
   return (
         <div className="max-w-sm p-6  border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
             <a href="#">
@@ -39,30 +39,30 @@ function CardPage() {
             </a>
         </div>
   )
-}`
-            }
-            ]
-        }
-    ]
+}`,
+        },
+      ],
+    },
+  ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-              <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-              <p className="text-gray-600 mt-2">
-                Explore different UI components you can use in your project.
-              </p>
-              <div className="mt-6 space-y-6">
-                {cardsVariants.map((variant, index) => (
-                  <PreviewComponent
-                    key={index}
-                    title={variant.title}
-                    codeSnippets={variant.codeSnippets}
-                  >
-                    {variant.component}
-                  </PreviewComponent>
-                ))}
-              </div>
-            </div>
-  )
+      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <p className="text-gray-600 mt-2">
+        Explore different UI components you can use in your project.
+      </p>
+      <div className="mt-6 space-y-6">
+        {cardsVariants.map((variant, index) => (
+          <PreviewComponent
+            key={index}
+            title={variant.title}
+            codeSnippets={variant.codeSnippets}
+          >
+            {variant.component}
+          </PreviewComponent>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default CardPage
+export default CardPage;

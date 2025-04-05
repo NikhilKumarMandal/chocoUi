@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Breadcrumb3() {
   return (
@@ -88,7 +88,7 @@ function Breadcrumb3() {
         </ol>
       </div>
     </>
-  )
+  );
 }
 
-export default Breadcrumb3
+export default Breadcrumb3;

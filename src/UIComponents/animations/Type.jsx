@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Types() {
-     const words = ["Choco", "Prize", "Money"];
+  const words = ["Choco", "Prize", "Money"];
   const typingDelay = 200;
   const erasingDelay = 200;
   const newLetterDelay = 800;
@@ -35,11 +35,14 @@ export default function Types() {
     return () => clearTimeout(timer);
   }, [charIndex, isTyping, index, words]);
   return (
-
-      <p className="text-4xl font-bold">
-        Everyone deserves a <span className="text-yellow-400">{words[index].substring(0, charIndex)}</span>
-        <span className="cursor border-l-2 border-yellow-400 animate-blink ml-1">&nbsp;</span>
-      </p>
-  )
+    <p className="text-4xl font-bold">
+      Everyone deserves a{" "}
+      <span className="text-yellow-400">
+        {words[index].substring(0, charIndex)}
+      </span>
+      <span className="cursor border-l-2 border-yellow-400 animate-blink ml-1">
+        &nbsp;
+      </span>
+    </p>
+  );
 }
-

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer4() {
   return (
     <>
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 py-10 relative overflow-hidden">
+      <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 py-10 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 blur-3xl absolute inset-0"></div>
         </div>
@@ -59,6 +59,5 @@ export default function Footer4() {
         </div>
       </footer>
     </>
-  )
+  );
 }
-

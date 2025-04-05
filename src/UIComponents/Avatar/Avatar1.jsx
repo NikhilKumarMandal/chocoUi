@@ -939,4 +939,3 @@ export default function Spinner1() {
     </section>
   );
 }
-

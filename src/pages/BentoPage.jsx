@@ -1,16 +1,16 @@
-import React from 'react'
-import Bento from '../UIComponents/Bento/Bento'
-import PreviewComponent from '../components/PreviewCom/PreviewComponent';
+import React from "react";
+import Bento from "../UIComponents/Bento/Bento";
+import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function BentoPage() {
-    const bentoVariants = [
+  const bentoVariants = [
+    {
+      title: "Bento",
+      component: <Bento />,
+      codeSnippets: [
         {
-            title: "Bento",
-            component: <Bento />,
-            codeSnippets: [
-                {
-                    language: "html",
-                    code: `<div class="grid gap-4 p-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+          language: "html",
+          code: `<div class="grid gap-4 p-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
         <div class="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] sm:col-span-1 md:col-span-2 shadow-lg">
             <h2 class="text-2xl font-bold">Large Item</h2>
         </div>
@@ -32,11 +32,11 @@ function BentoPage() {
         <div class="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
             <h2 class="text-xl font-semibold">Item 5</h2>
         </div>
-    </div>`
-    },
-    {
-        language: "jsx",
-        code: `export default function Bento() {
+    </div>`,
+        },
+        {
+          language: "jsx",
+          code: `export default function Bento() {
   return (
     <div className="grid gap-4 p-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
       <div className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] sm:col-span-1 md:col-span-2 shadow-lg">
@@ -64,30 +64,30 @@ function BentoPage() {
       
   )
 }
-`
-    }
-            ]
-        }
-    ]
+`,
+        },
+      ],
+    },
+  ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-          <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-          <p className="text-gray-600 mt-2">
-            Explore different UI components you can use in your project.
-          </p>
-          <div className="mt-6 space-y-6">
-            {bentoVariants.map((variant, index) => (
-              <PreviewComponent
-                key={index}
-                title={variant.title}
-                codeSnippets={variant.codeSnippets}
-              >
-                {variant.component}
-              </PreviewComponent>
-            ))}
-          </div>
-        </div>
-  )
+      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <p className="text-gray-600 mt-2">
+        Explore different UI components you can use in your project.
+      </p>
+      <div className="mt-6 space-y-6">
+        {bentoVariants.map((variant, index) => (
+          <PreviewComponent
+            key={index}
+            title={variant.title}
+            codeSnippets={variant.codeSnippets}
+          >
+            {variant.component}
+          </PreviewComponent>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default BentoPage
+export default BentoPage;

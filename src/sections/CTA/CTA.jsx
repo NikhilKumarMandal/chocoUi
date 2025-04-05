@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 function CTA() {
   return (
@@ -8,9 +8,9 @@ function CTA() {
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#FFDBB5]/10 blur-3xl -translate-x-20 -translate-y-20"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#FFEAC5]/10 blur-3xl translate-x-20 translate-y-20"></div>
-      
+
       <div className="container px-4 mx-auto text-center sm:px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -18,11 +18,12 @@ function CTA() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-[#FFEAC5] md:text-4xl lg:text-5xl">
-            Ready to build something{' '}
+            Ready to build something{" "}
             <span className="relative inline-block">
               <span className="relative z-10">amazing</span>
               <span className="absolute bottom-0 left-0 w-full h-2 bg-[#FFDBB5]/50 -z-10 transform -rotate-1"></span>
-            </span>?
+            </span>
+            ?
           </h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -31,7 +32,8 @@ function CTA() {
             viewport={{ once: true }}
             className="mb-8 text-lg text-[#FFDBB5]/90"
           >
-            Get started with ChocoUI today and transform your React applications with beautiful, accessible components.
+            Get started with ChocoUI today and transform your React applications
+            with beautiful, accessible components.
           </motion.p>
 
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 sm:justify-center">
@@ -73,28 +75,28 @@ function CTA() {
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-[#FFDBB5]/30 rounded-full"
-            initial={{ 
+            initial={{
               opacity: 0,
               scale: 0,
-              x: Math.random() * 100 - 50 + '%',
-              y: Math.random() * 100 - 50 + '%'
+              x: Math.random() * 100 - 50 + "%",
+              y: Math.random() * 100 - 50 + "%",
             }}
-            animate={{ 
+            animate={{
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
-              x: Math.random() * 100 - 50 + '%',
-              y: Math.random() * 100 - 50 + '%'
+              x: Math.random() * 100 - 50 + "%",
+              y: Math.random() * 100 - 50 + "%",
             }}
             transition={{
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
-              ease: 'linear'
+              ease: "linear",
             }}
           />
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default CTA
+export default CTA;

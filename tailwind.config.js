@@ -1,9 +1,9 @@
 module.exports = {
-    theme: {
-      extend: {
-        transitionProperty: {
-          'spacing': 'margin, padding',
-        }
-      }
-    }
-  }
+  theme: {
+    extend: {
+      transitionProperty: {
+        spacing: "margin, padding",
+      },
+    },
+  },
+};

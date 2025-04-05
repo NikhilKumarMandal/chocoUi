@@ -37,10 +37,12 @@ function Sidebar() {
               key={item.name}
               to={item.path}
               className={`block p-2 rounded-lg transition ${
-                location.pathname === item.path ? "bg-gray-800" : "hover:bg-gray-900"
+                location.pathname === item.path
+                  ? "bg-gray-800"
+                  : "hover:bg-gray-900"
               }`}
             >
-              {item.name} 
+              {item.name}
             </Link>
           ))}
         </nav>

@@ -1,17 +1,17 @@
-import React from 'react'
-import Footer5 from "../UIComponents/Footer/Footer5"
-import Footer6 from "../UIComponents/Footer/Footer6"
-import PreviewComponent from '../components/PreviewCom/PreviewComponent';
+import React from "react";
+import Footer5 from "../UIComponents/Footer/Footer5";
+import Footer6 from "../UIComponents/Footer/Footer6";
+import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function FooterPage() {
-    const FooterVariants = [
+  const FooterVariants = [
+    {
+      title: "Footer1",
+      component: <Footer5 />,
+      codeSnippets: [
         {
-            title: "Footer1",
-            component: <Footer5/>,
-            codeSnippets: [
-                {
-                    language: "html",
-                    code: `<footer class="bg-gradient-to-br from-gray-900 to-black text-gray-200 py-16">
+          language: "html",
+          code: `<footer class="bg-gradient-to-br from-gray-900 to-black text-gray-200 py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
             <!-- Company Info -->
@@ -46,11 +46,11 @@ function FooterPage() {
             </div>
         </div>
     </div>
-</footer>`
-                },
-    {
-        language: "jsx",
-        code : `export default function Footer2() {
+</footer>`,
+        },
+        {
+          language: "jsx",
+          code: `export default function Footer2() {
   return (
 
     <footer className="bg-gradient-to-br from-gray-900 to-black text-gray-200 py-16">
@@ -283,17 +283,17 @@ function FooterPage() {
         </div>
       </footer>
   )
-}`
-    }
-    ]
+}`,
         },
+      ],
+    },
+    {
+      title: "Footer 2",
+      component: <Footer6 />,
+      codeSnippets: [
         {
-            title: "Footer 2",
-            component: <Footer6 />,
-            codeSnippets: [
-                {
-                    language: "html",
-                    code: `<footer class="bg-gray-800 text-gray-300 py-6">
+          language: "html",
+          code: `<footer class="bg-gray-800 text-gray-300 py-6">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <!-- Copyright Text -->
         <p class="text-sm mb-4">&copy; 2025 Company Name. All rights reserved.</p>
@@ -322,11 +322,11 @@ function FooterPage() {
             </a>
         </div>
     </div>
-</footer>`
-                },
-                {
-                    language: "jsx",
-                    code: `export default function Footer3() {
+</footer>`,
+        },
+        {
+          language: "jsx",
+          code: `export default function Footer3() {
   return (
     <footer className="bg-gray-800 text-gray-300 py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -408,30 +408,30 @@ function FooterPage() {
       </footer>
   )
 }
-`
-            }
-            ]
-        }
-    ]
+`,
+        },
+      ],
+    },
+  ];
   return (
-   <div className="max-w-4xl mx-auto p-6">
-             <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-             <p className="text-gray-600 mt-2">
-               Explore different UI components you can use in your project.
-             </p>
-             <div className="mt-6 space-y-6">
-               {FooterVariants.map((variant, index) => (
-                 <PreviewComponent
-                   key={index}
-                   title={variant.title}
-                   codeSnippets={variant.codeSnippets}
-                 >
-                   {variant.component}
-                 </PreviewComponent>
-               ))}
-             </div>
-           </div>
-  )
+    <div className="max-w-4xl mx-auto p-6">
+      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <p className="text-gray-600 mt-2">
+        Explore different UI components you can use in your project.
+      </p>
+      <div className="mt-6 space-y-6">
+        {FooterVariants.map((variant, index) => (
+          <PreviewComponent
+            key={index}
+            title={variant.title}
+            codeSnippets={variant.codeSnippets}
+          >
+            {variant.component}
+          </PreviewComponent>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default FooterPage
+export default FooterPage;

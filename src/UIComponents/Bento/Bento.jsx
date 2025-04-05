@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Bento() {
   return (
@@ -20,12 +20,10 @@ export default function Bento() {
       </div>
       <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
         <h2 className="text-xl font-semibold">Item 4</h2>
-        </div>
-        <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
+      </div>
+      <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
         <h2 className="text-xl font-semibold">Item 5</h2>
       </div>
-      </div>
-      
-  )
+    </div>
+  );
 }
-
