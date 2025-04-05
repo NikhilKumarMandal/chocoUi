@@ -6,6 +6,7 @@ export default function PreviewComponent({
   title,
   codeSnippets = [],
   children,
+  isFullWidth = false,
 }) {
   const [activeTab, setActiveTab] = useState("preview");
   const [copied, setCopied] = useState(false);
@@ -28,38 +29,48 @@ export default function PreviewComponent({
   ];
 
   return (
-    <div className="w-full max-w-screen-xl mx-auto p-4 border rounded-lg shadow-md bg-white mt-6">
-      <h2 className="text-xl font-semibold text-gray-900 mb-4 text-center sm:text-left">
-        {title}
-      </h2>
+    <div
+      className={`w-full ${isFullWidth ? "max-w-full p-0" : "max-w-screen-xl px-4 py-2"} mx-auto border rounded-lg shadow-md bg-white mt-6 overflow-hidden`}
+    >
+      <div className="px-4 pt-4">
+        <h2 className="text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">
+          {title}
+        </h2>
 
-      {/* Tabs */}
-      <div className="flex border-b flex-wrap">
-        {[
-          { label: "Preview", value: "preview", icon: <Eye size={18} /> },
-          { label: "Code", value: "code", icon: <Code size={18} /> },
-        ].map(({ label, value, icon }) => (
-          <button
-            key={value}
-            className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-600 hover:text-blue-500 sm:text-base ${
-              activeTab === value
-                ? "border-b-2 border-blue-500 text-blue-500"
-                : ""
-            }`}
-            onClick={() => setActiveTab(value)}
-          >
-            {icon} {label}
-          </button>
-        ))}
+        <div className="flex border-b border-gray-200 flex-wrap">
+          {[
+            { label: "Preview", value: "preview", icon: <Eye size={18} /> },
+            { label: "Code", value: "code", icon: <Code size={18} /> },
+          ].map(({ label, value, icon }) => (
+            <button
+              key={value}
+              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-600 hover:text-blue-500 sm:text-base ${
+                activeTab === value
+                  ? "border-b-2 border-blue-500 text-blue-500"
+                  : ""
+              }`}
+              onClick={() => setActiveTab(value)}
+            >
+              {icon} {label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="p-4 mt-3 relative">
         {activeTab === "preview" ? (
           <div className="rounded-md border bg-gray-50 overflow-hidden">
-            <div className="max-h-[650px] overflow-y-auto p-4">
-              {/* Center and limit component */}
-              <div className="flex flex-wrap justify-center gap-4 w-full">
-                {children}
+            <div
+              className={`max-h-[650px] overflow-y-auto overflow-x-hidden ${isFullWidth ? "px-0" : "p-4"}`}
+            >
+              <div className="w-full max-w-full overflow-x-hidden">
+                <div
+                  className={`${isFullWidth ? "w-full" : "flex flex-wrap justify-center gap-4 w-full"} max-w-full`}
+                >
+                  <div className="w-full max-w-full overflow-x-hidden">
+                    {children}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -103,7 +114,7 @@ export default function PreviewComponent({
                   language={selectedLanguage}
                 >
                   {({ tokens, getLineProps, getTokenProps }) => (
-                    <pre className="rounded-lg overflow-auto text-sm leading-relaxed bg-gray-900 text-white border border-gray-700 w-full p-4">
+                    <pre className="rounded-lg overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed bg-gray-900 text-white border border-gray-700 w-full p-4">
                       {tokens.map((line, i) => (
                         <div
                           key={i}
