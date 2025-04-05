@@ -2,12 +2,12 @@ import React from "react";
 import Footer4 from "../UIComponents/Footer/Footer4";
 import Footer6 from "../UIComponents/Footer/Footer6";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-
+import HeroSection1 from "../UIComponents/HeroSection/HeroDesign1"
 function FooterPage() {
   const FooterVariants = [
     {
       title: "Footer1",
-      component: <Footer4 />,
+      component: <HeroSection1 />,
       codeSnippets: [
         {
           language: "html",

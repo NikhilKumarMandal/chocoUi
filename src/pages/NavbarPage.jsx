@@ -174,7 +174,8 @@ export default function NavbarComForUser() {
           <PreviewComponent
             key={index}
             title={variant.title}
-            codeSnippets={variant.codeSnippets}
+				codeSnippets={variant.codeSnippets}
+				isFullWidth={true}
           >
             {variant.component}
           </PreviewComponent>

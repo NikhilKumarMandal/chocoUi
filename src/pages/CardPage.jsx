@@ -56,6 +56,7 @@ function CardPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
+            
           >
             {variant.component}
           </PreviewComponent>
