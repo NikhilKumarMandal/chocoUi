@@ -164,23 +164,24 @@ export default function NavbarComForUser() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
-      </p>
-      <div className="mt-6 space-y-6">
-        {navbarVariants.map((variant, index) => (
-          <PreviewComponent
-            key={index}
-            title={variant.title}
-				codeSnippets={variant.codeSnippets}
-				isFullWidth={true}
-          >
-            {variant.component}
-          </PreviewComponent>
-        ))}
-      </div>
-    </div>
+    <div className="w-full px-4 md:px-6 pt-6 max-w-4xl mx-auto md:ml-64">
+  <h1 className="text-2xl md:text-3xl font-bold text-black">Component Previews</h1>
+  <p className="text-gray-600 mt-2 text-sm md:text-base">
+    Explore different UI components you can use in your project.
+  </p>
+
+  <div className="mt-6 space-y-6">
+    {navbarVariants.map((variant, index) => (
+      <PreviewComponent
+        key={index}
+        title={variant.title}
+        codeSnippets={variant.codeSnippets}
+        isFullWidth={true}
+      >
+        {variant.component}
+      </PreviewComponent>
+    ))}
+  </div>
+</div>
   );
 }

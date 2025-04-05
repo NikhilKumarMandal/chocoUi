@@ -44,7 +44,7 @@ export default function PreviewComponent({
           ].map(({ label, value, icon }) => (
             <button
               key={value}
-              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-600 hover:text-blue-500 sm:text-base ${
+              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-900 hover:text-blue-500 sm:text-base ${
                 activeTab === value
                   ? "border-b-2 border-blue-500 text-blue-500"
                   : ""
@@ -59,7 +59,7 @@ export default function PreviewComponent({
 
       <div className="p-4 mt-3 relative">
         {activeTab === "preview" ? (
-<div className="rounded-md border bg-gray-50 overflow-hidden">
+<div className="rounded-md overflow-hidden">
   <div
       className="max-h-[550px] overflow-y-auto p-4"
   >
