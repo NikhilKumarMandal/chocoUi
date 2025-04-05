@@ -5,13 +5,13 @@ function Footer() {
   return (
     <footer className="relative py-12 overflow-hidden bg-gradient-to-br from-[#FFEAC5] via-[#FFDBB5] to-[#f8c794] border-t border-[#6C4E31]/20">
       {/* Background elements */}
-      <motion.div 
+      <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 0.2 }}
         transition={{ duration: 2, type: "spring" }}
         className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full bg-[#F7374F]/10 blur-3xl -z-10"
       />
-      <motion.div 
+      <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 0.3 }}
         transition={{ duration: 2, delay: 0.3, type: "spring" }}
@@ -21,7 +21,7 @@ function Footer() {
       <div className="container px-4 mx-auto sm:px-6">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo with animation */}
-          <motion.div 
+          <motion.div
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -69,14 +69,14 @@ function Footer() {
           </motion.div>
 
           {/* Social links with floating animation */}
-          <motion.div 
+          <motion.div
             className="flex items-center space-x-6"
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <motion.a 
-              href="#" 
+            <motion.a
+              href="#"
               className="text-[#6C4E31]/80 hover:text-[#F7374F] transition-colors duration-300"
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
@@ -96,8 +96,8 @@ function Footer() {
                 ></path>
               </svg>
             </motion.a>
-            <motion.a 
-              href="#" 
+            <motion.a
+              href="#"
               className="text-[#6C4E31]/80 hover:text-[#F7374F] transition-colors duration-300"
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
@@ -124,35 +124,35 @@ function Footer() {
         </div>
 
         {/* Additional links row */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-6 mt-12 text-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Link 
-            to="/privacy" 
+          <Link
+            to="/privacy"
             className="text-[#6C4E31]/80 hover:text-[#603F26] transition-colors duration-300 relative group"
           >
             Privacy Policy
             <span className="absolute -bottom-1 left-0 h-0.5 bg-[#F7374F] w-0 group-hover:w-full transition-all duration-500"></span>
           </Link>
-          <Link 
-            to="/terms" 
+          <Link
+            to="/terms"
             className="text-[#6C4E31]/80 hover:text-[#603F26] transition-colors duration-300 relative group"
           >
             Terms of Service
             <span className="absolute -bottom-1 left-0 h-0.5 bg-[#F7374F] w-0 group-hover:w-full transition-all duration-500"></span>
           </Link>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="text-[#6C4E31]/80 hover:text-[#603F26] transition-colors duration-300 relative group"
           >
             Contact Us
             <span className="absolute -bottom-1 left-0 h-0.5 bg-[#F7374F] w-0 group-hover:w-full transition-all duration-500"></span>
           </Link>
-          <Link 
-            to="/docs" 
+          <Link
+            to="/docs"
             className="text-[#6C4E31]/80 hover:text-[#603F26] transition-colors duration-300 relative group"
           >
             Documentation
@@ -161,17 +161,18 @@ function Footer() {
         </motion.div>
 
         {/* Made with love text */}
-        <motion.p 
+        <motion.p
           className="mt-8 text-center text-xs text-[#6C4E31]/60"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          Made with <span className="text-[#F7374F]">♥</span> by the ChocoUI team
+          Made with <span className="text-[#F7374F]">♥</span> by the ChocoUI
+          team
         </motion.p>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

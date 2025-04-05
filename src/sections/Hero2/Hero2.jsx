@@ -1,26 +1,26 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import LocomotiveScroll from 'locomotive-scroll';
+import React from "react";
+import { motion } from "framer-motion";
+import LocomotiveScroll from "locomotive-scroll";
 
 const PreviewCard = ({ index, isHovered, onHover }) => {
   const zIndex = 3 - index;
   const yOffset = index * 30; // Increased stacking offset
   const xOffset = index * -40; // Horizontal offset for overlapping (80% overlap)
   const hoverOffset = index === 1 ? -60 : 0; // Increased hover offset
-  const scale = 1 - (index * 0.05); // Slightly smaller scale for back cards
+  const scale = 1 - index * 0.05; // Slightly smaller scale for back cards
 
   return (
     <motion.div
       className="relative w-[90%] max-w-[500px]"
-      style={{ 
+      style={{
         zIndex,
-        position: 'absolute',
+        position: "absolute",
         left: `${xOffset}px`, // Apply horizontal positioning
       }}
       animate={{
         y: isHovered ? hoverOffset : yOffset,
         scale: isHovered ? (index === 1 ? 1.05 : 1) : scale,
-        x: isHovered ? (index * -40) : xOffset, // Spread cards slightly on hover
+        x: isHovered ? index * -40 : xOffset, // Spread cards slightly on hover
       }}
       transition={{ duration: 0.6 }}
       onHoverStart={() => onHover(true)}
@@ -77,12 +77,14 @@ const Hero2 = () => {
         <div className="container px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
           <div className="flex flex-col md:flex-row items-center">
             {/* Text content */}
-            
 
             {/* Stacked cards */}
             <div className="w-full md:w-2/3 mt-12 md:mt-0 relative h-[500px]">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative" style={{ width: '500px', height: '350px' }}>
+                <div
+                  className="relative"
+                  style={{ width: "500px", height: "350px" }}
+                >
                   {[0, 1, 2].map((index) => (
                     <PreviewCard
                       key={index}
@@ -100,7 +102,8 @@ const Hero2 = () => {
                 Design with Confidence
               </h1>
               <p className="text-lg md:text-xl text-[#6C4E31] mb-8 max-w-xl">
-                Create stunning interfaces with our customizable components. Build faster and deliver better experiences.
+                Create stunning interfaces with our customizable components.
+                Build faster and deliver better experiences.
               </p>
               {/* Add whitespace-nowrap to keep button text on one line */}
               <div className="flex flex-col sm:flex-row gap-4">
@@ -115,7 +118,6 @@ const Hero2 = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

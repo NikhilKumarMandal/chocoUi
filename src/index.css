@@ -1,46 +1,47 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Berries';
-  src: url('/berries-personal-use/Berries.ttf') format('truetype');
+  font-family: "Berries";
+  src: url("/berries-personal-use/Berries.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'ChocoBubble';
-  src: url('/choco-bubble/ChocoBubble-BallonStyle.ttf') format('truetype');
+  font-family: "ChocoBubble";
+  src: url("/choco-bubble/ChocoBubble-BallonStyle.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ChocolateBar';
-  src: url('/chocolate-bar-demo/Chocolate Bar Demo.otf') format('opentype');
+  font-family: "ChocolateBar";
+  src: url("/chocolate-bar-demo/Chocolate Bar Demo.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Dotine';
-  src: url('/Dotine/dotine.ttf') format('truetype');
+  font-family: "Dotine";
+  src: url("/Dotine/dotine.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'magicRetro';
-  src: url('/magic-retro/MAGIC\ RETRO.TTF') format('truetype');
+  font-family: "magicRetro";
+  src: url("/magic-retro/MAGIC\ RETRO.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-7px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }

@@ -16,7 +16,8 @@ const HeroDesign1 = () => {
               Design with Confidence
             </h1>
             <p className="text-lg md:text-xl text-[#6C4E31] mb-8 max-w-xl">
-              Create stunning interfaces with our customizable components. Build faster and deliver better experiences.
+              Create stunning interfaces with our customizable components. Build
+              faster and deliver better experiences.
             </p>
             {/* Add whitespace-nowrap to keep button text on one line */}
             <div className="flex flex-col sm:flex-row gap-4">

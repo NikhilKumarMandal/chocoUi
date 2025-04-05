@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer1() {
   return (
     <>
-    <footer className="bg-[#F2EFE5] text-[#4A4A4A] border-t border-[#C7C8CC] w-full">
+      <footer className="bg-[#F2EFE5] text-[#4A4A4A] border-t border-[#C7C8CC] w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Brand Column */}
@@ -102,6 +102,5 @@ export default function Footer1() {
         </div>
       </footer>
     </>
-  )
+  );
 }
-

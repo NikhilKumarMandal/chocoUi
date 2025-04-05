@@ -21,21 +21,18 @@ function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-gradient-to-r from-[#FFEAC5]/60 via-[#FFDBB5]/60 to-[#f8c794]/60 backdrop-blur-lg shadow-lg" 
+        scrolled
+          ? "bg-gradient-to-r from-[#FFEAC5]/60 via-[#FFDBB5]/60 to-[#f8c794]/60 backdrop-blur-lg shadow-lg"
           : "bg-gradient-to-r from-[#FFEAC5]/80 via-[#FFDBB5]/80 to-[#f8c794]/80"
       } border-b border-[#6C4E31]/10`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <NavLink 
-            to="/" 
-            className="relative h-20 md:h-24 w-auto group"
-          >
-            <img 
-              src="/3.png" 
-              alt="ChocoUI Logo" 
+          <NavLink to="/" className="relative h-20 md:h-24 w-auto group">
+            <img
+              src="/3.png"
+              alt="ChocoUI Logo"
               className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
             />
           </NavLink>
@@ -48,8 +45,8 @@ function Navbar() {
                 to={item.path}
                 className={({ isActive }) =>
                   `text-lg font-medium transition-all duration-300 relative ${
-                    isActive 
-                      ? "text-[#603F26] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]" 
+                    isActive
+                      ? "text-[#603F26] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
                       : "text-[#6C4E31] hover:text-[#603F26] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
                   }`
                 }
@@ -89,9 +86,9 @@ function Navbar() {
         <div className="flex flex-col h-full p-6">
           <div className="flex justify-between items-center mb-8">
             <div className="relative h-16 w-auto group">
-              <img 
-                src="/3.png" 
-                alt="ChocoUI Logo" 
+              <img
+                src="/3.png"
+                alt="ChocoUI Logo"
                 className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
               />
             </div>
@@ -110,8 +107,8 @@ function Navbar() {
                 to={item.path}
                 className={({ isActive }) =>
                   `block px-4 py-3 text-lg rounded-lg transition-all duration-300 ${
-                    isActive 
-                      ? "bg-gradient-to-r from-[#FFDBB5] to-[#f8c794] text-[#603F26] font-medium shadow-md" 
+                    isActive
+                      ? "bg-gradient-to-r from-[#FFDBB5] to-[#f8c794] text-[#603F26] font-medium shadow-md"
                       : "text-[#6C4E31] hover:bg-[#FFDBB5]/50 hover:text-[#603F26]"
                   }`
                 }
