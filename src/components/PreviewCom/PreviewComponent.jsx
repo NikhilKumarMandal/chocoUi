@@ -59,19 +59,19 @@ export default function PreviewComponent({
 
       <div className="p-4 mt-3 relative">
         {activeTab === "preview" ? (
-<div className="rounded-md overflow-hidden">
-  <div
-      className="max-h-[550px] overflow-y-auto p-4"
-  >
-    <div
-      className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full`}
-    >
-      <div className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full"}`}>
-        {children}
-      </div>
-    </div>
-  </div>
-</div>
+          <div className="rounded-md overflow-hidden">
+            <div className="max-h-[550px] overflow-y-auto p-4">
+              <div
+                className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full`}
+              >
+                <div
+                  className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full"}`}
+                >
+                  {children}
+                </div>
+              </div>
+            </div>
+          </div>
         ) : (
           <div className="w-full rounded-md border bg-gray-900 overflow-hidden">
             <div className="max-h-[550px] overflow-auto p-2 sm:p-4">

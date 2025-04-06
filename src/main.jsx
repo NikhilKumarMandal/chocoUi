@@ -18,15 +18,15 @@ import CardPage from "./pages/CardPage.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<LandingPage />}/>
+      <Route path="/" element={<LandingPage />} />
 
       <Route path="/dashboard" element={<Layout />}>
-        <Route path="navbar" element={<NavbarComForUser />}/>
+        <Route path="navbar" element={<NavbarComForUser />} />
         <Route path="bento" element={<BentoPage />} />
         <Route path="footer" element={<FooterPage />} />
         <Route path="card" element={<CardPage />} />
       </Route>
-      <Route path="/docs" element={<DocsPage />}/>
+      <Route path="/docs" element={<DocsPage />} />
     </>
   )
 );
