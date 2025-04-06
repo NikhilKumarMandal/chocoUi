@@ -1,4 +1,4 @@
-function Pricing6() {
+function Pricing2() {
   return (
     <div className="bg-gray-900 min-h-screen flex items-center justify-center p-4 py-12">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -494,4 +494,4 @@ function Pricing6() {
   );
 }
 
-export default Pricing6;
+export default Pricing2;

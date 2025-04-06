@@ -23,6 +23,15 @@ function Sidebar() {
     { name: "Footer", path: "/dashboard/footer" },
     { name: "Cards", path: "/dashboard/card" },
     { name: "Bento", path: "/dashboard/bento" },
+    { name: "Hero", path: "/dashboard/hero" },
+    { name: "Avatar", path: "/dashboard/avatar" },
+    { name: "Breadcrumb", path: "/dashboard/breadcrumb" },
+    { name: "Calendar", path: "/dashboard/calendar" },
+    { name: "Form", path: "/dashboard/form" },
+    { name: "Pricing", path: "/dashboard/pricing" },
+    { name: "Skeleton", path: "/dashboard/skeleton" },
+    { name: "Table", path: "/dashboard/table" },
+    { name: "Toggle", path: "/dashboard/toggle" },
   ];
 
   const handleSearch = (e) => {

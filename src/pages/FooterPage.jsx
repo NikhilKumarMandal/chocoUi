@@ -1,5 +1,10 @@
 import React from "react";
 import Footer4 from "../UIComponents/Footer/Footer4";
+import Footer5 from "../UIComponents/Footer/Footer5";
+import Footer7 from "../UIComponents/Footer/Footer7";
+import Footer8 from "../UIComponents/Footer/Footer8";
+import Footer9 from "../UIComponents/Footer/Footer9";
+import Footer10 from "../UIComponents/Footer/Footer10";
 import Footer6 from "../UIComponents/Footer/Footer6";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import HeroSection1 from "../UIComponents/HeroSection/HeroDesign1";
@@ -7,7 +12,7 @@ function FooterPage() {
   const FooterVariants = [
     {
       title: "Footer1",
-      component: <HeroSection1 />,
+      component: <Footer4 />,
       codeSnippets: [
         {
           language: "html",
@@ -409,6 +414,76 @@ function FooterPage() {
   )
 }
 `,
+        },
+      ],
+    },
+    {
+      title: "Footer1",
+      component: <Footer7 />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+    {
+      title: "Footer1",
+      component: <Footer8 />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+    {
+      title: "Footer9",
+      component: <Footer9 />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+    {
+      title: "Footer1",
+      component: <Footer10 />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+    {
+      title: "Footer1",
+      component: <Footer5 />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
         },
       ],
     },
