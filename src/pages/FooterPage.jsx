@@ -417,7 +417,7 @@ function FooterPage() {
         },
       ],
     },
-        {
+    {
       title: "Footer1",
       component: <Footer7 />,
       codeSnippets: [
@@ -431,7 +431,7 @@ function FooterPage() {
         },
       ],
     },
-                {
+    {
       title: "Footer1",
       component: <Footer8 />,
       codeSnippets: [
@@ -459,7 +459,7 @@ function FooterPage() {
         },
       ],
     },
-            {
+    {
       title: "Footer1",
       component: <Footer10 />,
       codeSnippets: [
@@ -473,7 +473,7 @@ function FooterPage() {
         },
       ],
     },
-                    {
+    {
       title: "Footer1",
       component: <Footer5 />,
       codeSnippets: [

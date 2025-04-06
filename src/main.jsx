@@ -14,11 +14,11 @@ import { DocsPage } from "./pages/DocsPage.jsx";
 import BentoPage from "./pages/BentoPage.jsx";
 import FooterPage from "./pages/FooterPage.jsx";
 import CardPage from "./pages/CardPage.jsx";
-import AvatarPage from "./pages/AvatarPage.jsx"
-import Breadcrumb from "./pages/Breadcrumb.jsx"
-import CalendarPage from "./pages/CalendarPage.jsx"
-import FormPage from "./pages/FormPage.jsx"
-import HeroPage from "./pages/HeroPage.jsx"
+import AvatarPage from "./pages/AvatarPage.jsx";
+import Breadcrumb from "./pages/Breadcrumb.jsx";
+import CalendarPage from "./pages/CalendarPage.jsx";
+import FormPage from "./pages/FormPage.jsx";
+import HeroPage from "./pages/HeroPage.jsx";
 import PricingSection from "./pages/PricingPage.jsx";
 import SkeletonPage from "./pages/SkeletonPage.jsx";
 import TablePage from "./pages/TablePage.jsx";

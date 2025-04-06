@@ -100,8 +100,8 @@ export default function NavbarComForUser() {
 </header>`,
         },
       ],
-	  },
-	    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar4 />,
       codeSnippets: [
@@ -114,8 +114,8 @@ export default function NavbarComForUser() {
           code: ``,
         },
       ],
-	  },
-		    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar5 />,
       codeSnippets: [
@@ -128,8 +128,8 @@ export default function NavbarComForUser() {
           code: ``,
         },
       ],
-	  },
-			    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar6 />,
       codeSnippets: [
@@ -142,8 +142,8 @@ export default function NavbarComForUser() {
           code: ``,
         },
       ],
-	  },
-				    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar7 />,
       codeSnippets: [
@@ -156,8 +156,8 @@ export default function NavbarComForUser() {
           code: ``,
         },
       ],
-	  },
-					    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar8 />,
       codeSnippets: [
@@ -170,8 +170,8 @@ export default function NavbarComForUser() {
           code: ``,
         },
       ],
-	  },
-						    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar9 />,
       codeSnippets: [
@@ -184,8 +184,8 @@ export default function NavbarComForUser() {
           code: ``,
         },
       ],
-	  },
-							    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar10 />,
       codeSnippets: [
@@ -198,8 +198,8 @@ export default function NavbarComForUser() {
           code: ``,
         },
       ],
-	  },
-								    {
+    },
+    {
       title: "NavBar 1",
       component: <Navbar13 />,
       codeSnippets: [
