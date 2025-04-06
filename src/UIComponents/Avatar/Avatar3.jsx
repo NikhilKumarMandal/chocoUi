@@ -28,7 +28,7 @@ function Avatar3() {
       <div class="relative">
         <img
           class="w-10 h-10 rounded-full"
-          src="https://avatars.githubusercontent.com/u/32175682?v=4"
+          src="https://avatars.githubusercontent.com/u/155902231?v=4"
           alt=""
         />
         <span

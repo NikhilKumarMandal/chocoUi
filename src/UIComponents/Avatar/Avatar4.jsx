@@ -61,13 +61,13 @@ function Avatar4() {
         <div class="flex items-center gap-x-2">
           <img
             class="object-cover w-16 h-16 rounded-lg"
-            src="https://avatars.githubusercontent.com/u/32175682?v=4"
+            src="https://avatars.githubusercontent.com/u/155902231?v=4"
             alt=""
           />
 
           <div>
             <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-gray-800">
-              Mihir Verma
+            Nikhil
             </h1>
 
             <p class="text-base text-gray-500 dark:text-gray-400">
