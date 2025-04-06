@@ -3,7 +3,7 @@ import React from "react";
 function Avatar4() {
   return (
     <>
-      <div className="flex justify-center items-center min-h-screen">
+
         <div class="space-y-6">
           <div class="flex items-center gap-x-2">
             <img
@@ -77,7 +77,6 @@ function Avatar4() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }

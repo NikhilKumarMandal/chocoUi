@@ -3,7 +3,7 @@ import React from "react";
 function Avatar3() {
   return (
     <>
-      <div class="flex justify-center items-center min-h-screen gap-2.5">
+
         <div class="relative">
           <img
             class="w-10 h-10 rounded-full"
@@ -48,7 +48,6 @@ function Avatar3() {
                      bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"
           ></span>
         </div>
-      </div>
     </>
   );
 }

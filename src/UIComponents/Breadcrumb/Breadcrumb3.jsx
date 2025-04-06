@@ -3,7 +3,7 @@ import React from "react";
 function Breadcrumb3() {
   return (
     <>
-      <div className="min-h-screen flex justify-center items-center">
+      <div>
         <ol className="flex items-center whitespace-nowrap">
           <li className="inline-flex items-center">
             <a

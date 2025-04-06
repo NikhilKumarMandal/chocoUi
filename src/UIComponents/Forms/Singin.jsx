@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function () {
+export default function Form1 () {
   return (
     <>
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">

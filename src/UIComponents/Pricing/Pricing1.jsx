@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PricingComponent = () => {
+const Pricing1 = () => {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
@@ -146,4 +146,4 @@ const PricingComponent = () => {
   );
 };
 
-export default PricingComponent;
+export default Pricing1;
