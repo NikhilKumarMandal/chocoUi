@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 const Toggle2 = () => {
   const [isOn, setIsOn] = useState(false);
