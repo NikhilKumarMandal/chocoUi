@@ -30,10 +30,12 @@ export default function PreviewComponent({
 
   return (
     <div
-      className={`w-full ${isFullWidth ? "max-w-full p-0" : "max-w-screen-xl px-4 py-2"} mx-auto border rounded-lg shadow-md bg-white mt-6 overflow-hidden`}
+      className={`w-full ${
+        isFullWidth ? "max-w-full p-0" : "max-w-screen-xl px-4 py-2"
+      } mx-auto border rounded-lg shadow-md bg-white mt-6 overflow-hidden`}
     >
       <div className="px-4 pt-4">
-        <h2 className="text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">
+        <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">
           {title}
         </h2>
 
@@ -44,7 +46,7 @@ export default function PreviewComponent({
           ].map(({ label, value, icon }) => (
             <button
               key={value}
-              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-900 hover:text-blue-500 sm:text-base ${
+              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm sm:text-base font-medium transition-all text-gray-900 hover:text-blue-500 ${
                 activeTab === value
                   ? "border-b-2 border-blue-500 text-blue-500"
                   : ""
@@ -60,12 +62,16 @@ export default function PreviewComponent({
       <div className="p-4 mt-3 relative">
         {activeTab === "preview" ? (
           <div className="rounded-md overflow-hidden">
-            <div className="max-h-[560px] overflow-y-auto p-4">
+            <div className="max-h-[560px] overflow-y-auto p-2 sm:p-4">
               <div
-                className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full`}
+                className={`${
+                  isFullWidth ? "w-full" : "flex justify-center"
+                } w-full`}
               >
                 <div
-                  className={`${isFullWidth ? "w-full" :"w-full max-w-md"}`}
+                  className={`${
+                    isFullWidth ? "w-full" : "w-full max-w-md sm:max-w-xl"
+                  }`}
                 >
                   {children}
                 </div>
@@ -112,7 +118,7 @@ export default function PreviewComponent({
                   language={selectedLanguage}
                 >
                   {({ tokens, getLineProps, getTokenProps }) => (
-                    <pre className="rounded-lg overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed bg-gray-900 text-white border border-gray-700 w-full p-4">
+                    <pre className="rounded-lg overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed bg-gray-900 text-white border border-gray-700 w-full p-2 sm:p-4">
                       {tokens.map((line, i) => (
                         <div
                           key={i}
