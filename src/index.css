@@ -64,3 +64,13 @@ html.has-scroll-dragging {
 [data-scroll-container] {
   min-height: 100vh;
 }
+
+/* Custom class to hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

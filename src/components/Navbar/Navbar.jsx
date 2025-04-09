@@ -13,9 +13,30 @@ function Navbar() {
   }, []);
 
   const menuItems = [
+    { name: "Home", path: "/" },
     { name: "Components", path: "/dashboard/navbar" },
-    { name: "Documentation", path: "/documentation" },
-    { name: "Examples", path: "/examples" },
+    { name: "Docs", path: "/docs" },
+    { name: "Templates", path: "/templates" },
+  ];
+
+  const mobileMenuItems = [
+    { name: "Home", path: "/" },
+    { name: "Components", path: "/dashboard/navbar" },
+    { name: "Docs", path: "/docs" },
+    { name: "Templates", path: "/templates" },
+    { name: "Navbar", path: "/dashboard/navbar" },
+    { name: "Footer", path: "/dashboard/footer" },
+    { name: "Cards", path: "/dashboard/card" },
+    { name: "Bento", path: "/dashboard/bento" },
+    { name: "Hero", path: "/dashboard/hero" },
+    { name: "Avatar", path: "/dashboard/avatar" },
+    { name: "Breadcrumb", path: "/dashboard/breadcrumb" },
+    { name: "Calendar", path: "/dashboard/calendar" },
+    { name: "Form", path: "/dashboard/form" },
+    { name: "Pricing", path: "/dashboard/pricing" },
+    { name: "Skeleton", path: "/dashboard/skeleton" },
+    { name: "Table", path: "/dashboard/table" },
+    { name: "Toggle", path: "/dashboard/toggle" },
   ];
 
   return (
@@ -100,8 +121,8 @@ function Navbar() {
             </button>
           </div>
 
-          <nav className="space-y-4">
-            {menuItems.map((item) => (
+          <nav className="space-y-4 flex-1 overflow-y-auto py-2 scrollbar-hide">
+            {mobileMenuItems.map((item) => (
               <NavLink
                 key={item.name}
                 to={item.path}
