@@ -24,37 +24,37 @@ const Navbar12 = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider hover:border-b hover:border-gray-900"
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider inline-block pb-1 hover:border-b hover:border-gray-900"
               >
                 Home
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider hover:border-b hover:border-gray-900"
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider inline-block pb-1 hover:border-b hover:border-gray-900"
               >
                 About
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider hover:border-b hover:border-gray-900"
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider inline-block pb-1 hover:border-b hover:border-gray-900"
               >
                 Services
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider hover:border-b hover:border-gray-900"
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider inline-block pb-1 hover:border-b hover:border-gray-900"
               >
                 Contact
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider hover:border-b hover:border-gray-900"
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider inline-block pb-1 hover:border-b hover:border-gray-900"
               >
                 Work
               </a>
               <a
                 href="#"
-                className="px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors text-sm tracking-wider"
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-wider inline-block pb-1 hover:border-b hover:border-gray-900"
               >
                 Sign Up
               </a>
@@ -104,42 +104,40 @@ const Navbar12 = () => {
           <div className="px-4 pt-2 pb-4 space-y-2 sm:px-6 bg-white shadow-lg">
             <a
               href="#"
-              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider hover:border-b hover:border-gray-900"
+              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider"
             >
-              Home
+              <span className="inline-block pb-1 hover:border-b hover:border-gray-900">Home</span>
             </a>
             <a
               href="#"
-              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider hover:border-b hover:border-gray-900"
+              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider"
             >
-              About
+              <span className="inline-block pb-1 hover:border-b hover:border-gray-900">About</span>
             </a>
             <a
               href="#"
-              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider hover:border-b hover:border-gray-900"
+              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider"
             >
-              Services
+              <span className="inline-block pb-1 hover:border-b hover:border-gray-900">Services</span>
             </a>
             <a
               href="#"
-              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider hover:border-b hover:border-gray-900"
+              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider"
             >
-              Contact
+              <span className="inline-block pb-1 hover:border-b hover:border-gray-900">Contact</span>
             </a>
             <a
               href="#"
-              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider hover:border-b hover:border-gray-900"
+              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider"
             >
-              Work
+              <span className="inline-block pb-1 hover:border-b hover:border-gray-900">Work</span>
             </a>
-            <div className="pt-2">
-              <a
-                href="#"
-                className="block w-24 mx-auto px-4 py-2.5 text-sm font-medium bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors text-center tracking-wider"
-              >
-                Sign Up
-              </a>
-            </div>
+            <a
+              href="#"
+              className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors tracking-wider"
+            >
+              <span className="inline-block pb-1 hover:border-b hover:border-gray-900">Sign Up</span>
+            </a>
           </div>
         </div>
       </header>
