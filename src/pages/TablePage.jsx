@@ -1,4 +1,5 @@
 import Tabel1 from "../UIComponents/Table/Table1";
+import Tabel2 from "../UIComponents/Table/Table2";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function TablePage() {
@@ -17,6 +18,21 @@ function TablePage() {
         },
       ],
     },
+    {
+      title: "Calendar",
+      component: <Tabel2 />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
@@ -30,6 +46,7 @@ function TablePage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
+            isFullWidth={true}
           >
             {variant.component}
           </PreviewComponent>
