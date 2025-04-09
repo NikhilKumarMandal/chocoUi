@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Navbar8 = () => {
+const Navbar15 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,7 +9,7 @@ const Navbar8 = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
@@ -18,7 +18,7 @@ const Navbar8 = () => {
               </a>
             </div>
 
-            <nav className="hidden md:flex items-center space-x-4 sm:space-x-8">
+            <nav className="hidden md:flex items-center space-x-6">
               <a
                 href="#"
                 className="text-gray-600 hover:text-gray-900 transition-colors"
@@ -51,16 +51,16 @@ const Navbar8 = () => {
               </a>
               <a
                 href="#"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors ml-2"
+                className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors ml-2"
               >
-                Get Started
+                Sign Up
               </a>
             </nav>
 
             <div className="md:hidden flex items-center">
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
@@ -101,39 +101,39 @@ const Navbar8 = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
             >
               Home
             </a>
             <a
               href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
             >
               About
             </a>
             <a
               href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
             >
               Services
             </a>
             <a
               href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
             >
               Contact
             </a>
             <a
               href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
             >
               Work
             </a>
             <a
               href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700 w-32 text-center"
+              className="block px-3 py-2 rounded-md text-base font-medium bg-indigo-600 text-white hover:bg-indigo-700 w-24 text-center"
             >
-              Get Started
+              Sign Up
             </a>
           </div>
         </div>
@@ -142,4 +142,4 @@ const Navbar8 = () => {
   );
 };
 
-export default Navbar8;
+export default Navbar15; 
