@@ -40,97 +40,104 @@ function Navbar() {
   ];
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-gradient-to-r from-[#FFEAC5]/60 via-[#FFDBB5]/60 to-[#f8c794]/60 backdrop-blur-lg shadow-lg"
-          : "bg-gradient-to-r from-[#FFEAC5]/80 via-[#FFDBB5]/80 to-[#f8c794]/80"
-      } border-b border-[#6C4E31]/10`}
-    >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo */}
-          <NavLink to="/" className="relative h-20 md:h-24 w-auto group">
-            <img
-              src="/3.png"
-              alt="ChocoUI Logo"
-              className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
-            />
-          </NavLink>
+    <>
+      {/* Floating Navbar with gap above */}
+      <nav
+        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl ${
+          scrolled
+            ? "bg-white/60 backdrop-blur-lg shadow-lg border border-gray-200/80"
+            : "bg-white/60 backdrop-blur-md shadow-md border border-gray-200/60"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo - Simplified */}
+            <NavLink to="/" className="flex items-center group">
+              <img
+                src="/3.png"
+                alt="ChocoUi Logo"
+                className="h-18 hover:scale-105 transition-transform duration-300"
+              />
+            </NavLink>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.path}
-                className={({ isActive }) =>
-                  `text-lg font-medium transition-all duration-300 relative ${
-                    isActive
-                      ? "text-[#603F26] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
-                      : "text-[#6C4E31] hover:text-[#603F26] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
-                  }`
-                }
-              >
-                {item.name}
-              </NavLink>
-            ))}
-            <button className="px-6 py-2.5 bg-gradient-to-r from-[#603F26] to-[#6C4E31] text-[#FFEAC5] rounded-lg font-bold hover:shadow-lg hover:shadow-[#603F26]/20 transition-all duration-300 transform hover:-translate-y-0.5">
-              Get Started
+            {/* Desktop Menu - Minimalist */}
+            <div className="hidden md:flex items-center space-x-6">
+              {menuItems.map((item) => (
+                <NavLink
+                  key={item.name}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
+                      isActive
+                        ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
+                        : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
+                    }`
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              ))}
+              <button className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300 shadow-sm hover:shadow-md">
+                Get Started
+              </button>
+            </div>
+
+            {/* Mobile Menu Button - Minimal */}
+            <button
+              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-all duration-300"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2.5 rounded-lg bg-gradient-to-br from-[#FFDBB5] to-[#f8c794] text-[#603F26] hover:shadow-md transition-all duration-300"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-[#603F26]/30 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-300 z-40 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setIsOpen(false)}
       ></div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Minimalist */}
       <div
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-gradient-to-br from-[#FFEAC5] via-[#FFDBB5] to-[#f8c794] shadow-2xl transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-white shadow-2xl transition-transform duration-300 z-50 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } border-r border-[#6C4E31]/10`}
+        }`}
       >
         <div className="flex flex-col h-full p-6">
           <div className="flex justify-between items-center mb-8">
-            <div className="relative h-16 w-auto group">
+          <NavLink to="/" className="flex items-center group">
               <img
                 src="/3.png"
-                alt="ChocoUI Logo"
-                className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+                alt="ChocoUi Logo"
+                className="h-18 hover:scale-105 transition-transform duration-300"
               />
-            </div>
+            </NavLink>
             <button
-              className="p-2.5 rounded-lg bg-gradient-to-r from-[#603F26] to-[#6C4E31] text-[#FFEAC5] hover:shadow-md transition-all duration-300"
+              className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5" />
             </button>
           </div>
 
-          <nav className="space-y-4 flex-1 overflow-y-auto py-2 scrollbar-hide">
-            {mobileMenuItems.map((item) => (
+          <nav className="space-y-2">
+            {menuItems.map((item) => (
               <NavLink
                 key={item.name}
                 to={item.path}
                 className={({ isActive }) =>
-                  `block px-4 py-3 text-lg rounded-lg transition-all duration-300 ${
+                  `block px-4 py-3 text-sm rounded-lg transition-all duration-200 ${
                     isActive
-                      ? "bg-gradient-to-r from-[#FFDBB5] to-[#f8c794] text-[#603F26] font-medium shadow-md"
-                      : "text-[#6C4E31] hover:bg-[#FFDBB5]/50 hover:text-[#603F26]"
+                      ? "bg-[#FFDBB5] text-[#603F26] font-medium"
+                      : "text-gray-700 hover:bg-gray-100 hover:text-[#603F26]"
                   }`
                 }
                 onClick={() => setIsOpen(false)}
@@ -140,12 +147,12 @@ function Navbar() {
             ))}
           </nav>
 
-          <button className="mt-8 w-full py-3 bg-gradient-to-r from-[#603F26] to-[#6C4E31] text-[#FFEAC5] rounded-lg font-bold hover:shadow-lg hover:shadow-[#603F26]/20 transition-all duration-300">
+          <button className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300">
             Get Started
           </button>
         </div>
       </div>
-    </nav>
+    </>
   );
 }
 
