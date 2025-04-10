@@ -13,16 +13,26 @@ const Hero = () => {
   // Responsive positions for floating component previews
   const floatingElements = [
     {
-      left: "5%", 
+      left: "5%",
       top: "20%",
       rotate: -5,
       delay: 0,
-      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"><Card1/></a>,
+      comp: (
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <Card1 />
+        </a>
+      ),
     },
     {
       left: "10%",
       top: "60%",
-      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"></a>,
+      comp: (
+        <a
+          href="https://google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+      ),
       rotate: 3,
       delay: 0.5,
     },
@@ -31,16 +41,24 @@ const Hero = () => {
       top: "60%",
       width: "300px",
       height: "300px",
-      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-      
-    </a>,
+      comp: (
+        <a
+          href="https://google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+      ),
       rotate: 2,
       delay: 0.8,
     },
     {
       right: "20%",
       top: "10%",
-      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"><AudioWave/></a>,
+      comp: (
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <AudioWave />
+        </a>
+      ),
       rotate: -4,
       delay: 1.2,
     },
@@ -49,13 +67,22 @@ const Hero = () => {
       top: "40%",
       rotate: 6,
       delay: 1.6,
-      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"></a>,
-      
+      comp: (
+        <a
+          href="https://google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+      ),
     },
     {
       right: "5%",
       top: "30%",
-      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"><FileUpload/></a>,
+      comp: (
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <FileUpload />
+        </a>
+      ),
       rotate: -3,
       delay: 2,
     },
@@ -64,16 +91,16 @@ const Hero = () => {
   return (
     <section className="relative min-h-[100vh] bg-[#f8f8f8] overflow-hidden pt-24 md:pt-24">
       <Sparkles
-            density={100}
-            speed={1.2}
-            size={1.5}
-            direction="top"
-            opacitySpeed={2}
-            color="#603F26"
-            className="absolute inset-x-0 bottom-0 h-full w-full "
-          />
+        density={100}
+        speed={1.2}
+        size={1.5}
+        direction="top"
+        opacitySpeed={2}
+        color="#603F26"
+        className="absolute inset-x-0 bottom-0 h-full w-full "
+      />
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {/* First Blob with responsive sizing */}
+        {/* Blob elements */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}
@@ -90,7 +117,6 @@ const Hero = () => {
           />
         </motion.div>
 
-        {/* Second Blob with staggered fade-in */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}
@@ -107,7 +133,8 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      {/* Floating component preview placeholders with staggered animations */}
+
+      {/* Floating components */}
       {floatingElements.map((el, index) => (
         <motion.div
           key={index}
@@ -148,9 +175,9 @@ const Hero = () => {
         </motion.div>
       ))}
 
-      {/* Main content area with improved responsive spacing */}
-      <div className="container mt-20 mx-auto px-4 md:px-6 py-8 md:py-12 flex flex-col items-center justify-center text-center relative z-10">
-        <div className="min-h-[40vh] md:min-h-[50vh] flex flex-col items-center justify-center w-full max-w-[90%] sm:max-w-[80%] md:max-w-[90%] lg:max-w-[1200px]">
+      {/* Main content */}
+      <div className="container mt-12 md:mt-20 mx-auto px-4 md:px-6 py-6 md:py-12 flex flex-col items-center justify-center text-center relative z-10">
+        <div className="min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] flex flex-col items-center justify-center w-full max-w-[90%] sm:max-w-[80%] md:max-w-[90%] lg:max-w-[1200px]">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -168,7 +195,7 @@ const Hero = () => {
               <span className="relative inline-block">
                 <span className="relative z-10 [text-shadow:_0_1px_2px_rgba(255,234,197,0.2)]">
                   <RandomizedTextEffect
-                  text="UI Components" 
+                    text="UI Components"
                     className="relative z-10 [text-shadow:_0_1px_2px_rgba(255,234,197,0.2)]"
                   />
                 </span>
@@ -202,98 +229,67 @@ const Hero = () => {
                 curated collection
               </span>{" "}
               of responsive, accessible React components that will{" "}
-              <span className="italic">accelerate</span> your development workflow
-              and <span className="font-medium">elevate</span> your product's
-              design.
+              <span className="italic">accelerate</span> your development
+              workflow and <span className="font-medium">elevate</span> your
+              product's design.
             </p>
           </motion.div>
 
-          {/* CTA Buttons with improved responsive layout */}
+          {/* Modified CTA Section */}
           <motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.8, delay: 0.4 }}
-  className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6 md:mt-8 w-full sm:w-auto"
->
-  <Link
-    to="/dashboard"
-    className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#603F26] shadow-xl px-8 font-medium text-white transition-transform duration-300 hover:scale-105"
-  >
-    <span className="relative z-10 flex items-center">
-      Start Building Now
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-      >
-        <path
-          fillRule="evenodd"
-          d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </span>
-    <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r from-[#6C4E31] to-[#FFDBB5] transition-all duration-500 ease-out group-hover:w-full" />
-    <div className="absolute inset-0 z-10 rounded-md border-2 border-transparent transition-colors duration-300" />
-  </Link>
-
-  <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full shadow-xl font-['Inter'] bg-[#FFEAC5] px-8 font-medium text-[#603F26] transition-transform duration-300 hover:scale-105 hover:text-[#FFDBB5]">
-    <span className="relative z-10 flex items-center">
-      Explore Components
-      <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium group-hover:text-[#603F26] transition-colors duration-300">
-        50+
-      </span>
-    </span>
-    <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r font-['Inter'] from-[#603F26] to-[#6C4E31] transition-all duration-500 ease-out group-hover:w-full" />
-    <div className="absolute inset-0 z-10 rounded-md border-transparent transition-colors duration-300"/>
-  </button>
-</motion.div>
-        </div>
-
-        {/* Value proposition section with improved responsive grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 md:mt-25 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 text-left max-w-5xl font-['Inter']"
-        >
-          {[
-            {
-              title: "Developer First",
-              description:
-                "Clean, intuitive APIs with TypeScript support and comprehensive docs that developers love.",
-            },
-            {
-              title: "Design Perfection",
-              description:
-                "Pixel-perfect components crafted by designers, with attention to every interaction detail.",
-            },
-            {
-              title: "Production Ready",
-              description:
-                "Fully accessible, responsive, and performance optimized for real-world applications.",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="p-4 md:p-5 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-100 shadow-sm"
-            >
-              <h3 className="text-sm md:text-base font-bold text-[#603F26] mb-2 md:mb-3 font-bricolage">
-                {item.title}
-              </h3>
-
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
-                className="h-0.5 bg-[#FFDBB5] mb-2 md:mb-3"
-              />
-
-              <p className="text-gray-700 text-xs md:text-sm">{item.description}</p>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-6 md:mt-8 relative"
+          >
+            {/* Start Building Button */}
+            <div className="relative">
+              <Link
+                to="/dashboard"
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#603F26] shadow-xl px-6 md:px-8 font-medium text-white transition-transform duration-300 hover:scale-105"
+              >
+                <span className="relative z-10 flex items-center font-['Inter']">
+                  Start Building Now
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r from-[#6C4E31] to-[#FFDBB5] transition-all duration-500 ease-out group-hover:w-full" />
+              </Link>
+              <div className="absolute -bottom-8 md:-bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-[#6C4E31] font-['Inter'] italic whitespace-nowrap">
+                Build layouts using templates
+              </div>
             </div>
-          ))}
-        </motion.div>
+
+            {/* Vertical Divider */}
+            <div className="h-16 w-px bg-gradient-to-b from-transparent via-[#603F26] to-transparent opacity-50 my-2" />
+
+            {/* Explore Components Button */}
+            <div className="relative">
+              <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full shadow-xl font-['Inter'] bg-[#FFEAC5] px-6 md:px-8 font-medium text-[#603F26] transition-transform duration-300 hover:scale-105 hover:text-[#FFEAC5]">
+                <span className="relative z-10 flex items-center">
+                  Explore Components
+                  <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium transition-colors duration-300">
+                    50+
+                  </span>
+                </span>
+                <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r from-[#603F26] to-[#6C4E31] transition-all duration-500 ease-out group-hover:w-full" />
+              </button>
+              <div className="absolute -bottom-8 md:-bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-[#6C4E31] font-['Inter'] italic whitespace-nowrap">
+                Design with individual UI components
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
