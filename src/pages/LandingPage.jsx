@@ -5,6 +5,7 @@ import Feature from "../sections/Feature/Feature";
 import CTA from "../sections/CTA/CTA";
 import Footer from "../components/Footer/Footer";
 import Hero2 from "../sections/Hero2/Hero2";
+import Team from "../sections/Team/Team";
 function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -18,6 +19,7 @@ function LandingPage() {
         </div>
         <Feature />
         <CTA />
+        <Team />
       </main>
       <Footer />
     </div>
