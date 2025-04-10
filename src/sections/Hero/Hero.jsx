@@ -1,18 +1,85 @@
 import { Link } from "react-router-dom";
-import PreviewComponent from "../../components/PreviewCom/PreviewComponent";
 import { motion } from "framer-motion";
 import Blob3D from "../../components/Blob3D";
+import Card1 from "../../compoForUser/floats/Card1";
+import AudioWave from "../../compoForUser/floats/AudioWave";
+import { RandomizedTextEffect } from "../../compoForUser/floats/randomText";
+import { Sparkles } from "../../compoForUser/floats/sparkles";
+import FileUpload from "../../compoForUser/floats/SmallFileUpload";
+import MicroToast from "../../compoForUser/floats/MicroToast";
+import TimeBasedProgressBar from "../../compoForUser/floats/Stepper";
 
 const Hero = () => {
+  // Responsive positions for floating component previews
+  const floatingElements = [
+    {
+      left: "5%", 
+      top: "20%",
+      rotate: -5,
+      delay: 0,
+      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"><Card1/></a>,
+    },
+    {
+      left: "10%",
+      top: "60%",
+      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"></a>,
+      rotate: 3,
+      delay: 0.5,
+    },
+    {
+      right: "15%",
+      top: "60%",
+      width: "300px",
+      height: "300px",
+      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+      
+    </a>,
+      rotate: 2,
+      delay: 0.8,
+    },
+    {
+      right: "20%",
+      top: "10%",
+      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"><AudioWave/></a>,
+      rotate: -4,
+      delay: 1.2,
+    },
+    {
+      left: "20%",
+      top: "40%",
+      rotate: 6,
+      delay: 1.6,
+      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"></a>,
+      
+    },
+    {
+      right: "5%",
+      top: "30%",
+      comp: <a href="https://google.com" target="_blank" rel="noopener noreferrer"><FileUpload/></a>,
+      rotate: -3,
+      delay: 2,
+    },
+  ];
+
   return (
-    <section
-      data-scroll
-      data-scroll-speed=".2"
-      className="relative py-30 overflow-hidden bg-gradient-to-br from-[#FFEAC5] via-[#FFDBB5] to-[#f8c794] md:py-30 lg:py-32"
-    >
-      {/* Background Blob */}
-      <div className="fixed inset-0 overflow-hidden">
-        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-100">
+    <section className="relative min-h-[100vh] bg-[#f8f8f8] overflow-hidden pt-24 md:pt-24">
+      <Sparkles
+            density={100}
+            speed={1.2}
+            size={1.5}
+            direction="top"
+            opacitySpeed={2}
+            color="#603F26"
+            className="absolute inset-x-0 bottom-0 h-full w-full "
+          />
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        {/* First Blob with responsive sizing */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] hidden sm:block"
+        >
           <Blob3D
             color="rgb(212, 118, 46)"
             speed={0.8}
@@ -21,225 +88,211 @@ const Hero = () => {
             width="100%"
             height="100%"
           />
-        </div>
-        <div className="absolute -bottom-1/4 left-2/3 w-[600px] h-[600px] opacity-90">
+        </motion.div>
+
+        {/* Second Blob with staggered fade-in */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+          className="absolute -bottom-1/4 left-2/3 w-[600px] h-[600px] hidden md:block"
+        >
           <Blob3D
-            color="#603F26"
+            color="#153448"
             speed={1.2}
             distort={0.4}
             radius={2}
             width="100%"
             height="100%"
           />
-        </div>
+        </motion.div>
       </div>
+      {/* Floating component preview placeholders with staggered animations */}
+      {floatingElements.map((el, index) => (
+        <motion.div
+          key={index}
+          initial={{ y: 40, opacity: 0 }}
+          animate={{
+            y: [20, -20, 20],
+            opacity: [0.9, 1, 0.9],
+          }}
+          transition={{
+            y: {
+              duration: 6 + Math.random() * 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+              delay: el.delay,
+            },
+            opacity: {
+              duration: 6 + Math.random() * 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+              delay: el.delay,
+            },
+          }}
+          style={{
+            position: "absolute",
+            width: el.width,
+            height: el.height,
+            left: el.left,
+            right: el.right,
+            top: `calc(${el.top} + 2rem)`,
+            rotate: `${el.rotate}deg`,
+            borderRadius: "12px",
+          }}
+          className="backdrop-blur-[1px] relative z-20 drop-shadow-3xl invisible lg:visible md:invisible"
+        >
+          {el.comp ? el.comp : "Hello"}
+        </motion.div>
+      ))}
 
-      <div className="container grid grid-cols-1 gap-8 px-4 mx-auto lg:grid-cols-2 sm:px-6">
-        {/* Left Content - Enhanced with 3D effects */}
-        <div className="flex flex-col justify-center max-w-2xl relative">
-          {/* Floating badge with glow */}
+      {/* Main content area with improved responsive spacing */}
+      <div className="container mt-20 mx-auto px-4 md:px-6 py-8 md:py-12 flex flex-col items-center justify-center text-center relative z-10">
+        <div className="min-h-[40vh] md:min-h-[50vh] flex flex-col items-center justify-center w-full max-w-[90%] sm:max-w-[80%] md:max-w-[90%] lg:max-w-[1200px]">
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8 self-start"
-          >
-            <span className="inline-flex items-center px-4 py-1.5 text-sm font-bold tracking-wider text-[#603F26] bg-[#FFDBB5] rounded-full shadow-lg border border-[#FFEAC5] hover:shadow-[0_0_15px_rgba(247,55,79,0.3)] transition-all duration-500 group">
-              <span className="relative">
-                New Components v2.0
-                <span className="absolute -bottom-1 left-0 h-0.5 bg-[#F7374F] w-0 group-hover:w-full transition-all duration-700"></span>
-              </span>
-              <span className="ml-2 w-2 h-2 rounded-full bg-[#F7374F] animate-pulse shadow-[0_0_8px_#F7374F]"></span>
-            </span>
-          </motion.div>
-
-          {/* Headline with text shadow */}
-          <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 text-4xl font-medium tracking-tighter text-[#452213] md:text-5xl lg:text-5xl [text-shadow:_1px_1px_0_rgb(255_234_197_/_80%)] mix-blend-multiply"
+            className="mb-6 md:mb-8 max-w-4xl font-['Bricolage']"
           >
-            <span className="font-['dotine'] font-bold text-6xl">
-              Beautiful{" "}
-              <span className="relative">
-                <span className="relative z-10 text-6xl font-bold">
-                  UI components
-                </span>
-                <span className="absolute bottom-0 left-0 h-2 -z-10 transform -rotate-1"></span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-4 md:mb-6">
+              <span className="font-['InstrumentSerif'] text-[#603F26] font-normal">
+                Build faster
+              </span>{" "}
+              with
+              <span className="block mt-2 font-bold">
+                Beautiful, Production-Ready
               </span>
-              ,
-            </span>
-            <br />
-            <span className="font-['dotine'] font-bold">crafted with</span>{" "}
-            <span className="relative font-light">
-              <span className="relative z-10 font-['dotine'] font-bold text-7xl">
-                care
+              <span className="relative inline-block">
+                <span className="relative z-10 [text-shadow:_0_1px_2px_rgba(255,234,197,0.2)]">
+                  <RandomizedTextEffect
+                  text="UI Components" 
+                    className="relative z-10 [text-shadow:_0_1px_2px_rgba(255,234,197,0.2)]"
+                  />
+                </span>
+                <motion.span
+                  initial={{ width: "0%", x: 0 }}
+                  animate={{
+                    width: "100%",
+                    x: [0, 5, -5, 0],
+                    rotate: [0, 0.5, -0.5, 0],
+                  }}
+                  transition={{
+                    width: { duration: 0.9, ease: "easeOut" },
+                    x: {
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                    rotate: {
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  }}
+                  className="absolute bottom-0 left-0 h-2 bg-[#6C4E31] -z-10 transform origin-left"
+                ></motion.span>
               </span>
-              <motion.span
-                initial={{ width: "0%", x: 0 }}
-                animate={{
-                  width: "100%",
-                  x: [0, 5, -5, 0],
-                  rotate: [0, 2, -2, 0],
-                }}
-                transition={{
-                  width: { duration: 0.5 },
-                  x: {
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  },
-                  rotate: {
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  },
-                }}
-                className="absolute bottom-0 left-0 h-2 bg-[#452213]/90 -z-10 transform origin-left"
-              ></motion.span>
-            </span>
-          </motion.h1>
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl mt-6 md:mt-10 mx-auto font-['Inter'] leading-relaxed">
+              A{" "}
+              <span className="font-semibold text-[#6C4E31]">
+                curated collection
+              </span>{" "}
+              of responsive, accessible React components that will{" "}
+              <span className="italic">accelerate</span> your development workflow
+              and <span className="font-medium">elevate</span> your product's
+              design.
+            </p>
+          </motion.div>
 
-          {/* Description with animated border */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-8 text-lg text-[#6C4E31]/90 relative pl-6 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-[#F7374F] before:to-[#6C4E31] before:rounded-full before:hover:h-3/4 before:hover:top-[12%] before:transition-all before:duration-500 mix-blend-multiply"
-          >
-            A professionally designed, fully responsive UI component library for
-            React applications. Build beautiful interfaces without starting from
-            scratch.
-          </motion.p>
+          {/* CTA Buttons with improved responsive layout */}
+          <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6 md:mt-8 w-full sm:w-auto"
+>
+  <Link
+    to="/dashboard"
+    className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#603F26] shadow-xl px-8 font-medium text-white transition-transform duration-300 hover:scale-105"
+  >
+    <span className="relative z-10 flex items-center">
+      Start Building Now
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+      >
+        <path
+          fillRule="evenodd"
+          d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </span>
+    <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r from-[#6C4E31] to-[#FFDBB5] transition-all duration-500 ease-out group-hover:w-full" />
+    <div className="absolute inset-0 z-10 rounded-md border-2 border-transparent transition-colors duration-300" />
+  </Link>
 
-          {/* Buttons with 3D effect */}
-          <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-            <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
-              <Link
-                to="/dashboard"
-                className="relative inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-[#FFEAC5] bg-[#603F26] rounded-xl hover:bg-[#6C4E31] transition-all duration-300 shadow-[0_8px_0_#522546] hover:shadow-[0_4px_0_#522546] transform hover:-translate-y-1 active:translate-y-0 group overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center">
-                  Get Started
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="w-4 h-4 ml-2 z-10 transition-transform group-hover:translate-x-1 group-hover:scale-110"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#F7374F]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              </Link>
-            </motion.div>
-
-            <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
-              <a
-                href="#"
-                className="relative inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-[#603F26] bg-white rounded-xl hover:bg-[#FFEAC5] transition-all duration-300 shadow-[0_8px_0_#d1d5db] hover:shadow-[0_4px_0_#d1d5db] transform hover:-translate-y-1 active:translate-y-0 group overflow-hidden border-2 border-[#6C4E31]/20"
-              >
-                <span className="relative z-10 flex items-center">
-                  View on GitHub
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 ml-2 z-10 transition-transform group-hover:translate-x-1 group-hover:scale-110"
-                  >
-                    <path
-                      d="M15 3L21 3.00002M21 3.00002L21 9M21 3.00002L13 11"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#6C4E31]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              </a>
-            </motion.div>
-          </div>
+  <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full shadow-xl font-['Inter'] bg-[#FFEAC5] px-8 font-medium text-[#603F26] transition-transform duration-300 hover:scale-105 hover:text-[#FFDBB5]">
+    <span className="relative z-10 flex items-center">
+      Explore Components
+      <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium group-hover:text-[#603F26] transition-colors duration-300">
+        50+
+      </span>
+    </span>
+    <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r font-['Inter'] from-[#603F26] to-[#6C4E31] transition-all duration-500 ease-out group-hover:w-full" />
+    <div className="absolute inset-0 z-10 rounded-md border-transparent transition-colors duration-300"/>
+  </button>
+</motion.div>
         </div>
 
-        {/* Right Side - Floating 3D Preview Component */}
+        {/* Value proposition section with improved responsive grid */}
         <motion.div
-          initial={{ scale: 0.95, opacity: 0, rotateY: 15 }}
-          animate={{ scale: 1, opacity: 1, rotateY: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 md:mt-25 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 text-left max-w-5xl font-['Inter']"
         >
-          <div className="absolute -inset-4 bg-[#F7374F]/20 rounded-2xl blur-xl opacity-70 -z-10"></div>
-          <div className="absolute -inset-2 bg-[#6C4E31]/20 rounded-xl blur-md opacity-50 -z-10"></div>
+          {[
+            {
+              title: "Developer First",
+              description:
+                "Clean, intuitive APIs with TypeScript support and comprehensive docs that developers love.",
+            },
+            {
+              title: "Design Perfection",
+              description:
+                "Pixel-perfect components crafted by designers, with attention to every interaction detail.",
+            },
+            {
+              title: "Production Ready",
+              description:
+                "Fully accessible, responsive, and performance optimized for real-world applications.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="p-4 md:p-5 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-100 shadow-sm"
+            >
+              <h3 className="text-sm md:text-base font-bold text-[#603F26] mb-2 md:mb-3 font-bricolage">
+                {item.title}
+              </h3>
 
-          <PreviewComponent
-            title="Live Preview"
-            code={`<YourComponent />`}
-            language="jsx"
-            className="relative transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-          >
-            <div className="p-8 bg-white/10 backdrop-blur-sm rounded-lg border-2 border-[#6C4E31]/10 shadow-inner overflow-hidden relative">
-              {/* Floating elements in preview */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#F7374F]/10 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#6C4E31]/10 rounded-full blur-xl"></div>
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
+                className="h-0.5 bg-[#FFDBB5] mb-2 md:mb-3"
+              />
 
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-20 h-20 mb-6 rounded-full bg-gradient-to-br from-[#FFDBB5] to-[#F7374F]/30 flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(247,55,79,0.3)] animate-float">
-                  <svg
-                    className="w-10 h-10 text-[#603F26]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-[#603F26] mb-2">
-                  Component Preview
-                </h3>
-                <p className="text-[#6C4E31]/90">
-                  Experience the elegance of ChocoUI
-                </p>
-
-                {/* Animated dots */}
-                <div className="flex mt-6 space-x-2">
-                  {[...Array(3)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="w-3 h-3 bg-[#603F26]/30 rounded-full"
-                      animate={{
-                        scale: [1, 1.3, 1],
-                        opacity: [0.6, 1, 0.6],
-                      }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        delay: i * 0.2,
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
+              <p className="text-gray-700 text-xs md:text-sm">{item.description}</p>
             </div>
-          </PreviewComponent>
+          ))}
         </motion.div>
       </div>
     </section>

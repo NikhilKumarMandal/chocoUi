@@ -489,8 +489,8 @@ function FooterPage() {
     },
   ];
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+    <div className="max-w-4xl lg:max-w-6xl mx-auto p-6 ml-60 ">
+      <h1 className="text-3xl font-bold text-black">Footer</h1>
       <p className="text-gray-600 mt-2">
         Explore different UI components you can use in your project.
       </p>
