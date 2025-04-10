@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Layout from "./Layout.jsx";
+
 import LandingPage from "./pages/LandingPage.jsx";
 import NavbarComForUser from "./pages/NavbarPage.jsx";
 import { DocsPage } from "./pages/DocsPage.jsx";
@@ -23,13 +23,14 @@ import PricingSection from "./pages/PricingPage.jsx";
 import SkeletonPage from "./pages/SkeletonPage.jsx";
 import TablePage from "./pages/TablePage.jsx";
 import TogglePage from "./pages/TogglePage.jsx";
+import App from "./App.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<LandingPage />} />
 
-      <Route path="/dashboard" element={<Layout />}>
+      <Route path="/dashboard" element={<App />}>
         <Route path="navbar" element={<NavbarComForUser />} />
         <Route path="bento" element={<BentoPage />} />
         <Route path="footer" element={<FooterPage />} />
