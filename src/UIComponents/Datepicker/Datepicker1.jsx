@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect, useRef } from "react"
 
 export default function DatePicker({ onChange, value, className = "" }) {
@@ -258,4 +256,3 @@ export default function DatePicker({ onChange, value, className = "" }) {
     </div>
   )
 }
-
