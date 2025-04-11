@@ -8,5 +8,7 @@ const LinearProgress = ({ progress = 60 }) => {
       </div>
     );
   };
+    
+  
 
   export default LinearProgress

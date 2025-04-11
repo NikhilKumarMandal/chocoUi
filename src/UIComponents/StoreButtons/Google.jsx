@@ -21,5 +21,6 @@ const GooglePlayButton = () => {
     </button>
   );
 };
+  
 
 export default GooglePlayButton;
