@@ -7,6 +7,7 @@ export default function PreviewComponent({
   codeSnippets = [],
   children,
   isFullWidth = false,
+  previewBg = "white",
 }) {
   const [activeTab, setActiveTab] = useState("preview");
   const [copied, setCopied] = useState(false);
@@ -31,52 +32,49 @@ export default function PreviewComponent({
   return (
     <div
       className={`w-full ${
-        isFullWidth ? "max-w-full p-4 sm:p-6  " : "max-w-screen-xl px-4 py-4"
-      } mx-auto border rounded-xl shadow-sm bg-white  mt-6  overflow-hidden`}
+        isFullWidth ? "max-w-full p-0" : "max-w-screen-xl px-4 py-2"
+      } mx-auto border rounded-lg shadow-md mt-6 overflow-hidden bg-white`}
     >
-      <div className="px-2 sm:px-4 pt-4">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4 text-center sm:text-left">
+      <div className="px-4 pt-4">
+        <h2 className="text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">
           {title}
         </h2>
 
-        <div className="flex flex-wrap justify-center sm:justify-start border-b border-gray-200">
+        <div className="flex border-b border-gray-200 flex-wrap">
           {[
             { label: "Preview", value: "preview", icon: <Eye size={18} /> },
             { label: "Code", value: "code", icon: <Code size={18} /> },
           ].map(({ label, value, icon }) => (
             <button
               key={value}
-              className={`px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base font-medium flex items-center gap-2 border-b-2 transition-all ${
+              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-900 hover:text-blue-500 sm:text-base ${
                 activeTab === value
-                  ? "border-blue-600 text-blue-600"
-                  : "border-transparent text-gray-600 hover:text-blue-500"
+                  ? "border-b-2 border-blue-500 text-blue-500"
+                  : ""
               }`}
               onClick={() => setActiveTab(value)}
             >
-              {icon}
-              {label}
+              {icon} {label}
             </button>
           ))}
         </div>
       </div>
 
-      <div className="p-2 sm:p-4 mt-4 relative">
+      <div className="p-4 mt-3 relative">
         {activeTab === "preview" ? (
-          <div className="rounded-md bg-gray-50 p-4 overflow-auto max-h-[560px]">
+          <div className="rounded-md border bg-gray-50 overflow-hidden">
             <div
-              className={`${
-                isFullWidth ? "w-full" : "flex justify-center"
-              } w-full`}
+              className={`max-h-[550px] overflow-y-auto p-4 ${
+                isFullWidth ? "" : "flex justify-center"
+              }`}
             >
-              <div className={`${isFullWidth ? "w-full" : "max-w-md w-full"}`}>
-                {children}
-              </div>
+              <div className="w-full">{children}</div>
             </div>
           </div>
         ) : (
-          <div className="w-full bg-gray-900 rounded-md border border-gray-700 overflow-hidden">
-            <div className="max-h-[550px] overflow-auto p-4 custom-scrollbar">
-              <div className="flex justify-between items-center flex-wrap gap-2 mb-4">
+          <div className="w-full rounded-md border bg-gray-900 overflow-hidden">
+            <div className="max-h-[550px] overflow-auto p-2 sm:p-4">
+              <div className="mb-4 flex justify-between items-center flex-wrap gap-2">
                 {availableLanguages.length > 1 && (
                   <div className="flex gap-2 flex-wrap">
                     {availableLanguages.map((lang) => (
@@ -100,7 +98,6 @@ export default function PreviewComponent({
                   className="bg-gray-700 text-gray-200 px-3 py-1.5 rounded-md text-sm flex items-center gap-1 hover:bg-gray-600"
                 >
                   {copied ? <Check size={16} /> : <Copy size={16} />}
-                  {copied ? "Copied" : "Copy"}
                 </button>
               </div>
 
@@ -114,7 +111,7 @@ export default function PreviewComponent({
                   language={selectedLanguage}
                 >
                   {({ tokens, getLineProps, getTokenProps }) => (
-                    <pre className="text-sm leading-relaxed bg-gray-900 text-white w-full rounded-lg overflow-x-auto whitespace-pre-wrap break-words p-4 border border-gray-700">
+                    <pre className="rounded-lg overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed bg-gray-900 text-white border border-gray-700 w-full p-4">
                       {tokens.map((line, i) => (
                         <div
                           key={i}
@@ -139,3 +136,7 @@ export default function PreviewComponent({
     </div>
   );
 }
+
+
+
+
