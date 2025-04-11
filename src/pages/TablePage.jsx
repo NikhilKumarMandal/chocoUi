@@ -1,5 +1,5 @@
-import Tabel1 from "../UIComponents/Table/Table1";
-import Tabel2 from "../UIComponents/Table/Table2";
+import Tabel1 from "../UIComponents/Table/Table_01";
+import Tabel2 from "../UIComponents/Table/Table_02";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function TablePage() {
