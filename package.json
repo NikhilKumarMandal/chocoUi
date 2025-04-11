@@ -12,13 +12,14 @@
     "format:fix": "prettier . --write"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@number-flow/react": "^0.5.9",
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.1",
     "@tailwindcss/vite": "^4.0.17",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
-    "framer-motion": "^12.6.3",
+    "framer-motion": "^12.6.5",
     "gsap": "^3.12.7",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.485.0",
