@@ -1,8 +1,8 @@
 import React from "react";
 
-const MainContent = () => {
+const Docs = () => {
   return (
-    <main className="flex-1 p-6">
+    <main className="flex-1 p-6 ">
       <section id="introduction" className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Quick Start</h2>
         <p className="text-lg mb-6">Getting Started with SnappyUI.</p>
@@ -111,4 +111,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default Docs;

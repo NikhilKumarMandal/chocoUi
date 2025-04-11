@@ -1,3 +1,23 @@
+import React from "react";
+import Layout from "./components/Layout";
+import Navbar from "./components/Navbar/Navbar";
+import { Outlet } from "react-router-dom";
+import Docs from "./components/Docs/Docs";
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <Layout>
+        <Docs />
+        <Outlet />
+      </Layout>
+    </>
+  );
+};
+
+export default App;
+
 // import { Outlet } from "react-router-dom";
 // // import Sidebar from "./components/Sidebar/Sidebar";
 
@@ -22,23 +42,3 @@
 // }
 
 // export default Layout;
-
-import React from "react";
-import Layout from "./components/Layout";
-import MainContent from "./pages/MainContent";
-import Navbar from "./components/Navbar/Navbar";
-import { Outlet } from "react-router-dom";
-
-const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Layout>
-        <MainContent />
-        <Outlet />
-      </Layout>
-    </>
-  );
-};
-
-export default App;
