@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Blob3D from "../../components/Blob3D";
-import Card1 from "../../compoForUser/floats/Card1";
-import AudioWave from "../../compoForUser/floats/AudioWave";
-import { RandomizedTextEffect } from "../../compoForUser/floats/randomText";
-import { Sparkles } from "../../compoForUser/floats/sparkles";
-import FileUpload from "../../compoForUser/floats/SmallFileUpload";
-import MicroToast from "../../compoForUser/floats/MicroToast";
-import TimeBasedProgressBar from "../../compoForUser/floats/Stepper";
+import Card1 from "../../components/floats/Card1";
+import AudioWave from "../../components/floats/AudioWave";
+import { RandomizedTextEffect } from "../../components/floats/randomText";
+import { Sparkles } from "../../components/floats/sparkles";
+import FileUpload from "../../components/floats/SmallFileUpload";
+import UserAvatar from "../../components/floats/FloatAvatar";
+import ActionButton from "../../components/floats/NeonButton";
+import ImageHoverButton from "../../components/floats/ImageHover";
 
 const Hero = () => {
   // Responsive positions for floating component previews
@@ -25,28 +26,25 @@ const Hero = () => {
     },
     {
       left: "10%",
-      top: "60%",
+      top: "70%",
       comp: (
-        <a
-          href="https://google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <ImageHoverButton
+            imageUrl="https://images.unsplash.com/photo-1702313040371-6cde8b0f1972?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            label="Project Showcase"
+          />
+        </a>
       ),
-      rotate: 3,
+      rotate: 6,
       delay: 0.5,
     },
     {
       right: "15%",
-      top: "60%",
-      width: "300px",
-      height: "300px",
+      top: "70%",
       comp: (
-        <a
-          href="https://google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <ActionButton text="Hover" />
+        </a>
       ),
       rotate: 2,
       delay: 0.8,
@@ -63,16 +61,16 @@ const Hero = () => {
       delay: 1.2,
     },
     {
-      left: "20%",
+      left: "15%",
       top: "40%",
       rotate: 6,
       delay: 1.6,
       comp: (
-        <a
-          href="https://google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <UserAvatar
+            style={{ filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))" }}
+          />
+        </a>
       ),
     },
     {
@@ -190,7 +188,7 @@ const Hero = () => {
               </span>{" "}
               with
               <span className="block mt-2 font-bold">
-                Beautiful, Production-Ready
+                Chocolaty, Production-Ready
               </span>
               <span className="relative inline-block">
                 <span className="relative z-10 [text-shadow:_0_1px_2px_rgba(255,234,197,0.2)]">
@@ -223,7 +221,7 @@ const Hero = () => {
                 ></motion.span>
               </span>
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl mt-6 md:mt-10 mx-auto font-['Inter'] leading-relaxed">
+            <p className="text-sm sm:text-base md:text-sm text-gray-700 max-w-2xl mt-6 md:mt-10 mx-auto font-['Inter'] leading-relaxed">
               A{" "}
               <span className="font-semibold text-[#6C4E31]">
                 curated collection

@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 function CTA() {
   return (
-    <section className="relative py-16 overflow-hidden bg-gradient-to-br from-[#2A1B10] to-[#3C2613] md:py-20 lg:py-28">
+    <section className="relative py-16 overflow-hidden bg-gradient-to-br from-[#2A1B10] to-[#3C2613] md:py-20 lg:py-28 rounded-full">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#FFDBB5]/5 blur-3xl -translate-x-20 -translate-y-20"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#6C4E31]/10 blur-3xl translate-x-20 translate-y-20"></div>
@@ -29,7 +29,7 @@ function CTA() {
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="absolute bottom-0 left-0 w-full h-2 bg-[#FFDBB5]/30 -z-10 transform -rotate-1"
+                className="absolute bottom-0 left-0 w-full h-1 bg-[#FFDBB5] z-20 transform -rotate-1"
               ></motion.span>
             </span>?
           </h2>
