@@ -68,8 +68,10 @@ export default function PreviewComponent({
                 isFullWidth ? "" : "flex justify-center"
               }`}
             >
-              <div className="w-full">{children}</div>
-            </div>
+              <div className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full`}>
+              <div className={`${isFullWidth ? "w-full" : "w-full flex justify-center"}`}>{children}</div>
+              </div>
+                </div>
           </div>
         ) : (
           <div className="w-full rounded-md border bg-gray-900 overflow-hidden">
