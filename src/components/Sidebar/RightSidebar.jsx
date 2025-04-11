@@ -2,7 +2,7 @@ import React from "react";
 
 const RightSidebar = () => {
   return (
-    <aside className="w-64 bg-gray-50 p-4 h-screen overflow-y-auto border-l border-gray-200 hidden lg:block">
+    <aside className="w-45 bg-gray-50 p-4 h-screen overflow-y-auto border-l border-gray-200 hidden lg:block">
       <div className="space-y-8">
         <div>
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
