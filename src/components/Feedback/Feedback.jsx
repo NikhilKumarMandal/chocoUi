@@ -1,25 +1,42 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { feedback } from "../../http/api"; 
+
+const feedbackSchema = z.object({
+  email: z.string().email("Please enter a valid email address."),
+  name: z.string().max(50, "Name should be less than 50 characters"),
+  message: z.string().max(550, "Message should be less than 550 characters"),
+});
 
 const FeedbackPage = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    rating: 5,
-    message: "",
+  const [rating, setRating] = useState(5);
+
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(feedbackSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
 
-  const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleRating = (value) => {
-    setFormData((prev) => ({ ...prev, rating: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("🌟 Thanks for your feedback!");
-    setFormData({ name: "", email: "", rating: 5, message: "" });
+  const onSubmit = async (data) => {
+    try {
+      await feedback({ ...data, rating });
+      alert("🌟 Thanks for your feedback!");
+      reset();
+      setRating(5);
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again!");
+    }
   };
 
   const emojis = ["😡", "😕", "😐", "😊", "😍"];
@@ -30,32 +47,31 @@ const FeedbackPage = () => {
         <h1 className="text-4xl font-extrabold text-center text-indigo-700 mb-2">We Value Your Feedback</h1>
         <p className="text-center text-gray-600 mb-8">Help us improve our UI library by sharing your experience</p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
             <input
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
+              {...register("name")}
               className="w-full px-5 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-300 focus:outline-none bg-white"
               placeholder="Your name"
             />
+            {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
           </div>
 
+          {/* Email */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
             <input
-              name="email"
               type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
+              {...register("email")}
               className="w-full px-5 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-300 focus:outline-none bg-white"
               placeholder="you@example.com"
             />
+            {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>}
           </div>
 
+          {/* Rating */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">How do you feel about our UI?</label>
             <div className="flex justify-between max-w-sm mx-auto text-3xl">
@@ -63,9 +79,9 @@ const FeedbackPage = () => {
                 <button
                   type="button"
                   key={index}
-                  onClick={() => handleRating(index + 1)}
+                  onClick={() => setRating(index + 1)}
                   className={`transition transform hover:scale-110 ${
-                    formData.rating === index + 1 ? "opacity-100" : "opacity-50"
+                    rating === index + 1 ? "opacity-100" : "opacity-50"
                   }`}
                 >
                   {emoji}
@@ -74,17 +90,16 @@ const FeedbackPage = () => {
             </div>
           </div>
 
+          {/* Message */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
             <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
+              {...register("message")}
               rows={4}
               className="w-full px-5 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-300 focus:outline-none bg-white"
               placeholder="Tell us what you liked or what can be improved..."
             />
+            {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>}
           </div>
 
           <button
@@ -100,5 +115,6 @@ const FeedbackPage = () => {
 };
 
 export default FeedbackPage;
+
 
 
