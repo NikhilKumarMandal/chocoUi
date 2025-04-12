@@ -64,7 +64,7 @@ export default function PreviewComponent({
         {activeTab === "preview" ? (
           <div className="rounded-md border bg-gray-50 overflow-hidden">
             <div
-              className={`max-h-[550px] overflow-y-auto p-4 ${
+              className={`max-h-[600px] overflow-y-auto p-4 ${
                 isFullWidth ? "" : "flex justify-center"
               }`}
             >

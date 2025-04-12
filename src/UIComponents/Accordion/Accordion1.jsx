@@ -3,8 +3,7 @@ import { useState } from 'react';
 
 function Accordion1() {
   return (
-    <>
-        <div className="-mx-4 flex  justify-center min-h-screen items-center">
+
     
                 <div className="w-100 px-4 m-5 md:w-3xl sm:w-2xl">
                     <AccordionItem
@@ -13,8 +12,7 @@ function Accordion1() {
                     monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
                     />
                 </div>
-                </div>
-        </>
+
     )
     }
 
