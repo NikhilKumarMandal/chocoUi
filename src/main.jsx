@@ -33,6 +33,7 @@ import CTAPage from "./pages/CTAPage.jsx";
 import DropdownPage from "./pages/DropdownPage.jsx";
 import App from "./App.jsx";
 import Docs from "./components/Docs/Docs.jsx";
+import FeedbackPage from "./components/Feedback/Feedback.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -65,6 +66,7 @@ const router = createBrowserRouter(
         <Route path="toggle" element={<TogglePage />} />
       </Route>
       <Route path="/docs" element={<DocsPage />} />
+      <Route path="/feedback" element={<FeedbackPage />} />
     </>
   )
 );
