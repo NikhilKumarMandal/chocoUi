@@ -1,5 +1,10 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { contact } from '../../http/api';
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 const PreviewCard = ({ index, isHovered, onHover }) => {
   const zIndex = 3 - index;
@@ -54,39 +59,42 @@ const PreviewCard = ({ index, isHovered, onHover }) => {
   );
 };
 
+
+const contactSchema = z.object({
+  email: z.string().email("Please enter a valid email address."),
+});
+
 const Hero2 = () => {
   const [isHovered, setIsHovered] = React.useState(false);
-  const [email, setEmail] = React.useState('');
   const [animateSuccess, setAnimateSuccess] = React.useState(false);
   const [showSuccess, setShowSuccess] = React.useState(false);
   const [isValidEmail, setIsValidEmail] = React.useState(true);
 
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
+    const {
+      handleSubmit,
+      register,
+      reset,
+      formState: { errors },
+    } = useForm({
+      resolver: zodResolver(contactSchema),
+      defaultValues: {
+        name: "",
+        email: "",
+        message: "",
+      },
+    });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (!validateEmail(email)) {
-      setIsValidEmail(false);
-      return;
+  const onSubmit = async (data) => {
+    try {
+      await contact(data);
+      toast("🌟 We will reach out to you!");
+      reset();
+    } catch (error) {
+      toast(error);
     }
-
-    setIsValidEmail(true);
-    console.log('Submitted email:', email);
-    
-    setAnimateSuccess(true);
-    setShowSuccess(true);
-    
-    setTimeout(() => {
-      setAnimateSuccess(false);
-      setShowSuccess(false);
-    }, 2000);
-    
-    setEmail('');
   };
+
+
 
   return (
     <section className="relative bg-gradient-to-br from-[#2A1B10] to-[#3C2613] rounded-4xl overflow-hidden py-10 md:py-16">
@@ -122,15 +130,10 @@ const Hero2 = () => {
                   Contact us for customized components
                 </h3>
                 
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md" noValidate>
+                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col sm:flex-row gap-4 max-w-md" noValidate>
                   <div className="relative flex-1">
                     <motion.input
-                      type="email"
-                      value={email}
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                        if (!isValidEmail) setIsValidEmail(true);
-                      }}
+                      {...register("email")}
                       placeholder="Enter your email"
                       className={`w-full px-4 py-3 bg-[#3C2613]/50 backdrop-blur-sm border-2 rounded-xl text-[#FFDBB5] placeholder-[#FFDBB5]/60 focus:outline-none transition-all duration-300 ${
                         isValidEmail 
