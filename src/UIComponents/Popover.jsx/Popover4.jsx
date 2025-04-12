@@ -71,7 +71,7 @@ const Popover4 = () => {
                 This approach not only creates a clean and modern aesthetic but also 
                 improves usability by reducing cognitive load and helping users focus 
                 on what's important. The careful use of space, typography, and contrast 
-                guides the user's attention effectively.
+                guides the user's attention.
               </p>
 
               <div className="pt-2 flex justify-end border-t border-neutral-700">

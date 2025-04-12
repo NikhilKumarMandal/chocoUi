@@ -54,4 +54,4 @@ const Popover2 = () => {
   );
 };
 
-export default Popover2;
+export default Popover2

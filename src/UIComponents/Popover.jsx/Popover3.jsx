@@ -76,7 +76,7 @@ const Popover3 = () => {
               </div>
 
               <p className="text-gray-600 text-sm leading-relaxed">
-                Here's some helpful information that provides context to the user.
+                Here's some helpful information that provides context  the user.
                 Keep it brief and meaningful.
               </p>
 

@@ -5,7 +5,6 @@ const Popover1 = () => {
   const popoverRef = useRef(null);
   const buttonRef = useRef(null);
 
-  // Close popover when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -24,7 +23,7 @@ const Popover1 = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="relative">
-        {/* Trigger Button */}
+       
         <button
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
