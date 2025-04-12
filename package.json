@@ -13,12 +13,14 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^5.0.1",
     "@number-flow/react": "^0.5.9",
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.1",
     "@tailwindcss/vite": "^4.0.17",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
+    "axios": "^1.8.4",
     "framer-motion": "^12.6.5",
     "gsap": "^3.12.7",
     "locomotive-scroll": "^4.1.4",
@@ -27,7 +29,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.1",
-    "tailwindcss": "^4.0.17"
+    "tailwindcss": "^4.0.17",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
