@@ -8,6 +8,7 @@ export default function PreviewComponent({
   children,
   isFullWidth = false,
   previewBg = "white",
+  fixPreviewHeight = false,
 }) {
   const [activeTab, setActiveTab] = useState("preview");
   const [copied, setCopied] = useState(false);
@@ -66,7 +67,7 @@ export default function PreviewComponent({
             <div
               className={`max-h-[600px] overflow-y-auto p-4 ${
                 isFullWidth ? "" : "flex justify-center"
-              }`}
+              } ${fixPreviewHeight ? "min-h-[300px] overflow-y-auto flex justify-center" : ""}`}
             >
               <div className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full`}>
               <div className={`${isFullWidth ? "w-full" : "w-full flex justify-center"}`}>{children}</div>
@@ -138,7 +139,5 @@ export default function PreviewComponent({
     </div>
   );
 }
-
-
 
 

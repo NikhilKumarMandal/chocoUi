@@ -36,7 +36,7 @@ function ComboboxPage() {
                           key={index}
                           title={variant.title}
                           codeSnippets={variant.codeSnippets}
-                          isFullWidth={true}
+                          fixPreviewHeight={true}
                         >
                           {variant.component}
                         </PreviewComponent>

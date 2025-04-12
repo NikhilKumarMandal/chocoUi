@@ -59,6 +59,7 @@ function DropdownPage() {
                            key={index}
                            title={variant.title}
                            codeSnippets={variant.codeSnippets}
+                           fixPreviewHeight={true}
                          >
                            {variant.component}
                          </PreviewComponent>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const options = ["Ocean Blue", "Sky Blue", "Navy Blue", "Light Blue", "Deep Blue", "Baby Blue"];
+const options = ["Ocean Blue", "Sky Blue", "Navy Blue", "Light Blue"];
 
 export default function ComboBox1() {
   const [query, setQuery] = useState("");
