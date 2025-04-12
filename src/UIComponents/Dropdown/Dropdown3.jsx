@@ -21,9 +21,9 @@ const Dropdown3 = () => {
   };
 
   return (
-    <div className='flex justify-center items-center min-h-screen'>
+    
     <div className="relative w-64">
-      {/* Dropdown button */}
+     
       <button
         onClick={toggleDropdown}
         className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg 
@@ -48,7 +48,7 @@ const Dropdown3 = () => {
         </svg>
       </button>
 
-      {/* Dropdown menu */}
+    
       {isOpen && (
         <div className="absolute w-full mt-2 bg-white border border-gray-200 
                       rounded-lg shadow-lg">
@@ -65,7 +65,7 @@ const Dropdown3 = () => {
         </div>
       )}
     </div>
-    </div>
+
   );
 };
 

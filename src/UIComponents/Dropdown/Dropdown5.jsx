@@ -22,7 +22,7 @@ const Dropdown5 = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen" >
+   
     <div className="relative  inline-block text-left  ">
       <div>
         <button
@@ -59,7 +59,7 @@ const Dropdown5 = () => {
         </div>
       )}
     </div>
-    </div>
+    
   );
 };
 
