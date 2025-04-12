@@ -16,8 +16,8 @@ const LeftSidebar = () => {
       setWindowHeight(window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -42,6 +42,14 @@ const LeftSidebar = () => {
     { name: "Skeleton", path: "/dashboard/skeleton" },
     { name: "Table", path: "/dashboard/table" },
     { name: "Toggle", path: "/dashboard/toggle" },
+    { name: "Accordion", path: "/dashboard/accordion" },
+    { name: "Animation", path: "/dashboard/animation" },
+    { name: "Badge", path: "/dashboard/badge" },
+    { name: "Banner", path: "/dashboard/banner" },
+    { name: "Checkbox", path: "/dashboard/checkbox" },
+    { name: "Combobox", path: "/dashboard/combobox" },
+    { name: "CTA", path: "/dashboard/cta" },
+    { name: "Dropdown", path: "/dashboard/dropdown" },
   ];
 
   const filteredlinks = links.filter((component) =>
@@ -49,7 +57,6 @@ const LeftSidebar = () => {
   );
 
   // Use useCallback to memoize the scroll handler to prevent unnecessary re-renders
-  
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -67,11 +74,11 @@ const LeftSidebar = () => {
     <motion.button
       onClick={() => setIsOpen(!isOpen)}
       className="fixed left-0 top-1/3 z-50 flex items-center justify-center bg-gradient-to-r from-[#2A1B10] to-[#3C2613] text-[#FFDBB5] shadow-lg rounded-r-lg border border-[#FFDBB5]/20 md:hidden"
-      style={{ 
-        width: '40px', 
-        height: '80px',
-        borderTopLeftRadius: '0',
-        borderBottomLeftRadius: '0'
+      style={{
+        width: "40px",
+        height: "80px",
+        borderTopLeftRadius: "0",
+        borderBottomLeftRadius: "0",
       }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
@@ -87,7 +94,7 @@ const LeftSidebar = () => {
   // Sidebar content component to avoid duplication
   const SidebarContent = () => (
     <div className="space-y-6 relative z-10 h-full flex flex-col px-2">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -123,7 +130,7 @@ const LeftSidebar = () => {
             { id: "terminology", name: "Terminology" },
             { id: "faq", name: "FAQ" },
           ].map((item) => (
-            <motion.li 
+            <motion.li
               key={item.id}
               whileHover={{ x: 4 }}
               transition={{ duration: 0.2 }}
@@ -171,10 +178,13 @@ const LeftSidebar = () => {
           </div>
         </div>
 
-        <div className="overflow-y-auto overflow-x-hidden" style={{ maxHeight: 'calc(100vh - 250px)' }}>
+        <div
+          className="overflow-y-auto overflow-x-hidden"
+          style={{ maxHeight: "calc(100vh - 250px)" }}
+        >
           <ul className="space-y-1 font-['Inter']">
             {filteredlinks.map((link) => (
-              <motion.li 
+              <motion.li
                 key={link.name}
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.2 }}
@@ -190,9 +200,11 @@ const LeftSidebar = () => {
                 >
                   <div className="flex items-center justify-between">
                     <span className="truncate">{link.name}</span>
-                    <ChevronRight className={`w-4 h-4 transition-transform duration-300 flex-shrink-0 ${
-                      location.pathname === link.path ? "rotate-90" : ""
-                    }`} />
+                    <ChevronRight
+                      className={`w-4 h-4 transition-transform duration-300 flex-shrink-0 ${
+                        location.pathname === link.path ? "rotate-90" : ""
+                      }`}
+                    />
                   </div>
                 </Link>
               </motion.li>
@@ -214,14 +226,14 @@ const LeftSidebar = () => {
       <MobileToggleButton />
 
       {/* Desktop sidebar */}
-      <aside 
+      <aside
         className="w-60 bg-gradient-to-br from-[#2A1B10] to-[#3C2613] p-6 border-r border-[#FFDBB5]/10 shadow-lg hidden md:block relative"
-        style={{ height: `${windowHeight}px`, position: 'sticky', top: 0 }}
+        style={{ height: `${windowHeight}px`, position: "sticky", top: 0 }}
       >
         {/* Decorative elements - moved inward to prevent overflow */}
         <div className="absolute top-0 left-0 w-48 h-48 rounded-full bg-[#FFDBB5]/5 blur-3xl -translate-x-10 -translate-y-10"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-[#6C4E31]/10 blur-3xl translate-x-10 translate-y-10"></div>
-        
+
         {/* Decorative line elements - adjusted to prevent overflow */}
         <div className="absolute left-0 top-1/4 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/20 to-transparent"></div>
         <div className="absolute right-0 bottom-1/3 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/15 to-transparent"></div>
@@ -259,7 +271,7 @@ const LeftSidebar = () => {
               {/* Decorative elements */}
               <div className="absolute top-0 left-0 w-48 h-48 rounded-full bg-[#FFDBB5]/5 blur-3xl -translate-x-10 -translate-y-10"></div>
               <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-[#6C4E31]/10 blur-3xl translate-x-10 translate-y-10"></div>
-              
+
               {/* Decorative line elements */}
               <div className="absolute left-0 top-1/4 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/20 to-transparent"></div>
               <div className="absolute right-0 bottom-1/3 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/15 to-transparent"></div>
