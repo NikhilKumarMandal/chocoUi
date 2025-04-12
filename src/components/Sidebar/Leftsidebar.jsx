@@ -19,6 +19,14 @@ const LeftSidebar = () => {
     { name: "Skeleton", path: "/dashboard/skeleton" },
     { name: "Table", path: "/dashboard/table" },
     { name: "Toggle", path: "/dashboard/toggle" },
+    { name: "Accordion", path: "/dashboard/accordion" },
+    { name: "Animation", path: "/dashboard/animation" },
+    { name: "Badge", path: "/dashboard/badge" },
+    { name: "Banner", path: "/dashboard/banner" },
+    { name: "Checkbox", path: "/dashboard/checkbox" },
+    { name: "Combobox", path: "/dashboard/combobox" },
+    { name: "CTA", path: "/dashboard/cta" },
+    { name: "Dropdown", path: "/dashboard/dropdown" },
   ];
 
   const filteredLinks = links.filter((link) =>
