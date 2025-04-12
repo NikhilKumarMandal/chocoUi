@@ -3,7 +3,7 @@ import React from "react";
 function Footer10() {
   return (
     <>
-      <footer className="bg-white text-black w-full py-6 border-t border-gray-100">
+      <footer className="w-screen bg-white text-black py-6 border-t border-gray-100">
         <div className="w-full px-0">
           <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
