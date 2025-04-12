@@ -26,7 +26,7 @@ const Dropdown2 = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+   
       <div className="relative w-72">
         {/* Dropdown button */}
         <button
@@ -99,7 +99,7 @@ const Dropdown2 = () => {
           </div>
         )}
       </div>
-    </div>
+    
   );
 };
 

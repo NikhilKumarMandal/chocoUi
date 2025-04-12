@@ -68,9 +68,9 @@ const Dropdown4 = () => {
   );
 
   return (
-    <div className='flex justify-center items-center min-h-screen'>
+    
     <div className="relative w-72">
-      {/* Main dropdown button */}
+ 
       <button
         onClick={toggleDropdown}
         className="w-full px-4 py-3 bg-blue-900 text-white rounded-lg 
@@ -81,13 +81,13 @@ const Dropdown4 = () => {
         <ChevronIcon isOpen={isOpen} />
       </button>
 
-      {/* Dropdown menu */}
+     
       {isOpen && (
         <div className="absolute w-full mt-2 bg-white border border-gray-200 
                       rounded-lg shadow-xl z-50">
           {menuItems.map((item) => (
             <div key={item.id} className="border-b border-gray-100 last:border-none">
-              {/* Main menu item */}
+           
               <div
                 onClick={() => toggleSubMenu(item.id)}
                 className="flex items-center justify-between px-4 py-3 
@@ -97,7 +97,7 @@ const Dropdown4 = () => {
                 <ChevronIcon isOpen={openSubMenus.includes(item.id)} />
               </div>
 
-              {/* Submenu items */}
+        
               {openSubMenus.includes(item.id) && (
                 <div className="bg-blue-50/50 border-t border-blue-100">
                   {item.submenu.map((subItem) => (
@@ -116,7 +116,7 @@ const Dropdown4 = () => {
         </div>
       )}
     </div>
-    </div>
+  
   );
 };
 
