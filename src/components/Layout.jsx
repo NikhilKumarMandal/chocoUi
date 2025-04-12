@@ -1,5 +1,5 @@
 import React from "react";
-import LeftSidebar from "./Sidebar/LeftSidebar";
+import LeftSidebar from "./Sidebar/Leftsidebar";
 import RightSidebar from "./Sidebar/RightSidebar";
 
 const Layout = ({ children }) => {
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <LeftSidebar />
       </div>
 
-      <main className="flex-1 mx-auto px-4 md:px-8 lg:px-16 w-full max-w-5xl ml-72 mr-64">
+      <main className="flex-1 mx-auto px-4 md:px-8 lg:px-16 w-full max-w-5xl ml-72 mr-64 mt-28">
         {children}
       </main>
 

@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage.jsx";
-import NavbarComForUser from "./pages/NavbarPage.jsx";
+import NavbarPage from "./pages/NavbarPage.jsx"
 import { DocsPage } from "./pages/DocsPage.jsx";
 import BentoPage from "./pages/BentoPage.jsx";
 import FooterPage from "./pages/FooterPage.jsx";
@@ -23,7 +23,17 @@ import PricingSection from "./pages/PricingPage.jsx";
 import SkeletonPage from "./pages/SkeletonPage.jsx";
 import TablePage from "./pages/TablePage.jsx";
 import TogglePage from "./pages/TogglePage.jsx";
+import AccordionPage from "./pages/AccordionPage.jsx"
+import AnimationPage from "./pages/AnimationPage.jsx"
+import BadgePage from "./pages/BadgePage.jsx"
+import BannerPage from "./pages/BannerPage.jsx"
+import CheckboxPage from "./pages/CheckboxPage.jsx"
+import ComboboxPage from "./pages/ComboboxPage.jsx"
+import CTAPage from "./pages/CTAPage.jsx";
+import DropdownPage from "./pages/DropdownPage.jsx";
 import App from "./App.jsx";
+import Docs from "./components/Docs/Docs.jsx";
+import FeedbackPage from "./components/Feedback/Feedback.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +41,8 @@ const router = createBrowserRouter(
       <Route path="/" element={<LandingPage />} />
 
       <Route path="/dashboard" element={<App />}>
-        <Route path="navbar" element={<NavbarComForUser />} />
+        <Route path="docs" element={<Docs />} />
+        <Route path="navbar" element={<NavbarPage />} />
         <Route path="bento" element={<BentoPage />} />
         <Route path="footer" element={<FooterPage />} />
         <Route path="card" element={<CardPage />} />
@@ -40,12 +51,22 @@ const router = createBrowserRouter(
         <Route path="calendar" element={<CalendarPage />} />
         <Route path="form" element={<FormPage />} />
         <Route path="hero" element={<HeroPage />} />
-        <Route path="pricing" element={<PricingSection />} />
+        <Route path="accordion" element={<AccordionPage />} />
+        <Route path="animation" element={<AnimationPage />} />
+        <Route path="badge" element={<BadgePage />} />
+        <Route path="banner" element={<BannerPage />} />
+        <Route path="checkbox" element={<CheckboxPage />} />
+        <Route path="combobox" element={<ComboboxPage />} />
+        <Route path="cta" element={<CTAPage />} />
+        <Route path="dropdown" element={<DropdownPage />} />
+        <Route path="pricing" element={<PricingSection />}
+        />
         <Route path="skeleton" element={<SkeletonPage />} />
         <Route path="table" element={<TablePage />} />
         <Route path="toggle" element={<TogglePage />} />
       </Route>
       <Route path="/docs" element={<DocsPage />} />
+      <Route path="/feedback" element={<FeedbackPage />} />
     </>
   )
 );

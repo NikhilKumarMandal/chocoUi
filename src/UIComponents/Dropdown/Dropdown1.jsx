@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 
 export default function Dropdown1() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Start closed
   const dropdownRef = useRef(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -17,12 +16,12 @@ export default function Dropdown1() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
     <div className="relative inline-block" ref={dropdownRef}>
-      {/* Dropdown toggle button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen((prev) => !prev)}
         className="relative z-10 block p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+        aria-haspopup="true"
+        aria-expanded={isOpen}
       >
         <svg
           className="w-5 h-5 text-gray-800 dark:text-white"
@@ -38,11 +37,8 @@ export default function Dropdown1() {
         </svg>
       </button>
 
-      {/* Dropdown menu */}
       {isOpen && (
-        <div
-          className="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 transition ease-out duration-100 transform scale-100 opacity-100"
-        >
+        <div className="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 transition ease-out duration-100 transform scale-100 opacity-100">
           {[
             "Your Profile",
             "Your Projects",
@@ -60,7 +56,6 @@ export default function Dropdown1() {
           ))}
         </div>
       )}
-    </div>
     </div>
   );
 }
