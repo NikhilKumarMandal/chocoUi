@@ -16,7 +16,7 @@ function Navbar() {
     { name: "Home", path: "/" },
     { name: "Components", path: "/dashboard/navbar" },
     { name: "Docs", path: "/docs" },
-    { name: "Templates", path: "/templates" },
+    { name: "Feedback", path: "/feedback" },
   ];
 
   // const mobileMenuItems = [
