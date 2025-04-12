@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-
+import { Toaster } from 'sonner';
 import LandingPage from "./pages/LandingPage.jsx";
 import NavbarPage from "./pages/NavbarPage.jsx"
 import { DocsPage } from "./pages/DocsPage.jsx";
@@ -73,6 +73,7 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Toaster />
     <RouterProvider router={router} />
   </StrictMode>
 );
