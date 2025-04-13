@@ -58,7 +58,7 @@ function Navbar() {
                 </NavLink>
               ))}
               <button className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300 shadow-sm hover:shadow-md">
-                Get Started
+                Github
               </button>
             </div>
 
@@ -128,7 +128,7 @@ function Navbar() {
           </nav>
 
           <button className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300">
-            Get Started
+            Github
           </button>
         </div>
       </div>
