@@ -8,8 +8,8 @@ const PromotionBanner = () => {
         <div>
           <h3 className="text-xl font-bold text-white">Summer Sale! 🔥</h3>
           <p className="mt-1 text-sm text-white/80">
-            Get 40% off all premium plans until July 31st. Use code SUMMER40
-            at checkout.
+            Get 40% off all premium plans until July 31st. Use code SUMMER40 at
+            checkout.
           </p>
         </div>
         <div className="flex flex-shrink-0 space-x-3">
@@ -22,4 +22,4 @@ const PromotionBanner = () => {
   );
 };
 
-export default PromotionBanner; 
+export default PromotionBanner;

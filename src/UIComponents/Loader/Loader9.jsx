@@ -4,7 +4,7 @@ const Loader_09 = ({ orbCount = 5, orbColor = "bg-cyan-400", size = 60 }) => {
   return (
     <div
       className="flex items-center justify-center"
-      style={{ width: size, height: size }}
+      style={{ width: size + "px", height: size + "px" }}
     >
       <div
         className="relative w-full h-full"
@@ -20,15 +20,19 @@ const Loader_09 = ({ orbCount = 5, orbColor = "bg-cyan-400", size = 60 }) => {
               key={i}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{
-                transform: `rotate(${angle}deg) translateX(${orbitRadius}px)`,
+                transform:
+                  "rotate(" + angle + "deg) translateX(" + orbitRadius + "px)",
               }}
             >
               <div
-                className={`${orbColor} rounded-full shadow-lg shadow-cyan-500/50`}
+                className={
+                  orbColor + " rounded-full shadow-lg shadow-cyan-500/50"
+                }
                 style={{
-                  width: orbSize,
-                  height: orbSize,
-                  animation: `pulse 2s infinite ease-in-out ${i * 0.2}s alternate`,
+                  width: orbSize + "px",
+                  height: orbSize + "px",
+                  animation:
+                    "pulse 2s infinite ease-in-out " + i * 0.2 + "s alternate",
                 }}
               />
             </div>

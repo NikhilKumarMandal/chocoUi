@@ -27,7 +27,7 @@ const Loader_13 = ({ size = "md", color = "blue" }) => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className={`${sizeClasses[size]} ${colorClasses[color]}`}>
+      <div className={sizeClasses[size] + " " + colorClasses[color]}>
         <svg
           className="animate-spin"
           xmlns="http://www.w3.org/2000/svg"

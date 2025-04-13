@@ -84,7 +84,6 @@ const Checkbox = () => (
       </span>
     </label>
 
-    {/* With Description */}
     <label className="flex items-start gap-3 group cursor-pointer">
       <div className="relative mt-1">
         <input
