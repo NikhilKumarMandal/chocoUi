@@ -19,7 +19,6 @@ function LandingPage() {
         </div>
         <Feature />
         <CTA />
-        <Team />
       </main>
       <Footer />
     </div>
