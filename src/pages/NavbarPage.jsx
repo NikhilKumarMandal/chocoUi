@@ -27,13 +27,13 @@ export default function NavbarComForUser() {
         },
       ],
     },
+    {
+      title: "NavBar 2",
+      component: <Navbar2 />,
+      codeSnippets: [
         {
-          title: "NavBar 2",
-          component: <Navbar2 />,
-          codeSnippets: [
-            {
-              language: "html",
-              code: `<header class="p-4 bg-gray-100 text-gray-800">
+          language: "html",
+          code: `<header class="p-4 dark:bg-gray-100 dark:text-gray-800">
     	<div class="container flex justify-between h-16 mx-auto">
     		<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
     			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-8 h-8 dark:text-violet-600">
@@ -66,10 +66,10 @@ export default function NavbarComForUser() {
     		</button>
     	</div>
     </header>`,
-            },
-            {
-              language: "jsx",
-              code: `    <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
+        },
+        {
+          language: "jsx",
+          code: `    <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
     	<div className="container flex justify-between h-16 mx-auto">
     		<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
     			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-8 h-8 dark:text-violet-600">
@@ -98,9 +98,9 @@ export default function NavbarComForUser() {
     		</button>
     	</div>
     </header>`,
-            },
-          ],
         },
+      ],
+    },
     {
       title: "NavBar 1",
       component: <Navbar4 />,
@@ -143,27 +143,26 @@ export default function NavbarComForUser() {
         },
       ],
     },
-
   ];
 
   return (
-     <div className="max-w-4xl mx-auto p-6">
-          <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-          <p className="text-gray-600 mt-2">
-            Explore different UI components you can use in your project.
-          </p>
-          <div className="mt-6 space-y-6">
-            {navbarVariants.map((variant, index) => (
-              <PreviewComponent
-                key={index}
-                title={variant.title}
-                codeSnippets={variant.codeSnippets}
-                isFullWidth={true}
-              >
-                {variant.component}
-              </PreviewComponent>
-            ))}
-          </div>
-        </div>
+    <div className="max-w-4xl mx-auto p-6">
+      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <p className="text-gray-600 mt-2">
+        Explore different UI components you can use in your project.
+      </p>
+      <div className="mt-6 space-y-6">
+        {navbarVariants.map((variant, index) => (
+          <PreviewComponent
+            key={index}
+            title={variant.title}
+            codeSnippets={variant.codeSnippets}
+            isFullWidth={true}
+          >
+            {variant.component}
+          </PreviewComponent>
+        ))}
+      </div>
+    </div>
   );
 }
