@@ -10,6 +10,7 @@ const FileUpload1 = () => {
     const [uploadProgress, setUploadProgress] = useState({});
     const [errors, setErrors] = useState({});
     const [isUploading, setIsUploading] = useState(false);
+    const [previews, setPreviews] = useState({});
     const fileInputRef = useRef(null);
     const intervalRefs = useRef({});
     const errorTimeoutRefs = useRef({});
@@ -31,6 +32,17 @@ const FileUpload1 = () => {
         const sizes = ['Bytes', 'KB', 'MB', 'GB'];
         const i = Math.floor(Math.log(bytes) / Math.log(k));
         return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    };
+
+    const createPreview = (file) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setPreviews(prev => ({
+                ...prev,
+                [file.name]: reader.result
+            }));
+        };
+        reader.readAsDataURL(file);
     };
 
     const updateSpecificProgress = useCallback((fileName, progress) => {
@@ -81,7 +93,7 @@ const FileUpload1 = () => {
             delete newProgress[fileName];
             const remainingFiles = files.filter(f => f.name !== fileName);
             if (remainingFiles.length === 0 || remainingFiles.every(f => newProgress[f.name] === 100)) {
-                 setIsUploading(false);
+                setIsUploading(false);
             }
             return newProgress;
         });
@@ -89,6 +101,11 @@ const FileUpload1 = () => {
             const newErrors = { ...prev };
             delete newErrors[fileName];
             return newErrors;
+        });
+        setPreviews(prev => {
+            const newPreviews = { ...prev };
+            delete newPreviews[fileName];
+            return newPreviews;
         });
     }, [files]);
 
@@ -128,9 +145,10 @@ const FileUpload1 = () => {
             const fileErrors = validateFile(file);
             if (fileErrors.length === 0) {
                 validFilesToAdd.push(file);
-                 if(errors[file.name]) {
-                     clearError(file.name);
-                 }
+                createPreview(file);
+                if(errors[file.name]) {
+                    clearError(file.name);
+                }
             } else {
                 addError(file.name, fileErrors);
             }
@@ -183,12 +201,12 @@ const FileUpload1 = () => {
                                     <li key={index}>{error}</li>
                                 ))}
                             </ul>
-                             <button
-                                 onClick={() => clearError(fileName)}
-                                 className="mt-1 text-xs text-red-600 hover:text-red-800"
-                             >
-                                 Dismiss
-                             </button>
+                            <button
+                                onClick={() => clearError(fileName)}
+                                className="mt-1 text-xs text-red-600 hover:text-red-800"
+                            >
+                                Dismiss
+                            </button>
                         </div>
                     ))}
                 </div>
@@ -223,7 +241,7 @@ const FileUpload1 = () => {
                     </svg>
                     <div className="text-sm text-gray-600">
                         <span className="font-medium text-blue-600">
-                           Click to upload
+                            Click to upload
                         </span>
                         <span> or drag and drop</span>
                     </div>
@@ -240,14 +258,23 @@ const FileUpload1 = () => {
                         {files.map((file) => {
                             const progress = uploadProgress[file.name] || 0;
                             const isFileUploading = progress < 100;
+                            const preview = previews[file.name];
 
                             return (
                                 <li key={file.name} className="px-4 py-3">
                                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                         <div className="flex items-center flex-grow min-w-0 mr-4">
-                                            <svg className="h-6 w-6 text-gray-400 flex-shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                            </svg>
+                                            {preview ? (
+                                                <img 
+                                                    src={preview} 
+                                                    alt={file.name} 
+                                                    className="h-12 w-12 object-cover rounded-md mr-3"
+                                                />
+                                            ) : (
+                                                <svg className="h-6 w-6 text-gray-400 flex-shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                                </svg>
+                                            )}
                                             <div className="min-w-0">
                                                 <p className="text-sm font-medium text-gray-900 truncate" title={file.name}>{file.name}</p>
                                                 <p className="text-sm text-gray-500">{formatFileSize(file.size)}</p>
@@ -265,12 +292,12 @@ const FileUpload1 = () => {
                                                             />
                                                         </div>
                                                         <p className="text-xs text-gray-500 text-right">{Math.round(progress)}%</p>
-                                                     </>
+                                                    </>
                                                 ) : (
-                                                     <div className="flex items-center text-green-600">
-                                                         <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                                                    <div className="flex items-center text-green-600">
+                                                        <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                                                         <p className="text-xs font-medium">Complete</p>
-                                                     </div>
+                                                    </div>
                                                 )}
                                             </div>
                                             <button
