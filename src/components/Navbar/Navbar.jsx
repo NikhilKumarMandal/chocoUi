@@ -19,26 +19,6 @@ function Navbar() {
     { name: "Feedback", path: "/feedback" },
   ];
 
-  // const mobileMenuItems = [
-  //   { name: "Home", path: "/" },
-  //   { name: "Components", path: "/dashboard/navbar" },
-  //   { name: "Docs", path: "/docs" },
-  //   { name: "Templates", path: "/templates" },
-  //   { name: "Navbar", path: "/dashboard/navbar" },
-  //   { name: "Footer", path: "/dashboard/footer" },
-  //   { name: "Cards", path: "/dashboard/card" },
-  //   { name: "Bento", path: "/dashboard/bento" },
-  //   { name: "Hero", path: "/dashboard/hero" },
-  //   { name: "Avatar", path: "/dashboard/avatar" },
-  //   { name: "Breadcrumb", path: "/dashboard/breadcrumb" },
-  //   { name: "Calendar", path: "/dashboard/calendar" },
-  //   { name: "Form", path: "/dashboard/form" },
-  //   { name: "Pricing", path: "/dashboard/pricing" },
-  //   { name: "Skeleton", path: "/dashboard/skeleton" },
-  //   { name: "Table", path: "/dashboard/table" },
-  //   { name: "Toggle", path: "/dashboard/toggle" },
-  // ];
-
   return (
     <>
       {/* Floating Navbar with gap above */}
@@ -113,7 +93,7 @@ function Navbar() {
       >
         <div className="flex flex-col h-full p-6">
           <div className="flex justify-between items-center mb-8">
-          <NavLink to="/" className="flex items-center group">
+            <NavLink to="/" className="flex items-center group">
               <img
                 src="/3.png"
                 alt="ChocoUi Logo"
