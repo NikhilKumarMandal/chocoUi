@@ -10,12 +10,12 @@ const Layout = ({ children }) => {
       </div>
 
       <main
-        className={`
+        className={
           flex-1 mx-auto px-4 md:px-8 lg:px-20  w-full max-w-10xl
           mt-20
           ${"ml-1.5 md:ml-64"}
           ${"mr-0 lg:mr-64"}
-        `}
+        }
       >
         {children}
       </main>

@@ -1,4 +1,5 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
+import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import Navbar1 from "../UIComponents/Navbar/Navbar1";
 import Navbar2 from "../UIComponents/Navbar/Navbar2";
 import Navbar3 from "../UIComponents/Navbar/Navbar3";
