@@ -34,20 +34,7 @@ function TogglePage() {
         },
       ],
     },
-    {
-      title: "Calendar",
-      component: <Toggle3 />,
-      codeSnippets: [
-        {
-          language: "html",
-          code: ``,
-        },
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
+
     {
       title: "Calendar",
       component: <Toggle4 />,

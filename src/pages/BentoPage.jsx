@@ -1,13 +1,12 @@
 import React from "react";
-import Bento from "../UIComponents/Bento/Bento";
-import Carousel1 from "../UIComponents/Carousel/Carousel1";
+import BentoGrid from "../UIComponents/Bento/BentoGrid";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function BentoPage() {
   const bentoVariants = [
     {
       title: "Bento",
-      component: <Carousel1 />,
+      component: <BentoGrid />,
       codeSnippets: [
         {
           language: "html",
