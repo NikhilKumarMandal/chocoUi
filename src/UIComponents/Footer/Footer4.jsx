@@ -15,7 +15,7 @@ export default function Footer4() {
               >
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22C5.2 15.7 6.65 14 8.33 14h5.33c1.68 0 3.13 1.7 3.67 3.98-1.29 1.94-3.5 3.22-6 3.22z" />
               </svg>
-              <h4 className="text-xl font-semibold tracking-wide">Company X</h4>
+              <h4 className="text-xl font-semibold tracking-wide">ChocoUi</h4>
             </div>
             <p className="text-sm leading-relaxed text-gray-400 text-center lg:text-left">
               Innovating for tomorrow, delivering excellence today. We build

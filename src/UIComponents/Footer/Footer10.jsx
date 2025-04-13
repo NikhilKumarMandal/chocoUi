@@ -9,7 +9,7 @@ function Footer10() {
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <div className="flex items-center">
                 <a href="#" className="font-bold text-lg tracking-tight">
-                  MONO
+                  CHOCO
                 </a>
               </div>
 

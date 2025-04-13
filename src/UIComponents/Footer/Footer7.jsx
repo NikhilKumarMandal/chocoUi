@@ -131,7 +131,7 @@ function Footer7() {
 
               <div className="w-full mt-12 pt-8 border-t border-gray-100">
                 <p className="text-sm text-center text-gray-500">
-                  © {new Date().getFullYear()} Timely Inc. All rights reserved.
+                  © {new Date().getFullYear()} ChocoUi. All rights reserved.
                 </p>
 
                 <div className="flex justify-center mt-4 space-x-6">
