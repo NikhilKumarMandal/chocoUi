@@ -3,7 +3,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function CheckboxPage() {
   const CheckboxVariants = [
     {
-      title: "Calendar",
+      title: "Checkbox",
       component: <Checkbox />,
       codeSnippets: [
         {
@@ -16,9 +16,12 @@ function CheckboxPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <h1 className="text-3xl font-bold text-black">
+        Checkbox Component Showcase
+      </h1>
       <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+        Discover versatile checkbox components designed for seamless form
+        interactions and consistent user experience. Perfect for any modern UI.
       </p>
       <div className="mt-6 space-y-6">
         {CheckboxVariants.map((variant, index) => (
