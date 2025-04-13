@@ -70,7 +70,7 @@ export default Breadcrumb;
         },
       ],
     },
-    
+
     {
       title: "Breadcrumb",
       component: <Breadcrumb2 />,

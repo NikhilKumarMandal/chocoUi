@@ -24,7 +24,7 @@ const LeftSidebar = () => {
   const links = useMemo(
     () => [
       { name: "Navbar", path: "/dashboard/navbar" },
-      { name: "Footer", path: "/dashboard/footer" },
+      // { name: "Footer", path: "/dashboard/footer" },
       { name: "Cards", path: "/dashboard/card" },
       { name: "Bento", path: "/dashboard/bento" },
       // { name: "Hero", path: "/dashboard/hero" },
@@ -45,7 +45,7 @@ const LeftSidebar = () => {
       { name: "Dropdown", path: "/dashboard/dropdown" },
       { name: "Input", path: "/dashboard/input" },
       { name: "Loader", path: "/dashboard/loader" },
-      { name: "FileUpload", path: "/dashboard/fileUpload" },
+      // { name: "FileUpload", path: "/dashboard/fileUpload" },
       { name: "Button", path: "/dashboard/button" },
     ],
     []

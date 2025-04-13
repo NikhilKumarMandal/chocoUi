@@ -23,10 +23,30 @@ const Navbar6 = () => {
             </div>
 
             <nav className="hidden md:flex items-center space-x-4 sm:space-x-8">
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Contact
+              </a>
             </nav>
 
             <div className="md:hidden flex items-center">
@@ -43,7 +63,12 @@ const Navbar6 = () => {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
                 <svg
                   className={closeIconClass}
@@ -52,7 +77,12 @@ const Navbar6 = () => {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
@@ -61,10 +91,30 @@ const Navbar6 = () => {
 
         <div className={mobileMenuClass}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Home</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">About</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Services</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+            <a
+              href="#"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Home
+            </a>
+            <a
+              href="#"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Services
+            </a>
+            <a
+              href="#"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Contact
+            </a>
           </div>
         </div>
       </header>

@@ -7,8 +7,18 @@ const Calendar = () => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   const getDaysInMonth = (year, month) => {
@@ -40,7 +50,8 @@ const Calendar = () => {
   const daysInMonth = getDaysInMonth(currentYear, currentMonth);
   const startDay = getStartDayOfMonth(currentYear, currentMonth);
   const todayDate = today.getDate();
-  const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+  const isCurrentMonth =
+    today.getMonth() === currentMonth && today.getFullYear() === currentYear;
 
   const calendarCells = [];
   for (let i = 0; i < startDay; i++) {
