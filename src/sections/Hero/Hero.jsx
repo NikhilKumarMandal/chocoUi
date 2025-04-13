@@ -180,7 +180,7 @@ const Hero = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 md:mb-8 max-w-4xl font-['Bricolage']"
+            className="mb-6 md:mb-3 max-w-4xl font-['Bricolage']"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-4 md:mb-6">
               <span className="font-['InstrumentSerif'] text-[#603F26] font-normal">
@@ -238,7 +238,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-6 md:mt-8 relative"
+            className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-4 md:mt-2 relative"
           >
             {/* Start Building Button */}
             <div className="relative">
