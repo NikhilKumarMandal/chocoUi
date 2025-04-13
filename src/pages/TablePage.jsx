@@ -1,5 +1,4 @@
 import Table1 from "../UIComponents/Table/Table_01";
-import Table4 from "../UIComponents/Table/Table_04";
 import Table6 from "../UIComponents/Table/Table_06";
 import Table7 from "../UIComponents/Table/Table_07";
 import Table8 from "../UIComponents/Table/Table_08";
@@ -17,14 +16,7 @@ function TablePage() {
         { language: "jsx", code: `` },
       ],
     },
-    {
-      title: "Table 4",
-      component: <Table4 />,
-      codeSnippets: [
-        { language: "html", code: `` },
-        { language: "jsx", code: `` },
-      ],
-    },
+    
     {
       title: "Table 6",
       component: <Table6 />,

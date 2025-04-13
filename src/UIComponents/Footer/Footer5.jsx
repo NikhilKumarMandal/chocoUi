@@ -24,13 +24,13 @@ function Footer5() {
                         fill="black"
                       />
                     </svg>
-                    <span className="text-lg font-semibold">Arc UI</span>
+                    <span className="text-lg font-semibold">Choco UI</span>
                   </div>
                 </div>
 
                 <div className="max-w-sm space-y-4">
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Building beautiful interfaces shouldn't be so difficult. Arc
+                    Building beautiful interfaces shouldn't be so difficult. Choco
                     UI provides a set of accessible, reusable, and composable
                     React components for faster development.
                   </p>
@@ -245,7 +245,7 @@ function Footer5() {
 
             <div className="flex flex-col sm:flex-row justify-between items-center mt-12 pt-8 border-t border-gray-200">
               <p className="text-sm text-gray-500">
-                © {new Date().getFullYear()} Arc UI, Inc. All rights reserved.
+                © 2025 Choco UI, Inc. All rights reserved.
               </p>
 
               <p className="text-sm text-gray-500 mt-4 sm:mt-0">
