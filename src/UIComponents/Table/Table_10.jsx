@@ -792,4 +792,3 @@ const Table_10 = () => {
 };
 
 export default Table_10;
-

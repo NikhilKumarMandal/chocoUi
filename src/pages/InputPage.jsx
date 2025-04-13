@@ -1,11 +1,22 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import Type from "../UIComponents/animations/Type";
-
-function Animation() {
-  const AnimVariants = [
+import Input_01 from "../UIComponents/Input/Input_01";
+import Input_02 from "../UIComponents/Input/Input_02";
+import Input_03 from "../UIComponents/Input/Input_03";
+function InputPage() {
+  const InputVariants = [
     {
       title: "Calendar",
-      component: <Type />,
+      component: <Input_01 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+    {
+      title: "Calendar",
+      component: <Input_02 />,
       codeSnippets: [
         {
           language: "jsx",
@@ -21,7 +32,7 @@ function Animation() {
         Explore different UI components you can use in your project.
       </p>
       <div className="mt-6 space-y-6">
-        {AnimVariants.map((variant, index) => (
+        {InputVariants.map((variant, index) => (
           <PreviewComponent
             key={index}
             title={variant.title}
@@ -36,4 +47,4 @@ function Animation() {
   );
 }
 
-export default Animation;
+export default InputPage;

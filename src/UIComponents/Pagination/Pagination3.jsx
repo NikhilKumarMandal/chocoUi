@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Pagination3 = ({ totalPages = 5 }) => {
-  const [currentPage, setCurrentPage] = useState(2); 
+  const [currentPage, setCurrentPage] = useState(2);
 
   const handlePrev = () => {
     if (currentPage > 1) setCurrentPage((prev) => prev - 1);
@@ -13,9 +13,7 @@ const Pagination3 = ({ totalPages = 5 }) => {
 
   return (
     <div className="flex flex-col items-center">
-      
       <div className="flex items-center gap-1">
-
         <button
           onClick={handlePrev}
           disabled={currentPage === 1}
@@ -41,7 +39,6 @@ const Pagination3 = ({ totalPages = 5 }) => {
           Previous
         </button>
 
-       
         {[...Array(totalPages)].map((_, index) => {
           const page = index + 1;
           const isActive = page === currentPage;
@@ -52,8 +49,8 @@ const Pagination3 = ({ totalPages = 5 }) => {
               onClick={() => setCurrentPage(page)}
               className={`inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm min-w-[38px] min-h-[38px] rounded-md ${
                 isActive
-                  ? 'shadow-sm hover:shadow-md bg-stone-800 border-stone-800 text-stone-50 hover:bg-stone-700 hover:border-stone-700'
-                  : 'bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none'
+                  ? "shadow-sm hover:shadow-md bg-stone-800 border-stone-800 text-stone-50 hover:bg-stone-700 hover:border-stone-700"
+                  : "bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none"
               }`}
             >
               {page}
@@ -61,7 +58,6 @@ const Pagination3 = ({ totalPages = 5 }) => {
           );
         })}
 
-        
         <button
           onClick={handleNext}
           disabled={currentPage === totalPages}

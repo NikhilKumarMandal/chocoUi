@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from "react";
 
 const Popover1 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +8,7 @@ const Popover1 = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        popoverRef.current && 
+        popoverRef.current &&
         !popoverRef.current.contains(event.target) &&
         !buttonRef.current.contains(event.target)
       ) {
@@ -16,14 +16,13 @@ const Popover1 = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="relative">
-       
         <button
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
@@ -35,18 +34,17 @@ const Popover1 = () => {
           Click me
         </button>
 
-        
         {isOpen && (
           <div
             ref={popoverRef}
             className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-64 
                      bg-white rounded-lg shadow-lg border border-gray-200 z-50"
           >
-      
             <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-              <div className="w-4 h-4 bg-white rotate-45 border-l border-t 
-                           border-gray-200">
-              </div>
+              <div
+                className="w-4 h-4 bg-white rotate-45 border-l border-t 
+                           border-gray-200"
+              ></div>
             </div>
 
             <div className="px-4 py-3 border-b border-gray-200">
@@ -55,16 +53,17 @@ const Popover1 = () => {
               </h3>
             </div>
 
-    
             <div className="px-4 py-3">
               <p className="text-gray-600">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, reprehenderit.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Doloremque, reprehenderit.
               </p>
             </div>
 
-      
-            <div className="px-4 py-3 bg-gray-50 rounded-b-lg border-t 
-                         border-gray-200">
+            <div
+              className="px-4 py-3 bg-gray-50 rounded-b-lg border-t 
+                         border-gray-200"
+            >
               <div className="flex justify-end space-x-2">
                 <button
                   onClick={() => setIsOpen(false)}

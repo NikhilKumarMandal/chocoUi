@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Stepper3 = () => {
   const [activeStep, setActiveStep] = useState(0);
-  const steps = ['Setup', 'Configuration', 'Customization', 'Review'];
+  const steps = ["Setup", "Configuration", "Customization", "Review"];
 
   const handleNext = () => {
     setActiveStep((prevStep) => Math.min(prevStep + 1, steps.length - 1));
@@ -59,7 +59,8 @@ const Stepper3 = () => {
               Step {activeStep + 1} of {steps.length}
             </h2>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              This is the content for {steps[activeStep].toLowerCase()}. Fill in your information here.
+              This is the content for {steps[activeStep].toLowerCase()}. Fill in
+              your information here.
             </p>
             <div className="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0">
               <button
@@ -67,8 +68,8 @@ const Stepper3 = () => {
                 disabled={activeStep === 0}
                 className={`px-4 py-2 rounded-md ${
                   activeStep === 0
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
                 Back
@@ -78,11 +79,11 @@ const Stepper3 = () => {
                 disabled={activeStep === steps.length - 1}
                 className={`px-4 py-2 rounded-md ${
                   activeStep === steps.length - 1
-                    ? 'bg-blue-400 text-white cursor-not-allowed'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? "bg-blue-400 text-white cursor-not-allowed"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
                 }`}
               >
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                {activeStep === steps.length - 1 ? "Finish" : "Next"}
               </button>
             </div>
           </div>
@@ -92,4 +93,4 @@ const Stepper3 = () => {
   );
 };
 
-export default Stepper3; 
+export default Stepper3;

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Tab4 = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
-    { label: 'All', content: 'View all items' },
-    { label: 'Active', content: 'View active items' },
-    { label: 'Archived', content: 'View archived items' },
+    { label: "All", content: "View all items" },
+    { label: "Active", content: "View active items" },
+    { label: "Archived", content: "View archived items" },
   ];
 
   return (
@@ -18,14 +18,14 @@ const Tab4 = () => {
             onClick={() => setActiveTab(index)}
             className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${
               index === 0
-                ? 'rounded-l-lg'
+                ? "rounded-l-lg"
                 : index === tabs.length - 1
-                ? 'rounded-r-lg'
-                : ''
+                  ? "rounded-r-lg"
+                  : ""
             } ${
               activeTab === index
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-50'
+                ? "bg-blue-600 text-white"
+                : "bg-white text-gray-700 hover:bg-gray-50"
             }`}
           >
             {tab.label}
@@ -42,4 +42,4 @@ const Tab4 = () => {
   );
 };
 
-export default Tab4; 
+export default Tab4;

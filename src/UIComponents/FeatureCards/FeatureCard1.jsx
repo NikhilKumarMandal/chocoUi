@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const FeatureCard1 = () => {
   return (
@@ -20,7 +20,8 @@ const FeatureCard1 = () => {
         At your fingertips
       </h1>
       <p className="mt-2 w-60 text-center text-sm font-normal leading-4 text-gray-600">
-        Slate helps you see how many more days you need to work to reach. Slate helps you see how many more days.
+        Slate helps you see how many more days you need to work to reach. Slate
+        helps you see how many more days.
       </p>
       <button className="mt-2 rounded-full bg-slate-900 px-8 py-2 text-center font-sans text-lg font-normal text-gray-400 transition-all disabled:bg-gray-400">
         Try for free
