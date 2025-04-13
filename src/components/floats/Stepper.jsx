@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-import { Check, Rocket, Zap, Sparkles, Clock } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { Check, Rocket, Zap, Sparkles, Clock } from "lucide-react";
 
 const TimeBasedProgressBar = ({
   duration = 5000, // milliseconds
   onComplete,
-  theme = 'cosmic',
-  label = 'Processing...',
+  theme = "cosmic",
+  label = "Processing...",
   showPercentage = true,
   showElapsedTime = true,
   pulseEffect = true,
   cometEffect = true,
-  glowEffect = true
+  glowEffect = true,
 }) => {
   const [progress, setProgress] = useState(0);
   const [elapsed, setElapsed] = useState(0);
@@ -23,34 +23,34 @@ const TimeBasedProgressBar = ({
 
   const themes = {
     cosmic: {
-      bg: 'bg-gray-900',
-      bar: 'bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400',
-      text: 'text-cyan-200',
-      icon: <Rocket className="w-5 h-5 text-cyan-300" />
+      bg: "bg-gray-900",
+      bar: "bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400",
+      text: "text-cyan-200",
+      icon: <Rocket className="w-5 h-5 text-cyan-300" />,
     },
     fire: {
-      bg: 'bg-gray-900',
-      bar: 'bg-gradient-to-r from-amber-500 via-orange-600 to-red-500',
-      text: 'text-amber-200',
-      icon: <Zap className="w-5 h-5 text-amber-300" />
+      bg: "bg-gray-900",
+      bar: "bg-gradient-to-r from-amber-500 via-orange-600 to-red-500",
+      text: "text-amber-200",
+      icon: <Zap className="w-5 h-5 text-amber-300" />,
     },
     neon: {
-      bg: 'bg-gray-950',
-      bar: 'bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500',
-      text: 'text-cyan-200',
-      icon: <Sparkles className="w-5 h-5 text-cyan-300" />
-    }
+      bg: "bg-gray-950",
+      bar: "bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500",
+      text: "text-cyan-200",
+      icon: <Sparkles className="w-5 h-5 text-cyan-300" />,
+    },
   };
 
   // Comet animation sequence
   const animateComet = async () => {
     await cometControls.start({
-      x: ['-100%', '120%'],
+      x: ["-100%", "120%"],
       opacity: [0, 1, 0],
       transition: {
         duration: 1.2,
-        ease: [0.65, 0, 0.35, 1]
-      }
+        ease: [0.65, 0, 0.35, 1],
+      },
     });
     if (progress < 100) {
       animateComet();
@@ -66,7 +66,7 @@ const TimeBasedProgressBar = ({
       const now = Date.now();
       const elapsedTime = now - startTime;
       const currentProgress = Math.min((elapsedTime / duration) * 100, 100);
-      
+
       setProgress(currentProgress);
       setElapsed(elapsedTime);
 
@@ -75,8 +75,12 @@ const TimeBasedProgressBar = ({
         setIsComplete(true);
         controls.start({
           scale: [1, 1.02, 1],
-          boxShadow: ['0 0 0 rgba(0,0,0,0)', '0 0 20px rgba(124, 58, 237, 0.7)', '0 0 0 rgba(0,0,0,0)'],
-          transition: { duration: 0.8 }
+          boxShadow: [
+            "0 0 0 rgba(0,0,0,0)",
+            "0 0 20px rgba(124, 58, 237, 0.7)",
+            "0 0 0 rgba(0,0,0,0)",
+          ],
+          transition: { duration: 0.8 },
         });
         setTimeout(() => onComplete?.(), 800);
       }
@@ -97,8 +101,8 @@ const TimeBasedProgressBar = ({
         transition: {
           duration: 2,
           repeat: Infinity,
-          ease: 'easeInOut'
-        }
+          ease: "easeInOut",
+        },
       });
     }
   }, [pulseEffect, isComplete]);
@@ -110,14 +114,16 @@ const TimeBasedProgressBar = ({
   };
 
   return (
-    <div className={`relative w-full max-w-lg p-5 rounded-xl ${themes[theme].bg} border border-gray-800 overflow-hidden`}>
+    <div
+      className={`relative w-full max-w-lg p-5 rounded-xl ${themes[theme].bg} border border-gray-800 overflow-hidden`}
+    >
       {/* Header */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           {themes[theme].icon}
           <span className={`font-medium ${themes[theme].text}`}>{label}</span>
         </div>
-        
+
         <div className="flex items-center gap-3">
           {showElapsedTime && (
             <div className="flex items-center gap-1 text-xs text-gray-400">
@@ -134,21 +140,21 @@ const TimeBasedProgressBar = ({
       </div>
 
       {/* Main progress bar */}
-      <div 
+      <div
         ref={barRef}
-        className={`relative h-3 rounded-full bg-gray-800 overflow-hidden ${glowEffect ? 'shadow-inner' : ''}`}
+        className={`relative h-3 rounded-full bg-gray-800 overflow-hidden ${glowEffect ? "shadow-inner" : ""}`}
       >
         {/* Progress fill */}
         <motion.div
           className={`absolute top-0 left-0 h-full ${themes[theme].bar} rounded-full`}
           style={{ width: `${progress}%` }}
           animate={{
-            backgroundPosition: ['0% 50%', '100% 50%'],
+            backgroundPosition: ["0% 50%", "100% 50%"],
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: 'linear'
+            ease: "linear",
           }}
         >
           {/* Animated shine */}
@@ -156,16 +162,16 @@ const TimeBasedProgressBar = ({
             <motion.div
               className="absolute top-0 left-0 h-full w-20 bg-white/20"
               animate={{
-                x: ['-100%', '150%']
+                x: ["-100%", "150%"],
               }}
               transition={{
                 duration: 2.5,
                 repeat: Infinity,
-                ease: 'easeInOut'
+                ease: "easeInOut",
               }}
               style={{
-                transform: 'skewX(-20deg)',
-                filter: 'blur(6px)'
+                transform: "skewX(-20deg)",
+                filter: "blur(6px)",
               }}
             />
           )}
@@ -177,8 +183,9 @@ const TimeBasedProgressBar = ({
             className="absolute top-0 h-full w-8 bg-white"
             animate={cometControls}
             style={{
-              filter: 'blur(4px)',
-              background: 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%)'
+              filter: "blur(4px)",
+              background:
+                "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%)",
             }}
           />
         )}
@@ -193,13 +200,13 @@ const TimeBasedProgressBar = ({
                 initial={{ x: `${10 + i * 15}%`, opacity: 0 }}
                 animate={{
                   opacity: [0, 0.8, 0],
-                  y: [0, -2, 0]
+                  y: [0, -2, 0],
                 }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
                   delay: i * 0.3,
-                  ease: 'easeInOut'
+                  ease: "easeInOut",
                 }}
               />
             ))}
@@ -220,17 +227,17 @@ const TimeBasedProgressBar = ({
               className="flex flex-col items-center p-6 rounded-lg bg-gray-800 border border-gray-700"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
-              transition={{ type: 'spring' }}
+              transition={{ type: "spring" }}
             >
               <motion.div
                 className="p-3 mb-3 rounded-full bg-gradient-to-br from-green-400 to-emerald-600"
-                animate={{ 
+                animate={{
                   rotate: [0, 360],
-                  scale: [1, 1.1, 1]
+                  scale: [1, 1.1, 1],
                 }}
-                transition={{ 
+                transition={{
                   duration: 0.8,
-                  ease: 'backOut'
+                  ease: "backOut",
                 }}
               >
                 <Check className="w-6 h-6 text-white" />
@@ -254,18 +261,18 @@ const TimeBasedProgressBar = ({
               initial={{
                 x: `${Math.random() * 100}%`,
                 y: `${Math.random() * 100}%`,
-                scale: 0
+                scale: 0,
               }}
               animate={{
                 scale: [0, 1.5, 0],
                 opacity: [0, 0.7, 0],
-                y: [`${Math.random() * 20}%`, `${Math.random() * 80}%`]
+                y: [`${Math.random() * 20}%`, `${Math.random() * 80}%`],
               }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
                 delay: i * 0.4,
-                ease: 'easeInOut'
+                ease: "easeInOut",
               }}
             />
           ))}

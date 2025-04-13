@@ -1,7 +1,7 @@
 function Pricing2() {
   return (
     <div className="bg-gray-900 min-h-screen flex items-center justify-center p-4 py-12">
-      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-1  gap-8">
         <div className="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-8">
             <div className="p-2 bg-indigo-500 rounded-lg">
@@ -19,12 +19,14 @@ function Pricing2() {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-white">For Individuals</h2>
+            <h2 className="text-xl  md:text-2xl font-bold text-white">
+              For Individuals
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-gray-900 rounded-lg p-6 hover:border-indigo-400 border border-gray-800 transition-all duration-200 hover:scale-[1.02]">
-              <div className="flex items-center gap-2 mb-3 text-gray-300">
+              <div className="flex items-center  gap-2 mb-3 text-gray-300">
                 <svg
                   className="w-4 h-4 text-yellow-400"
                   fill="none"
@@ -41,7 +43,9 @@ function Pricing2() {
                 <span>Monthly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className="text-4xl font-bold text-white">$39</span>
+                <span className="text-xl ls:text-4xl font-bold text-white">
+                  $39
+                </span>
                 <span className="text-sm text-gray-400 ml-1 mb-1">/month</span>
               </div>
 
@@ -158,7 +162,9 @@ function Pricing2() {
                 <span>Yearly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className="text-4xl font-bold text-white">$390</span>
+                <span className=" text-2xl ls:text-4xl font-bold text-white">
+                  $390
+                </span>
                 <span className="text-sm text-gray-400 ml-1 mb-1">/year</span>
               </div>
 
@@ -264,9 +270,9 @@ function Pricing2() {
             <h2 className="text-2xl font-bold text-white">For Teams</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-gray-900 rounded-lg p-6 hover:border-purple-400 border border-gray-800 transition-all duration-200 hover:scale-[1.02]">
-              <div className="flex items-center gap-2 mb-3 text-gray-300">
+              <div className="flex items-center flex-wrap gap-2 mb-3 text-gray-300">
                 <svg
                   className="w-4 h-4 text-yellow-400"
                   fill="none"
@@ -283,10 +289,10 @@ function Pricing2() {
                 <span>Monthly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className="text-4xl font-bold text-white">$24.50</span>
-                <span className="text-sm text-gray-400 ml-1 mb-1">
-                  /seat/month
+                <span className=" text-2xl ls:text-4xl font-bold text-white">
+                  $24.50
                 </span>
+                <span className="text-sm text-gray-400 ml-1 mb-1">/month</span>
               </div>
 
               <div className="text-sm text-gray-400 mb-1">Minimum 10 seats</div>
@@ -397,15 +403,15 @@ function Pricing2() {
                 <span>Yearly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className="text-4xl font-bold text-white">$245</span>
+                <span className="text-2xl ls:text-4xl font-bold text-white">
+                  $245
+                </span>
                 <span className="text-sm text-gray-400 ml-1 mb-1">
                   /seat/year
                 </span>
               </div>
 
-              <div className="text-sm text-gray-400 mb-4">
-                ($20.42/seat/month)
-              </div>
+              <div className="text-sm text-gray-400 mb-4">($20.42/month)</div>
 
               <div className="border-t border-gray-700 my-5"></div>
 

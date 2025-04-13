@@ -1,15 +1,13 @@
-
-
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react";
 
 export default function DatePicker({ onChange, value, className = "" }) {
-  const [currentDate, setCurrentDate] = useState(value || new Date())
-  const [showMonthDropdown, setShowMonthDropdown] = useState(false)
-  const [showYearDropdown, setShowYearDropdown] = useState(false)
-  const [selectedDate, setSelectedDate] = useState(value || null)
+  const [currentDate, setCurrentDate] = useState(value || new Date());
+  const [showMonthDropdown, setShowMonthDropdown] = useState(false);
+  const [showYearDropdown, setShowYearDropdown] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(value || null);
 
-  const monthDropdownRef = useRef(null)
-  const yearDropdownRef = useRef(null)
+  const monthDropdownRef = useRef(null);
+  const yearDropdownRef = useRef(null);
 
   const months = [
     "January",
@@ -24,107 +22,110 @@ export default function DatePicker({ onChange, value, className = "" }) {
     "October",
     "November",
     "December",
-  ]
+  ];
 
-  const daysOfWeek = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
+  const daysOfWeek = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (monthDropdownRef.current && !monthDropdownRef.current.contains(event.target)) {
-        setShowMonthDropdown(false)
+      if (
+        monthDropdownRef.current &&
+        !monthDropdownRef.current.contains(event.target)
+      ) {
+        setShowMonthDropdown(false);
       }
 
-      if (yearDropdownRef.current && !yearDropdownRef.current.contains(event.target)) {
-        setShowYearDropdown(false)
+      if (
+        yearDropdownRef.current &&
+        !yearDropdownRef.current.contains(event.target)
+      ) {
+        setShowYearDropdown(false);
       }
-    }
+    };
 
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const getDaysInMonth = (year, month) => {
-    return new Date(year, month + 1, 0).getDate()
-  }
+    return new Date(year, month + 1, 0).getDate();
+  };
 
   const getFirstDayOfMonth = (year, month) => {
-    const day = new Date(year, month, 1).getDay()
-    return day === 0 ? 6 : day - 1 
-  }
+    const day = new Date(year, month, 1).getDay();
+    return day === 0 ? 6 : day - 1;
+  };
 
   const handlePrevMonth = () => {
     setCurrentDate((prev) => {
-      const newDate = new Date(prev)
-      newDate.setMonth(prev.getMonth() - 1)
-      return newDate
-    })
-  }
+      const newDate = new Date(prev);
+      newDate.setMonth(prev.getMonth() - 1);
+      return newDate;
+    });
+  };
 
   const handleNextMonth = () => {
     setCurrentDate((prev) => {
-      const newDate = new Date(prev)
-      newDate.setMonth(prev.getMonth() + 1)
-      return newDate
-    })
-  }
+      const newDate = new Date(prev);
+      newDate.setMonth(prev.getMonth() + 1);
+      return newDate;
+    });
+  };
 
   const handleMonthSelect = (monthIndex) => {
     setCurrentDate((prev) => {
-      const newDate = new Date(prev)
-      newDate.setMonth(monthIndex)
-      return newDate
-    })
-    setShowMonthDropdown(false)
-  }
+      const newDate = new Date(prev);
+      newDate.setMonth(monthIndex);
+      return newDate;
+    });
+    setShowMonthDropdown(false);
+  };
 
   const handleYearSelect = (year) => {
     setCurrentDate((prev) => {
-      const newDate = new Date(prev)
-      newDate.setFullYear(year)
-      return newDate
-    })
-    setShowYearDropdown(false)
-  }
+      const newDate = new Date(prev);
+      newDate.setFullYear(year);
+      return newDate;
+    });
+    setShowYearDropdown(false);
+  };
 
   const handleDateSelect = (day, isCurrentMonth) => {
-    const newDate = new Date(currentDate)
+    const newDate = new Date(currentDate);
 
     if (!isCurrentMonth) {
       if (day > 20) {
-        
-        newDate.setMonth(newDate.getMonth() - 1)
+        newDate.setMonth(newDate.getMonth() - 1);
       } else {
-        
-        newDate.setMonth(newDate.getMonth() + 1)
+        newDate.setMonth(newDate.getMonth() + 1);
       }
     }
 
-    newDate.setDate(day)
-    setSelectedDate(newDate)
+    newDate.setDate(day);
+    setSelectedDate(newDate);
 
     if (onChange) {
-      onChange(newDate)
+      onChange(newDate);
     }
-  }
+  };
 
   const renderCalendarDays = () => {
-    const year = currentDate.getFullYear()
-    const month = currentDate.getMonth()
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
 
-    const daysInMonth = getDaysInMonth(year, month)
-    const firstDayOfMonth = getFirstDayOfMonth(year, month)
+    const daysInMonth = getDaysInMonth(year, month);
+    const firstDayOfMonth = getFirstDayOfMonth(year, month);
 
-    const prevMonth = month === 0 ? 11 : month - 1
-    const prevYear = month === 0 ? year - 1 : year
-    const daysInPrevMonth = getDaysInMonth(prevYear, prevMonth)
+    const prevMonth = month === 0 ? 11 : month - 1;
+    const prevYear = month === 0 ? year - 1 : year;
+    const daysInPrevMonth = getDaysInMonth(prevYear, prevMonth);
 
-    const days = []
+    const days = [];
 
-    
     for (let i = 0; i < firstDayOfMonth; i++) {
-      const day = daysInPrevMonth - firstDayOfMonth + i + 1
+      const day = daysInPrevMonth - firstDayOfMonth + i + 1;
       days.push(
         <div
           key={`prev-${day}`}
@@ -132,18 +133,17 @@ export default function DatePicker({ onChange, value, className = "" }) {
           onClick={() => handleDateSelect(day, false)}
         >
           {day}
-        </div>,
-      )
+        </div>
+      );
     }
 
-    
     for (let day = 1; day <= daysInMonth; day++) {
-      const date = new Date(year, month, day)
+      const date = new Date(year, month, day);
       const isSelected =
         selectedDate &&
         date.getDate() === selectedDate.getDate() &&
         date.getMonth() === selectedDate.getMonth() &&
-        date.getFullYear() === selectedDate.getFullYear()
+        date.getFullYear() === selectedDate.getFullYear();
 
       days.push(
         <div
@@ -153,14 +153,15 @@ export default function DatePicker({ onChange, value, className = "" }) {
           onClick={() => handleDateSelect(day, true)}
         >
           {day}
-          {isSelected && <div className="absolute w-10 h-10 rounded-full bg-pink-100 -z-10"></div>}
-        </div>,
-      )
+          {isSelected && (
+            <div className="absolute w-10 h-10 rounded-full bg-pink-100 -z-10"></div>
+          )}
+        </div>
+      );
     }
 
-    
-    const totalCells = 42 // 6 rows of 7 days
-    const remainingCells = totalCells - days.length
+    const totalCells = 42; // 6 rows of 7 days
+    const remainingCells = totalCells - days.length;
 
     for (let day = 1; day <= remainingCells; day++) {
       days.push(
@@ -170,15 +171,17 @@ export default function DatePicker({ onChange, value, className = "" }) {
           onClick={() => handleDateSelect(day, false)}
         >
           {day}
-        </div>,
-      )
+        </div>
+      );
     }
 
-    return days
-  }
+    return days;
+  };
 
   return (
-    <div className={`bg-white rounded-2xl p-4 shadow-lg ${className} max-w-2xs`}>
+    <div
+      className={`bg-white rounded-2xl p-4 shadow-lg ${className} max-w-2xs`}
+    >
       <div className="flex items-center justify-between mb-4">
         <button
           className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200"
@@ -224,7 +227,10 @@ export default function DatePicker({ onChange, value, className = "" }) {
 
             {showYearDropdown && (
               <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-md shadow-lg z-10 w-24 max-h-60 overflow-y-auto">
-                {Array.from({ length: 20 }, (_, i) => currentDate.getFullYear() - 10 + i).map((year) => (
+                {Array.from(
+                  { length: 20 },
+                  (_, i) => currentDate.getFullYear() - 10 + i
+                ).map((year) => (
                   <div
                     key={year}
                     className={`px-4 py-2 cursor-pointer hover:bg-gray-100 
@@ -249,13 +255,15 @@ export default function DatePicker({ onChange, value, className = "" }) {
 
       <div className="grid grid-cols-7 gap-1">
         {daysOfWeek.map((day) => (
-          <div key={day} className="flex items-center justify-center h-10 font-medium">
+          <div
+            key={day}
+            className="flex items-center justify-center h-10 font-medium"
+          >
             {day}
           </div>
         ))}
         {renderCalendarDays()}
       </div>
     </div>
-  )
+  );
 }
-

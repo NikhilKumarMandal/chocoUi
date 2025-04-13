@@ -1,15 +1,17 @@
-export const CodeBlock = ({ children, language = "bash" }) => {
+export const CodeBlock = ({ children, language = "bash", className = "" }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(children);
   };
 
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden mb-4">
-      <div className="flex items-center justify-between px-4 py-2 bg-gray-700 text-gray-300 text-sm">
-        <span>{language}</span>
+    <div
+      className={`bg-[#1A1A1A] rounded-xl overflow-hidden shadow-lg border border-[#333333] ${className}`}
+    >
+      <div className="flex items-center justify-between px-4 py-2.5 bg-[#222222] text-[#CCCCCC] text-sm border-b border-[#333333]">
+        <span className="font-medium">{language}</span>
         <button
           onClick={copyToClipboard}
-          className="text-gray-400 hover:text-white flex items-center gap-1"
+          className="text-[#999999] hover:text-white flex items-center gap-1.5 transition-colors duration-200"
           aria-label="Copy code"
         >
           <svg
@@ -25,11 +27,11 @@ export const CodeBlock = ({ children, language = "bash" }) => {
               d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
             />
           </svg>
-          Copy
+          <span className="text-xs">Copy</span>
         </button>
       </div>
-      <pre className="p-4 overflow-x-auto text-gray-100">
-        <code className="font-mono text-sm">{children}</code>
+      <pre className="p-5 overflow-x-auto text-[#E0E0E0] bg-[#1A1A1A]">
+        <code className="font-mono text-sm leading-relaxed">{children}</code>
       </pre>
     </div>
   );

@@ -8,10 +8,10 @@ const Loader_11 = ({ barCount = 12, barColor = "bg-purple-500" }) => {
           key={i}
           className={`w-2 ${barColor} rounded-t-sm transition-[height] duration-100 ease-out`}
           style={{
-            height: "10%", 
+            height: "10%",
             animation: `soundPulse 0.8s infinite ease-in-out alternate`,
             animationDelay: `${Math.random() * 0.5}s`,
-            filter: "drop-shadow(0 0 4px var(--color-purple-500))", 
+            filter: "drop-shadow(0 0 4px var(--color-purple-500))",
           }}
         ></div>
       ))}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Pagination2 = ({ totalPages = 10 }) => {
   const [currentPage, setCurrentPage] = useState(1);

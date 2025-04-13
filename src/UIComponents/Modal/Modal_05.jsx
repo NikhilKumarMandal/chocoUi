@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Modal5 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,15 +21,27 @@ const Modal5 = () => {
             {/* Header */}
             <div className="p-6 border-b border-gray-200 flex justify-between items-center">
               <div>
-                <h2 className="text-2xl font-bold text-gray-800">Slide Modal</h2>
+                <h2 className="text-2xl font-bold text-gray-800">
+                  Slide Modal
+                </h2>
                 <p className="text-gray-600 mt-2">A modern slide-in dialog</p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-gray-400 hover:text-gray-600"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
@@ -37,8 +49,9 @@ const Modal5 = () => {
             {/* Body */}
             <div className="p-6">
               <p className="text-gray-700">
-                This slide-in modal is perfect for side panels and additional content.
-                It provides a smooth animation and works great on all devices.
+                This slide-in modal is perfect for side panels and additional
+                content. It provides a smooth animation and works great on all
+                devices.
               </p>
             </div>
 
@@ -64,4 +77,4 @@ const Modal5 = () => {
   );
 };
 
-export default Modal5; 
+export default Modal5;

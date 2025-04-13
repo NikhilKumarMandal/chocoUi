@@ -18,7 +18,7 @@ const Button_05 = () => {
 
   const handleMouseLeave = () => {
     setOpacity(0);
-    setPosition({ x: -100, y: -100 }); 
+    setPosition({ x: -100, y: -100 });
   };
 
   return (

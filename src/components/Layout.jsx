@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
-
       <div className="hidden lg:block fixed top-0 right-[-15px] h-screen z-10 w-64">
         <RightSidebar />
       </div>

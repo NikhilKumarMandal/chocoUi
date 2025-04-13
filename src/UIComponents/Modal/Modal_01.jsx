@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Modal1 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,14 +21,17 @@ const Modal1 = () => {
             {/* Header */}
             <div className="p-6 border-b border-gray-200">
               <h2 className="text-2xl font-bold text-gray-800">Welcome</h2>
-              <p className="text-gray-600 mt-2">This is a modern modal dialog</p>
+              <p className="text-gray-600 mt-2">
+                This is a modern modal dialog
+              </p>
             </div>
 
             {/* Body */}
             <div className="p-6">
               <p className="text-gray-700">
-                This modal is fully responsive and works great on all screen sizes.
-                It features a clean design with smooth animations and transitions.
+                This modal is fully responsive and works great on all screen
+                sizes. It features a clean design with smooth animations and
+                transitions.
               </p>
             </div>
 
@@ -54,4 +57,4 @@ const Modal1 = () => {
   );
 };
 
-export default Modal1; 
+export default Modal1;

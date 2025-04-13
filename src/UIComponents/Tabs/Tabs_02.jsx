@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Tab2 = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
-    { label: 'Overview', content: 'Get an overview of your data' },
-    { label: 'Analytics', content: 'View detailed analytics' },
-    { label: 'Reports', content: 'Access your reports here' },
+    { label: "Overview", content: "Get an overview of your data" },
+    { label: "Analytics", content: "View detailed analytics" },
+    { label: "Reports", content: "Access your reports here" },
   ];
 
   return (
@@ -18,8 +18,8 @@ const Tab2 = () => {
             onClick={() => setActiveTab(index)}
             className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
               activeTab === index
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? "bg-blue-600 text-white"
+                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
             {tab.label}

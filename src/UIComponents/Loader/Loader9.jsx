@@ -11,9 +11,9 @@ const Loader_09 = ({ orbCount = 5, orbColor = "bg-cyan-400", size = 60 }) => {
         style={{ animation: "spin 5s linear infinite" }}
       >
         {Array.from({ length: orbCount }).map((_, i) => {
-          const angle = (i / orbCount) * 360; 
+          const angle = (i / orbCount) * 360;
           const orbSize = Math.max(3, size / 10);
-          const orbitRadius = size * 0.4; 
+          const orbitRadius = size * 0.4;
 
           return (
             <div
