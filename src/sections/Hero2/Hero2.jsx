@@ -223,7 +223,7 @@ const Hero2 = () => {
             </motion.div>
           </div>
 
-          <div className="w-full lg:w-1/2 px-4 lg:px-8">
+          <div className="w-full lg:w-1/2 px-4 lg:px-8 md:block hidden">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
