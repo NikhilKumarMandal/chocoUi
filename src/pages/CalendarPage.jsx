@@ -1,4 +1,5 @@
 import Calendar from "../UIComponents/Calendar/Calendar";
+import Timely from "../UIComponents/Calendar/Timely";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function CalendarPage() {
@@ -111,13 +112,31 @@ function CalendarPage() {
         },
       ],
     },
+
+    {
+      title: "Calendar",
+      component: <Timely />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <h1 className="text-3xl font-bold text-black">Calendar Components</h1>
       <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+        Discover beautifully designed and fully customizable calendar components
+        to enhance date selection and scheduling experiences in your
+        application.
       </p>
+
       <div className="mt-6 space-y-6">
         {calendarVariants.map((variant, index) => (
           <PreviewComponent
