@@ -7,6 +7,10 @@ const Navbar7 = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const hamburgerIconClass = isMenuOpen ? "hidden h-6 w-6" : "block h-6 w-6";
+  const closeIconClass = isMenuOpen ? "block h-6 w-6" : "hidden h-6 w-6";
+  const mobileMenuClass = isMenuOpen ? "block md:hidden" : "hidden md:hidden";
+
   return (
     <>
       <header className="bg-gradient-to-r from-purple-600 to-blue-600">
@@ -61,11 +65,11 @@ const Navbar7 = () => {
               <button
                 onClick={toggleMenu}
                 className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-200 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                aria-expanded="false"
+                aria-expanded={isMenuOpen}
               >
                 <span className="sr-only">Open main menu</span>
                 <svg
-                  className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`}
+                  className={hamburgerIconClass}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -79,7 +83,7 @@ const Navbar7 = () => {
                   />
                 </svg>
                 <svg
-                  className={`${isMenuOpen ? "block" : "hidden"} h-6 w-6`}
+                  className={closeIconClass}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -97,7 +101,7 @@ const Navbar7 = () => {
           </div>
         </div>
 
-        <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
+        <div className={mobileMenuClass}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#"
