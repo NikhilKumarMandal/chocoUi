@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Textarea4() {
   return (
@@ -11,7 +11,7 @@ function Textarea4() {
         ></textarea>
       </div>
     </div>
-  )
+  );
 }
 
-export default Textarea4
+export default Textarea4;

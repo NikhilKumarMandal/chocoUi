@@ -1,4 +1,6 @@
 import SingIn from "../UIComponents/Forms/Singin";
+import ContactUs from "../UIComponents/Forms/ContactUs";
+
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function FormPage() {
@@ -6,6 +8,21 @@ function FormPage() {
     {
       title: "Calendar",
       component: <SingIn />,
+      codeSnippets: [
+        {
+          language: "html",
+          code: ``,
+        },
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+
+    {
+      title: "Calendar",
+      component: <ContactUs />,
       codeSnippets: [
         {
           language: "html",

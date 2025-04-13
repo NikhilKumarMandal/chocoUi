@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Textarea() {
   return (
@@ -23,7 +23,7 @@ function Textarea() {
         </label>
       </div>
     </div>
-  )
+  );
 }
 
-export default Textarea
+export default Textarea;

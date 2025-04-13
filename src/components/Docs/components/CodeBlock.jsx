@@ -4,7 +4,9 @@ export const CodeBlock = ({ children, language = "bash", className = "" }) => {
   };
 
   return (
-    <div className={`bg-[#1A1A1A] rounded-xl overflow-hidden shadow-lg border border-[#333333] ${className}`}>
+    <div
+      className={`bg-[#1A1A1A] rounded-xl overflow-hidden shadow-lg border border-[#333333] ${className}`}
+    >
       <div className="flex items-center justify-between px-4 py-2.5 bg-[#222222] text-[#CCCCCC] text-sm border-b border-[#333333]">
         <span className="font-medium">{language}</span>
         <button

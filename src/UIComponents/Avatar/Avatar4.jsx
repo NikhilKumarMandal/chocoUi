@@ -67,7 +67,7 @@ function Avatar4() {
 
           <div>
             <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-gray-800">
-            Nikhil
+              Nikhil
             </h1>
 
             <p class="text-base text-gray-500 dark:text-gray-400">

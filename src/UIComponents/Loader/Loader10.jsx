@@ -23,7 +23,7 @@ const Loader_10 = ({ percentage = 0, size = 100, strokeWidth = 10 }) => {
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke="url(#gaugeGradient)" 
+          stroke="url(#gaugeGradient)"
           strokeWidth={strokeWidth}
           fill="transparent"
           strokeDasharray={circumference}

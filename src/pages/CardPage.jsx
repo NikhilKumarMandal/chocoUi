@@ -15,8 +15,9 @@ import Card14 from "../UIComponents/Card/Card14";
 import Card15 from "../UIComponents/Card/Card15";
 import Card16 from "../UIComponents/Card/Card16";
 import Card17 from "../UIComponents/Card/Card17";
-
 import Card19 from "../UIComponents/Card/Card19";
+import Card18 from "../UIComponents/Card/Card18";
+
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function CardPage() {
@@ -121,109 +122,10 @@ function CardPage() {
         },
       ],
     },
-    {
-      title: "Card 8",
-      component: <Card8 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 9",
-      component: <Card9 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
+
     {
       title: "Card 10",
       component: <Card10 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 11",
-      component: <Card11 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 12",
-      component: <Card12 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 13",
-      component: <Card13 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 14",
-      component: <Card14 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 16",
-      component: <Card16 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 17",
-      component: <Card17 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 19",
-      component: <Card19 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 20",
-      component: <Card15 />,
       codeSnippets: [
         {
           language: "jsx",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const DiscountCard = () => {
   return (
@@ -15,7 +15,9 @@ const DiscountCard = () => {
           fill="#121225"
         />
       </svg>
-      <p className="text-lg font-normal text-gray-600 text-center">Ultimate Discount</p>
+      <p className="text-lg font-normal text-gray-600 text-center">
+        Ultimate Discount
+      </p>
     </div>
   );
 };

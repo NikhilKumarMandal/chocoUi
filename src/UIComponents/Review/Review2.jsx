@@ -13,9 +13,12 @@ const Review2 = () => {
           K
         </div>
         <div>
-          <h4 className="text-lg font-bold text-[#464646]">Kyle Weznick       <span className="px-2 py-1 inline-flex items-center justify-center rounded-full text-sm font-medium bg-[#FFEAC5] text-black">
-  Choco
-</span></h4>
+          <h4 className="text-lg font-bold text-[#464646]">
+            Kyle Weznick{" "}
+            <span className="px-2 py-1 inline-flex items-center justify-center rounded-full text-sm font-medium bg-[#FFEAC5] text-black">
+              Choco
+            </span>
+          </h4>
           <p className="text-sm text-[#545454]">
             Media Director, Turn Around Music Group
           </p>

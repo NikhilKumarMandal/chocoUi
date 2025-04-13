@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Dropdown4 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,29 +7,29 @@ const Dropdown4 = () => {
   const menuItems = [
     {
       id: 1,
-      label: 'Products',
+      label: "Products",
       submenu: [
-        { id: 'sub1-1', label: 'Electronics' },
-        { id: 'sub1-2', label: 'Clothing' },
-        { id: 'sub1-3', label: 'Books' },
+        { id: "sub1-1", label: "Electronics" },
+        { id: "sub1-2", label: "Clothing" },
+        { id: "sub1-3", label: "Books" },
       ],
     },
     {
       id: 2,
-      label: 'Services',
+      label: "Services",
       submenu: [
-        { id: 'sub2-1', label: 'Consulting' },
-        { id: 'sub2-2', label: 'Design' },
-        { id: 'sub2-3', label: 'Development' },
+        { id: "sub2-1", label: "Consulting" },
+        { id: "sub2-2", label: "Design" },
+        { id: "sub2-3", label: "Development" },
       ],
     },
     {
       id: 3,
-      label: 'Categories',
+      label: "Categories",
       submenu: [
-        { id: 'sub3-1', label: 'Featured' },
-        { id: 'sub3-2', label: 'Trending' },
-        { id: 'sub3-3', label: 'New Arrivals' },
+        { id: "sub3-1", label: "Featured" },
+        { id: "sub3-2", label: "Trending" },
+        { id: "sub3-3", label: "New Arrivals" },
       ],
     },
   ];
@@ -43,16 +43,14 @@ const Dropdown4 = () => {
 
   const toggleSubMenu = (id) => {
     setOpenSubMenus((prev) =>
-      prev.includes(id)
-        ? prev.filter((menuId) => menuId !== id)
-        : [...prev, id]
+      prev.includes(id) ? prev.filter((menuId) => menuId !== id) : [...prev, id]
     );
   };
 
   const ChevronIcon = ({ isOpen }) => (
     <svg
       className={`w-5 h-5 transition-transform duration-200 ${
-        isOpen ? 'transform rotate-180' : ''
+        isOpen ? "transform rotate-180" : ""
       }`}
       fill="none"
       stroke="currentColor"
@@ -68,9 +66,7 @@ const Dropdown4 = () => {
   );
 
   return (
-    
     <div className="relative w-72">
- 
       <button
         onClick={toggleDropdown}
         className="w-full px-4 py-3 bg-blue-900 text-white rounded-lg 
@@ -81,13 +77,16 @@ const Dropdown4 = () => {
         <ChevronIcon isOpen={isOpen} />
       </button>
 
-     
       {isOpen && (
-        <div className="absolute w-full mt-2 bg-white border border-gray-200 
-                      rounded-lg shadow-xl z-50">
+        <div
+          className="absolute w-full mt-2 bg-white border border-gray-200 
+                      rounded-lg shadow-xl z-50"
+        >
           {menuItems.map((item) => (
-            <div key={item.id} className="border-b border-gray-100 last:border-none">
-           
+            <div
+              key={item.id}
+              className="border-b border-gray-100 last:border-none"
+            >
               <div
                 onClick={() => toggleSubMenu(item.id)}
                 className="flex items-center justify-between px-4 py-3 
@@ -97,7 +96,6 @@ const Dropdown4 = () => {
                 <ChevronIcon isOpen={openSubMenus.includes(item.id)} />
               </div>
 
-        
               {openSubMenus.includes(item.id) && (
                 <div className="bg-blue-50/50 border-t border-blue-100">
                   {item.submenu.map((subItem) => (
@@ -116,7 +114,6 @@ const Dropdown4 = () => {
         </div>
       )}
     </div>
-  
   );
 };
 
