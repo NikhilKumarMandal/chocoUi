@@ -23,7 +23,7 @@ function Footer9() {
                     strokeLinecap="round"
                   />
                 </svg>
-                <span className="ml-2 font-semibold text-xl">Minimal</span>
+                <span className="ml-2 font-semibold text-xl">Choco</span>
               </div>
               <p className="text-gray-600 text-sm max-w-xs">
                 Clean, simple, and functional designs for the modern web.
@@ -119,7 +119,7 @@ function Footer9() {
           <div className="w-full border-t border-gray-200 mt-8 pt-8 px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-600 text-sm">
-                © {new Date().getFullYear()} Minimal. All rights reserved.
+                © 2025 Choco. All rights reserved.
               </p>
 
               <div className="flex items-center space-x-6">

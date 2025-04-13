@@ -14,7 +14,7 @@ const Navbar6 = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <a href="#" className="text-gray-900 text-xl font-bold">
-                Brand
+                Choco
               </a>
             </div>
 
