@@ -2,14 +2,14 @@ import React from "react";
 import Footer4 from "../UIComponents/Footer/Footer4";
 import Footer5 from "../UIComponents/Footer/Footer5";
 import Footer7 from "../UIComponents/Footer/Footer7";
-import Footer8 from "../UIComponents/Footer/Footer8";
 import Footer9 from "../UIComponents/Footer/Footer9";
 import Footer10 from "../UIComponents/Footer/Footer10";
 import Footer6 from "../UIComponents/Footer/Footer6";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import HeroSection1 from "../UIComponents/HeroSection/HeroDesign1";
+
 function FooterPage() {
   const FooterVariants = [
+    // Footer - 1
     {
       title: "Footer1",
       component: <Footer4 />,
@@ -292,6 +292,8 @@ function FooterPage() {
         },
       ],
     },
+
+    // Footer 2
     {
       title: "Footer 2",
       component: <Footer6 />,
@@ -417,6 +419,8 @@ function FooterPage() {
         },
       ],
     },
+
+    // Footer - 3
     {
       title: "Footer1",
       component: <Footer7 />,
@@ -431,20 +435,8 @@ function FooterPage() {
         },
       ],
     },
-    {
-      title: "Footer1",
-      component: <Footer8 />,
-      codeSnippets: [
-        {
-          language: "html",
-          code: ``,
-        },
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
+
+    // Footer - 4
     {
       title: "Footer9",
       component: <Footer9 />,
@@ -459,6 +451,8 @@ function FooterPage() {
         },
       ],
     },
+
+    // Footer - 5
     {
       title: "Footer1",
       component: <Footer10 />,
@@ -473,6 +467,8 @@ function FooterPage() {
         },
       ],
     },
+
+    // Footer - 6
     {
       title: "Footer1",
       component: <Footer5 />,
