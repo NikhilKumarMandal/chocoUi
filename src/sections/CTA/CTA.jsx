@@ -53,7 +53,7 @@ function CTA() {
                 href="#"
                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-[#2A1B10] bg-[#FFDBB5] rounded-xl transition-all duration-300 hover:bg-[#6C4E31] hover:text-white hover:shadow-2xl hover:shadow-[#FFDBB5]/30 font-['Inter']"
               >
-                <span className="relative z-10">Get Started</span>
+                <span className="relative z-10">Coming Soon</span>
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                 <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#FFDBB5]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
               </a>
