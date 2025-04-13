@@ -11,8 +11,8 @@ const NewsletterBanner = () => {
         <div className="text-white text-center sm:text-left">
           <h3 className="text-xl font-bold">Stay in the loop!</h3>
           <p className="mt-2 text-white/80 max-w-md">
-            Subscribe to our newsletter to receive updates, exclusive
-            offers, and helpful tips directly to your inbox.
+            Subscribe to our newsletter to receive updates, exclusive offers,
+            and helpful tips directly to your inbox.
           </p>
         </div>
 
@@ -33,4 +33,4 @@ const NewsletterBanner = () => {
   );
 };
 
-export default NewsletterBanner; 
+export default NewsletterBanner;

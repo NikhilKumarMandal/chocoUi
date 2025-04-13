@@ -5,22 +5,89 @@ import Input_03 from "../UIComponents/Input/Input_03";
 function InputPage() {
   const InputVariants = [
     {
-      title: "Calendar",
+      title: "Input",
       component: <Input_01 />,
       codeSnippets: [
         {
           language: "jsx",
-          code: ``,
+          code: `import { X } from "lucide-react";
+          import { useState } from "react";
+          
+          const Input = () => {
+            const [value, setValue] = useState("");
+          
+            return (
+              <div className="w-96 mx-auto">
+                <label htmlFor="text" className="text-sm font-normal">
+                  Text Input
+                </label>
+                <div className="relative mt-1">
+                  <input
+                    type="text"
+                    id="text"
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                    placeholder="Type something..."
+                    className="bg-background w-full outline-none focus-within:border-blue-700 rounded-md p-2 border-2"
+                  />
+                  {value && (
+                    <X
+                      size={18}
+                      onClick={() => setValue("")}
+                      className="absolute right-3 top-3.5 text-gray-400 cursor-pointer hover:text-gray-600"
+                    />
+                  )}
+                </div>
+              </div>
+            );
+          };
+          
+          export default Input;
+          `,
         },
       ],
     },
     {
-      title: "Calendar",
+      title: "Input",
       component: <Input_02 />,
       codeSnippets: [
         {
           language: "jsx",
-          code: ``,
+          code: `import { Search, X } from "lucide-react";
+import { useState } from "react";
+
+const Input = () => {
+  const [query, setQuery] = useState("");
+
+  return (
+    <div className="w-96 mx-auto">
+      <label htmlFor="search" className="text-sm font-normal">
+        Search
+      </label>
+      <div className="relative mt-1">
+        <input
+          type="text"
+          id="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search..."
+          className="bg-background w-full outline-none focus-within:border-blue-700 rounded-md p-2 pl-10 border-2"
+        />
+        <Search size={18} className="absolute left-3 top-3.5 text-gray-400" />
+        {query && (
+          <X
+            size={18}
+            onClick={() => setQuery("")}
+            className="absolute right-3 top-3.5 text-gray-400 cursor-pointer hover:text-gray-600"
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Input;
+`,
         },
       ],
     },

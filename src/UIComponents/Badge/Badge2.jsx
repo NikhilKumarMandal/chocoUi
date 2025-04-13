@@ -20,7 +20,11 @@ const Badge2 = () => {
           {badges.map((badge) => (
             <span
               key={badge.id}
-              className={`px-3 py-1 inline-flex items-center justify-center rounded-full text-sm font-medium ${badge.color} shadow-sm transform transition-transform duration-200 hover:scale-105`}
+              className={
+                "px-3 py-1 inline-flex items-center justify-center rounded-full text-sm font-medium " +
+                badge.color +
+                " shadow-sm transform transition-transform duration-200 hover:scale-105"
+              }
             >
               {badge.label}
             </span>

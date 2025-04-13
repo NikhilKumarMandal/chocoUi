@@ -12,10 +12,6 @@ export default function NavbarComForUser() {
       component: <Navbar10 />,
       codeSnippets: [
         {
-          language: "html",
-          code: ``,
-        },
-        {
           language: "jsx",
           code: ``,
         },
@@ -57,10 +53,6 @@ export default function NavbarComForUser() {
       codeSnippets: [
         {
           language: "html",
-          code: ``,
-        },
-        {
-          language: "jsx",
           code: ``,
         },
       ],

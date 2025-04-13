@@ -28,7 +28,11 @@ const Loader_12 = ({ size = "md", color = "blue" }) => {
   return (
     <div className="flex justify-center items-center">
       <div
-        className={`${sizeClasses[size]} border-4 border-t-transparent rounded-full animate-spin ${colorClasses[color]}`}
+        className={
+          sizeClasses[size] +
+          " border-4 border-t-transparent rounded-full animate-spin " +
+          colorClasses[color]
+        }
       ></div>
     </div>
   );
