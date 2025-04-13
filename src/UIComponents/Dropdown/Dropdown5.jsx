@@ -10,7 +10,8 @@ const Dropdown5 = () => {
     { name: "Gray", class: "bg-gray-500 text-white" },
     {
       name: "Gradient",
-      class: "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white",
+      class:
+        "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white",
     },
   ];
 
@@ -22,7 +23,6 @@ const Dropdown5 = () => {
   };
 
   return (
-   
     <div className="relative  inline-block text-left  ">
       <div>
         <button
@@ -38,7 +38,12 @@ const Dropdown5 = () => {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
           </svg>
         </button>
       </div>
@@ -59,7 +64,6 @@ const Dropdown5 = () => {
         </div>
       )}
     </div>
-    
   );
 };
 

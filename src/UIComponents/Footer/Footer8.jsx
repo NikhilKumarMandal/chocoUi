@@ -247,13 +247,22 @@ function Footer8() {
                 reserved.
               </p>
               <div className="mt-4 flex justify-center space-x-6">
-                <a href="#" className="text-sm text-gray-500 hover:text-gray-900">
+                <a
+                  href="#"
+                  className="text-sm text-gray-500 hover:text-gray-900"
+                >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-sm text-gray-500 hover:text-gray-900">
+                <a
+                  href="#"
+                  className="text-sm text-gray-500 hover:text-gray-900"
+                >
                   Terms of Service
                 </a>
-                <a href="#" className="text-sm text-gray-500 hover:text-gray-900">
+                <a
+                  href="#"
+                  className="text-sm text-gray-500 hover:text-gray-900"
+                >
                   Cookie Policy
                 </a>
               </div>

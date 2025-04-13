@@ -1,11 +1,19 @@
-import React, { useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { UploadCloud, X, Check, FileText, Image, FileAudio, FileVideo } from 'lucide-react';
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  UploadCloud,
+  X,
+  Check,
+  FileText,
+  Image,
+  FileAudio,
+  FileVideo,
+} from "lucide-react";
 
-const SmallFileUpload = ({ 
-  accept = '*',
+const SmallFileUpload = ({
+  accept = "*",
   maxSize = 5, // MB
-  onFileUpload
+  onFileUpload,
 }) => {
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -14,9 +22,12 @@ const SmallFileUpload = ({
   const fileInputRef = useRef(null);
 
   const getFileIcon = (type) => {
-    if (type.startsWith('image/')) return <Image className="w-4 h-4 text-purple-300" />;
-    if (type.startsWith('audio/')) return <FileAudio className="w-4 h-4 text-purple-300" />;
-    if (type.startsWith('video/')) return <FileVideo className="w-4 h-4 text-purple-300" />;
+    if (type.startsWith("image/"))
+      return <Image className="w-4 h-4 text-purple-300" />;
+    if (type.startsWith("audio/"))
+      return <FileAudio className="w-4 h-4 text-purple-300" />;
+    if (type.startsWith("video/"))
+      return <FileVideo className="w-4 h-4 text-purple-300" />;
     return <FileText className="w-4 h-4 text-purple-300" />;
   };
 
@@ -74,9 +85,9 @@ const SmallFileUpload = ({
   };
 
   return (
-    <motion.div 
+    <motion.div
       className={`relative w-full max-w-xs rounded-xl bg-gray-900 shadow-lg overflow-hidden border border-gray-700 ${
-        isDragging ? 'ring-2 ring-purple-500' : 'hover:border-purple-400'
+        isDragging ? "ring-2 ring-purple-500" : "hover:border-purple-400"
       }`}
       whileHover={{ y: -2, scale: 1.01 }}
       onDragOver={handleDragOver}
@@ -93,20 +104,20 @@ const SmallFileUpload = ({
       />
 
       {/* Main container */}
-      <div 
+      <div
         className="relative p-4 cursor-pointer"
         onClick={() => fileInputRef.current.click()}
       >
         {/* Background shimmer effect */}
         {isDragging && (
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-purple-800/20 to-purple-900/10"
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
+            initial={{ x: "-100%" }}
+            animate={{ x: "100%" }}
             transition={{
               duration: 1.5,
               repeat: Infinity,
-              ease: 'linear'
+              ease: "linear",
             }}
           />
         )}
@@ -121,15 +132,18 @@ const SmallFileUpload = ({
                 Drag & drop files
               </h4>
               <p className="text-xs text-gray-400 mt-1 hover:text-purple-200 transition-colors">
-                or <span className="font-medium text-purple-300">click to browse</span>
+                or{" "}
+                <span className="font-medium text-purple-300">
+                  click to browse
+                </span>
               </p>
               <p className="text-[10px] text-gray-500 mt-2">
-                Supported formats: {accept === '*' ? 'All' : accept}
+                Supported formats: {accept === "*" ? "All" : accept}
               </p>
             </div>
           </div>
         ) : (
-          <motion.div 
+          <motion.div
             className="space-y-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -149,7 +163,7 @@ const SmallFileUpload = ({
                   </p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={removeFile}
                 className="p-1 rounded-full hover:bg-purple-900/50 transition-colors"
               >
@@ -161,7 +175,9 @@ const SmallFileUpload = ({
             <div className="relative h-2 bg-gray-800 rounded-full overflow-hidden">
               <motion.div
                 className={`absolute top-0 left-0 h-full ${
-                  file.error ? 'bg-red-500' : 'bg-gradient-to-r from-purple-500 to-purple-400'
+                  file.error
+                    ? "bg-red-500"
+                    : "bg-gradient-to-r from-purple-500 to-purple-400"
                 } rounded-full`}
                 initial={{ width: 0 }}
                 animate={{ width: `${uploadProgress}%` }}
@@ -171,15 +187,15 @@ const SmallFileUpload = ({
                 <motion.div
                   className="absolute top-0 h-full w-4 bg-white/30"
                   animate={{
-                    x: ['0%', '100%']
+                    x: ["0%", "100%"],
                   }}
                   transition={{
                     duration: 1.5,
                     repeat: Infinity,
-                    ease: 'linear'
+                    ease: "linear",
                   }}
                   style={{
-                    boxShadow: '0 0 10px 5px rgba(192, 132, 252, 0.3)'
+                    boxShadow: "0 0 10px 5px rgba(192, 132, 252, 0.3)",
                   }}
                 />
               )}

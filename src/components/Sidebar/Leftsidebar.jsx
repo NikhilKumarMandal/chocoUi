@@ -45,6 +45,10 @@ const LeftSidebar = () => {
       { name: "Combobox", path: "/dashboard/combobox" },
       { name: "CTA", path: "/dashboard/cta" },
       { name: "Dropdown", path: "/dashboard/dropdown" },
+      { name: "Input", path: "/dashboard/input" },
+      { name: "Loader", path: "/dashboard/loader" },
+      { name: "FileUpload", path: "/dashboard/fileUpload" },
+      { name: "Button", path: "/dashboard/button" },
     ],
     []
   );

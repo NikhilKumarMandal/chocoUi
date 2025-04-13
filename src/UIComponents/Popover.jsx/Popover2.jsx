@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from "react";
 
 const Popover2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +8,7 @@ const Popover2 = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        popoverRef.current && 
+        popoverRef.current &&
         !popoverRef.current.contains(event.target) &&
         !triggerRef.current.contains(event.target)
       ) {
@@ -16,14 +16,13 @@ const Popover2 = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="relative inline-block">
-       
         <span
           ref={triggerRef}
           onMouseEnter={() => setIsOpen(true)}
@@ -39,13 +38,11 @@ const Popover2 = () => {
             className="absolute left-1/2 transform -translate-x-1/2 -translate-y-full 
                      top-0 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-md 
                      shadow-lg whitespace-nowrap"
-            style={{ marginTop: '-10px' }}
+            style={{ marginTop: "-10px" }}
           >
-       
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
               <div className="w-2 h-2 bg-gray-900 rotate-45" />
             </div>
-            
             Simple tooltip message
           </div>
         )}
@@ -54,4 +51,4 @@ const Popover2 = () => {
   );
 };
 
-export default Popover2
+export default Popover2;

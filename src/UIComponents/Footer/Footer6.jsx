@@ -51,16 +51,18 @@ function Footer6() {
                     Products
                   </h3>
                   <ul className="space-y-3">
-                    {["Components", "Templates", "Pricing", "FAQ"].map((item) => (
-                      <li key={item}>
-                        <a
-                          href="#"
-                          className="text-base text-white hover:text-gray-300 transition-colors"
-                        >
-                          {item}
-                        </a>
-                      </li>
-                    ))}
+                    {["Components", "Templates", "Pricing", "FAQ"].map(
+                      (item) => (
+                        <li key={item}>
+                          <a
+                            href="#"
+                            className="text-base text-white hover:text-gray-300 transition-colors"
+                          >
+                            {item}
+                          </a>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </div>
 

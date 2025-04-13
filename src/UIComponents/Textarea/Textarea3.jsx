@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Textarea3() {
   return (
@@ -8,7 +8,7 @@ function Textarea3() {
         placeholder="Type here..."
       ></textarea>
     </div>
-  )
+  );
 }
 
-export default Textarea3
+export default Textarea3;

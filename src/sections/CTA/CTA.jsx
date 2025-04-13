@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 function CTA() {
   return (
@@ -8,13 +8,13 @@ function CTA() {
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#FFDBB5]/5 blur-3xl -translate-x-20 -translate-y-20"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#6C4E31]/10 blur-3xl translate-x-20 translate-y-20"></div>
-      
+
       {/* Decorative line elements */}
       <div className="absolute left-0 top-1/4 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/20 to-transparent"></div>
       <div className="absolute right-0 bottom-1/3 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/15 to-transparent"></div>
-      
+
       <div className="container px-4 mx-auto text-center sm:px-6 max-w-7xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -22,16 +22,19 @@ function CTA() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-[#FFDBB5] md:text-4xl lg:text-5xl font-['Bricolage']">
-            Ready to build something{' '}
+            Ready to build something{" "}
             <span className="relative inline-block">
-              <span className="font-['InstrumentSerif'] font-normal italic relative z-10">amazing</span>
-              <motion.span 
+              <span className="font-['InstrumentSerif'] font-normal italic relative z-10">
+                amazing
+              </span>
+              <motion.span
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 1, delay: 0.5 }}
                 className="absolute bottom-0 left-0 w-full h-1 bg-[#FFDBB5] z-20 transform -rotate-1"
               ></motion.span>
-            </span>?
+            </span>
+            ?
           </h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -40,7 +43,8 @@ function CTA() {
             viewport={{ once: true }}
             className="mb-8 text-sm lg:text-lg text-[#FFDBB5]/80 font-['Inter'] leading-relaxed"
           >
-            Get started with our UI library today and transform your React applications with beautiful, accessible components.
+            Get started with our UI library today and transform your React
+            applications with beautiful, accessible components.
           </motion.p>
 
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 sm:justify-center">
@@ -94,16 +98,26 @@ function CTA() {
       </div>
 
       {/* Floating code particles */}
-     
 
       {/* Additional decorative elements */}
       <div className="absolute top-10 right-10 w-32 h-32 border border-[#FFDBB5]/10 rounded-full opacity-30"></div>
       <div className="absolute bottom-20 left-20 w-48 h-48 border border-[#FFDBB5]/10 rounded-full opacity-20"></div>
-      
+
       {/* Curved decoration at the bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-8">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 48" fill="none" className="w-full h-full">
-          <path fillRule="evenodd" clipRule="evenodd" d="M0 48H1440V24C1296 40 1092 48 720 48C348 48 144 40 0 24V48Z" fill="#f8f8f8" fillOpacity="0.05" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 48"
+          fill="none"
+          className="w-full h-full"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0 48H1440V24C1296 40 1092 48 720 48C348 48 144 40 0 24V48Z"
+            fill="#f8f8f8"
+            fillOpacity="0.05"
+          />
         </svg>
       </div>
     </section>
@@ -111,8 +125,3 @@ function CTA() {
 }
 
 export default CTA;
-
-
-
-
-

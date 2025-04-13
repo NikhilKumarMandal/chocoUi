@@ -1,15 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Dropdown3 = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState('Select option');
+  const [selected, setSelected] = useState("Select option");
 
-  const options = [
-    'Option 1',
-    'Option 2',
-    'Option 3',
-    'Option 4',
-  ];
+  const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -21,9 +16,7 @@ const Dropdown3 = () => {
   };
 
   return (
-    
     <div className="relative w-64">
-     
       <button
         onClick={toggleDropdown}
         className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg 
@@ -33,7 +26,7 @@ const Dropdown3 = () => {
         <span>{selected}</span>
         <svg
           className={`w-5 h-5 transition-transform duration-200 ${
-            isOpen ? 'transform rotate-180' : ''
+            isOpen ? "transform rotate-180" : ""
           }`}
           fill="none"
           stroke="currentColor"
@@ -48,10 +41,11 @@ const Dropdown3 = () => {
         </svg>
       </button>
 
-    
       {isOpen && (
-        <div className="absolute w-full mt-2 bg-white border border-gray-200 
-                      rounded-lg shadow-lg">
+        <div
+          className="absolute w-full mt-2 bg-white border border-gray-200 
+                      rounded-lg shadow-lg"
+        >
           {options.map((option, index) => (
             <div
               key={index}
@@ -65,7 +59,6 @@ const Dropdown3 = () => {
         </div>
       )}
     </div>
-
   );
 };
 

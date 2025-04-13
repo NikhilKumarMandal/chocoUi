@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 function Textarea5() {
-  const [text, setText] = useState('')
+  const [text, setText] = useState("");
   return (
     <div className="flex justify-center flex-col  items-center min-h-screen">
       <div className="relative w-2/5 h-32">
@@ -17,7 +17,7 @@ function Textarea5() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Textarea5
+export default Textarea5;

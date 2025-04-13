@@ -1,44 +1,44 @@
-import React from 'react'
+import React from "react";
 
 const Loader_23 = ({ size = "md", color = "blue" }) => {
-    const sizeClasses = {
-        sm: "w-6 h-6",
-        md: "w-10 h-10",
-        lg: "w-16 h-16",
-        xl: "w-24 h-24",
-      };
-    
-      // Color options
-      const colorClasses = {
-        blue: "bg-blue-500",
-        indigo: "bg-indigo-500",
-        purple: "bg-purple-500",
-        pink: "bg-pink-500",
-        red: "bg-red-500",
-        orange: "bg-orange-500",
-        amber: "bg-amber-500",
-        yellow: "bg-yellow-500",
-        lime: "bg-lime-500",
-        green: "bg-green-500",
-        teal: "bg-teal-500",
-        cyan: "bg-cyan-500",
-        sky: "bg-sky-500",
-        gray: "bg-gray-500",
-      };
-    
-      return (
-        <div className="flex justify-center items-center">
-          <div className={`${sizeClasses[size]} flex space-x-1`}>
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={i}
-                className={`w-1/3 h-full ${colorClasses[color]} rounded-full animate-pulse`}
-                style={{ animationDelay: `${i * 0.15}s` }}
-              ></div>
-            ))}
-          </div>
-        </div>
-      );
-}
+  const sizeClasses = {
+    sm: "w-6 h-6",
+    md: "w-10 h-10",
+    lg: "w-16 h-16",
+    xl: "w-24 h-24",
+  };
 
-export default Loader_23
+  // Color options
+  const colorClasses = {
+    blue: "bg-blue-500",
+    indigo: "bg-indigo-500",
+    purple: "bg-purple-500",
+    pink: "bg-pink-500",
+    red: "bg-red-500",
+    orange: "bg-orange-500",
+    amber: "bg-amber-500",
+    yellow: "bg-yellow-500",
+    lime: "bg-lime-500",
+    green: "bg-green-500",
+    teal: "bg-teal-500",
+    cyan: "bg-cyan-500",
+    sky: "bg-sky-500",
+    gray: "bg-gray-500",
+  };
+
+  return (
+    <div className="flex justify-center items-center">
+      <div className={`${sizeClasses[size]} flex space-x-1`}>
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={i}
+            className={`w-1/3 h-full ${colorClasses[color]} rounded-full animate-pulse`}
+            style={{ animationDelay: `${i * 0.15}s` }}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Loader_23;

@@ -52,9 +52,9 @@ export const Documentation = () => {
         color="#603F26"
         className="absolute inset-x-0 bottom-0 h-full w-full"
       />
-      
+
       <div className="max-w-7xl mx-auto px-4 py-8 pt-35 relative z-10">
-        <motion.header 
+        <motion.header
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -64,14 +64,17 @@ export const Documentation = () => {
             ChocoUI Documentation
           </h1>
           <p className="mt-4 text-sm text-gray-900 font-['Inter'] max-w-2xl mx-auto">
-            Everything you need to build beautiful interfaces with our chocolaty components
+            Everything you need to build beautiful interfaces with our chocolaty
+            components
           </p>
         </motion.header>
 
         <div className="flex flex-col md:flex-row gap-12">
           <nav className="md:w-64 flex-shrink-0">
             <div className="sticky top-32 space-y-2 bg-white/50 backdrop-blur-sm p-4 rounded-xl shadow-md border border-[#FFDBB5]">
-              <h3 className="text-[#603F26] font-semibold mb-4 font-['Bricolage']">Contents</h3>
+              <h3 className="text-[#603F26] font-semibold mb-4 font-['Bricolage']">
+                Contents
+              </h3>
               <SidebarLink
                 active={activeTab === "introduction"}
                 onClick={() => scrollToSection("introduction")}
@@ -100,8 +103,8 @@ export const Documentation = () => {
           </nav>
 
           <main className="flex-1 space-y-24 pb-24">
-            <motion.section 
-              id="introduction" 
+            <motion.section
+              id="introduction"
               className="scroll-mt-24"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -110,9 +113,9 @@ export const Documentation = () => {
             >
               <Introduction />
             </motion.section>
-            
-            <motion.section 
-              id="installation" 
+
+            <motion.section
+              id="installation"
               className="scroll-mt-24"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -121,9 +124,9 @@ export const Documentation = () => {
             >
               <Installation />
             </motion.section>
-            
-            <motion.section 
-              id="usage" 
+
+            <motion.section
+              id="usage"
               className="scroll-mt-24"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,9 +135,9 @@ export const Documentation = () => {
             >
               <Usage />
             </motion.section>
-            
-            <motion.section 
-              id="theming" 
+
+            <motion.section
+              id="theming"
               className="scroll-mt-24"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

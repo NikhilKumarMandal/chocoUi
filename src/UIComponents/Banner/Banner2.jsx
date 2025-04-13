@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Banners2 = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -18,33 +18,40 @@ const Banners2 = () => {
   return (
     <div className="max-w-4xl mx-auto p-4">
       <div className="relative bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm transition-opacity duration-300">
-       
-        <button 
+        <button
           onClick={() => setIsVisible(false)}
           className="absolute right-3 top-3 text-gray-400 hover:text-gray-600 
                      transition-colors duration-200"
           aria-label="Close banner"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                  d="M6 18L18 6M6 6l12 12" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
         <div className="px-6 py-8">
           {!isSubscribed ? (
             <div>
-             
               <div className="text-center mb-6">
                 <h3 className="text-gray-900 font-medium text-lg mb-2">
                   Stay updated with our newsletter
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Get the latest updates and exclusive offers directly in your inbox
+                  Get the latest updates and exclusive offers directly in your
+                  inbox
                 </p>
               </div>
 
-          
               <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                 <div className="flex space-x-2">
                   <input
@@ -75,12 +82,22 @@ const Banners2 = () => {
             </div>
           ) : (
             <div className="text-center">
-              <div className="mb-4 inline-flex items-center justify-center w-12 h-12 
-                              rounded-full bg-gray-100">
-                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" 
-                     viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                        d="M5 13l4 4L19 7" />
+              <div
+                className="mb-4 inline-flex items-center justify-center w-12 h-12 
+                              rounded-full bg-gray-100"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
               <h3 className="text-gray-900 font-medium text-lg mb-2">
@@ -93,7 +110,6 @@ const Banners2 = () => {
           )}
         </div>
 
-     
         <div className="h-1 bg-gradient-to-r from-gray-900 to-gray-700" />
       </div>
     </div>
@@ -101,4 +117,3 @@ const Banners2 = () => {
 };
 
 export default Banners2;
-

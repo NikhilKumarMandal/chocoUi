@@ -50,7 +50,9 @@ const FeedbackPage = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* Name */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Name
+            </label>
             <input
               {...register("name")}
               className="w-full px-5 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-300 focus:outline-none bg-white"
@@ -63,7 +65,9 @@ const FeedbackPage = () => {
 
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
             <input
               type="email"
               {...register("email")}
@@ -71,13 +75,17 @@ const FeedbackPage = () => {
               placeholder="you@example.com"
             />
             {errors.email && (
-              <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {errors.email.message}
+              </p>
             )}
           </div>
 
           {/* Message */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Your Message
+            </label>
             <textarea
               {...register("message")}
               rows={4}
@@ -85,7 +93,9 @@ const FeedbackPage = () => {
               placeholder="What can we improve or what did you love?"
             />
             {errors.message && (
-              <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {errors.message.message}
+              </p>
             )}
           </div>
 
@@ -103,7 +113,3 @@ const FeedbackPage = () => {
 };
 
 export default FeedbackPage;
-
-
-
-
