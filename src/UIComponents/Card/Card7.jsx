@@ -18,7 +18,7 @@ export default function Card7() {
 
           <a href="#">
             <h3 className="mt-0.5 text-lg text-white font-bold">
-              Lega kya choco
+              Haanji, kaisi lagi ChocoUI?
             </h3>
           </a>
 

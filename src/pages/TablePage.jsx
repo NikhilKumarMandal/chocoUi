@@ -1,35 +1,68 @@
-import Tabel1 from "../UIComponents/Table/Table_01";
-import Tabel2 from "../UIComponents/Table/Table_02";
+import Table1 from "../UIComponents/Table/Table_01";
+import Table4 from "../UIComponents/Table/Table_04";
+import Table6 from "../UIComponents/Table/Table_06";
+import Table7 from "../UIComponents/Table/Table_07";
+import Table8 from "../UIComponents/Table/Table_08";
+import Table9 from "../UIComponents/Table/Table_09";
+import Table11 from "../UIComponents/Table/Table_11";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function TablePage() {
   const TableVariants = [
     {
-      title: "Calendar",
-      component: <Tabel1 />,
+      title: "Table 1",
+      component: <Table1 />,
       codeSnippets: [
-        {
-          language: "html",
-          code: ``,
-        },
-        {
-          language: "jsx",
-          code: ``,
-        },
+        { language: "html", code: `` },
+        { language: "jsx", code: `` },
       ],
     },
     {
-      title: "Calendar",
-      component: <Tabel2 />,
+      title: "Table 4",
+      component: <Table4 />,
       codeSnippets: [
-        {
-          language: "html",
-          code: ``,
-        },
-        {
-          language: "jsx",
-          code: ``,
-        },
+        { language: "html", code: `` },
+        { language: "jsx", code: `` },
+      ],
+    },
+    {
+      title: "Table 6",
+      component: <Table6 />,
+      codeSnippets: [
+        { language: "html", code: `` },
+        { language: "jsx", code: `` },
+      ],
+    },
+    {
+      title: "Table 7",
+      component: <Table7 />,
+      codeSnippets: [
+        { language: "html", code: `` },
+        { language: "jsx", code: `` },
+      ],
+    },
+    {
+      title: "Table 8",
+      component: <Table8 />,
+      codeSnippets: [
+        { language: "html", code: `` },
+        { language: "jsx", code: `` },
+      ],
+    },
+    {
+      title: "Table 9",
+      component: <Table9 />,
+      codeSnippets: [
+        { language: "html", code: `` },
+        { language: "jsx", code: `` },
+      ],
+    },
+    {
+      title: "Table 11",
+      component: <Table11 />,
+      codeSnippets: [
+        { language: "html", code: `` },
+        { language: "jsx", code: `` },
       ],
     },
   ];
