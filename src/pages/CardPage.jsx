@@ -23,113 +23,699 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function CardPage() {
   const cardsVariants = [
     {
-      title: "Card 1",
+      title: "Card",
       component: <Card1 />,
       codeSnippets: [
         {
-          language: "html",
-          code: `<div class="max-w-sm p-6 border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#152f3d]">Choco UI</h5>
-        </a>
-        <p class="mb-3 font-normal text-[#102733]">Here are the full information of Choco UI and Tech-Wizard team.</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-[#6C4E31] rounded-lg hover:bg-[#5a3e29] focus:ring-4 focus:outline-none focus:ring-[#6C4E31]">
-            Read more
-            <svg class="w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
-    </div>`,
-        },
-        {
           language: "jsx",
-          code: `export default function Card1() {
-  return (
-        <div className="max-w-sm p-6  border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
-            <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#152f3d]">Choco ui</h5>
-            </a>
-            <p className="mb-3 font-normal text-[#102733] ">Here are the full  information of choco ui and tech-wizard team </p>
-            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#6C4E31] rounded-lg hover:bg-[#6C4E31] focus:ring-4 focus:outline-none focus:ring-[#6C4E31] dark:bg-[#6C4E31] dark:hover:bg-[#6C4E31] dark:focus:ring-[#6C4E31]">
-                Read more
-                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
-        </div>
-  )
-}`,
-        },
-      ],
-    },
-    {
-      title: "Card 2",
-      component: <Card2 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 3",
-      component: <Card3 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 4",
-      component: <Card4 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 5",
-      component: <Card5 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 6",
-      component: <Card6 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Card 7",
-      component: <Card7 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
+          code: `import React from "react";
+          
+          export default function Card() {
+            return (
+              <div className="max-w-sm p-6  border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
+                <a href="#">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#152f3d]">
+                    Choco ui
+                  </h5>
+                </a>
+                <p className="mb-3 font-normal text-[#102733] ">
+                  Here are the full information of choco ui and tech-wizard team{" "}
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#6C4E31] rounded-lg hover:bg-[#6C4E31] focus:ring-4 focus:outline-none focus:ring-[#6C4E31] dark:bg-[#6C4E31] dark:hover:bg-[#6C4E31] dark:focus:ring-[#6C4E31]"
+                >
+                  Read more
+                  <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+              </div>
+            );
+          }
+          `,
         },
       ],
     },
 
     {
-      title: "Card 10",
+      title: "Card",
+      component: <Card2 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `import React from "react";
+          
+          function Card() {
+            return (
+              <div className="max-w-sm rounded-2xl border-1 overflow-hidden shadow-lg">
+                <img
+                  className="p-3 rounded-3xl w-full h-64"
+                  src="https://plus.unsplash.com/premium_photo-1683120880375-074c4ba3f775?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Sunset in the mountains"
+                />
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">
+                    Rich, velvety brown chocolate flows smoothly, melting into a decadent
+                    treat
+                  </div>
+                  <p className="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                    quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+                    nihil.
+                  </p>
+                </div>
+                <div className="px-6 pt-4 pb-2">
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    #Choco 🍫
+                  </span>
+                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    #ChocoAddict 😍
+                  </span>
+                </div>
+              </div>
+            );
+          }
+          
+          export default Card;
+          `,
+        },
+      ],
+    },
+
+    {
+      title: "Card",
+      component: <Card3 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `import React from "react";
+          
+          function Card() {
+            return (
+              <div class="max-w-xs rounded-lg shadow-lg p-3 border-1 border-amber-200 bg-white text-gray-600">
+                <div class="flex flex-col items-center p-5 pt-10 bg-amber-100 rounded-lg relative">
+                  <span class="absolute top-0 right-0 bg-amber-200 rounded-l-full px-3 py-2 text-lg font-semibold text-gray-700">
+                    $49 <small class="text-sm text-gray-500">/ m</small>
+                  </span>
+                  <p class="font-semibold text-xl text-gray-700">Professional</p>
+                  <p class="mt-3 text-center">
+                    This plan is for those who have a team already and running a large
+                    business.
+                  </p>
+                  <ul class="mt-4 space-y-3 w-full">
+                    <li class="flex items-center gap-2">
+                      <span class="bg-teal-500 text-white rounded-full flex items-center justify-center w-5 h-5">
+                        <svg
+                          class="w-3.5 h-3.5"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0h24v24H0z" fill="none"></path>
+                          <path
+                            fill="currentColor"
+                            d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span>
+                        <strong>20</strong> team members
+                      </span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="bg-teal-500 text-white rounded-full flex items-center justify-center w-5 h-5">
+                        <svg
+                          class="w-3.5 h-3.5"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0h24v24H0z" fill="none"></path>
+                          <path
+                            fill="currentColor"
+                            d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span>
+                        Plan <strong>team meetings</strong>
+                      </span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="bg-teal-500 text-white rounded-full flex items-center justify-center w-5 h-5">
+                        <svg
+                          class="w-3.5 h-3.5"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0h24v24H0z" fill="none"></path>
+                          <path
+                            fill="currentColor"
+                            d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span>File sharing</span>
+                    </li>
+                  </ul>
+                  <div class="mt-5 w-full">
+                    <a
+                      href="#"
+                      class="block text-center bg-amber-300 hover:bg-amber-400 text-white font-medium text-lg py-2 rounded-md w-full"
+                    >
+                      Choose plan
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+          
+          export default Card;
+          `,
+        },
+      ],
+    },
+
+    {
+      title: "Card",
+      component: <Card4 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `import React from "react";
+          
+          function Card() {
+            return (
+              <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border-1 border-blue-300 bg-white shadow-md">
+                <a class="relative mx-3 mt-3  h-60 overflow-hidden rounded-xl" href="#">
+                  <img
+                    class="object-cover"
+                    src="https://images.unsplash.com/photo-1646168932800-e48f378d37bb?q=80&w=1863&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="product image"
+                  />
+                  <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
+                    39% OFF
+                  </span>
+                </a>
+                <div class="mt-4 px-5 pb-5">
+                  <a href="#">
+                    <h5 class="text-xl tracking-tight text-slate-900">Ammol Chocolate</h5>
+                  </a>
+                  <div class="mt-2 mb-5 flex items-center justify-between">
+                    <p>
+                      <span class="text-3xl font-bold text-slate-900">$449</span>
+                      <span class="text-sm text-slate-900 line-through">$699</span>
+                    </p>
+                    <div class="flex items-center">
+                      <svg
+                        aria-hidden="true"
+                        class="h-5 w-5 text-yellow-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="h-5 w-5 text-yellow-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="h-5 w-5 text-yellow-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="h-5 w-5 text-yellow-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="h-5 w-5 text-yellow-300"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <span class="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">
+                        5.0
+                      </span>
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center rounded-md bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="mr-2 h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    Add to cart
+                  </a>
+                </div>
+              </div>
+            );
+          }
+          
+          export default Card;
+          `,
+        },
+      ],
+    },
+
+    {
+      title: "Card",
+      component: <Card5 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `import React from "react";
+          
+          export default function Card() {
+            return (
+              <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex flex-col items-center pb-10 mt-9">
+                  <img
+                    class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                    src="https://images.pexels.com/users/avatars/97941/hitesh-choudhary-291.jpeg?auto=compress&fit=crop&h=130&w=130&dpr=2"
+                    alt="Bonnie image"
+                  />
+                  <h5 class="mb-1 text-xl font-snas text-gray-900 dark:text-white">
+                    Hitesh choudhary
+                  </h5>
+                  <span class="text-sm text-gray-500 dark:text-gray-400 ">Ex techie</span>
+                  <div class="flex mt-4 md:mt-6 ">
+                    <a
+                      href="#"
+                      class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                      Add friend
+                    </a>
+                    <a
+                      href="#"
+                      class="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      Message
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+          `,
+        },
+      ],
+    },
+
+    {
+      title: "Card",
+      component: <Card6 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `import React from "react";
+          
+          export default function Card() {
+            return (
+              <div
+                className="relative w-screen max-w-sm border border-gray-600 rounded-2xl bg-gray-100 px-4 py-8 sm:px-6 lg:px-8"
+                aria-modal="true"
+                role="dialog"
+                tabIndex="-1"
+              >
+                <button className="absolute end-4 top-4 text-gray-600 transition hover:scale-110">
+                  <span className="sr-only">Close cart</span>
+          
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+          
+                <div className="mt-4 space-y-6">
+                  <ul className="space-y-4">
+                    <li className="flex items-center gap-4">
+                      <img
+                        src="https://media.istockphoto.com/id/182412043/photo/white-t-shirt.jpg?s=612x612&w=0&k=20&c=uXrNJo2dxDyDDI6hRwB84Jgn0Snj5NqyDmfN9DCI_qQ="
+                        alt=""
+                        className="size-16 rounded-sm object-cover "
+                      />
+          
+                      <div>
+                        <h3 className="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+          
+                        <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+                          <div>
+                            <dt className="inline">Size:</dt>
+                            <dd className="inline">S</dd>
+                          </div>
+          
+                          <div>
+                            <dt className="inline">Color:</dt>
+                            <dd className="inline">White</dd>
+                          </div>
+                        </dl>
+                      </div>
+          
+                      <div className="flex flex-1 items-center justify-end gap-2">
+                        <form>
+                          <label htmlFor="Line1Qty" className="sr-only">
+                            {" "}
+                            Quantity{" "}
+                          </label>
+                          <button className="h-8 w-12 rounded-sm border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-900 [-moz-appearance:_textfield] focus:outline-hidden [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none">
+                            Add
+                          </button>
+                        </form>
+          
+                        <button className="text-gray-600 transition hover:text-red-600">
+                          <span className="sr-only">Remove item</span>
+          
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="size-4"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+          
+                    <li className="flex items-center gap-4">
+                      <img
+                        src="https://media.istockphoto.com/id/1830111752/photo/black-t-shirt-short-sleeve-mockup.jpg?s=612x612&w=0&k=20&c=fqMq-q2LjSt2uVUiD3VC46FaxmIDCJunEoRlJiNOswE="
+                        alt=""
+                        className="size-16 rounded-sm object-cover"
+                      />
+          
+                      <div>
+                        <h3 className="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+          
+                        <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+                          <div>
+                            <dt className="inline">Size:</dt>
+                            <dd className="inline">M</dd>
+                          </div>
+          
+                          <div>
+                            <dt className="inline">Color:</dt>
+                            <dd className="inline">Black</dd>
+                          </div>
+                        </dl>
+                      </div>
+          
+                      <div className="flex flex-1 items-center justify-end gap-2">
+                        <form>
+                          <label htmlFor="Line2Qty" className="sr-only">
+                            {" "}
+                            Quantity{" "}
+                          </label>
+          
+                          <button className="h-8 w-12 rounded-sm border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-900 [-moz-appearance:_textfield] focus:outline-hidden [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none">
+                            Add
+                          </button>
+                        </form>
+          
+                        <button className="text-gray-600 transition hover:text-red-600">
+                          <span className="sr-only">Remove item</span>
+          
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="size-4"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+          
+                    <li className="flex items-center gap-4">
+                      <img
+                        src="https://media.istockphoto.com/id/465485445/photo/red-t-shirt-clipping-path.jpg?s=612x612&w=0&k=20&c=SfSPtHeslymJs8KbopzzDWHZzYIAdMMnfon0JRkwfVw="
+                        alt=""
+                        className="size-16 rounded-sm object-cover"
+                      />
+          
+                      <div>
+                        <h3 className="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+          
+                        <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+                          <div>
+                            <dt className="inline">Size:</dt>
+                            <dd className="inline">l</dd>
+                          </div>
+          
+                          <div>
+                            <dt className="inline">Color:</dt>
+                            <dd className="inline">Red</dd>
+                          </div>
+                        </dl>
+                      </div>
+          
+                      <div className="flex flex-1 items-center justify-end gap-2">
+                        <form>
+                          <label htmlFor="Line3Qty" className="sr-only">
+                            {" "}
+                            Quantity{" "}
+                          </label>
+          
+                          <button className="h-8 w-12 rounded-sm border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-900 [-moz-appearance:_textfield] focus:outline-hidden [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none">
+                            Add
+                          </button>
+                        </form>
+          
+                        <button className="text-gray-600 transition hover:text-red-600">
+                          <span className="sr-only">Remove item</span>
+          
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="size-4"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+          
+                  <div className="space-y-4 text-center">
+                    <a
+                      href="#"
+                      className="block rounded-md  border border-gray-600 px-5 py-3 text-sm text-gray-600 transition hover:ring-1 hover:ring-gray-400 "
+                    >
+                      View my cart (2)
+                    </a>
+          
+                    <a
+                      href="#"
+                      className="block rounded-sm bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
+                    >
+                      Checkout
+                    </a>
+          
+                    <a
+                      href="#"
+                      className="inline-block text-sm text-gray-500 underline underline-offset-4 transition hover:text-gray-600 rounded-2xl"
+                    >
+                      Continue shopping
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+          `,
+        },
+      ],
+    },
+
+    {
+      title: "Card",
+      component: <Card7 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `import React from "react";
+          
+          export default function Card() {
+            return (
+              <article className="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg max-w-96">
+                <img
+                  alt=""
+                  src="https://images.pexels.com/photos/1739941/pexels-photo-1739941.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+          
+                <div className="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 pt-32 sm:pt-48 lg:pt-64">
+                  <div className="p-4 sm:p-6">
+                    <time datetime="2022-10-10" className="block text-xs text-white/90">
+                      {" "}
+                      2 March 2025{" "}
+                    </time>
+          
+                    <a href="#">
+                      <h3 className="mt-0.5 text-lg text-white font-bold">
+                        Haanji, kaisi lagi ChocoUI?
+                      </h3>
+                    </a>
+          
+                    <p className="mt-2 line-clamp-3 text-sm/relaxed text-white/95">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+                      dolores, possimus pariatur animi temporibus nesciunt praesentium
+                      dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque
+                      minus soluta, voluptates neque explicabo tempora nisi culpa eius
+                      atque dignissimos. Molestias explicabo corporis voluptatem?
+                    </p>
+                  </div>
+                </div>
+              </article>
+            );
+          }
+          `,
+        },
+      ],
+    },
+
+    {
+      title: "Card",
       component: <Card10 />,
       codeSnippets: [
         {
           language: "jsx",
-          code: ``,
+          code: `import React from "react";
+          
+          const Card = () => {
+            return (
+              <div className="group max-w-sm w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-600 transform group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <svg
+                      className="w-20 h-20 text-white opacity-80"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z" />
+                      <path d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4z" />
+                    </svg>
+                  </div>
+                </div>
+          
+                <div className="p-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800">Chocolate Bliss</h3>
+                      <p className="text-gray-600">Premium Selection</p>
+                    </div>
+                    <div className="bg-amber-100 text-amber-600 px-3 py-1 rounded-full text-sm font-medium">
+                      New
+                    </div>
+                  </div>
+          
+                  <div className="mt-6 space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Dark Chocolate</span>
+                      <span className="text-gray-800 font-semibold">$12.99</span>
+                    </div>
+          
+                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                      <div className="h-full w-3/4 bg-amber-500 rounded-full transform origin-left group-hover:scale-x-100 transition-transform duration-500"></div>
+                    </div>
+          
+                    <div className="grid grid-cols-3 gap-3">
+                      <div className="text-center p-2 rounded-lg bg-gray-50 group-hover:bg-amber-50 transition-colors duration-300">
+                        <span className="text-sm text-gray-600">100g</span>
+                      </div>
+                      <div className="text-center p-2 rounded-lg bg-gray-50 group-hover:bg-amber-50 transition-colors duration-300">
+                        <span className="text-sm text-gray-600">70%</span>
+                      </div>
+                      <div className="text-center p-2 rounded-lg bg-gray-50 group-hover:bg-amber-50 transition-colors duration-300">
+                        <span className="text-sm text-gray-600">Belgium</span>
+                      </div>
+                    </div>
+          
+                    <button className="w-full py-3 px-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition-all duration-300 transform hover:scale-105">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          };
+          
+          export default Card;
+          `,
         },
       ],
     },
