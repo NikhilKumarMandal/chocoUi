@@ -7,7 +7,9 @@ export const Usage = () => (
     </h2>
     <div className="space-y-8 text-[#6C4E31] font-['Inter']">
       <p className="text-lg leading-relaxed">
-        After installation, you can import components directly:
+        ChocoUI components are ready-to-use. Just copy the code snippet from any
+        component page and paste it into your existing Vite + Tailwind CSS
+        project.
       </p>
 
       <div className="space-y-6">
@@ -23,26 +25,6 @@ export const Usage = () => (
 
 function App() {
   return <Button>Click Me</Button>;
-}`}
-          </CodeBlock>
-        </div>
-
-        <div>
-          <h3 className="font-semibold text-[#603F26] text-xl mb-3 font-['Bricolage']">
-            Theme Provider
-          </h3>
-          <CodeBlock
-            language="jsx"
-            className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md"
-          >
-            {`import { ThemeProvider } from '@chocoui/react';
-
-function Root() {
-  return (
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  );
 }`}
           </CodeBlock>
         </div>

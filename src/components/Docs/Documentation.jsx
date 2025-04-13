@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Introduction } from "./sections/Introduction";
 import { Installation } from "./sections/Installation";
 import { Usage } from "./sections/Usage";
-import { Theming } from "./sections/Theming";
 import { SidebarLink } from "./components/SidebarLink";
 import { motion } from "framer-motion";
 import { Sparkles } from "../floats/sparkles";
@@ -93,12 +92,6 @@ export const Documentation = () => {
               >
                 Basic Usage
               </SidebarLink>
-              <SidebarLink
-                active={activeTab === "theming"}
-                onClick={() => scrollToSection("theming")}
-              >
-                Theming
-              </SidebarLink>
             </div>
           </nav>
 
@@ -143,9 +136,7 @@ export const Documentation = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-            >
-              <Theming />
-            </motion.section>
+            ></motion.section>
           </main>
         </div>
       </div>
