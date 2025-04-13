@@ -4,7 +4,7 @@ import RightSidebar from "./Sidebar/RightSidebar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex relative bg-gradient-to-br from-[#FFEAC5] via-white to-[#FFDBB5] ">
+    <div className="flex relative bg-gradient-to-br from-[#FFEAC5] via-white to-[#FFDBB5]">
       <div className=" md:block fixed top-0 left-0 h-screen z-10 w-64">
         <LeftSidebar />
       </div>

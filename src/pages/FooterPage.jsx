@@ -496,7 +496,6 @@ function FooterPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
-            
           >
             {variant.component}
           </PreviewComponent>

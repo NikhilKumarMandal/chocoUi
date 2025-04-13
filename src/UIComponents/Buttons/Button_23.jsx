@@ -14,7 +14,6 @@ const Button_23 = () => {
           dark:focus:ring-gray-600 dark:focus:ring-offset-gray-900
         "
     >
-      {/* Hidden text that slides in */}
       <span
         className="
             absolute left-4 whitespace-nowrap opacity-0
@@ -26,7 +25,6 @@ const Button_23 = () => {
         Explore
       </span>
 
-      {/* Arrow icon with smooth movement */}
       <div
         className="
             absolute flex items-center justify-center
@@ -51,7 +49,6 @@ const Button_23 = () => {
         </svg>
       </div>
 
-      {/* Initial circle with pulsating effect */}
       <div
         className="
             flex h-8 w-8 items-center justify-center rounded-full

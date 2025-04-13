@@ -27,12 +27,20 @@ const Loader_15 = ({ size = "md", color = "blue" }) => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className={`${sizeClasses[size]} relative`}>
+      <div className={sizeClasses[size] + " relative"}>
         <div
-          className={`absolute inset-0 border-4 ${colorClasses[color]} rounded-full animate-pulse`}
+          className={
+            "absolute inset-0 border-4 " +
+            colorClasses[color] +
+            " rounded-full animate-pulse"
+          }
         ></div>
         <div
-          className={`absolute inset-0 border-4 border-t-transparent ${colorClasses[color]} rounded-full animate-spin`}
+          className={
+            "absolute inset-0 border-4 border-t-transparent " +
+            colorClasses[color] +
+            " rounded-full animate-spin"
+          }
         ></div>
       </div>
     </div>

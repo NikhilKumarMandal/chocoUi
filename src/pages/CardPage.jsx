@@ -5,18 +5,7 @@ import Card4 from "../UIComponents/Card/Card4";
 import Card5 from "../UIComponents/Card/Card5";
 import Card6 from "../UIComponents/Card/Card6";
 import Card7 from "../UIComponents/Card/Card7";
-import Card8 from "../UIComponents/Card/Card8";
-import Card9 from "../UIComponents/Card/Card9";
 import Card10 from "../UIComponents/Card/Card10";
-import Card11 from "../UIComponents/Card/Card11";
-import Card12 from "../UIComponents/Card/Card12";
-import Card13 from "../UIComponents/Card/Card13";
-import Card14 from "../UIComponents/Card/Card14";
-import Card15 from "../UIComponents/Card/Card15";
-import Card16 from "../UIComponents/Card/Card16";
-import Card17 from "../UIComponents/Card/Card17";
-import Card19 from "../UIComponents/Card/Card19";
-import Card18 from "../UIComponents/Card/Card18";
 
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
@@ -722,9 +711,12 @@ function CardPage() {
   ];
   return (
     <div className="max-w-4xl mx-auto p-6 min-h-screen">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <h1 className="text-3xl font-bold text-black">
+        Elegant Card Component Previews
+      </h1>
       <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+        Dive into a variety of beautifully designed card components tailored for
+        modern web interfaces. Copy, customize, and elevate your UI instantly.
       </p>
       <div className="mt-6 space-y-6">
         {cardsVariants.map((variant, index) => (

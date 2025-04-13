@@ -30,9 +30,9 @@ function Footer5() {
 
                 <div className="max-w-sm space-y-4">
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Building beautiful interfaces shouldn't be so difficult. Choco
-                    UI provides a set of accessible, reusable, and composable
-                    React components for faster development.
+                    Building beautiful interfaces shouldn't be so difficult.
+                    Choco UI provides a set of accessible, reusable, and
+                    composable React components for faster development.
                   </p>
 
                   <form className="flex mt-6">

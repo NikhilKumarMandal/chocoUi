@@ -25,9 +25,7 @@ const WelcomeBanner = () => {
             </svg>
           </div>
           <div>
-            <h3 className="text-lg font-semibold">
-              Welcome to our platform!
-            </h3>
+            <h3 className="text-lg font-semibold">Welcome to our platform!</h3>
             <p className="mt-1 text-sm text-white/80">
               Get started by exploring our new features and personalized
               recommendations.
@@ -45,4 +43,4 @@ const WelcomeBanner = () => {
   );
 };
 
-export default WelcomeBanner; 
+export default WelcomeBanner;

@@ -16,7 +16,7 @@ function TablePage() {
         { language: "jsx", code: `` },
       ],
     },
-    
+
     {
       title: "Table 6",
       component: <Table6 />,
