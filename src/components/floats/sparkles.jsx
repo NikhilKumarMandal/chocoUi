@@ -1,7 +1,7 @@
-'use client';
-import { useEffect, useId, useState } from 'react';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim';
+"use client";
+import { useEffect, useId, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 export function Sparkles({
   className,
   size = 1.2,
@@ -10,13 +10,13 @@ export function Sparkles({
   speed = 1.5,
   minSpeed = null,
   opacity = 1,
-  direction = '',
+  direction = "",
   opacitySpeed = 3,
   minOpacity = null,
-  color = '#ffffff',
+  color = "#ffffff",
   mousemove = false,
   hover = false,
-  background = 'transparent',
+  background = "transparent",
   options = {},
 }) {
   const [isReady, setIsReady] = useState(false);
@@ -43,11 +43,11 @@ export function Sparkles({
       events: {
         onClick: {
           enable: true,
-          mode: 'push',
+          mode: "push",
         },
         onHover: {
           enable: hover,
-          mode: 'grab',
+          mode: "grab",
           parallax: {
             enable: mousemove,
             force: 60,
@@ -93,7 +93,7 @@ export function Sparkles({
         },
         enable: false,
         maxSpeed: 50,
-        mode: 'bounce',
+        mode: "bounce",
         overlap: {
           enable: true,
           retries: 0,

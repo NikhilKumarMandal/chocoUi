@@ -65,7 +65,7 @@ const Navbar8 = () => {
               >
                 <span className="sr-only">Open main menu</span>
                 <svg
-                  className={`${isMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
+                  className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ const Navbar8 = () => {
                   />
                 </svg>
                 <svg
-                  className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                  className={`${isMenuOpen ? "block" : "hidden"} h-6 w-6`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -97,7 +97,7 @@ const Navbar8 = () => {
           </div>
         </div>
 
-        <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
+        <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#"

@@ -1,25 +1,30 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { contact } from "../../http/api";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 const PreviewCard = ({ index, isHovered, onHover }) => {
   const zIndex = 3 - index;
   const yOffset = index * 30;
   const xOffset = index * -40;
   const hoverOffset = index === 1 ? -60 : 0;
-  const scale = 1 - (index * 0.05);
+  const scale = 1 - index * 0.05;
 
   return (
     <motion.div
       className="relative w-[90%] max-w-[500px]"
-      style={{ 
+      style={{
         zIndex,
-        position: 'absolute',
+        position: "absolute",
         left: `${xOffset}px`,
       }}
       animate={{
         y: isHovered ? hoverOffset : yOffset,
         scale: isHovered ? (index === 1 ? 1.05 : 1) : scale,
-        x: isHovered ? (index * -40) : xOffset,
+        x: isHovered ? index * -40 : xOffset,
       }}
       transition={{ duration: 0.6 }}
       onHoverStart={() => onHover(true)}
@@ -54,45 +59,45 @@ const PreviewCard = ({ index, isHovered, onHover }) => {
   );
 };
 
+const contactSchema = z.object({
+  email: z.string().email("Please enter a valid email address."),
+});
+
 const Hero2 = () => {
   const [isHovered, setIsHovered] = React.useState(false);
-  const [email, setEmail] = React.useState('');
   const [animateSuccess, setAnimateSuccess] = React.useState(false);
   const [showSuccess, setShowSuccess] = React.useState(false);
   const [isValidEmail, setIsValidEmail] = React.useState(true);
 
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (!validateEmail(email)) {
-      setIsValidEmail(false);
-      return;
+  const onSubmit = async (data) => {
+    try {
+      await contact(data);
+      toast("🌟 We will reach out to you!");
+      reset();
+    } catch (error) {
+      toast(error);
     }
-
-    setIsValidEmail(true);
-    console.log('Submitted email:', email);
-    
-    setAnimateSuccess(true);
-    setShowSuccess(true);
-    
-    setTimeout(() => {
-      setAnimateSuccess(false);
-      setShowSuccess(false);
-    }, 2000);
-    
-    setEmail('');
   };
 
   return (
     <section className="relative bg-gradient-to-br from-[#2A1B10] to-[#3C2613] rounded-4xl overflow-hidden py-10 md:py-16">
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#FFDBB5]/5 blur-3xl -translate-x-20 -translate-y-20"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#6C4E31]/10 blur-3xl translate-x-20 translate-y-20"></div>
-      
+
       <div className="container mx-10 lg:mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="w-full mr-20 lg:w-2/3 px-4 lg:px-8">
@@ -104,12 +109,16 @@ const Hero2 = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FFDBB5] mb-6 font-['Bricolage']">
                 <span className="font-['InstrumentSerif'] text-[#FFDBB5]/90 font-normal italic">
                   Design
-                </span>{' '}
+                </span>{" "}
                 with Confidence
               </h2>
               <p className="text-base md:text-lg text-[#FFDBB5]/80 mb-8 max-w-lg font-['Inter'] leading-relaxed">
-                Create stunning interfaces with our customizable components. Build faster and{' '}
-                <span className="font-medium text-[#FFDBB5]">deliver better</span> experiences.
+                Create stunning interfaces with our customizable components.
+                Build faster and{" "}
+                <span className="font-medium text-[#FFDBB5]">
+                  deliver better
+                </span>{" "}
+                experiences.
               </p>
 
               <motion.div
@@ -121,29 +130,36 @@ const Hero2 = () => {
                 <h3 className="text-xl font-['Inter'] text-[#FFDBB5]/90">
                   Contact us for customized components
                 </h3>
-                
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md" noValidate>
+
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="flex flex-col sm:flex-row gap-4 max-w-md"
+                  noValidate
+                >
                   <div className="relative flex-1">
                     <motion.input
-                      type="email"
-                      value={email}
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                        if (!isValidEmail) setIsValidEmail(true);
-                      }}
+                      {...register("email")}
                       placeholder="Enter your email"
                       className={`w-full px-4 py-3 bg-[#3C2613]/50 backdrop-blur-sm border-2 rounded-xl text-[#FFDBB5] placeholder-[#FFDBB5]/60 focus:outline-none transition-all duration-300 ${
-                        isValidEmail 
-                          ? 'border-[#FFDBB5]/30 focus:border-[#FFDBB5]/60' 
-                          : 'border-red-400/60 focus:border-red-400/80'
+                        isValidEmail
+                          ? "border-[#FFDBB5]/30 focus:border-[#FFDBB5]/60"
+                          : "border-red-400/60 focus:border-red-400/80"
                       }`}
-                      animate={animateSuccess ? {
-                        scale: [1, 1.05, 1],
-                        borderColor: ['#FFDBB54D', '#4CAF50', '#FFDBB54D']
-                      } : {}}
+                      animate={
+                        animateSuccess
+                          ? {
+                              scale: [1, 1.05, 1],
+                              borderColor: [
+                                "#FFDBB54D",
+                                "#4CAF50",
+                                "#FFDBB54D",
+                              ],
+                            }
+                          : {}
+                      }
                       transition={{ duration: 0.6 }}
                     />
-                    
+
                     <AnimatePresence>
                       {showSuccess && (
                         <motion.div
@@ -160,7 +176,11 @@ const Hero2 = () => {
                             stroke="currentColor"
                             strokeWidth="2"
                           >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 13l4 4L19 7"
+                            />
                           </svg>
                         </motion.div>
                       )}
@@ -220,8 +240,8 @@ const Hero2 = () => {
             </motion.div>
           </div>
 
-          <div className="w-full lg:w-1/2 px-4 lg:px-8">
-            <motion.div 
+          <div className="w-full lg:w-1/2 px-4 lg:px-8 md:block hidden">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -243,8 +263,19 @@ const Hero2 = () => {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-8">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 48" fill="none" className="w-full h-full">
-          <path fillRule="evenodd" clipRule="evenodd" d="M0 48H1440V24C1296 40 1092 48 720 48C348 48 144 40 0 24V48Z" fill="#f8f8f8" fillOpacity="0.05" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 48"
+          fill="none"
+          className="w-full h-full"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0 48H1440V24C1296 40 1092 48 720 48C348 48 144 40 0 24V48Z"
+            fill="#f8f8f8"
+            fillOpacity="0.05"
+          />
         </svg>
       </div>
     </section>

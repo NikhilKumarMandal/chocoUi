@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Modal3 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,14 +26,16 @@ const Modal3 = () => {
             {/* Header */}
             <div className="p-6 border-b border-gray-200">
               <h2 className="text-2xl font-bold text-gray-800">Bottom Sheet</h2>
-              <p className="text-gray-600 mt-2">Perfect for mobile interfaces</p>
+              <p className="text-gray-600 mt-2">
+                Perfect for mobile interfaces
+              </p>
             </div>
 
             {/* Body */}
             <div className="p-6">
               <p className="text-gray-700">
-                This bottom sheet modal is optimized for mobile devices with
-                a natural swipe-to-dismiss interaction pattern.
+                This bottom sheet modal is optimized for mobile devices with a
+                natural swipe-to-dismiss interaction pattern.
               </p>
             </div>
 
@@ -59,4 +61,4 @@ const Modal3 = () => {
   );
 };
 
-export default Modal3; 
+export default Modal3;

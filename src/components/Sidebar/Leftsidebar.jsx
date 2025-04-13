@@ -45,6 +45,10 @@ const LeftSidebar = () => {
       { name: "Combobox", path: "/dashboard/combobox" },
       { name: "CTA", path: "/dashboard/cta" },
       { name: "Dropdown", path: "/dashboard/dropdown" },
+      { name: "Input", path: "/dashboard/input" },
+      { name: "Loader", path: "/dashboard/loader" },
+      { name: "FileUpload", path: "/dashboard/fileUpload" },
+      { name: "Button", path: "/dashboard/button" },
     ],
     []
   );
@@ -62,7 +66,7 @@ const LeftSidebar = () => {
   const MobileToggleButton = () => (
     <button
       onClick={() => setIsOpen((prev) => !prev)}
-      className="fixed left-0 top-1/3 z-50 flex items-center justify-center bg-gradient-to-r from-[#2A1B10] to-[#3C2613] text-[#FFDBB5] shadow-lg rounded-r-lg border border-[#FFDBB5]/20 md:hidden"
+      className="fixed left-0 top-1/3 z-50 flex items-center justify-center bg-white/80 backdrop-blur-lg shadow-lg border border-gray-200/80 rounded-r-lg md:hidden transition-all hover:bg-white/90"
       style={{
         width: "40px",
         height: "80px",
@@ -71,53 +75,34 @@ const LeftSidebar = () => {
       }}
       aria-label="Toggle menu"
     >
-      <div className="flex flex-col items-center">
-        <GripVertical size={16} className="mb-1 text-[#FFDBB5]/60" />
+      <div className="flex flex-col items-center text-[#1E1E2C]">
+        <GripVertical size={16} className="mb-1 opacity-70" />
         {isOpen ? <X size={20} /> : <Menu size={20} />}
       </div>
     </button>
   );
 
   const SearchInput = () => (
-    <div className="relative mb-3 font-['Inter']">
+    <div className="relative mb-4 font-['Inter']">
       <input
-        key="search-input"
-        autoFocus={isOpen}
         type="text"
         placeholder="Search components..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full pl-9 pr-3 py-1.5 text-sm bg-[#2A1B10]/50 border border-[#FFDBB5]/20 rounded-md focus:ring-2 focus:ring-[#FFDBB5]/30 focus:border-[#FFDBB5]/30 outline-none text-[#FFDBB5] placeholder-[#FFDBB5]/40"
+        className="w-full pl-9 pr-3 py-2 text-sm bg-white/50 backdrop-blur-sm border border-gray-200/60 rounded-lg focus:ring-2 focus:ring-[#5C5CFF]/80 focus:border-[#5C5CFF]/80 outline-none text-[#1E1E2C] placeholder-gray-500/70 transition-all"
       />
-      <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-[#FFDBB5]/40" />
+      <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500/70" />
     </div>
   );
 
   const SidebarContent = () => (
-    <div className="space-y-6 relative z-10 h-full flex flex-col px-2">
-      <div className="px-2">
-        <h2 className="text-xl font-bold text-[#FFDBB5] flex items-center font-['Bricolage']">
-          <svg
-            className="w-5 h-5 mr-2 text-[#FFDBB5]"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fillRule="evenodd"
-              d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-              clipRule="evenodd"
-            />
-          </svg>
-          ChocoUI
-        </h2>
-      </div>
-
-      <div className="flex-grow">
+    <div className="space-y-6 relative z-10 h-full flex flex-col px-3 py-2">
+      <div className="flex-grow mt-20">
         <div className="flex items-center justify-between mb-2 px-2">
-          <h2 className="text-xs font-semibold text-[#FFDBB5]/60 uppercase tracking-wider font-['Inter']">
+          <h2 className="text-xs font-semibold text-gray-600/90 uppercase tracking-wider font-['Inter']">
             Components
           </h2>
-          <span className="bg-[#FFDBB5]/10 text-[#FFDBB5] text-xs px-2 py-0.5 rounded-full border border-[#FFDBB5]/20">
+          <span className="bg-[#6c4e31] text-[#ffdbb5] font-bold text-xs px-2 py-0.5 rounded-full shadow-sm">
             {filteredLinks.length}
           </span>
         </div>
@@ -125,27 +110,28 @@ const LeftSidebar = () => {
         <SearchInput />
 
         <div
-          className="overflow-y-auto overflow-x-hidden"
+          className="overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-300/50 scrollbar-track-transparent"
           style={{ maxHeight: "calc(100vh - 250px)" }}
         >
-          <ul className="space-y-1 font-['Inter']">
+          <ul className="space-y-1.5 font-['Inter']">
             {filteredLinks.map((link) => (
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  replace
                   onClick={handleLinkClick}
-                  className={`block px-3 py-1.5 rounded-md transition-all duration-300 text-sm ${
+                  className={`block px-3 py-2 rounded-lg transition-all duration-200 text-sm ${
                     location.pathname === link.path
-                      ? "bg-[#FFDBB5]/10 text-[#FFDBB5] font-medium border border-[#FFDBB5]/20"
-                      : "text-[#FFDBB5]/70 hover:bg-[#FFDBB5]/5 hover:text-[#FFDBB5]"
+                      ? "bg-[#6c4e31] text-[#ffdbb5] font-medium shadow-sm"
+                      : "text-gray-700/90 hover:bg-gray-100/70"
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <span className="truncate">{link.name}</span>
                     <ChevronRight
-                      className={`w-4 h-4 transition-transform duration-300 flex-shrink-0 ${
-                        location.pathname === link.path ? "rotate-90" : ""
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        location.pathname === link.path
+                          ? "rotate-90 text-white/90"
+                          : "text-gray-400/80"
                       }`}
                     />
                   </div>
@@ -153,8 +139,8 @@ const LeftSidebar = () => {
               </li>
             ))}
             {filteredLinks.length === 0 && (
-              <li className="px-3 py-2 text-sm text-[#FFDBB5]/40 italic">
-                No matches found.
+              <li className="px-3 py-2 text-sm text-gray-500/80 italic">
+                No components found
               </li>
             )}
           </ul>
@@ -169,16 +155,16 @@ const LeftSidebar = () => {
 
       {/* Desktop sidebar */}
       <aside
-        className="w-60 bg-gradient-to-br from-[#2A1B10] to-[#3C2613] p-6 border-r border-[#FFDBB5]/10 shadow-lg hidden md:block relative"
-        style={{ height: `${windowHeight}px`, position: "sticky", top: 0 }}
+        className="w-64 bg-white/60 backdrop-blur-lg shadow-xl border-r border-gray-200/80 p-5 hidden md:block relative"
+        style={{
+          height: `${windowHeight}px`,
+          position: "sticky",
+          top: 0,
+        }}
       >
-        {/* Decorative effects */}
-        <div className="absolute top-0 left-0 w-48 h-48 rounded-full bg-[#FFDBB5]/5 blur-3xl -translate-x-10 -translate-y-10"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-[#6C4E31]/10 blur-3xl translate-x-10 translate-y-10"></div>
-        <div className="absolute left-0 top-1/4 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/20 to-transparent"></div>
-        <div className="absolute right-0 bottom-1/3 w-full h-px bg-gradient-to-r from-transparent via-[#FFDBB5]/15 to-transparent"></div>
-        <div className="absolute top-10 right-5 w-24 h-24 border border-[#FFDBB5]/10 rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 left-5 w-32 h-32 border border-[#FFDBB5]/10 rounded-full opacity-20"></div>
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-48 h-48 rounded-full bg-[#5C5CFF]/10 blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-[#7A7AFF]/10 blur-3xl translate-x-1/3 translate-y-1/3"></div>
         <SidebarContent />
       </aside>
 
@@ -186,11 +172,11 @@ const LeftSidebar = () => {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
             onClick={handleLinkClick}
           />
           <aside
-            className="fixed top-0 left-0 w-4/5 max-w-60 z-50 bg-gradient-to-br from-[#2A1B10] to-[#3C2613] p-6 border-r border-[#FFDBB5]/10 shadow-lg md:hidden overflow-hidden"
+            className="fixed top-0 left-0 w-72 max-w-[80%] z-50 bg-white/70 backdrop-blur-xl shadow-2xl border-r border-gray-200/90 p-5 md:hidden overflow-hidden"
             style={{ height: `${windowHeight}px` }}
           >
             <SidebarContent />

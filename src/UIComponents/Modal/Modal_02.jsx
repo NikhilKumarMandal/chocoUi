@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Modal2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +27,8 @@ const Modal2 = () => {
             {/* Body */}
             <div className="p-6">
               <p className="text-white/90">
-                This modal features a beautiful glassmorphism effect with
-                smooth animations and a modern design that works on all devices.
+                This modal features a beautiful glassmorphism effect with smooth
+                animations and a modern design that works on all devices.
               </p>
             </div>
 
@@ -54,4 +54,4 @@ const Modal2 = () => {
   );
 };
 
-export default Modal2; 
+export default Modal2;

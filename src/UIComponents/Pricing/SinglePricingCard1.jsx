@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const FreePlanCard = () => {
   return (
@@ -22,19 +22,16 @@ const FreePlanCard = () => {
         <div className="ml-3 mt-8">
           <ul className="grid gap-4">
             {[
-              { text: 'Unlimited updates', enabled: true },
-              { text: 'Slate helps you see how', enabled: true },
-              { text: 'Amazing offers', enabled: true },
-              { text: '1 GB Storage', enabled: false },
-              { text: 'Community Support', enabled: false },
+              { text: "Unlimited updates", enabled: true },
+              { text: "Slate helps you see how", enabled: true },
+              { text: "Amazing offers", enabled: true },
+              { text: "1 GB Storage", enabled: false },
+              { text: "Community Support", enabled: false },
             ].map((item, index) => (
-              <li
-                key={index}
-                className="inline-flex items-center text-black"
-              >
+              <li key={index} className="inline-flex items-center text-black">
                 <svg
                   className={`mr-3 h-4 w-4 fill-current ${
-                    item.enabled ? 'text-green-400' : 'text-gray-400'
+                    item.enabled ? "text-green-400" : "text-gray-400"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Modal4 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,16 +20,20 @@ const Modal4 = () => {
           <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full transform transition-all duration-300">
             {/* Header */}
             <div className="p-8 border-b border-gray-200">
-              <h2 className="text-3xl font-bold text-gray-800">Full Screen Modal</h2>
-              <p className="text-gray-600 mt-2">A modern take on full-screen dialogs</p>
+              <h2 className="text-3xl font-bold text-gray-800">
+                Full Screen Modal
+              </h2>
+              <p className="text-gray-600 mt-2">
+                A modern take on full-screen dialogs
+              </p>
             </div>
 
             {/* Body */}
             <div className="p-8">
               <p className="text-gray-700 text-lg">
-                This full-screen modal provides maximum focus on the content while
-                maintaining a clean and modern design. Perfect for important actions
-                or detailed information.
+                This full-screen modal provides maximum focus on the content
+                while maintaining a clean and modern design. Perfect for
+                important actions or detailed information.
               </p>
             </div>
 
@@ -55,4 +59,4 @@ const Modal4 = () => {
   );
 };
 
-export default Modal4; 
+export default Modal4;

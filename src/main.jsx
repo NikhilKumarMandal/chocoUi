@@ -7,9 +7,9 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-
+import { Toaster } from "sonner";
 import LandingPage from "./pages/LandingPage.jsx";
-import NavbarPage from "./pages/NavbarPage.jsx"
+import NavbarPage from "./pages/NavbarPage.jsx";
 import { DocsPage } from "./pages/DocsPage.jsx";
 import BentoPage from "./pages/BentoPage.jsx";
 import FooterPage from "./pages/FooterPage.jsx";
@@ -23,17 +23,21 @@ import PricingSection from "./pages/PricingPage.jsx";
 import SkeletonPage from "./pages/SkeletonPage.jsx";
 import TablePage from "./pages/TablePage.jsx";
 import TogglePage from "./pages/TogglePage.jsx";
-import AccordionPage from "./pages/AccordionPage.jsx"
-import AnimationPage from "./pages/AnimationPage.jsx"
-import BadgePage from "./pages/BadgePage.jsx"
-import BannerPage from "./pages/BannerPage.jsx"
-import CheckboxPage from "./pages/CheckboxPage.jsx"
-import ComboboxPage from "./pages/ComboboxPage.jsx"
+import AccordionPage from "./pages/AccordionPage.jsx";
+import AnimationPage from "./pages/AnimationPage.jsx";
+import BadgePage from "./pages/BadgePage.jsx";
+import BannerPage from "./pages/BannerPage.jsx";
+import CheckboxPage from "./pages/CheckboxPage.jsx";
+import ComboboxPage from "./pages/ComboboxPage.jsx";
 import CTAPage from "./pages/CTAPage.jsx";
 import DropdownPage from "./pages/DropdownPage.jsx";
 import App from "./App.jsx";
 import Docs from "./components/Docs/Docs.jsx";
 import FeedbackPage from "./components/Feedback/Feedback.jsx";
+import InputPage from "./pages/InputPage.jsx";
+import LoaderPage from "./pages/LoaderPage.jsx";
+import FileUpload from "./pages/FileUploadPage.jsx";
+import ButtonPage from "./pages/ButtonPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -59,11 +63,15 @@ const router = createBrowserRouter(
         <Route path="combobox" element={<ComboboxPage />} />
         <Route path="cta" element={<CTAPage />} />
         <Route path="dropdown" element={<DropdownPage />} />
-        <Route path="pricing" element={<PricingSection />}
-        />
+        <Route path="pricing" element={<PricingSection />} />
         <Route path="skeleton" element={<SkeletonPage />} />
         <Route path="table" element={<TablePage />} />
         <Route path="toggle" element={<TogglePage />} />
+
+        <Route path="input" element={<InputPage />} />
+        <Route path="loader" element={<LoaderPage />} />
+        <Route path="fileUpload" element={<FileUpload />} />
+        <Route path="button" element={<ButtonPage />} />
       </Route>
       <Route path="/docs" element={<DocsPage />} />
       <Route path="/feedback" element={<FeedbackPage />} />
@@ -73,6 +81,7 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Toaster />
     <RouterProvider router={router} />
   </StrictMode>
 );

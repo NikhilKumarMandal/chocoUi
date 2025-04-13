@@ -1,23 +1,23 @@
-import React, { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
-import { MeshDistortMaterial, Environment } from '@react-three/drei';
-import * as THREE from 'three';
+import React, { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { MeshDistortMaterial, Environment } from "@react-three/drei";
+import * as THREE from "three";
 
-const BlobMesh = ({ 
-  color = '#FFEAC5', 
-  speed = 1.2, 
-  distort = 0.7, 
+const BlobMesh = ({
+  color = "#FFEAC5",
+  speed = 1.2,
+  distort = 0.7,
   radius = 2,
   opacity = 0.15,
   roughness = 0.8,
-  metalness = 0.05
+  metalness = 0.05,
 }) => {
   const meshRef = useRef();
 
   useFrame((state) => {
     const { clock } = state;
     const time = clock.getElapsedTime();
-    
+
     if (meshRef.current) {
       // Subtle organic movement
       meshRef.current.rotation.x = Math.sin(time * 0.7) * 0.1;
@@ -47,7 +47,6 @@ const BlobMesh = ({
           thickness={5}
         />
       </mesh>
-
     </>
   );
 };
