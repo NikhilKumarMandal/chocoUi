@@ -12,7 +12,7 @@ import Skeleton_17 from "../UIComponents/Skeleton/Skeleton_17";
 function FooterPage() {
   const FooterVariants = [
     {
-      title: "Skeleton",
+      title: "Content Skeleton",
       component: <Skeleton01 />,
       codeSnippets: [
         {
@@ -34,7 +34,7 @@ function FooterPage() {
     },
 
     {
-      title: "Skeleton",
+      title: "Image Loading Skeleton",
       component: <Skeleton03 />,
       codeSnippets: [
         {
@@ -57,7 +57,7 @@ function FooterPage() {
     },
 
     {
-      title: "Skeleton",
+      title: "Detailed Loading Skeleton",
       component: <Skeleton_04 />,
       codeSnippets: [
         {
@@ -85,7 +85,7 @@ function FooterPage() {
     },
 
     {
-      title: "Skeleton",
+      title: "Profile Loading Skeleton",
       component: <Skeleton_05 />,
       codeSnippets: [
         {
@@ -125,7 +125,7 @@ function FooterPage() {
       ],
     },
     {
-      title: "Skeleton",
+      title: "Timeline Loading Skeleton",
       component: <Skeleton_10 />,
       codeSnippets: [
         {
@@ -162,7 +162,7 @@ function FooterPage() {
     },
 
     {
-      title: "Skeleton",
+      title: "Chat Loading Skeleton",
       component: <Skeleton_14 />,
       codeSnippets: [
         {
@@ -202,7 +202,7 @@ function FooterPage() {
     },
 
     {
-      title: "Skeleton",
+      title: "Dashboard Loading Skeleton",
       component: <Skeleton_17 />,
       codeSnippets: [
         {
@@ -254,9 +254,9 @@ function FooterPage() {
   ];
   return (
     <div className="max-w-4xl mx-auto p-6 ">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Skeleton Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+       Smooth user experience with content-aware loading animations
       </p>
       <div className="mt-6 space-y-6">
         {FooterVariants.map((variant, index) => (

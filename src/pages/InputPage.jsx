@@ -5,7 +5,7 @@ import Input_03 from "../UIComponents/Input/Input_03";
 function InputPage() {
   const InputVariants = [
     {
-      title: "Input",
+      title: "The Clearable Input",
       component: <Input_01 />,
       codeSnippets: [
         {
@@ -48,7 +48,7 @@ function InputPage() {
       ],
     },
     {
-      title: "Input",
+      title: "The Search Box",
       component: <Input_02 />,
       codeSnippets: [
         {
@@ -94,9 +94,9 @@ export default Input;
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Input Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Versatile input fields for seamless data collection and user interaction
       </p>
       <div className="mt-6 space-y-6">
         {InputVariants.map((variant, index) => (

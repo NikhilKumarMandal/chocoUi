@@ -12,7 +12,7 @@ import Loader15 from "../UIComponents/Loader/Loader15";
 function LoaderPage() {
   const LoaderVariants = [
     {
-      title: "Loader",
+      title: "The Bouncer",
       component: <Loader1 />,
       codeSnippets: [
         {
@@ -38,7 +38,7 @@ export default Loader;`,
     },
 
     {
-      title: "Loader",
+      title: "The Spinner",
       component: <Loader3 />,
       codeSnippets: [
         {
@@ -58,7 +58,7 @@ export default Loader;`,
       ],
     },
     {
-      title: "Loader",
+      title: "The Swift Spinner",
       component: <Loader5 />,
       codeSnippets: [
         {
@@ -76,7 +76,7 @@ export default Loader;`,
       ],
     },
     {
-      title: "Loader",
+      title: "Vertical Bounce",
       component: <Loader6 />,
       codeSnippets: [
         {
@@ -102,7 +102,7 @@ export default Loader;
       ],
     },
     {
-      title: "Loader",
+      title: "The Adaptable Spinner",
       component: <Loader12 />,
       codeSnippets: [
         {
@@ -151,7 +151,7 @@ export default Loader;
       ],
     },
     {
-      title: "Loader",
+      title: "Vector Loader",
       component: <Loader13 />,
       codeSnippets: [
         {
@@ -218,7 +218,7 @@ export default Loader;
     },
 
     {
-      title: "Calendar",
+      title: "Dual Spinner",
       component: <Loader15 />,
       codeSnippets: [
         {
@@ -272,9 +272,9 @@ export default Loader_15;
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Loader Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Keep users engaged during wait times with elegant loading states
       </p>
       <div className="mt-6 space-y-6">
         {LoaderVariants.map((variant, index) => (
