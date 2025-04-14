@@ -2,7 +2,7 @@ import React from "react";
 
 const Button_26 = () => {
   return (
-    <div className="group relative h-12 w-36 cursor-pointer overflow-hidden rounded-full border border-gray-300 bg-white p-1 font-medium transition-all duration-300 hover:border-gray-400 dark:border-gray-600 dark:bg-gray-800">
+    <div className="group relative h-12 w-36 m-4 cursor-pointer overflow-hidden rounded-full border border-gray-300 bg-white p-1 font-medium transition-all duration-300 hover:border-gray-400 dark:border-gray-600 dark:bg-gray-800">
       <span className="absolute inset-0 flex translate-y-0 items-center justify-center text-gray-700 opacity-100 transition-all duration-300 ease-out group-hover:-translate-y-full group-hover:opacity-0 dark:text-gray-300">
         Our Work
       </span>

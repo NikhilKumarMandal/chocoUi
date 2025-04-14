@@ -16,7 +16,7 @@ const Dropdown3 = () => {
   };
 
   // Precomputed class names
-  const containerClass = "relative w-64";
+  const containerClass = "relative w-64 m-4";
 
   const buttonClass =
     "w-full px-4 py-2 bg-indigo-600 text-white rounded-lg flex items-center justify-between hover:bg-indigo-700 transition-colors duration-200";

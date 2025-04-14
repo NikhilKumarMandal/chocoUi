@@ -86,7 +86,7 @@ function CTA() {
               className="relative group"
             >
               <Link
-                to={"/docs"}
+                to="/docs"
                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-[#FFDBB5] border-2 border-[#FFDBB5]/30 rounded-xl bg-[#3C2613]/50 backdrop-blur-sm hover:bg-[#2A1B10]/70 hover:border-[#FFDBB5]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FFDBB5]/10 font-['Inter']"
               >
                 <span className="relative z-10">View Documentation</span>

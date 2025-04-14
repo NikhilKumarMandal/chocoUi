@@ -2,7 +2,7 @@ import React from "react";
 
 const Skeleton_05 = () => {
   return (
-    <div className="w-full max-w-xs p-5 border rounded-xl shadow-sm animate-pulse bg-white mx-auto">
+    <div className="w-full max-w-xs p-5 border rounded-xl shadow-sm animate-pulse bg-white mx-auto m-4">
       <div className="flex items-center space-x-4">
         <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
         <div className="flex-1">

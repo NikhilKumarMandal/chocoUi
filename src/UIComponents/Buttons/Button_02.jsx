@@ -5,7 +5,7 @@ const Button_02 = () => {
   return (
     <button
       className="
-              group relative inline-flex h-12 items-center justify-center overflow-hidden
+              group relative inline-flex h-12 m-4 items-center justify-center overflow-hidden
               rounded-lg bg-indigo-600 px-6 font-medium text-white shadow-md
               transition-all duration-300 ease-out
               hover:bg-indigo-700 hover:pl-5 hover:pr-12

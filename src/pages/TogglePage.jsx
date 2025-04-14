@@ -14,7 +14,7 @@ function TogglePage() {
           language: "jsx",
           code: `import { useState } from "react";
 
-const Toggle1 = () => {
+const Toggle = () => {
   const [isOn, setIsOn] = useState(false);
 
   const toggle = () => setIsOn((prev) => !prev);
@@ -34,7 +34,7 @@ const Toggle1 = () => {
   );
 };
 
-export default Toggle1;
+export default Toggle;
 `,
         },
       ],
@@ -77,7 +77,7 @@ export default Toggle;
           language: "jsx",
           code: `import { useState } from "react";
 
-const Toggle4 = () => {
+const Toggle = () => {
   const [enabled, setEnabled] = useState(false);
 
   return (
@@ -100,7 +100,7 @@ const Toggle4 = () => {
   );
 };
 
-export default Toggle4;
+export default Toggle;
 `,
         },
       ],

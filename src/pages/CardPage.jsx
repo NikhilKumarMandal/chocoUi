@@ -710,7 +710,7 @@ function CardPage() {
     },
   ];
   return (
-    <div className="max-w-4xl mx-auto p-6 min-h-screen">
+    <div className="max-w-4xl mx-auto p-6 ">
       <h1 className="text-3xl font-bold text-black">
         Elegant Card Component Previews
       </h1>
