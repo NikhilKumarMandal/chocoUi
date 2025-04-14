@@ -2,7 +2,7 @@ import React from "react";
 
 function Login() {
   return (
-    <div className="w-full max-w-md p-8 space-y-6 rounded-xl bg-white dark:bg-gray-50 text-gray-800">
+    <div className="w-full max-w-md mx-auto p-8 m-4 space-y-6 rounded-xl bg-white dark:bg-gray-50 text-gray-800">
       <h1 className="text-2xl font-bold text-center">Login</h1>
       <form noValidate action="" className="space-y-6">
         <div className="space-y-1 text-sm">
