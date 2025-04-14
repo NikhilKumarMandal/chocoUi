@@ -11,7 +11,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function CardPage() {
   const cardsVariants = [
-      {
+    {
       title: "Card",
       component: < DollyGatesCard />,
       codeSnippets: [
