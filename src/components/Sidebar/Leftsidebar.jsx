@@ -25,7 +25,7 @@ const linksData = [
   { name: "Input", path: "/dashboard/input" },
   { name: "Loader", path: "/dashboard/loader" },
   { name: "Button", path: "/dashboard/button" },
-  { name: "Footer", path: "/dashboard/footer" },
+  { name: "Avatar", path: "/dashboard/avatar" },
 ];
 
 const LeftSidebar = () => {

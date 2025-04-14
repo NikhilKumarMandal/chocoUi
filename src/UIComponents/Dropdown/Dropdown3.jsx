@@ -15,7 +15,6 @@ const Dropdown3 = () => {
     setIsOpen(false);
   };
 
-  // Precomputed class names
   const containerClass = "relative w-64 m-4";
 
   const buttonClass =
