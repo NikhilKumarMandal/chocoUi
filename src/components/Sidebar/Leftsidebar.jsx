@@ -24,7 +24,7 @@ const LeftSidebar = () => {
   const links = useMemo(
     () => [
       { name: "Navbar", path: "/dashboard/navbar" },
-      // { name: "Footer", path: "/dashboard/footer" },
+      { name: "Footer", path: "/dashboard/footer" },
       { name: "Cards", path: "/dashboard/card" },
       { name: "Bento", path: "/dashboard/bento" },
       // { name: "Hero", path: "/dashboard/hero" },
@@ -161,9 +161,6 @@ const LeftSidebar = () => {
           top: 0,
         }}
       >
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-48 h-48 rounded-full bg-[#5C5CFF]/10 blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-[#7A7AFF]/10 blur-3xl translate-x-1/3 translate-y-1/3"></div>
         <SidebarContent />
       </aside>
 
