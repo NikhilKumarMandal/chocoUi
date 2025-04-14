@@ -1,19 +1,11 @@
-import Avatar1 from "../UIComponents/Avatar/Avatar1";
-import Avatar2 from "../UIComponents/Avatar/Avatar2";
-import Avatar3 from "../UIComponents/Avatar/Avatar3";
-import Avatar4 from "../UIComponents/Avatar/Avatar4";
-import Avatar5 from "../UIComponents/Avatar/Avatar5";
 import Avatar6 from "../UIComponents/Avatar/Avatar6";
-import Avatar7 from "../UIComponents/Avatar/Avatar7";
-import Avatar8 from "../UIComponents/Avatar/Avatar8";
-import Avatar9 from "../UIComponents/Avatar/Avatar9";
 import Avatar10 from "../UIComponents/Avatar/Avatar10";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function AvatarPage() {
   const avatarVariants = [
     {
-      title: "Avatar 2",
+      title: "Avatar",
       component: <Avatar10 />,
       codeSnippets: [
         {
@@ -89,7 +81,7 @@ function AvatarPage() {
     },
 
     {
-      title: "Avatar 2",
+      title: "Avatar",
       component: <Avatar6 />,
       codeSnippets: [
         {
