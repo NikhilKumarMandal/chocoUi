@@ -1,5 +1,4 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import Dropdown1 from "../UIComponents/Dropdown/Dropdown1";
 import Dropdown2 from "../UIComponents/Dropdown/Dropdown2";
 import Dropdown3 from "../UIComponents/Dropdown/Dropdown3";
 import Dropdown4 from "../UIComponents/Dropdown/Dropdown4";

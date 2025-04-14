@@ -6,7 +6,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function FormPage() {
   const FormVariants = [
     {
-      title: "SignIn",
+      title: "Elegant Sign-In Form",
       component: <SingIn />,
       codeSnippets: [
         {
@@ -91,7 +91,7 @@ function FormPage() {
     },
 
     {
-      title: "LoginIn",
+      title: "Elegant Login Form",
       component: <Loginin />,
       codeSnippets: [
         {
@@ -176,9 +176,9 @@ function FormPage() {
   ];
   return (
     <div className=" max-w-5xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Form Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Streamline user input with responsive, accessible form elements
       </p>
       <div className="mt-6 space-y-6">
         {FormVariants.map((variant, index) => (

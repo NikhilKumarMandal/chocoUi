@@ -5,7 +5,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function BentoPage() {
   const bentoVariants = [
     {
-      title: "Bento Grid",
+      title: "Minimalist Elegance Bento",
       component: <BentoGrid />,
       codeSnippets: [
         {
@@ -126,9 +126,9 @@ function BentoPage() {
   ];
   return (
     <div className=" mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Bento Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Discover modular, grid-based Bento UI components
       </p>
       <div className="mt-6 space-y-6">
         {bentoVariants.map((variant, index) => (

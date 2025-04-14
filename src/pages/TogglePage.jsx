@@ -7,7 +7,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function TogglePage() {
   const ToggleVariants = [
     {
-      title: "Toggle",
+      title: "Day-Night Toggle",
       component: <Toggle1 />,
       codeSnippets: [
         {
@@ -40,7 +40,7 @@ export default Toggle;
       ],
     },
     {
-      title: "Toggle",
+      title: "Dark Mode Toggle",
       component: <Toggle2 />,
       codeSnippets: [
         {
@@ -70,7 +70,7 @@ export default Toggle;
     },
 
     {
-      title: "Toggle",
+      title: "Enabled-Disabled Toggle",
       component: <Toggle4 />,
       codeSnippets: [
         {
@@ -108,9 +108,9 @@ export default Toggle;
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Toggle Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Sleek, accessible switches for binary options and preferences
       </p>
       <div className="mt-6 space-y-6">
         {ToggleVariants.map((variant, index) => (
