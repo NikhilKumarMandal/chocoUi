@@ -17,9 +17,9 @@ function CardPage() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `import React from 'react';
-          
-          const DollyGatesCard = () => {
+          code: `
+          import React from 'react';
+  const DollyGatesCard = () => {
             return (
               <div className="flex justify-center items-center">
                 <div className="w-full max-w-md rounded-3xl overflow-hidden bg-white shadow-lg">

@@ -288,7 +288,9 @@ export default Breadcrumb;
       codeSnippets: [
         {
           language: "jsx",
-          code: `import React from "react";
+          code: `
+          
+          import React from "react";
           
           function Breadcrumb() {
             return (
