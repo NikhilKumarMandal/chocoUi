@@ -90,7 +90,7 @@ const LeftSidebar = () => {
 
   const SidebarContent = useMemo(
     () => (
-      <div className="space-y-6 relative z-10 h-full flex flex-col px-3 py-2">
+      <div className="space-y-6 relative z-10 h-full flex flex-col  px-3 py-2">
         <div className="flex-grow mt-20">
           <div className="flex items-center justify-between mb-2 px-2">
             <h2 className="text-xs font-semibold text-gray-600/90 uppercase tracking-wider font-['Inter']">
@@ -150,7 +150,7 @@ const LeftSidebar = () => {
     () => (
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="fixed left-0 top-1/3 z-50 flex items-center justify-center bg-white/80 backdrop-blur-lg shadow-lg border border-gray-200/80 rounded-r-lg md:hidden transition-all hover:bg-white/90"
+        className="fixed left-0 top-1/2 z-50 flex items-center justify-center bg-white/80 backdrop-blur-lg shadow-lg border border-gray-200/80 rounded-r-lg md:hidden transition-all hover:bg-white/90"
         style={{
           width: "40px",
           height: "80px",
@@ -203,4 +203,3 @@ const LeftSidebar = () => {
 };
 
 export default LeftSidebar;
-
