@@ -32,11 +32,11 @@ import ComboboxPage from "./pages/ComboboxPage.jsx";
 import CTAPage from "./pages/CTAPage.jsx";
 import DropdownPage from "./pages/DropdownPage.jsx";
 import App from "./App.jsx";
-import FeedbackPage from "./components/Feedback/Feedback.jsx";
 import InputPage from "./pages/InputPage.jsx";
 import LoaderPage from "./pages/LoaderPage.jsx";
 import FileUpload from "./pages/FileUploadPage.jsx";
 import ButtonPage from "./pages/ButtonPage.jsx";
+import FeedLayout from "./components/Feedback/FeedLayout.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -71,7 +71,7 @@ const router = createBrowserRouter(
         <Route path="button" element={<ButtonPage />} />
       </Route>
       <Route path="/docs" element={<DocsPage />} />
-      <Route path="/feedback" element={<FeedbackPage />} />
+      <Route path="/feedback" element={<FeedLayout />} />
     </>
   )
 );

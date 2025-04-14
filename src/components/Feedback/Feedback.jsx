@@ -39,9 +39,9 @@ const FeedbackPage = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-purple-100 flex items-center justify-center p-4">
-        <div className="w-full max-w-2xl bg-white/80 backdrop-blur-md shadow-2xl rounded-3xl p-8 sm:p-12 border border-white/30">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-2">
+      <div className="min-h-screen bg-gradient-to-br from-[#FFEAC5] via-white to-[#FFDBB5] flex items-center justify-center p-4 ">
+        <div className="w-full max-w-2xl bg-white/80 backdrop-blur-md shadow-2xl rounded-3xl p-8 sm:p-12 border border-white/30 mt-25 mb-6">
+          <h1 className="text-3xl sm:text-4xl font-bold text-center text-[#ac8b6a] mb-2">
             Share Your Feedback 💬
           </h1>
           <p className="text-center text-gray-600 mb-8 text-sm sm:text-base">
@@ -105,7 +105,7 @@ const FeedbackPage = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold text-lg shadow-lg hover:from-indigo-600 hover:to-purple-600 transition duration-300"
+              className="w-full py-3 rounded-xl bg-[#603F26] text-[#FFDBB5] font-semibold text-lg shadow-lg  hover:bg-[#6C4E31] transition duration-300"
             >
               Submit Feedback
             </button>

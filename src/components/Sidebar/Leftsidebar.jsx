@@ -91,7 +91,7 @@ const LeftSidebar = () => {
   const SidebarContent = useMemo(
     () => (
       <div className="space-y-6 relative z-10 h-full flex flex-col  px-3 py-2">
-        <div className="flex-grow mt-20">
+        <div className="flex-grow mt-15">
           <div className="flex items-center justify-between mb-2 px-2">
             <h2 className="text-xs font-semibold text-gray-600/90 uppercase tracking-wider font-['Inter']">
               Components
