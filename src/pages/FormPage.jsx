@@ -209,7 +209,7 @@ function FormPage() {
     <div className=" max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-[#603F26]">Form Components</h1>
       <p className="text-[#1a1a1a] mt-2">
-      Streamline user input with responsive, accessible form elements
+        Streamline user input with responsive, accessible form elements
       </p>
       <div className="mt-6 space-y-6">
         {FormVariants.map((variant, index) => (

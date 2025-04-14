@@ -300,7 +300,7 @@ function CalendarPage() {
     <div className=" mx-auto p-6 max-w-6xl">
       <h1 className="text-3xl font-bold text-[#603F26]">Calendar Components</h1>
       <p className="text-[#1a1a1a] mt-2">
-      Beautifully designed calendars for seamless scheduling
+        Beautifully designed calendars for seamless scheduling
       </p>
 
       <div className="mt-6 space-y-6">

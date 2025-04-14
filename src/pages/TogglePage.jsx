@@ -110,7 +110,7 @@ export default Toggle;
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-[#603F26]">Toggle Components</h1>
       <p className="text-[#1a1a1a] mt-2">
-      Sleek, accessible switches for binary options and preferences
+        Sleek, accessible switches for binary options and preferences
       </p>
       <div className="mt-6 space-y-6">
         {ToggleVariants.map((variant, index) => (
