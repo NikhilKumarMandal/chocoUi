@@ -18,7 +18,7 @@ const linksData = [
   { name: "Form", path: "/dashboard/form" },
   { name: "Skeleton", path: "/dashboard/skeleton" },
   { name: "Toggle", path: "/dashboard/toggle" },
-  { name: "Animation", path: "/dashboard/animation" },
+  // { name: "Animation", path: "/dashboard/animation" },
   { name: "Badge", path: "/dashboard/badge" },
   { name: "Checkbox", path: "/dashboard/checkbox" },
   { name: "Dropdown", path: "/dashboard/dropdown" },
