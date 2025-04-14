@@ -84,7 +84,6 @@ function CardPage() {
       ],
     },
     {
-      title: "Card",
       component: <Card1 />,
       codeSnippets: [
         {
@@ -132,7 +131,7 @@ function CardPage() {
     },
 
     {
-      title: "Card",
+      title: "Melted Delight",
       component: <Card2 />,
       codeSnippets: [
         {
@@ -177,7 +176,7 @@ function CardPage() {
     },
 
     {
-      title: "Card",
+      title: "Pro Plan Card",
       component: <Card3 />,
       codeSnippets: [
         {
@@ -270,7 +269,7 @@ function CardPage() {
     },
 
     {
-      title: "Card",
+      title: "Ammol Delight Card",
       component: <Card4 />,
       codeSnippets: [
         {
@@ -382,7 +381,7 @@ function CardPage() {
     },
 
     {
-      title: "Card",
+      title: "The Grand Card",
       component: <Card5 />,
       codeSnippets: [
         {
@@ -426,7 +425,7 @@ function CardPage() {
     },
 
     {
-      title: "Card",
+      title: "The Modal Maze Cart",
       component: <Card6 />,
       codeSnippets: [
         {
@@ -662,7 +661,7 @@ function CardPage() {
     },
 
     {
-      title: "Card",
+      title: "Image Background Card (Hitesh Sir Edition)",
       component: <Card7 />,
       codeSnippets: [
         {
@@ -709,7 +708,7 @@ function CardPage() {
     },
 
     {
-      title: "Card",
+      title: "Premium Selection Card",
       component: <Card10 />,
       codeSnippets: [
         {
@@ -783,12 +782,9 @@ function CardPage() {
   ];
   return (
     <div className="max-w-4xl mx-auto p-6 ">
-      <h1 className="text-3xl font-bold text-black">
-        Elegant Card Component Previews
-      </h1>
-      <p className="text-gray-600 mt-2">
-        Dive into a variety of beautifully designed card components tailored for
-        modern web interfaces. Copy, customize, and elevate your UI instantly.
+      <h1 className="text-3xl font-bold text-[#603F26]">Card Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Explore a curated selection of sleek, responsive card components
       </p>
       <div className="mt-6 space-y-6">
         {cardsVariants.map((variant, index) => (

@@ -5,7 +5,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function CalendarPage() {
   const calendarVariants = [
     {
-      title: "Calendar",
+      title: "Interactive Date Picker",
       component: <Calendar />,
       codeSnippets: [
         {
@@ -125,7 +125,7 @@ function CalendarPage() {
     },
 
     {
-      title: "Calendar with Events",
+      title: "Eventful Calendar",
       component: <Timely />,
       codeSnippets: [
         {
@@ -298,11 +298,9 @@ function CalendarPage() {
   ];
   return (
     <div className=" mx-auto p-6 max-w-6xl">
-      <h1 className="text-3xl font-bold text-black">Calendar Components</h1>
-      <p className="text-gray-600 mt-2">
-        Discover beautifully designed and fully customizable calendar components
-        to enhance date selection and scheduling experiences in your
-        application.
+      <h1 className="text-3xl font-bold text-[#603F26]">Calendar Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Beautifully designed calendars for seamless scheduling
       </p>
 
       <div className="mt-6 space-y-6">
