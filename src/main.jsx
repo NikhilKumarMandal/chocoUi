@@ -32,7 +32,6 @@ import ComboboxPage from "./pages/ComboboxPage.jsx";
 import CTAPage from "./pages/CTAPage.jsx";
 import DropdownPage from "./pages/DropdownPage.jsx";
 import App from "./App.jsx";
-import Docs from "./components/Docs/Docs.jsx";
 import FeedbackPage from "./components/Feedback/Feedback.jsx";
 import InputPage from "./pages/InputPage.jsx";
 import LoaderPage from "./pages/LoaderPage.jsx";
@@ -43,9 +42,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<LandingPage />} />
-
       <Route path="/dashboard" element={<App />}>
-        <Route path="docs" element={<Docs />} />
         <Route path="navbar" element={<NavbarPage />} />
         <Route path="bento" element={<BentoPage />} />
         <Route path="footer" element={<FooterPage />} />
