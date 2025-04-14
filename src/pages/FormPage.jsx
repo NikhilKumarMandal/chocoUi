@@ -1,6 +1,6 @@
 import SingIn from "../UIComponents/Forms/Singin";
 import ContactUs from "../UIComponents/Forms/ContactUs";
-import Loginin from "../UIComponents/Forms/Login"
+import Loginin from "../UIComponents/Forms/Login";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function FormPage() {
@@ -174,7 +174,7 @@ function FormPage() {
     },
   ];
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className=" max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-black">Component Previews</h1>
       <p className="text-gray-600 mt-2">
         Explore different UI components you can use in your project.
@@ -185,6 +185,7 @@ function FormPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
+            isFullWidth={true}
           >
             {variant.component}
           </PreviewComponent>
