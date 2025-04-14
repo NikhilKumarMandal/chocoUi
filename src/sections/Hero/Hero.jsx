@@ -66,11 +66,11 @@ const Hero = () => {
       rotate: 6,
       delay: 1.6,
       comp: (
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+        <Link to="/dashboard/avatar" >
           <UserAvatar
             style={{ filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))" }}
           />
-        </a>
+        </Link>
       ),
     },
     {

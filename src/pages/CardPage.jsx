@@ -21,7 +21,7 @@ function CardPage() {
           
           export default function Card() {
             return (
-              <div className="max-w-sm p-6  border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
+              <div className="max-w-sm p-6  border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba] mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <a href="#">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#152f3d]">
                     Choco ui
@@ -69,7 +69,7 @@ function CardPage() {
           
           function Card() {
             return (
-              <div className="max-w-sm rounded-2xl border-1 overflow-hidden shadow-lg">
+              <div className="max-w-sm rounded-2xl border-1 overflow-hidden shadow-lg mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <img
                   className="p-3 rounded-3xl w-full h-64"
                   src="https://plus.unsplash.com/premium_photo-1683120880375-074c4ba3f775?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -114,7 +114,7 @@ function CardPage() {
           
           function Card() {
             return (
-              <div class="max-w-xs rounded-lg shadow-lg p-3 border-1 border-amber-200 bg-white text-gray-600">
+              <div class="max-w-xs rounded-lg shadow-lg p-3 border-1 border-amber-200 bg-white text-gray-600 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <div class="flex flex-col items-center p-5 pt-10 bg-amber-100 rounded-lg relative">
                   <span class="absolute top-0 right-0 bg-amber-200 rounded-l-full px-3 py-2 text-lg font-semibold text-gray-700">
                     $49 <small class="text-sm text-gray-500">/ m</small>
@@ -207,7 +207,7 @@ function CardPage() {
           
           function Card() {
             return (
-              <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border-1 border-blue-300 bg-white shadow-md">
+              <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border-1 border-blue-300 bg-white shadow-md mx-auto  sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <a class="relative mx-3 mt-3  h-60 overflow-hidden rounded-xl" href="#">
                   <img
                     class="object-cover"
@@ -319,7 +319,7 @@ function CardPage() {
           
           export default function Card() {
             return (
-              <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+              <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <div class="flex flex-col items-center pb-10 mt-9">
                   <img
                     class="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -364,7 +364,7 @@ function CardPage() {
           export default function Card() {
             return (
               <div
-                className="relative w-screen max-w-sm border border-gray-600 rounded-2xl bg-gray-100 px-4 py-8 sm:px-6 lg:px-8"
+                className="relative w-screen max-w-sm border border-gray-600 rounded-2xl bg-gray-100 px-4 py-8 sm:px-6 lg:px-8 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4"
                 aria-modal="true"
                 role="dialog"
                 tabIndex="-1"
@@ -599,7 +599,7 @@ function CardPage() {
           
           export default function Card() {
             return (
-              <article className="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg max-w-96">
+              <article className="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg max-w-96 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <img
                   alt=""
                   src="https://images.pexels.com/photos/1739941/pexels-photo-1739941.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
@@ -646,7 +646,7 @@ function CardPage() {
           
           const Card = () => {
             return (
-              <div className="group max-w-sm w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <div className="group max-w-sm w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-600 transform group-hover:scale-110 transition-transform duration-500"></div>
                   <div className="absolute inset-0 flex items-center justify-center">

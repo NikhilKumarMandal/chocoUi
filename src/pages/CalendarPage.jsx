@@ -19,8 +19,18 @@ function CalendarPage() {
             const [selectedDate, setSelectedDate] = useState(null);
           
             const months = [
-              "January", "February", "March", "April", "May", "June",
-              "July", "August", "September", "October", "November", "December",
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December",
             ];
           
             const getDaysInMonth = (year, month) => {
@@ -52,7 +62,8 @@ function CalendarPage() {
             const daysInMonth = getDaysInMonth(currentYear, currentMonth);
             const startDay = getStartDayOfMonth(currentYear, currentMonth);
             const todayDate = today.getDate();
-            const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+            const isCurrentMonth =
+              today.getMonth() === currentMonth && today.getFullYear() === currentYear;
           
             const calendarCells = [];
             for (let i = 0; i < startDay; i++) {
@@ -80,7 +91,7 @@ function CalendarPage() {
             }
           
             return (
-              <div className="bg-white rounded-lg shadow p-4 w-full max-w-sm">
+              <div className="bg-white rounded-lg shadow p-4 w-full max-w-sm mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <div className="flex justify-between items-center mb-4">
                   <button onClick={handlePrev} className="px-2 py-1 bg-gray-200 rounded">
                     ←

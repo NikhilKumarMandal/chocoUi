@@ -8,167 +8,66 @@ function DropdownPage() {
   const DropdownVariants = [
     {
       title: "Dropdown",
-      component: <Dropdown1 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: `import { useState, useRef, useEffect } from "react";
-          
-          export default function Dropdown() {
-            const [isOpen, setIsOpen] = useState(false);
-            const dropdownRef = useRef(null);
-          
-            useEffect(() => {
-              function handleClickOutside(event) {
-                if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                  setIsOpen(false);
-                }
-              }
-          
-              document.addEventListener("mousedown", handleClickOutside);
-              return () => document.removeEventListener("mousedown", handleClickOutside);
-            }, []);
-          
-            return (
-              <div className="relative inline-block" ref={dropdownRef}>
-                <button
-                  onClick={() => setIsOpen((prev) => !prev)}
-                  className="relative z-10 block p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
-                  aria-haspopup="true"
-                  aria-expanded={isOpen}
-                >
-                  <svg
-                    className="w-5 h-5 text-gray-800 dark:text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-          
-                {isOpen && (
-                  <div className="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 transition ease-out duration-100 transform scale-100 opacity-100">
-                    {[
-                      "Your Profile",
-                      "Your Projects",
-                      "Help",
-                      "Settings",
-                      "Sign Out",
-                    ].map((item, index) => (
-                      <a
-                        key={index}
-                        href="#"
-                        className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                      >
-                        {item}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          }`,
-        },
-      ],
-    },
-    {
-      title: "Dropdown",
       component: <Dropdown2 />,
       codeSnippets: [
         {
           language: "jsx",
           code: `import { useState } from "react";
-
-const Dropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedItems, setSelectedItems] = useState([]);
-
-  const options = [
-    { id: 1, label: "Option 1" },
-    { id: 2, label: "Option 2" },
-    { id: 3, label: "Option 3" },
-    { id: 4, label: "Option 4" },
-  ];
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const toggleOption = (optionId) => {
-    setSelectedItems((prev) =>
-      prev.includes(optionId)
-        ? prev.filter((id) => id !== optionId)
-        : [...prev, optionId]
-    );
-  };
-
-  const dropdownBtnClass =
-    "w-full px-4 py-3 bg-purple-600 text-white rounded-lg flex items-center justify-between hover:bg-purple-700 transition-colors duration-200 shadow-md";
-
-  const dropdownIconBase = "w-5 h-5 transition-transform duration-200";
-  const dropdownIconOpen = "transform rotate-180";
-
-  const dropdownMenuClass =
-    "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg divide-y divide-gray-100";
-
-  const dropdownItemClass =
-    "flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150";
-
-  const checkboxClass =
-    "w-4 h-4 border-2 border-gray-300 rounded focus:ring-purple-500 text-purple-600 cursor-pointer";
-
-  const checkIconClass = "absolute w-4 h-4 text-green-500 pointer-events-none";
-
-  const dropdownIconClass = isOpen
-    ? dropdownIconBase + " " + dropdownIconOpen
-    : dropdownIconBase;
-
-  return (
-    <div className="relative w-72">
-      <button onClick={toggleDropdown} className={dropdownBtnClass}>
-        <span>
-          {selectedItems.length === 0
-            ? "Select Options"
-            : selectedItems.length + " Selected"}
-        </span>
-        <svg
-          className={dropdownIconClass}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-
-      {isOpen && (
-        <div className={dropdownMenuClass}>
-          {options.map((option) => (
-            <div
-              key={option.id}
-              className={dropdownItemClass}
-              onClick={() => toggleOption(option.id)}
-            >
-              <div className="relative flex items-center">
-                <input
-                  type="checkbox"
-                  checked={selectedItems.includes(option.id)}
-                  onChange={() => {}}
-                  className={checkboxClass}
-                />
-                {selectedItems.includes(option.id) && (
+          
+          const Dropdown = () => {
+            const [isOpen, setIsOpen] = useState(false);
+            const [selectedItems, setSelectedItems] = useState([]);
+          
+            const options = [
+              { id: 1, label: "Option 1" },
+              { id: 2, label: "Option 2" },
+              { id: 3, label: "Option 3" },
+              { id: 4, label: "Option 4" },
+            ];
+          
+            const toggleDropdown = () => {
+              setIsOpen(!isOpen);
+            };
+          
+            const toggleOption = (optionId) => {
+              setSelectedItems((prev) =>
+                prev.includes(optionId)
+                  ? prev.filter((id) => id !== optionId)
+                  : [...prev, optionId]
+              );
+            };
+          
+            const dropdownBtnClass =
+              "w-full px-4 py-3 bg-purple-600 text-white rounded-lg flex items-center justify-between hover:bg-purple-700 transition-colors duration-200 shadow-md";
+          
+            const dropdownIconBase = "w-5 h-5 transition-transform duration-200";
+            const dropdownIconOpen = "transform rotate-180";
+          
+            const dropdownMenuClass =
+              "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg divide-y divide-gray-100";
+          
+            const dropdownItemClass =
+              "flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150";
+          
+            const checkboxClass =
+              "w-4 h-4 border-2 border-gray-300 rounded focus:ring-purple-500 text-purple-600 cursor-pointer";
+          
+            const checkIconClass = "absolute w-4 h-4 text-green-500 pointer-events-none";
+          
+            const dropdownIconClass = isOpen
+              ? dropdownIconBase + " " + dropdownIconOpen
+              : dropdownIconBase;
+          
+            return (
+              <div className="relative w-72 m-4">
+                <button onClick={toggleDropdown} className={dropdownBtnClass}>
+                  <span>
+                    {selectedItems.length === 0
+                      ? "Select Options"
+                      : selectedItems.length + " Selected"}
+                  </span>
                   <svg
-                    className={checkIconClass}
+                    className={dropdownIconClass}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -177,21 +76,52 @@ const Dropdown = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M5 13l4 4L19 7"
+                      d="M19 9l-7 7-7-7"
                     />
                   </svg>
+                </button>
+          
+                {isOpen && (
+                  <div className={dropdownMenuClass}>
+                    {options.map((option) => (
+                      <div
+                        key={option.id}
+                        className={dropdownItemClass}
+                        onClick={() => toggleOption(option.id)}
+                      >
+                        <div className="relative flex items-center">
+                          <input
+                            type="checkbox"
+                            checked={selectedItems.includes(option.id)}
+                            onChange={() => {}}
+                            className={checkboxClass}
+                          />
+                          {selectedItems.includes(option.id) && (
+                            <svg
+                              className={checkIconClass}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                          )}
+                        </div>
+                        <span className="ml-3 text-gray-700">{option.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 )}
               </div>
-              <span className="ml-3 text-gray-700">{option.label}</span>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default Dropdown;
+            );
+          };
+          
+          export default Dropdown;
 `,
         },
       ],
@@ -203,76 +133,76 @@ export default Dropdown;
         {
           language: "jsx",
           code: `import { useState } from "react";
-
-const Dropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("Select option");
-
-  const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleSelect = (option) => {
-    setSelected(option);
-    setIsOpen(false);
-  };
-
-  const containerClass = "relative w-64";
-
-  const buttonClass =
-    "w-full px-4 py-2 bg-indigo-600 text-white rounded-lg flex items-center justify-between hover:bg-indigo-700 transition-colors duration-200";
-
-  const iconBaseClass = "w-5 h-5 transition-transform duration-200";
-  const iconOpenClass = "transform rotate-180";
-  const iconClass = isOpen
-    ? iconBaseClass + " " + iconOpenClass
-    : iconBaseClass;
-
-  const dropdownClass =
-    "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg";
-
-  const optionClass =
-    "px-4 py-2 cursor-pointer hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg";
-
-  return (
-    <div className={containerClass}>
-      <button onClick={toggleDropdown} className={buttonClass}>
-        <span>{selected}</span>
-        <svg
-          className={iconClass}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-
-      {isOpen && (
-        <div className={dropdownClass}>
-          {options.map((option, index) => (
-            <div
-              key={index}
-              onClick={() => handleSelect(option)}
-              className={optionClass}
-            >
-              {option}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default Dropdown;
+          
+          const Dropdown = () => {
+            const [isOpen, setIsOpen] = useState(false);
+            const [selected, setSelected] = useState("Select option");
+          
+            const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
+          
+            const toggleDropdown = () => {
+              setIsOpen(!isOpen);
+            };
+          
+            const handleSelect = (option) => {
+              setSelected(option);
+              setIsOpen(false);
+            };
+          
+            const containerClass = "relative w-64 m-4";
+          
+            const buttonClass =
+              "w-full px-4 py-2 bg-indigo-600 text-white rounded-lg flex items-center justify-between hover:bg-indigo-700 transition-colors duration-200";
+          
+            const iconBaseClass = "w-5 h-5 transition-transform duration-200";
+            const iconOpenClass = "transform rotate-180";
+            const iconClass = isOpen
+              ? iconBaseClass + " " + iconOpenClass
+              : iconBaseClass;
+          
+            const dropdownClass =
+              "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg";
+          
+            const optionClass =
+              "px-4 py-2 cursor-pointer hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg";
+          
+            return (
+              <div className={containerClass}>
+                <button onClick={toggleDropdown} className={buttonClass}>
+                  <span>{selected}</span>
+                  <svg
+                    className={iconClass}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+          
+                {isOpen && (
+                  <div className={dropdownClass}>
+                    {options.map((option, index) => (
+                      <div
+                        key={index}
+                        onClick={() => handleSelect(option)}
+                        className={optionClass}
+                      >
+                        {option}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          };
+          
+          export default Dropdown;
 `,
         },
       ],
@@ -284,124 +214,124 @@ export default Dropdown;
         {
           language: "jsx",
           code: `import { useState } from "react";
-
-const Dropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [openSubMenus, setOpenSubMenus] = useState([]);
-
-  const menuItems = [
-    {
-      id: 1,
-      label: "Products",
-      submenu: [
-        { id: "sub1-1", label: "Electronics" },
-        { id: "sub1-2", label: "Clothing" },
-        { id: "sub1-3", label: "Books" },
-      ],
-    },
-    {
-      id: 2,
-      label: "Services",
-      submenu: [
-        { id: "sub2-1", label: "Consulting" },
-        { id: "sub2-2", label: "Design" },
-        { id: "sub2-3", label: "Development" },
-      ],
-    },
-    {
-      id: 3,
-      label: "Categories",
-      submenu: [
-        { id: "sub3-1", label: "Featured" },
-        { id: "sub3-2", label: "Trending" },
-        { id: "sub3-3", label: "New Arrivals" },
-      ],
-    },
-  ];
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) setOpenSubMenus([]);
-  };
-
-  const toggleSubMenu = (id) => {
-    setOpenSubMenus((prev) =>
-      prev.includes(id) ? prev.filter((menuId) => menuId !== id) : [...prev, id]
-    );
-  };
-
-  const ChevronIcon = ({ isOpen }) => {
-    const baseClass = "w-5 h-5 transition-transform duration-200";
-    const openClass = " transform rotate-180";
-    const chevronIconClass = isOpen ? baseClass + openClass : baseClass;
-
-    return (
-      <svg
-        className={chevronIconClass}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19 9l-7 7-7-7"
-        />
-      </svg>
-    );
-  };
-
-  const containerClass = "relative w-72";
-  const buttonClass =
-    "w-full px-4 py-3 bg-blue-900 text-white rounded-lg flex items-center justify-between hover:bg-blue-800 transition-colors duration-200 shadow-lg";
-  const dropdownClass =
-    "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50";
-  const menuItemContainerClass = "border-b border-gray-100 last:border-none";
-  const menuItemButtonClass =
-    "flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-blue-50 transition-colors duration-150";
-  const menuItemLabelClass = "text-blue-900 font-medium";
-  const submenuContainerClass = "bg-blue-50/50 border-t border-blue-100";
-  const submenuItemClass =
-    "px-8 py-2 cursor-pointer hover:bg-blue-100 transition-colors duration-150 text-blue-900/80";
-
-  return (
-    <div className={containerClass}>
-      <button onClick={toggleDropdown} className={buttonClass}>
-        <span>Menu</span>
-        <ChevronIcon isOpen={isOpen} />
-      </button>
-
-      {isOpen && (
-        <div className={dropdownClass}>
-          {menuItems.map((item) => (
-            <div key={item.id} className={menuItemContainerClass}>
-              <div
-                onClick={() => toggleSubMenu(item.id)}
-                className={menuItemButtonClass}
-              >
-                <span className={menuItemLabelClass}>{item.label}</span>
-                <ChevronIcon isOpen={openSubMenus.includes(item.id)} />
+          
+          const Dropdown = () => {
+            const [isOpen, setIsOpen] = useState(false);
+            const [openSubMenus, setOpenSubMenus] = useState([]);
+          
+            const menuItems = [
+              {
+                id: 1,
+                label: "Products",
+                submenu: [
+                  { id: "sub1-1", label: "Electronics" },
+                  { id: "sub1-2", label: "Clothing" },
+                  { id: "sub1-3", label: "Books" },
+                ],
+              },
+              {
+                id: 2,
+                label: "Services",
+                submenu: [
+                  { id: "sub2-1", label: "Consulting" },
+                  { id: "sub2-2", label: "Design" },
+                  { id: "sub2-3", label: "Development" },
+                ],
+              },
+              {
+                id: 3,
+                label: "Categories",
+                submenu: [
+                  { id: "sub3-1", label: "Featured" },
+                  { id: "sub3-2", label: "Trending" },
+                  { id: "sub3-3", label: "New Arrivals" },
+                ],
+              },
+            ];
+          
+            const toggleDropdown = () => {
+              setIsOpen(!isOpen);
+              if (!isOpen) setOpenSubMenus([]);
+            };
+          
+            const toggleSubMenu = (id) => {
+              setOpenSubMenus((prev) =>
+                prev.includes(id) ? prev.filter((menuId) => menuId !== id) : [...prev, id]
+              );
+            };
+          
+            const ChevronIcon = ({ isOpen }) => {
+              const baseClass = "w-5 h-5 transition-transform duration-200";
+              const openClass = " transform rotate-180";
+              const chevronIconClass = isOpen ? baseClass + openClass : baseClass;
+          
+              return (
+                <svg
+                  className={chevronIconClass}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              );
+            };
+          
+            const containerClass = "relative w-72 m-4";
+            const buttonClass =
+              "w-full px-4 py-3 bg-blue-900 text-white rounded-lg flex items-center justify-between hover:bg-blue-800 transition-colors duration-200 shadow-lg";
+            const dropdownClass =
+              "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50";
+            const menuItemContainerClass = "border-b border-gray-100 last:border-none";
+            const menuItemButtonClass =
+              "flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-blue-50 transition-colors duration-150";
+            const menuItemLabelClass = "text-blue-900 font-medium";
+            const submenuContainerClass = "bg-blue-50/50 border-t border-blue-100";
+            const submenuItemClass =
+              "px-8 py-2 cursor-pointer hover:bg-blue-100 transition-colors duration-150 text-blue-900/80";
+          
+            return (
+              <div className={containerClass}>
+                <button onClick={toggleDropdown} className={buttonClass}>
+                  <span>Menu</span>
+                  <ChevronIcon isOpen={isOpen} />
+                </button>
+          
+                {isOpen && (
+                  <div className={dropdownClass}>
+                    {menuItems.map((item) => (
+                      <div key={item.id} className={menuItemContainerClass}>
+                        <div
+                          onClick={() => toggleSubMenu(item.id)}
+                          className={menuItemButtonClass}
+                        >
+                          <span className={menuItemLabelClass}>{item.label}</span>
+                          <ChevronIcon isOpen={openSubMenus.includes(item.id)} />
+                        </div>
+          
+                        {openSubMenus.includes(item.id) && (
+                          <div className={submenuContainerClass}>
+                            {item.submenu.map((subItem) => (
+                              <div key={subItem.id} className={submenuItemClass}>
+                                {subItem.label}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-
-              {openSubMenus.includes(item.id) && (
-                <div className={submenuContainerClass}>
-                  {item.submenu.map((subItem) => (
-                    <div key={subItem.id} className={submenuItemClass}>
-                      {subItem.label}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default Dropdown;
+            );
+          };
+          
+          export default Dropdown;
 `,
         },
       ],
