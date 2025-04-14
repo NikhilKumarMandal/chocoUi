@@ -48,18 +48,18 @@ function NavbarV2() {
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `text-sm font-medium transition-colors duration-200 ${
+                    `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
                       isActive
-                        ? "text-[#603F26] font-semibold"
-                        : "text-gray-600 hover:text-[#603F26]"
+                        ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26] "
+                        : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
                     }`
                   }
                 >
                   {item.name}
                 </NavLink>
               ))}
-              <button className="px-4 py-2 bg-[#603F26] text-[#FFDBB5] rounded-lg font-medium hover:bg-[#6C4E31] transition-all duration-300 shadow-sm hover:shadow-md">
-                Get Started
+              <button className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300 shadow-sm hover:shadow-md">
+                Github
               </button>
             </div>
             {/* Mobile Menu Button */}
@@ -100,14 +100,12 @@ function NavbarV2() {
                 {item.name}
               </NavLink>
             ))}
-            <button className="w-full mt-2 px-3 py-2 bg-[#603F26] text-[#FFDBB5] rounded-md text-base font-medium hover:bg-[#6C4E31] transition-all duration-300">
-              Get Started
+            <button className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300">
+              Github
             </button>
           </div>
         </div>
       </nav>
-
-      <div className="h-16"></div>
     </>
   );
 }

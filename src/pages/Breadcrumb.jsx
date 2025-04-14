@@ -54,7 +54,7 @@ function Breadcrumb() {
           <a
             rel="noopener noreferrer"
             href="#"
-            className="flex items-center px-1 capitalize hover:underline hover:no-underline cursor-default"
+            className="flex items-center px-1 capitalize hover:underline  cursor-default"
           >
             Current
           </a>
@@ -159,7 +159,7 @@ export default Breadcrumb;
                     <a
                       rel="noopener noreferrer"
                       href="#"
-                      className="flex items-center px-1 capitalize hover:underline hover:no-underline cursor-default"
+                      className="flex items-center px-1 capitalize hover:underline  cursor-default"
                     >
                       Current
                     </a>
