@@ -7,7 +7,7 @@ export default function PreviewComponent({
   codeSnippets = [],
   children,
   isFullWidth = false,
-  previewBg = "white",
+  previewBg = "bg-white",
   fixPreviewHeight = false,
 }) {
   const [activeTab, setActiveTab] = useState("preview");
