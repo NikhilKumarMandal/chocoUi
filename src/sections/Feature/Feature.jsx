@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 function Feature() {
   const features = [
@@ -62,7 +61,7 @@ function Feature() {
     {
       title: "Developer Friendly",
       description:
-        "Well-documented API with TypeScript support for smooth development and enhanced productivity.",
+        "Well-documented API with JavaScript support for smooth development and enhanced productivity.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
