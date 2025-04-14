@@ -5,7 +5,7 @@ const Button_21 = () => {
   return (
     <button
       className="
-              group inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap
+              group inline-flex h-11 m-4 items-center justify-center gap-2 whitespace-nowrap
               rounded-md bg-gray-700 px-5 py-2 text-sm font-medium text-white
               transition-colors duration-200 ease-out hover:bg-gray-800
               focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-white

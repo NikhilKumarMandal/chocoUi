@@ -114,7 +114,9 @@ const Calendar = ({ onDateSelect }) => {
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 w-full max-w-md mx-auto">
+
+    <div className="bg-white rounded-xl shadow-lg p-4 w-full max-w-md mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
+      {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <button
           onClick={() => navigateMonth(-1)}

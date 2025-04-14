@@ -26,7 +26,7 @@ const Loader_12 = ({ size = "md", color = "blue" }) => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center m-4">
       <div
         className={
           sizeClasses[size] +

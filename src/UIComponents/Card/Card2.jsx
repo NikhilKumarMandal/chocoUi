@@ -2,7 +2,7 @@ import React from "react";
 
 function Card2() {
   return (
-    <div className="max-w-sm rounded-2xl border-1 overflow-hidden shadow-lg">
+    <div className="max-w-sm rounded-2xl border-1 overflow-hidden shadow-lg mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       <img
         className="p-3 rounded-3xl w-full h-64"
         src="https://plus.unsplash.com/premium_photo-1683120880375-074c4ba3f775?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

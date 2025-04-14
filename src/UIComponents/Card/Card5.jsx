@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card5() {
   return (
-    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       <div class="flex flex-col items-center pb-10 mt-9">
         <img
           class="w-24 h-24 mb-3 rounded-full shadow-lg"

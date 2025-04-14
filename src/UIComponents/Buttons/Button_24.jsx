@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const Button_24 = () => {
   return (
-    <div className="group relative isolate h-12 w-32 cursor-pointer overflow-hidden rounded-full border border-gray-200 bg-white p-1 text-center font-medium shadow-sm transition-all duration-500 hover:border-transparent hover:shadow-lg dark:border-gray-700 dark:bg-gray-800">
+    <div className="group relative isolate h-12 w-32 m-4 cursor-pointer overflow-hidden rounded-full border border-gray-200 bg-white p-1 text-center font-medium shadow-sm transition-all duration-500 hover:border-transparent hover:shadow-lg dark:border-gray-700 dark:bg-gray-800">
       <span className="absolute inset-0 z-10 flex translate-x-0 items-center justify-center text-gray-800 opacity-100 transition-all duration-500 ease-out group-hover:-translate-x-full group-hover:opacity-0 dark:text-gray-200">
         Explore
       </span>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Skeleton_07 = () => {
   return (
-    <div className="w-full max-w-5xl p-4 border rounded-lg shadow-sm animate-pulse bg-white mx-auto">
+    <div className="w-full max-w-5xl p-4 border rounded-lg shadow-sm animate-pulse bg-white mx-auto m-4">
       <div className="h-8 w-1/4 bg-gray-200 rounded mb-6"></div>
 
       {/* Stats Cards */}
