@@ -129,7 +129,7 @@ export default Badge;
     <div className="max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-[#603F26]">Badge Components</h1>
       <p className="text-[#1a1a1a] mt-2">
-      Highlight important information with subtle visual cues
+        Highlight important information with subtle visual cues
       </p>
       <div className="mt-6 space-y-6">
         {Badge1Variants.map((variant, index) => (

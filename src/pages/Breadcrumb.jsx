@@ -288,7 +288,9 @@ export default Breadcrumb;
       codeSnippets: [
         {
           language: "jsx",
-          code: `import React from "react";
+          code: `
+          
+          import React from "react";
           
           function Breadcrumb() {
             return (
@@ -346,9 +348,11 @@ export default Breadcrumb;
   ];
   return (
     <div className="mx-auto p-6 max-w-4xl">
-      <h1 className="text-3xl font-bold text-[#603F26]">Breadcrumb Components</h1>
+      <h1 className="text-3xl font-bold text-[#603F26]">
+        Breadcrumb Components
+      </h1>
       <p className="text-[#1a1a1a]  mt-2">
-      Keep users oriented with clear navigation paths
+        Keep users oriented with clear navigation paths
       </p>
       <div className="mt-6 space-y-6">
         {breadcrumbVariants.map((variant, index) => (
