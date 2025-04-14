@@ -13,22 +13,13 @@ export default function PreviewComponent({
   const [activeTab, setActiveTab] = useState("preview");
   const [copied, setCopied] = useState(false);
 
-  const defaultLanguage =
-    codeSnippets.length > 0 ? codeSnippets[0].language : "jsx";
-  const [selectedLanguage, setSelectedLanguage] = useState(defaultLanguage);
+  const codeSnippet = codeSnippets[0] || { language: "jsx", code: "" };
 
   const handleCopy = () => {
-    const activeCode =
-      codeSnippets.find((snippet) => snippet.language === selectedLanguage)
-        ?.code || "";
-    navigator.clipboard.writeText(activeCode);
+    navigator.clipboard.writeText(codeSnippet.code || "");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
-  const availableLanguages = [
-    ...new Set(codeSnippets.map((snippet) => snippet.language)),
-  ];
 
   return (
     <div
@@ -83,25 +74,7 @@ export default function PreviewComponent({
         ) : (
           <div className="w-full rounded-md border bg-gray-900 overflow-hidden">
             <div className="max-h-[550px] overflow-auto p-2 sm:p-4">
-              <div className="mb-4 flex justify-between items-center flex-wrap gap-2">
-                {availableLanguages.length > 1 && (
-                  <div className="flex gap-2 flex-wrap">
-                    {availableLanguages.map((lang) => (
-                      <button
-                        key={lang}
-                        onClick={() => setSelectedLanguage(lang)}
-                        className={`px-3 py-1.5 rounded-md text-sm font-medium ${
-                          selectedLanguage === lang
-                            ? "bg-blue-600 text-white"
-                            : "bg-gray-700 text-gray-200 hover:bg-gray-600"
-                        }`}
-                      >
-                        {lang.toUpperCase()}
-                      </button>
-                    ))}
-                  </div>
-                )}
-
+              <div className="mb-4 flex justify-end">
                 <button
                   onClick={handleCopy}
                   className="bg-gray-700 text-gray-200 px-3 py-1.5 rounded-md text-sm flex items-center gap-1 hover:bg-gray-600"
@@ -112,12 +85,8 @@ export default function PreviewComponent({
 
               {codeSnippets.length > 0 ? (
                 <Highlight
-                  code={
-                    codeSnippets
-                      .find((snippet) => snippet.language === selectedLanguage)
-                      ?.code.trim() || ""
-                  }
-                  language={selectedLanguage}
+                  code={codeSnippet.code.trim()}
+                  language={codeSnippet.language}
                 >
                   {({ tokens, getLineProps, getTokenProps }) => (
                     <pre className="rounded-lg overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed bg-gray-900 text-white border border-gray-700 w-full p-4">

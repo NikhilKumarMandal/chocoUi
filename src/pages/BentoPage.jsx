@@ -5,66 +5,120 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function BentoPage() {
   const bentoVariants = [
     {
-      title: "Bento",
+      title: "Bento Grid",
       component: <BentoGrid />,
       codeSnippets: [
         {
-          language: "html",
-          code: `<div class="grid gap-4 p-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-        <div class="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] sm:col-span-1 md:col-span-2 shadow-lg">
-            <h2 class="text-2xl font-bold">Large Item</h2>
-        </div>
-        <div class="bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-            <h2 class="text-xl font-semibold">Item 1</h2>
-        </div>
-        <div class="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-            <h2 class="text-xl font-semibold">Item 2</h2>
-        </div>
-        <div class="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] md:row-span-2 shadow-lg">
-            <h2 class="text-xl font-semibold">Tall Item</h2>
-        </div>
-        <div class="bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-            <h2 class="text-xl font-semibold">Item 3</h2>
-        </div>
-        <div class="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-            <h2 class="text-xl font-semibold">Item 4</h2>
-        </div>
-        <div class="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-            <h2 class="text-xl font-semibold">Item 5</h2>
-        </div>
-    </div>`,
-        },
-        {
           language: "jsx",
-          code: `export default function Bento() {
-  return (
-    <div className="grid gap-4 p-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-      <div className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] sm:col-span-1 md:col-span-2 shadow-lg">
-        <h2 className="text-2xl font-bold">Large Item</h2>
-      </div>
-      <div className="bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-        <h2 className="text-xl font-semibold">Item 1</h2>
-      </div>
-      <div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-        <h2 className="text-xl font-semibold">Item 2</h2>
-      </div>
-      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] md:row-span-2 shadow-lg">
-        <h2 className="text-xl font-semibold">Tall Item</h2>
-      </div>
-      <div className="bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-        <h2 className="text-xl font-semibold">Item 3</h2>
-      </div>
-      <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-        <h2 className="text-xl font-semibold">Item 4</h2>
-        </div>
-        <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-6 text-white flex items-center justify-center min-h-[150px] shadow-md">
-        <h2 className="text-xl font-semibold">Item 5</h2>
-      </div>
-      </div>
-      
-  )
-}
-`,
+          code: `import React from "react";
+          
+          const images = {
+            nature:
+              "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80&w=1920",
+            workspace:
+              "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1920",
+            minimal:
+              "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=1920",
+            architecture:
+              "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&q=80&w=1920",
+            design:
+              "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=1920",
+            tech: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1920",
+            abstract:
+              "https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?auto=format&fit=crop&q=80&w=1920",
+          };
+          
+          const BentoGrid = () => {
+            return (
+          
+                <div className="max-w-7xl mx-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    <div className="sm:col-span-2 lg:col-span-2 bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                      <div className="relative h-48 sm:h-64 md:h-80 lg:h-96">
+                        <img
+                          src={images.nature}
+                          alt="Nature"
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">
+                            Explore Nature
+                          </h2>
+                          <p className="text-sm sm:text-base md:text-lg opacity-90">
+                            Discover the beauty of the natural world
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                      <div className="relative h-48 sm:h-64 md:h-80 lg:h-96">
+                        <img
+                          src={images.workspace}
+                          alt="Workspace"
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                          <h2 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">
+                            Workspace
+                          </h2>
+                          <p className="text-sm sm:text-base opacity-90">
+                            Productive environment
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                      <div className="relative h-48 sm:h-64 md:h-80">
+                        <img
+                          src={images.minimal}
+                          alt="Minimal"
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                          <h2 className="text-xl sm:text-2xl font-bold">Minimal</h2>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                      <div className="relative h-48 sm:h-64 md:h-80">
+                        <img
+                          src={images.architecture}
+                          alt="Architecture"
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                          <h2 className="text-xl sm:text-2xl font-bold">Architecture</h2>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                      <div className="relative h-48 sm:h-64 md:h-80">
+                        <img
+                          src={images.design}
+                          alt="Design"
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                          <h2 className="text-xl sm:text-2xl font-bold">Design</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            );
+          };
+          
+          export default BentoGrid;
+          `,
         },
       ],
     },

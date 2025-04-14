@@ -51,4 +51,4 @@ const UpdateBanner = () => {
   );
 };
 
-export default UpdateBanner; 
+export default UpdateBanner;

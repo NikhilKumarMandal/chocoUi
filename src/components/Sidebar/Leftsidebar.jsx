@@ -24,7 +24,7 @@ const LeftSidebar = () => {
   const links = useMemo(
     () => [
       { name: "Navbar", path: "/dashboard/navbar" },
-      { name: "Footer", path: "/dashboard/footer" },
+      // { name: "Footer", path: "/dashboard/footer" },
       { name: "Cards", path: "/dashboard/card" },
       { name: "Bento", path: "/dashboard/bento" },
       // { name: "Hero", path: "/dashboard/hero" },
@@ -45,7 +45,7 @@ const LeftSidebar = () => {
       { name: "Dropdown", path: "/dashboard/dropdown" },
       { name: "Input", path: "/dashboard/input" },
       { name: "Loader", path: "/dashboard/loader" },
-      { name: "FileUpload", path: "/dashboard/fileUpload" },
+      // { name: "FileUpload", path: "/dashboard/fileUpload" },
       { name: "Button", path: "/dashboard/button" },
     ],
     []
@@ -88,6 +88,7 @@ const LeftSidebar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="w-full pl-9 pr-3 py-2 text-sm bg-white/50 backdrop-blur-sm border border-gray-200/60 rounded-lg focus:ring-2 focus:ring-[#5C5CFF]/80 focus:border-[#5C5CFF]/80 outline-none text-[#1E1E2C] placeholder-gray-500/70 transition-all"
+        autoFocus
       />
       <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500/70" />
     </div>

@@ -16,33 +16,45 @@ const Dropdown2 = () => {
   };
 
   const toggleOption = (optionId) => {
-    setSelectedItems((prev) => {
-      if (prev.includes(optionId)) {
-        return prev.filter((id) => id !== optionId);
-      } else {
-        return [...prev, optionId];
-      }
-    });
+    setSelectedItems((prev) =>
+      prev.includes(optionId)
+        ? prev.filter((id) => id !== optionId)
+        : [...prev, optionId]
+    );
   };
+
+  // Precomputed classes
+  const dropdownBtnClass =
+    "w-full px-4 py-3 bg-purple-600 text-white rounded-lg flex items-center justify-between hover:bg-purple-700 transition-colors duration-200 shadow-md";
+
+  const dropdownIconBase = "w-5 h-5 transition-transform duration-200";
+  const dropdownIconOpen = "transform rotate-180";
+
+  const dropdownMenuClass =
+    "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg divide-y divide-gray-100";
+
+  const dropdownItemClass =
+    "flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150";
+
+  const checkboxClass =
+    "w-4 h-4 border-2 border-gray-300 rounded focus:ring-purple-500 text-purple-600 cursor-pointer";
+
+  const checkIconClass = "absolute w-4 h-4 text-green-500 pointer-events-none";
+
+  const dropdownIconClass = isOpen
+    ? dropdownIconBase + " " + dropdownIconOpen
+    : dropdownIconBase;
 
   return (
     <div className="relative w-72">
-      {/* Dropdown button */}
-      <button
-        onClick={toggleDropdown}
-        className="w-full px-4 py-3 bg-purple-600 text-white rounded-lg 
-                   flex items-center justify-between hover:bg-purple-700 
-                   transition-colors duration-200 shadow-md"
-      >
+      <button onClick={toggleDropdown} className={dropdownBtnClass}>
         <span>
           {selectedItems.length === 0
             ? "Select Options"
-            : `${selectedItems.length} Selected`}
+            : selectedItems.length + " Selected"}
         </span>
         <svg
-          className={`w-5 h-5 transition-transform duration-200 ${
-            isOpen ? "transform rotate-180" : ""
-          }`}
+          className={dropdownIconClass}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -56,17 +68,12 @@ const Dropdown2 = () => {
         </svg>
       </button>
 
-      {/* Dropdown menu */}
       {isOpen && (
-        <div
-          className="absolute w-full mt-2 bg-white border border-gray-200 
-                        rounded-lg shadow-lg divide-y divide-gray-100"
-        >
+        <div className={dropdownMenuClass}>
           {options.map((option) => (
             <div
               key={option.id}
-              className="flex items-center px-4 py-3 hover:bg-gray-50 
-                         cursor-pointer transition-colors duration-150"
+              className={dropdownItemClass}
               onClick={() => toggleOption(option.id)}
             >
               <div className="relative flex items-center">
@@ -74,13 +81,11 @@ const Dropdown2 = () => {
                   type="checkbox"
                   checked={selectedItems.includes(option.id)}
                   onChange={() => {}}
-                  className="w-4 h-4 border-2 border-gray-300 rounded 
-                             focus:ring-purple-500 text-purple-600 
-                             cursor-pointer"
+                  className={checkboxClass}
                 />
                 {selectedItems.includes(option.id) && (
                   <svg
-                    className="absolute w-4 h-4 text-green-500 pointer-events-none"
+                    className={checkIconClass}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

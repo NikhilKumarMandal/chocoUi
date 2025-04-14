@@ -19,21 +19,21 @@ const Hero = () => {
       rotate: -5,
       delay: 0,
       comp: (
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+        <Link to={"/dashboard/button"} >
           <Card1 />
-        </a>
+        </Link>
       ),
     },
     {
       left: "10%",
       top: "70%",
       comp: (
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+        <Link to={"/dashboard/button"} >
           <ImageHoverButton
             imageUrl="https://images.unsplash.com/photo-1702313040371-6cde8b0f1972?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             label="Project Showcase"
           />
-        </a>
+        </Link>
       ),
       rotate: 6,
       delay: 0.5,
@@ -42,9 +42,9 @@ const Hero = () => {
       right: "15%",
       top: "70%",
       comp: (
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+        <Link to={"/dashboard/button"}>
           <ActionButton text="Hover" />
-        </a>
+        </Link>
       ),
       rotate: 2,
       delay: 0.8,
@@ -53,9 +53,9 @@ const Hero = () => {
       right: "20%",
       top: "10%",
       comp: (
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+        <Link to={"/dashboard/loader"}>
           <AudioWave />
-        </a>
+        </Link>
       ),
       rotate: -4,
       delay: 1.2,
@@ -243,7 +243,7 @@ const Hero = () => {
             {/* Start Building Button */}
             <div className="relative">
               <Link
-                to="/dashboard"
+                to={""}
                 className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#603F26] shadow-xl px-6 md:px-8 font-medium text-white transition-transform duration-300 hover:scale-105"
               >
                 <span className="relative z-10 flex items-center font-['Inter']">
@@ -274,12 +274,14 @@ const Hero = () => {
             {/* Explore Components Button */}
             <div className="relative">
               <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full shadow-xl font-['Inter'] bg-[#FFEAC5] px-6 md:px-8 font-medium text-[#603F26] transition-transform duration-300 hover:scale-105 hover:text-[#FFEAC5]">
+                <Link to={"/dashboard/navbar"}>
                 <span className="relative z-10 flex items-center">
                   Explore Components
                   <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium transition-colors duration-300">
                     50+
                   </span>
-                </span>
+                  </span>
+                  </Link>
                 <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r from-[#603F26] to-[#6C4E31] transition-all duration-500 ease-out group-hover:w-full" />
               </button>
               <div className="absolute -bottom-8 md:-bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-[#6C4E31] font-['Inter'] italic whitespace-nowrap">

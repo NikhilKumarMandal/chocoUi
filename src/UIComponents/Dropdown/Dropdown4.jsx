@@ -36,9 +36,7 @@ const Dropdown4 = () => {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
-    if (!isOpen) {
-      setOpenSubMenus([]);
-    }
+    if (!isOpen) setOpenSubMenus([]);
   };
 
   const toggleSubMenu = (id) => {
@@ -47,63 +45,64 @@ const Dropdown4 = () => {
     );
   };
 
-  const ChevronIcon = ({ isOpen }) => (
-    <svg
-      className={`w-5 h-5 transition-transform duration-200 ${
-        isOpen ? "transform rotate-180" : ""
-      }`}
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M19 9l-7 7-7-7"
-      />
-    </svg>
-  );
+  const ChevronIcon = ({ isOpen }) => {
+    const baseClass = "w-5 h-5 transition-transform duration-200";
+    const openClass = " transform rotate-180";
+    const chevronIconClass = isOpen ? baseClass + openClass : baseClass;
+
+    return (
+      <svg
+        className={chevronIconClass}
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    );
+  };
+
+  const containerClass = "relative w-72";
+  const buttonClass =
+    "w-full px-4 py-3 bg-blue-900 text-white rounded-lg flex items-center justify-between hover:bg-blue-800 transition-colors duration-200 shadow-lg";
+  const dropdownClass =
+    "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50";
+  const menuItemContainerClass = "border-b border-gray-100 last:border-none";
+  const menuItemButtonClass =
+    "flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-blue-50 transition-colors duration-150";
+  const menuItemLabelClass = "text-blue-900 font-medium";
+  const submenuContainerClass = "bg-blue-50/50 border-t border-blue-100";
+  const submenuItemClass =
+    "px-8 py-2 cursor-pointer hover:bg-blue-100 transition-colors duration-150 text-blue-900/80";
 
   return (
-    <div className="relative w-72">
-      <button
-        onClick={toggleDropdown}
-        className="w-full px-4 py-3 bg-blue-900 text-white rounded-lg 
-                 flex items-center justify-between hover:bg-blue-800 
-                 transition-colors duration-200 shadow-lg"
-      >
+    <div className={containerClass}>
+      <button onClick={toggleDropdown} className={buttonClass}>
         <span>Menu</span>
         <ChevronIcon isOpen={isOpen} />
       </button>
 
       {isOpen && (
-        <div
-          className="absolute w-full mt-2 bg-white border border-gray-200 
-                      rounded-lg shadow-xl z-50"
-        >
+        <div className={dropdownClass}>
           {menuItems.map((item) => (
-            <div
-              key={item.id}
-              className="border-b border-gray-100 last:border-none"
-            >
+            <div key={item.id} className={menuItemContainerClass}>
               <div
                 onClick={() => toggleSubMenu(item.id)}
-                className="flex items-center justify-between px-4 py-3 
-                         cursor-pointer hover:bg-blue-50 transition-colors duration-150"
+                className={menuItemButtonClass}
               >
-                <span className="text-blue-900 font-medium">{item.label}</span>
+                <span className={menuItemLabelClass}>{item.label}</span>
                 <ChevronIcon isOpen={openSubMenus.includes(item.id)} />
               </div>
 
               {openSubMenus.includes(item.id) && (
-                <div className="bg-blue-50/50 border-t border-blue-100">
+                <div className={submenuContainerClass}>
                   {item.submenu.map((subItem) => (
-                    <div
-                      key={subItem.id}
-                      className="px-8 py-2 cursor-pointer hover:bg-blue-100 
-                               transition-colors duration-150 text-blue-900/80"
-                    >
+                    <div key={subItem.id} className={submenuItemClass}>
                       {subItem.label}
                     </div>
                   ))}

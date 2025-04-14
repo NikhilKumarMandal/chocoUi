@@ -37,12 +37,14 @@ export const Introduction = () => (
                   "Built with the utility-first CSS framework for rapid development",
               },
               {
-                title: "Dark Mode",
-                description: "Built-in support for light and dark themes",
+                title: "Clean and Consistent Design",
+                description:
+                  "Built-in support for a modern, minimalist theme with consistent styling across all components",
               },
               {
-                title: "Accessible",
-                description: "Fully WAI-ARIA compliant for all users",
+                title: "Built for Everyone",
+                description:
+                  "Designed with accessibility best practices to support all users.",
               },
             ].map((feature, index) => (
               <motion.div

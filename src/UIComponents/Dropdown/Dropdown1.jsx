@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 export default function Dropdown1() {
-  const [isOpen, setIsOpen] = useState(false); // Start closed
+  const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {

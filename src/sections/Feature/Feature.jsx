@@ -1,12 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Feature() {
   const features = [
     {
       title: "Modular Components",
-      description: "Mix and match components to create unique interfaces that fit your brand perfectly.",
+      description:
+        "Mix and match components to create unique interfaces that fit your brand perfectly.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -19,11 +20,12 @@ function Feature() {
         </svg>
       ),
       size: "medium",
-      color: "bg-gradient-to-br from-[#FFDBB5] to-[#FFD19A]"
+      color: "bg-gradient-to-br from-[#FFDBB5] to-[#FFD19A]",
     },
     {
       title: "Customizable",
-      description: "Easily customize colors, spacing, and more to match your design system with minimal effort.",
+      description:
+        "Easily customize colors, spacing, and more to match your design system with minimal effort.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -36,11 +38,12 @@ function Feature() {
         </svg>
       ),
       size: "small",
-      color: "bg-gradient-to-br from-[#FFEAC5] to-[#FFE0A8]"
+      color: "bg-gradient-to-br from-[#FFEAC5] to-[#FFE0A8]",
     },
     {
       title: "Performance First",
-      description: "Optimized for speed and efficiency, ensuring your application remains lightning fast even at scale.",
+      description:
+        "Optimized for speed and efficiency, ensuring your application remains lightning fast even at scale.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -54,11 +57,12 @@ function Feature() {
       ),
       size: "large",
       color: "bg-gradient-to-br from-[#603F26] to-[#7A5233]",
-      textColor: "text-white"
+      textColor: "text-white",
     },
     {
       title: "Developer Friendly",
-      description: "Well-documented API with TypeScript support for smooth development and enhanced productivity.",
+      description:
+        "Well-documented API with TypeScript support for smooth development and enhanced productivity.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -72,11 +76,12 @@ function Feature() {
       ),
       size: "medium",
       color: "bg-gradient-to-br from-[#6C4E31] to-[#8A6541]",
-      textColor: "text-white"
+      textColor: "text-white",
     },
     {
       title: "Accessible by Default",
-      description: "Built with accessibility in mind, ensuring your app works for everyone without compromise.",
+      description:
+        "Built with accessibility in mind, ensuring your app works for everyone without compromise.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -89,35 +94,40 @@ function Feature() {
         </svg>
       ),
       size: "small",
-      color: "bg-gradient-to-br from-[#FFDBB5] to-[#FFD19A]"
-    }
+      color: "bg-gradient-to-br from-[#FFDBB5] to-[#FFD19A]",
+    },
   ];
 
   const getSizeClasses = (size) => {
-    switch(size) {
-      case 'small':
-        return 'md:col-span-1';
-      case 'medium':
-        return 'md:col-span-2';
-      case 'large':
-        return 'md:col-span-3';
+    switch (size) {
+      case "small":
+        return "md:col-span-1";
+      case "medium":
+        return "md:col-span-2";
+      case "large":
+        return "md:col-span-3";
       default:
-        return 'md:col-span-1';
+        return "md:col-span-1";
     }
   };
 
   return (
     <section className="relative bg-gradient-to-b from-white via-[#fcedd2]/30 to-white overflow-hidden py-16 md:py-24">
-      {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-0 left-0 w-[40%] h-[40%] rounded-full bg-[#FFDBB5]/20 blur-3xl -z-10 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-[50%] h-[50%] rounded-full bg-[#6C4E31]/10 blur-3xl -z-10 animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute top-[30%] right-[20%] w-[30%] h-[30%] rounded-full bg-[#FFEAC5]/15 blur-3xl -z-10 animate-pulse" style={{ animationDuration: '12s' }}></div>
+        <div
+          className="absolute bottom-0 right-0 w-[50%] h-[50%] rounded-full bg-[#6C4E31]/10 blur-3xl -z-10 animate-pulse"
+          style={{ animationDuration: "8s" }}
+        ></div>
+        <div
+          className="absolute top-[30%] right-[20%] w-[30%] h-[30%] rounded-full bg-[#FFEAC5]/15 blur-3xl -z-10 animate-pulse"
+          style={{ animationDuration: "12s" }}
+        ></div>
       </div>
-      
+
       <div className="container mx-auto px-4 lg:px-6 max-w-6xl relative z-10">
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -125,16 +135,20 @@ function Feature() {
           className="max-w-2xl mx-auto mb-12 text-center"
         >
           <div className="inline-block mb-2 px-3 py-1 bg-[#FFEAC5]/50 rounded-full">
-            <span className="text-xs font-medium text-[#603F26] font-['Inter']">Why Choose Choco UI</span>
+            <span className="text-xs font-medium text-[#603F26] font-['Inter']">
+              Why Choose Choco UI
+            </span>
           </div>
           <h2 className="mb-4 text-3xl md:text-4xl font-bold text-gray-900 font-['Bricolage']">
             <span className="font-['InstrumentSerif'] text-[#603F26] font-normal italic">
               Powerful
-            </span>{' '}
+            </span>{" "}
             Features
           </h2>
           <p className="text-sm md:text-base text-gray-700 max-w-lg mx-auto font-['Inter'] leading-relaxed">
-            Our UI library is built with the developer experience in mind, making it easy to create beautiful interfaces that delight your users.
+            Our UI library is built with the developer experience in mind,
+            making it easy to create beautiful interfaces that delight your
+            users.
           </p>
         </motion.div>
 
@@ -149,16 +163,14 @@ function Feature() {
               viewport={{ once: true, margin: "-50px" }}
               className={`relative group ${getSizeClasses(feature.size)} h-full`}
             >
-              <div 
-                className="h-full p-5 rounded-xl border border-[#3C2613]/10 bg-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-md hover:scale-[1.01] overflow-hidden text-[#603F26] group-hover:bg-[#3C2613] group-hover:border-[#3C2613]/80"
-              >
+              <div className="h-full p-5 rounded-xl border border-[#3C2613]/10 bg-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-md hover:scale-[1.01] overflow-hidden text-[#603F26] group-hover:bg-[#3C2613] group-hover:border-[#3C2613]/80">
                 {/* Icon */}
                 <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-white/20 border border-white/30 transition-all duration-300 group-hover:bg-[#FFDBB5]/30">
                   <div className="text-lg group-hover:text-white">
                     {feature.icon}
                   </div>
                 </div>
-                
+
                 <h3 className="mb-2 text-lg font-bold text-[#603F26] transition-colors duration-300 font-['Bricolage'] group-hover:text-white">
                   {feature.title}
                 </h3>

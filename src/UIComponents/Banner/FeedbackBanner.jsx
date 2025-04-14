@@ -11,8 +11,8 @@ const FeedbackBanner = () => {
         <div className="text-white text-center sm:text-left">
           <h3 className="text-xl font-bold">We value your feedback!</h3>
           <p className="mt-2 text-white/80 max-w-md">
-            Help us improve by sharing your thoughts and suggestions about
-            your experience with our platform.
+            Help us improve by sharing your thoughts and suggestions about your
+            experience with our platform.
           </p>
         </div>
 
@@ -29,4 +29,4 @@ const FeedbackBanner = () => {
   );
 };
 
-export default FeedbackBanner; 
+export default FeedbackBanner;

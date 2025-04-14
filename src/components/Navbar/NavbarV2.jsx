@@ -14,14 +14,13 @@ function NavbarV2() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Components", path: "/components" },
+    { name: "Components", path: "/dashboard/navbar" },
     { name: "Docs", path: "/docs" },
     { name: "Feedback", path: "/feedback" },
   ];
 
   return (
     <>
-      {/* Full-width sticky navbar */}
       <nav
         className={`fixed top-0 left-0 right-0  z-50 transition-all duration-300 ${
           scrolled
@@ -43,7 +42,6 @@ function NavbarV2() {
               />
             </NavLink>
 
-            {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               {menuItems.map((item) => (
                 <NavLink
@@ -78,9 +76,6 @@ function NavbarV2() {
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 invisible"
@@ -112,7 +107,6 @@ function NavbarV2() {
         </div>
       </nav>
 
-      {/* Add padding to account for fixed navbar */}
       <div className="h-16"></div>
     </>
   );
