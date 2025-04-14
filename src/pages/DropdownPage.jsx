@@ -6,7 +6,7 @@ import Dropdown4 from "../UIComponents/Dropdown/Dropdown4";
 function DropdownPage() {
   const DropdownVariants = [
     {
-      title: "Dropdown",
+      title: "Multi Select Dropdown",
       component: <Dropdown2 />,
       codeSnippets: [
         {
@@ -126,7 +126,7 @@ function DropdownPage() {
       ],
     },
     {
-      title: "Dropdown",
+      title: "Single Select Dropdown",
       component: <Dropdown3 />,
       codeSnippets: [
         {
@@ -207,7 +207,7 @@ function DropdownPage() {
       ],
     },
     {
-      title: "Dropdown",
+      title: "Nested Dropdown",
       component: <Dropdown4 />,
       codeSnippets: [
         {
@@ -338,9 +338,9 @@ function DropdownPage() {
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Dropdown Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Elegant, accessible dropdowns for seamless user selections
       </p>
       <div className="mt-6 space-y-6">
         {DropdownVariants.map((variant, index) => (
