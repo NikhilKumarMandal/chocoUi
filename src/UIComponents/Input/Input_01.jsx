@@ -5,7 +5,7 @@ const Input_01 = () => {
   const [value, setValue] = useState("");
 
   return (
-    <div className="w-96 mx-auto">
+    <div className="w-full max-w-sm mx-auto px-4">
       <label htmlFor="text" className="text-sm font-normal">
         Text Input
       </label>
