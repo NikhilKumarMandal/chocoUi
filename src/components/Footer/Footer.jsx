@@ -103,14 +103,14 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/examples"
+                  to="/feedback"
                   className="text-[#603F26]/80 hover:text-[#603F26] text-sm flex items-center gap-2 transition-all duration-300 relative group font-['Inter']"
                 >
                   <Globe
                     size={14}
                     className="opacity-70 group-hover:opacity-100"
                   />
-                  <span>Examples</span>
+                  <span>Feedback</span>
                   <span className="absolute -bottom-0.5 left-0 h-0.5 bg-[#603F26] w-0 group-hover:w-full transition-all duration-500"></span>
                 </Link>
               </li>
@@ -130,7 +130,7 @@ function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/privacy"
+                  to="/"
                   className="text-[#603F26]/80 hover:text-[#603F26] text-sm flex items-center gap-2 transition-all duration-300 relative group font-['Inter']"
                 >
                   <Shield
@@ -143,7 +143,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/terms"
+                  to="/"
                   className="text-[#603F26]/80 hover:text-[#603F26] text-sm flex items-center gap-2 transition-all duration-300 relative group font-['Inter']"
                 >
                   <FileText
@@ -156,7 +156,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/"
                   className="text-[#603F26]/80 hover:text-[#603F26] text-sm flex items-center gap-2 transition-all duration-300 relative group font-['Inter']"
                 >
                   <Mail
