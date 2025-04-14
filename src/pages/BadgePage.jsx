@@ -5,7 +5,7 @@ import Badge2 from "../UIComponents/Badge/Badge2";
 function Badge() {
   const Badge1Variants = [
     {
-      title: "Badge",
+      title: "Status Badges",
       component: <Badge1 />,
       codeSnippets: [
         {
@@ -46,7 +46,7 @@ function Badge() {
       ],
     },
     {
-      title: "Badge",
+      title: "Product Status Badges",
       component: <Badge2 />,
       codeSnippets: [
         {
@@ -127,9 +127,9 @@ export default Badge;
 
   return (
     <div className="max-w-5xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Badge Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Highlight important information with subtle visual cues
       </p>
       <div className="mt-6 space-y-6">
         {Badge1Variants.map((variant, index) => (

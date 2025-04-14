@@ -7,7 +7,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function Breadcrumb() {
   const breadcrumbVariants = [
     {
-      title: "Breadcrumb",
+      title: "The Navigator",
       component: <Breadcrumb1 />,
       codeSnippets: [
         {
@@ -72,7 +72,7 @@ export default Breadcrumb;
     },
 
     {
-      title: "Breadcrumb",
+      title: "Symbolic Path",
       component: <Breadcrumb2 />,
       codeSnippets: [
         {
@@ -177,7 +177,7 @@ export default Breadcrumb;
     },
 
     {
-      title: "Breadcrumb",
+      title: "Routed Breadcrumb",
       component: <Breadcrumb3 />,
       codeSnippets: [
         {
@@ -283,7 +283,7 @@ export default Breadcrumb;
     },
 
     {
-      title: "Breadcrumb",
+      title: "The Forward SlashNav",
       component: <Breadcrumb4 />,
       codeSnippets: [
         {
@@ -346,9 +346,9 @@ export default Breadcrumb;
   ];
   return (
     <div className="mx-auto p-6 max-w-4xl">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Breadcrumb Components</h1>
+      <p className="text-[#1a1a1a]  mt-2">
+      Keep users oriented with clear navigation paths
       </p>
       <div className="mt-6 space-y-6">
         {breadcrumbVariants.map((variant, index) => (

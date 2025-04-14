@@ -8,7 +8,7 @@ import Navbar10 from "../UIComponents/Navbar/Navbar10";
 export default function NavbarComForUser() {
   const navbarVariants = [
     {
-      title: "Navbar",
+      title: "Harmony Bar",
       component: <Navbar10 />,
       codeSnippets: [
         {
@@ -248,7 +248,7 @@ export default function NavbarComForUser() {
     },
 
     {
-      title: "Navbar",
+      title: "Shadow Bar",
       component: <Navbar5 />,
       codeSnippets: [
         {
@@ -333,7 +333,7 @@ export default function NavbarComForUser() {
       ],
     },
     {
-      title: "Navbar",
+      title: "Breeze Bar",
       component: <Navbar6 />,
       codeSnippets: [
         {
@@ -420,9 +420,9 @@ export default function NavbarComForUser() {
 
   return (
     <div className=" mx-auto p-6 ">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Navbar Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      A sleek and adaptive navigation bar
       </p>
       <div className="mt-6 space-y-6">
         {navbarVariants.map((variant, index) => (
