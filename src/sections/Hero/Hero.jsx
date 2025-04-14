@@ -19,7 +19,7 @@ const Hero = () => {
       rotate: -5,
       delay: 0,
       comp: (
-        <Link to={"/dashboard/button"} >
+        <Link to={"/dashboard/button"}>
           <Card1 />
         </Link>
       ),
@@ -28,7 +28,7 @@ const Hero = () => {
       left: "10%",
       top: "70%",
       comp: (
-        <Link to={"/dashboard/button"} >
+        <Link to={"/dashboard/button"}>
           <ImageHoverButton
             imageUrl="https://images.unsplash.com/photo-1702313040371-6cde8b0f1972?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             label="Project Showcase"
@@ -66,7 +66,7 @@ const Hero = () => {
       rotate: 6,
       delay: 1.6,
       comp: (
-        <Link to="/dashboard/avatar" >
+        <Link to="/dashboard/avatar">
           <UserAvatar
             style={{ filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))" }}
           />
@@ -275,13 +275,13 @@ const Hero = () => {
             <div className="relative">
               <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full shadow-xl font-['Inter'] bg-[#FFEAC5] px-6 md:px-8 font-medium text-[#603F26] transition-transform duration-300 hover:scale-105 hover:text-[#FFEAC5]">
                 <Link to={"/dashboard/navbar"}>
-                <span className="relative z-10 flex items-center">
-                  Explore Components
-                  <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium transition-colors duration-300">
-                    50+
+                  <span className="relative z-10 flex items-center">
+                    Explore Components
+                    <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium transition-colors duration-300">
+                      50+
+                    </span>
                   </span>
-                  </span>
-                  </Link>
+                </Link>
                 <div className="absolute inset-0 z-0 w-0 bg-gradient-to-r from-[#603F26] to-[#6C4E31] transition-all duration-500 ease-out group-hover:w-full" />
               </button>
               <div className="absolute -bottom-8 md:-bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-[#6C4E31] font-['Inter'] italic whitespace-nowrap">
