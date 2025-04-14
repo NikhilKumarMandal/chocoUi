@@ -10,6 +10,7 @@ export const Documentation = () => {
   const [activeTab, setActiveTab] = useState("introduction");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const sections = ["introduction", "installation", "usage", "theming"];
       const scrollPosition = window.scrollY + 100; // Add some offset

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 function CTA() {
   return (
     <section className="relative py-16 overflow-hidden bg-gradient-to-br from-[#2A1B10] to-[#3C2613] md:py-20 lg:py-28 rounded-xl">
@@ -53,14 +53,14 @@ function CTA() {
               whileTap={{ scale: 0.95 }}
               className="relative group"
             >
-              <a
-                href="#"
+              <Link
+                to={""}
                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-[#2A1B10] bg-[#FFDBB5] rounded-xl transition-all duration-300 hover:bg-[#6C4E31] hover:text-white hover:shadow-2xl hover:shadow-[#FFDBB5]/30 font-['Inter']"
               >
                 <span className="relative z-10">Coming Soon</span>
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                 <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#FFDBB5]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              </a>
+              </Link>
               {/* Decorative dot pattern beneath button */}
               <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {[...Array(5)].map((_, i) => (
@@ -85,21 +85,18 @@ function CTA() {
               whileTap={{ scale: 0.95 }}
               className="relative group"
             >
-              <a
-                href="#"
+              <Link
+                to="/docs"
                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-[#FFDBB5] border-2 border-[#FFDBB5]/30 rounded-xl bg-[#3C2613]/50 backdrop-blur-sm hover:bg-[#2A1B10]/70 hover:border-[#FFDBB5]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FFDBB5]/10 font-['Inter']"
               >
                 <span className="relative z-10">View Documentation</span>
                 <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#FFDBB5]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              </a>
+              </Link>
             </motion.div>
           </div>
         </motion.div>
       </div>
 
-      {/* Floating code particles */}
-
-      {/* Additional decorative elements */}
       <div className="absolute top-10 right-10 w-32 h-32 border border-[#FFDBB5]/10 rounded-full opacity-30"></div>
       <div className="absolute bottom-20 left-20 w-48 h-48 border border-[#FFDBB5]/10 rounded-full opacity-20"></div>
 

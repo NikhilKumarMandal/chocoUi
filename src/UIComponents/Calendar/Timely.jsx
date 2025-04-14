@@ -24,7 +24,7 @@ const Calendar = ({ onDateSelect }) => {
 
   const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  // Sample events data
+
   useEffect(() => {
     const sampleEvents = {
       [`${currentYear}-${currentMonth + 1}-15`]: "Team meeting",
@@ -77,17 +77,16 @@ const Calendar = ({ onDateSelect }) => {
   const isCurrentMonth =
     today.getMonth() === currentMonth && today.getFullYear() === currentYear;
 
-  // Generate calendar cells
+ 
   const calendarCells = [];
 
-  // Empty cells for days before the start of the month
   for (let i = 0; i < startDay; i++) {
     calendarCells.push(
       <div key={`empty-${i}`} className="aspect-square p-2 opacity-0"></div>
     );
   }
 
-  // Days of the month
+
   for (let day = 1; day <= daysInMonth; day++) {
     const isSelected = selectedDate === day;
     const isToday = isCurrentMonth && todayDate === day;
@@ -115,6 +114,7 @@ const Calendar = ({ onDateSelect }) => {
   }
 
   return (
+
     <div className="bg-white rounded-xl shadow-lg p-4 w-full max-w-md mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
@@ -169,7 +169,6 @@ const Calendar = ({ onDateSelect }) => {
         </button>
       </div>
 
-      {/* Weekdays */}
       <div className="grid grid-cols-7 gap-1 mb-3">
         {weekdays.map((day) => (
           <div
@@ -181,10 +180,8 @@ const Calendar = ({ onDateSelect }) => {
         ))}
       </div>
 
-      {/* Days grid */}
       <div className="grid grid-cols-7 gap-1">{calendarCells}</div>
 
-      {/* Selected date info */}
       {selectedDate && (
         <div className="mt-6 p-3 bg-blue-50 rounded-lg">
           <h3 className="text-sm font-medium text-gray-700">Selected date</h3>
