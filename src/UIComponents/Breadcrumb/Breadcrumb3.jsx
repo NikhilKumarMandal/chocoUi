@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Breadcrumb3() {
   return (
@@ -7,7 +6,7 @@ function Breadcrumb3() {
       <div>
         <ol className="flex items-center whitespace-nowrap">
           <li className="inline-flex items-center">
-            <Link
+            <a
               className="flex items-center text-sm text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 dark:text-neutral-500 "
               href="#"
             >
@@ -27,7 +26,7 @@ function Breadcrumb3() {
                 <polyline points="9 22 9 12 15 12 15 22" />
               </svg>
               ChocoUI
-            </Link>
+            </a>
             <svg
               className="shrink-0 mx-2 size-4 text-gray-400 "
               xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +43,7 @@ function Breadcrumb3() {
             </svg>
           </li>
           <li className="inline-flex items-center">
-            <Link
+            <a
               className="flex items-center text-sm text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 "
               href="#"
             >
@@ -78,7 +77,7 @@ function Breadcrumb3() {
               >
                 <path d="m9 18 6-6-6-6" />
               </svg>
-            </Link>
+            </a>
           </li>
           <li
             className="inline-flex items-center text-sm font-semibold text-gray-800 truncate"

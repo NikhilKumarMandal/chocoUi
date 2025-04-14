@@ -11,9 +11,9 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function CardPage() {
   const cardsVariants = [
-    {
-      title: "Card",
-      component: < DollyGatesCard />,
+        {
+      title: "Choco Card",
+      component: <DollyGatesCard />,
       codeSnippets: [
         {
           language: "jsx",
@@ -21,7 +21,7 @@ function CardPage() {
           
           const DollyGatesCard = () => {
             return (
-              <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-100 to-blue-100 p-4">
+              <div className="flex justify-center items-center">
                 <div className="w-full max-w-md rounded-3xl overflow-hidden bg-white shadow-lg">
                   <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80">
                     <div className="relative h-full">
@@ -79,12 +79,13 @@ function CardPage() {
             );
           };
           
-          export default DollyGatesCard;`
+          export default DollyGatesCard;
+          `,
         },
       ],
     },
     {
-      title: "Choco Card",
+      title: "Simple Card",
       component: <Card1 />,
       codeSnippets: [
         {
@@ -130,7 +131,6 @@ function CardPage() {
         },
       ],
     },
-
     {
       title: "Melted Delight",
       component: <Card2 />,
