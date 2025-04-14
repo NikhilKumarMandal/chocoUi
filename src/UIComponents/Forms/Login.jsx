@@ -49,7 +49,7 @@ function Login() {
       </div>
 
      <div className="flex justify-center space-x-4">
-  {/* Google */}
+
   <button aria-label="Log in with Google" className="p-3 rounded-sm">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-5 h-5">
       <path
@@ -71,7 +71,6 @@ function Login() {
     </svg>
   </button>
 
-  {/* Twitter */}
   <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5">
       <path
@@ -81,7 +80,7 @@ function Login() {
     </svg>
   </button>
 
-  {/* GitHub */}
+
   <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5">
       <path
