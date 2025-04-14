@@ -532,7 +532,7 @@ export default Button;`,
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-[#603F26]">Button Components</h1>
       <p className="text-[#1a1a1a] mt-2">
-      Engaging, accessible buttons for every interaction in your application
+        Engaging, accessible buttons for every interaction in your application
       </p>
       <div className="mt-6 space-y-6">
         {ButtonVariants.map((variant, index) => (

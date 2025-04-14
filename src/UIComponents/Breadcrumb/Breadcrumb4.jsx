@@ -7,7 +7,7 @@ function Breadcrumb4() {
         <ul className="flex items-center">
           <li className="inline-flex items-center">
             <a href="#" className="text-gray-600 hover:text-blue-500">
-               <svg
+              <svg
                 className="shrink-0 me-3 size-4"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
