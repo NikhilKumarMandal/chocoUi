@@ -18,7 +18,7 @@ import Button_27 from "../UIComponents/Buttons/Button_27";
 function ButtonPage() {
   const ButtonVariants = [
     {
-      title: "Button",
+      title: "Icon Glide Button",
       component: <Button_02 />,
       codeSnippets: [
         {
@@ -57,7 +57,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "The Fill Button",
       component: <Button_03 />,
       codeSnippets: [
         {
@@ -94,7 +94,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "Round Action Button",
       component: <Button_07 />,
       codeSnippets: [
         {
@@ -126,7 +126,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "Gradient Reveal Button",
       component: <Button_08 />,
       codeSnippets: [
         {
@@ -151,7 +151,7 @@ export default Button;`,
     },
 
     {
-      title: "Button",
+      title: "Arrow Slide Button",
       component: <Button_10 />,
       codeSnippets: [
         {
@@ -186,7 +186,7 @@ export default Button;`,
     },
 
     {
-      title: "Button",
+      title: "The Bloom Button",
       component: <Button_12 />,
       codeSnippets: [
         {
@@ -207,7 +207,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "The Prismatic Button",
       component: <Button_19 />,
       codeSnippets: [
         {
@@ -247,7 +247,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "Rotate Arrow Button",
       component: <Button_21 />,
       codeSnippets: [
         {
@@ -283,7 +283,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "Expanding Button",
       component: <Button_23 />,
       codeSnippets: [
         {
@@ -373,7 +373,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "Slide Reveal Button",
       component: <Button_24 />,
       codeSnippets: [
         {
@@ -407,7 +407,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "The Beacon Button",
       component: <Button_25 />,
       codeSnippets: [
         {
@@ -463,7 +463,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "Vertical Flip Button",
       component: <Button_26 />,
       codeSnippets: [
         {
@@ -491,7 +491,7 @@ export default Button;`,
       ],
     },
     {
-      title: "Button",
+      title: "Underline Button",
       component: <Button_27 />,
       codeSnippets: [
         {
@@ -533,9 +533,9 @@ export default Button;`,
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Button Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+      Engaging, accessible buttons for every interaction in your application
       </p>
       <div className="mt-6 space-y-6">
         {ButtonVariants.map((variant, index) => (
