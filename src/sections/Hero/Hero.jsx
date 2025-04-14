@@ -77,7 +77,7 @@ const Hero = () => {
       right: "5%",
       top: "30%",
       comp: (
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+        <a href="#" rel="noopener noreferrer">
           <FileUpload />
         </a>
       ),

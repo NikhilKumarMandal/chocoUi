@@ -129,7 +129,6 @@ export const Documentation = () => {
             >
               <Usage />
             </motion.section>
-
             <motion.section
               id="theming"
               className="scroll-mt-24"

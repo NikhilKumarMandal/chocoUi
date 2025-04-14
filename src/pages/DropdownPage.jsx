@@ -340,7 +340,7 @@ function DropdownPage() {
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-[#603F26]">Dropdown Components</h1>
       <p className="text-[#1a1a1a] mt-2">
-      Elegant, accessible dropdowns for seamless user selections
+        Elegant, accessible dropdowns for seamless user selections
       </p>
       <div className="mt-6 space-y-6">
         {DropdownVariants.map((variant, index) => (

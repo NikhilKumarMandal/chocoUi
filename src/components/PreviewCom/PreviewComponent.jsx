@@ -94,7 +94,7 @@ export default function PreviewComponent({
                         <div
                           key={i}
                           {...getLineProps({ line })}
-                          className="whitespace-pre-wrap"
+                          className="whitespace-pre"
                         >
                           {line.map((token, key) => (
                             <span key={key} {...getTokenProps({ token })} />

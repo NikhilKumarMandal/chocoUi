@@ -96,7 +96,7 @@ const SmallFileUpload = ({
     >
       {/* Hidden file input */}
       <input
-        type="file"
+        type="disabled"
         ref={fileInputRef}
         onChange={handleFileChange}
         accept={accept}
