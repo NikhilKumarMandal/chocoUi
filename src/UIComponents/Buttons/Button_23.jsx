@@ -4,7 +4,7 @@ const Button_23 = () => {
   return (
     <button
       className="
-          group relative inline-flex h-12 items-center justify-center 
+          group relative inline-flex h-12 m-4 items-center justify-center 
           overflow-hidden rounded-full border border-gray-200
           bg-white px-3 font-medium text-gray-700 shadow-sm
           transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]

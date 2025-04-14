@@ -18,84 +18,86 @@ const images = {
 
 const BentoGrid = () => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <div className="sm:col-span-2 lg:col-span-2 bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
-          <div className="relative h-48 sm:h-64 md:h-80 lg:h-96">
-            <img
-              src={images.nature}
-              alt="Nature"
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">
-                Explore Nature
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg opacity-90">
-                Discover the beauty of the natural world
-              </p>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="max-w-7xl mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="sm:col-span-2 lg:col-span-2 bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+            <div className="relative h-48 sm:h-64 md:h-80 lg:h-96">
+              <img
+                src={images.nature}
+                alt="Nature"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">
+                  Explore Nature
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg opacity-90">
+                  Discover the beauty of the natural world
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
-          <div className="relative h-48 sm:h-64 md:h-80 lg:h-96">
-            <img
-              src={images.workspace}
-              alt="Workspace"
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
-              <h2 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">
-                Workspace
-              </h2>
-              <p className="text-sm sm:text-base opacity-90">
-                Productive environment
-              </p>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+            <div className="relative h-48 sm:h-64 md:h-80 lg:h-96">
+              <img
+                src={images.workspace}
+                alt="Workspace"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                <h2 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">
+                  Workspace
+                </h2>
+                <p className="text-sm sm:text-base opacity-90">
+                  Productive environment
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
-          <div className="relative h-48 sm:h-64 md:h-80">
-            <img
-              src={images.minimal}
-              alt="Minimal"
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
-              <h2 className="text-xl sm:text-2xl font-bold">Minimal</h2>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+            <div className="relative h-48 sm:h-64 md:h-80">
+              <img
+                src={images.minimal}
+                alt="Minimal"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                <h2 className="text-xl sm:text-2xl font-bold">Minimal</h2>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
-          <div className="relative h-48 sm:h-64 md:h-80">
-            <img
-              src={images.architecture}
-              alt="Architecture"
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
-              <h2 className="text-xl sm:text-2xl font-bold">Architecture</h2>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+            <div className="relative h-48 sm:h-64 md:h-80">
+              <img
+                src={images.architecture}
+                alt="Architecture"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                <h2 className="text-xl sm:text-2xl font-bold">Architecture</h2>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
-          <div className="relative h-48 sm:h-64 md:h-80">
-            <img
-              src={images.design}
-              alt="Design"
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
-              <h2 className="text-xl sm:text-2xl font-bold">Design</h2>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+            <div className="relative h-48 sm:h-64 md:h-80">
+              <img
+                src={images.design}
+                alt="Design"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4 sm:p-6 text-white">
+                <h2 className="text-xl sm:text-2xl font-bold">Design</h2>
+              </div>
             </div>
           </div>
         </div>

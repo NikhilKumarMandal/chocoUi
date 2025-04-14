@@ -2,7 +2,7 @@ import React from "react";
 
 const Card10 = () => {
   return (
-    <div className="group max-w-sm w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+    <div className="group max-w-sm w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       <div className="relative h-48 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-600 transform group-hover:scale-110 transition-transform duration-500"></div>
         <div className="absolute inset-0 flex items-center justify-center">

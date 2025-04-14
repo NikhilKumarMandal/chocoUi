@@ -1,7 +1,7 @@
 import React from "react";
 const ContactUs = () => {
   return (
-    <div className="max-w-md mx-auto p-6 bg-[#f5f1e9] rounded-lg shadow-lg">
+    <div className="max-w-md mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4 p-6 bg-[#f5f1e9] rounded-lg shadow-lg">
       <h1 className="text-3xl font-bold mb-2 text-[#603F26]">
         Got a question?
       </h1>

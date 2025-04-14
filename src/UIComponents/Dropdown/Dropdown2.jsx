@@ -46,7 +46,7 @@ const Dropdown2 = () => {
     : dropdownIconBase;
 
   return (
-    <div className="relative w-72">
+    <div className="relative w-72 m-4">
       <button onClick={toggleDropdown} className={dropdownBtnClass}>
         <span>
           {selectedItems.length === 0

@@ -4,7 +4,7 @@ const Button_03 = () => {
   return (
     <button
       className="
-            relative inline-flex h-12 items-center justify-center rounded-lg border-2
+            relative inline-flex h-12 m-4 items-center justify-center rounded-lg border-2
             border-teal-500 bg-transparent px-6 font-medium text-teal-500
             transition-all duration-300 ease-in-out
             hover:bg-teal-500 hover:text-white

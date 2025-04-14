@@ -2,7 +2,7 @@ import React from "react";
 
 function Card4() {
   return (
-    <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border-1 border-blue-300 bg-white shadow-md">
+    <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border-1 border-blue-300 bg-white shadow-md mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       <a class="relative mx-3 mt-3  h-60 overflow-hidden rounded-xl" href="#">
         <img
           class="object-cover"

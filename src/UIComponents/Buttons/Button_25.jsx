@@ -5,7 +5,7 @@ const Button_25 = () => {
   return (
     <button
       className="
-          group relative flex h-12 w-44 items-center justify-between
+          group relative flex h-12 w-44 m-4 items-center justify-between
           overflow-hidden rounded-full px-6 py-3 font-medium
           bg-neutral-900 text-white transition-all duration-300
           hover:bg-neutral-800 hover:shadow-lg
