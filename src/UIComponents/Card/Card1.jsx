@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card1() {
   return (
-    <div className="max-w-sm p-6  border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba]">
+    <div className="max-w-sm p-6  border border-gray-200 rounded-lg shadow-sm bg-[#FFDBB5] dark:border-[#cec4ba] mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       <a href="#">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#152f3d]">
           Choco ui

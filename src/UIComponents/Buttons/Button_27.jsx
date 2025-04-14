@@ -4,7 +4,7 @@ const Button_27 = () => {
   return (
     <button
       className="
-          group relative inline-flex h-12 items-center justify-center 
+          group relative inline-flex h-12 m-4 items-center justify-center 
           overflow-hidden rounded-lg border border-slate-300
           bg-white px-8 font-medium text-slate-800 transition-all
           duration-200 ease-out hover:bg-slate-50

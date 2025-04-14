@@ -51,7 +51,7 @@ function FooterPage() {
             );
           }
           
-          export default Skeleton3;`,
+          export default Skeleton;`,
         },
       ],
     },

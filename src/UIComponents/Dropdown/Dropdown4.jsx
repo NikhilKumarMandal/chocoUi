@@ -67,7 +67,7 @@ const Dropdown4 = () => {
     );
   };
 
-  const containerClass = "relative w-72";
+  const containerClass = "relative w-72 m-4";
   const buttonClass =
     "w-full px-4 py-3 bg-blue-900 text-white rounded-lg flex items-center justify-between hover:bg-blue-800 transition-colors duration-200 shadow-lg";
   const dropdownClass =

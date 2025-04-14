@@ -3,7 +3,7 @@ import React from "react";
 export default function Card6() {
   return (
     <div
-      className="relative w-screen max-w-sm border border-gray-600 rounded-2xl bg-gray-100 px-4 py-8 sm:px-6 lg:px-8"
+      className="relative w-screen max-w-sm border border-gray-600 rounded-2xl bg-gray-100 px-4 py-8 sm:px-6 lg:px-8 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4"
       aria-modal="true"
       role="dialog"
       tabIndex="-1"

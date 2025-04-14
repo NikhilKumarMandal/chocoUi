@@ -4,7 +4,7 @@ const Button_19 = () => {
   return (
     <button
       className="
-              group relative inline-flex h-14 items-center justify-center rounded-xl
+              group relative inline-flex h-14 m-4 items-center justify-center rounded-xl
               border-2 border-purple-500 bg-white px-8 py-3 font-bold
               transition-colors duration-200 ease-in-out
               hover:bg-purple-50

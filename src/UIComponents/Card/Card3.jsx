@@ -2,7 +2,7 @@ import React from "react";
 
 function Card3() {
   return (
-    <div class="max-w-xs rounded-lg shadow-lg p-3 border-1 border-amber-200 bg-white text-gray-600">
+    <div class="max-w-xs rounded-lg shadow-lg p-3 border-1 border-amber-200 bg-white text-gray-600 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       <div class="flex flex-col items-center p-5 pt-10 bg-amber-100 rounded-lg relative">
         <span class="absolute top-0 right-0 bg-amber-200 rounded-l-full px-3 py-2 text-lg font-semibold text-gray-700">
           $49 <small class="text-sm text-gray-500">/ m</small>
