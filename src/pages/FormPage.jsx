@@ -13,10 +13,10 @@ function FormPage() {
           language: "jsx",
           code: `import React from "react";
           
-          export default function Form() {
+          export default function SignIn() {
             return (
               <>
-                <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
+                <div className="flex flex-col max-w-md p-6 m-4 mx-auto justify-center items-center rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
                   <div className="mb-8 text-center">
                     <h1 className="my-3 text-4xl font-bold">Sign in</h1>
                     <p className="text-sm dark:text-gray-600">
@@ -84,7 +84,8 @@ function FormPage() {
                 </div>
               </>
             );
-          }`,
+          }
+          `,
         },
       ],
     },
