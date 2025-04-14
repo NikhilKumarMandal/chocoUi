@@ -113,7 +113,6 @@ function Feature() {
 
   return (
     <section className="relative bg-gradient-to-b from-white via-[#fcedd2]/30 to-white overflow-hidden py-16 md:py-24">
-      {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-0 left-0 w-[40%] h-[40%] rounded-full bg-[#FFDBB5]/20 blur-3xl -z-10 animate-pulse"></div>
         <div
