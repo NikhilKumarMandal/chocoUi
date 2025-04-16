@@ -37,7 +37,7 @@ import LoaderPage from "./pages/LoaderPage.jsx";
 import FileUpload from "./pages/FileUploadPage.jsx";
 import ButtonPage from "./pages/ButtonPage.jsx";
 import FeedLayout from "./components/Feedback/FeedLayout.jsx";
-
+import TemplatePage from "./pages/TemplatePage.jsx"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -72,6 +72,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/docs" element={<DocsPage />} />
       <Route path="/feedback" element={<FeedLayout />} />
+      <Route path="/template" element={<TemplatePage />} />
     </>
   )
 );
