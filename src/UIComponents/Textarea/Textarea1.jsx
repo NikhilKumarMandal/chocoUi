@@ -2,7 +2,6 @@ import React from "react";
 
 function Textarea() {
   return (
-    <div className=" flex justify-center flex-col  items-center min-h-screen">
       <div className="relative w-2/5">
         <textarea
           id="message"
@@ -22,7 +21,6 @@ function Textarea() {
           Your Message
         </label>
       </div>
-    </div>
   );
 }
 

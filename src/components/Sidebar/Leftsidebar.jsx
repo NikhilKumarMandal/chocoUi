@@ -18,7 +18,7 @@ const linksData = [
   { name: "Form", path: "/dashboard/form" },
   { name: "Skeleton", path: "/dashboard/skeleton" },
   { name: "Toggle", path: "/dashboard/toggle" },
-  // { name: "Animation", path: "/dashboard/animation" },
+  { name: "Animation", path: "/dashboard/animation" },
   { name: "Badge", path: "/dashboard/badge" },
   { name: "Checkbox", path: "/dashboard/checkbox" },
   { name: "Dropdown", path: "/dashboard/dropdown" },
@@ -26,6 +26,13 @@ const linksData = [
   { name: "Loader", path: "/dashboard/loader" },
   { name: "Button", path: "/dashboard/button" },
   { name: "Avatar", path: "/dashboard/avatar" },
+  { name: "Table", path: "/dashboard/table" },
+  { name: "Accordion", path: "/dashboard/accordion" },
+  { name: "CTA", path: "/dashboard/cta" },
+  { name: "Footer", path: "/dashboard/footer" },
+  { name: "Pricing Card", path: "/dashboard/pricing" },
+  { name: "Carousel", path: "/dashboard/carousel" },
+  { name: "TextArea", path: "/dashboard/textArea" },
 ];
 
 const LeftSidebar = () => {

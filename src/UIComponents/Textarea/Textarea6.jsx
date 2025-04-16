@@ -2,8 +2,6 @@ import React from "react";
 
 function Textarea6() {
   return (
-    //Post card
-    <div class="flex justify-center items-center min-h-screen px-4">
       <div class="w-full max-w-xl bg-white border border-gray-200 rounded-2xl shadow-md p-4 space-y-4 md:flex md:space-x-4 md:space-y-0">
         <div class="flex-shrink-0 flex justify-center md:justify-start">
           <img
@@ -25,7 +23,6 @@ function Textarea6() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

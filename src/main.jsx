@@ -38,6 +38,9 @@ import FileUpload from "./pages/FileUploadPage.jsx";
 import ButtonPage from "./pages/ButtonPage.jsx";
 import FeedLayout from "./components/Feedback/FeedLayout.jsx";
 import TemplatePage from "./pages/TemplatePage.jsx"
+import CarouselPage from "./pages/CarouselPage.jsx";
+import TextAreaPage from "./pages/TextAreaPage.jsx";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -69,6 +72,8 @@ const router = createBrowserRouter(
         <Route path="loader" element={<LoaderPage />} />
         <Route path="fileUpload" element={<FileUpload />} />
         <Route path="button" element={<ButtonPage />} />
+        <Route path="carousel" element={<CarouselPage />} />
+        <Route path="textArea" element={<TextAreaPage />} />
       </Route>
       <Route path="/docs" element={<DocsPage />} />
       <Route path="/feedback" element={<FeedLayout />} />
