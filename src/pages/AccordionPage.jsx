@@ -1,7 +1,4 @@
 import Accordion1 from "../UIComponents/Accordion/Accordion1";
-import Accordion2 from "../UIComponents/Accordion/Accordion2";
-import Accordion3 from "../UIComponents/Accordion/Accordion3";
-import Accordion4 from "../UIComponents/Accordion/Accordion4";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function Accordion() {
@@ -9,36 +6,6 @@ function Accordion() {
     {
       title: "Calendar",
       component: <Accordion1 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Calendar",
-      component: <Accordion2 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Calendar",
-      component: <Accordion3 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Calendar",
-      component: <Accordion4 />,
       codeSnippets: [
         {
           language: "jsx",

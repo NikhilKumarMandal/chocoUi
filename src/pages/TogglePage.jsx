@@ -1,6 +1,5 @@
 import Toggle1 from "../UIComponents/Toggle/Toggle1";
 import Toggle2 from "../UIComponents/Toggle/Toggle2";
-import Toggle3 from "../UIComponents/Toggle/Toggle3";
 import Toggle4 from "../UIComponents/Toggle/Toggle4";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 

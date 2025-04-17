@@ -1,5 +1,4 @@
 import SingIn from "../UIComponents/Forms/Singin";
-import ContactUs from "../UIComponents/Forms/ContactUs";
 import Loginin from "../UIComponents/Forms/Login";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
