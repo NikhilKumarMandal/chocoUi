@@ -48,7 +48,6 @@ import ModalPage from "./pages/ModalPage.jsx";
 import TooltipPage from "./pages/TooltipPage.jsx";
 import TabsPage from "./pages/TabsPage.jsx";
 import PaginationPage from "./pages/PaginationPage.jsx";
-import DatePickerPage from "./pages/DatePickerPage.jsx";
 import FileUploadPage from "./pages/FileUploadPage.jsx";
 import StoreButtonsPage from "./pages/StoreButtonsPage.jsx";
 import FeedbackAlertPage from "./pages/FeedbackAlertPage.jsx";
@@ -96,7 +95,6 @@ const router = createBrowserRouter(
         <Route path="tooltip" element={<TooltipPage />} />
         <Route path="tabs" element={<TabsPage />} />
         <Route path="pagination" element={<PaginationPage />} />
-        <Route path="datepicker" element={<DatePickerPage />} />
         <Route path="fileupload" element={<FileUploadPage />} />
         <Route path="storebuttons" element={<StoreButtonsPage />} />
         <Route path="feedbackalert" element={<FeedbackAlertPage />} />
