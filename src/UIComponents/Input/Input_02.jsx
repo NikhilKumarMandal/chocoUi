@@ -32,4 +32,3 @@ const Input_02 = () => {
 };
 
 export default Input_02;
-

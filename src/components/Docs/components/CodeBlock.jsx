@@ -6,7 +6,7 @@ export const CodeBlock = ({ children, language = "bash", className = "" }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(children);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); 
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (

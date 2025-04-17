@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 function Navbar() {
@@ -17,7 +17,7 @@ function Navbar() {
     { name: "Components", path: "/dashboard/navbar" },
     { name: "Docs", path: "/docs" },
     { name: "Feedback", path: "/feedback" },
-    { name: "Template", path: "https://template.chocoui.live" ,external: true},
+    { name: "Template", path: "https://template.chocoui.live", external: true },
   ];
 
   return (
@@ -43,21 +43,39 @@ function Navbar() {
 
             {/* Desktop Menu - Minimalist */}
             <div className="hidden md:flex items-center space-x-6">
-              {menuItems.map((item) => (
-                <NavLink
-                  key={item.name}
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
-                      isActive
-                        ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
-                        : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
-                    }`
-                  }
-                >
-                  {item.name}
-                </NavLink>
-              ))}
+              {menuItems.map((item) =>
+                item.external ? (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={({ isActive }) =>
+                      `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
+                        isActive
+                          ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
+                          : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
+                      }`
+                    }
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <NavLink
+                    key={item.name}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
+                        isActive
+                          ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
+                          : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
+                      }`
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                )
+              )}
               <button className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300 shadow-sm hover:shadow-md">
                 Github
               </button>
@@ -110,22 +128,35 @@ function Navbar() {
           </div>
 
           <nav className="space-y-2">
-            {menuItems.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.path}
-                className={({ isActive }) =>
-                  `block px-4 py-3 text-sm rounded-lg transition-all duration-200 ${
-                    isActive
-                      ? "bg-[#FFDBB5] text-[#603F26] font-medium"
-                      : "text-gray-700 hover:bg-gray-100 hover:text-[#603F26]"
-                  }`
-                }
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </NavLink>
-            ))}
+            {menuItems.map((item) =>
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-3 text-sm rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[#603F26]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <NavLink
+                  key={item.name}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `block px-4 py-3 text-sm rounded-lg transition-all duration-200 ${
+                      isActive
+                        ? "bg-[#FFDBB5] text-[#603F26] font-medium"
+                        : "text-gray-700 hover:bg-gray-100 hover:text-[#603F26]"
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </NavLink>
+              )
+            )}
           </nav>
 
           <button className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300">

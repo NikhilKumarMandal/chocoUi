@@ -78,7 +78,9 @@ const FeedbackPage = () => {
               placeholder="you@example.com"
             />
             {errors.email && (
-              <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {errors.email.message}
+              </p>
             )}
           </div>
 
@@ -117,4 +119,3 @@ const FeedbackPage = () => {
 };
 
 export default FeedbackPage;
-

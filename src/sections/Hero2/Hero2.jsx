@@ -87,20 +87,18 @@ const Hero2 = () => {
   const onSubmit = async (data) => {
     try {
       setIsSubmitting(true);
-      
-      
-      
+
       // await contact(data);
       setAnimateSuccess(true);
       setShowSuccess(true);
-      
+
       setTimeout(() => {
         setAnimateSuccess(false);
       }, 1000);
-      
+
       toast("🌟 We will reach out to you!");
       reset();
-      
+
       // Keep button disabled for a moment to show success state
       setTimeout(() => {
         setIsSubmitting(false);
