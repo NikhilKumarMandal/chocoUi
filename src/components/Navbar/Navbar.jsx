@@ -17,7 +17,7 @@ function Navbar() {
     { name: "Components", path: "/dashboard/navbar" },
     { name: "Docs", path: "/docs" },
     { name: "Feedback", path: "/feedback" },
-    { name: "Template", path: "/template" },
+    { name: "Template", path: "https://template.chocoui.live" ,external: true},
   ];
 
   return (
