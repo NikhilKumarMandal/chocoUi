@@ -40,6 +40,20 @@ import FeedLayout from "./components/Feedback/FeedLayout.jsx";
 import TemplatePage from "./pages/TemplatePage.jsx";
 import CarouselPage from "./pages/CarouselPage.jsx";
 import TextAreaPage from "./pages/TextAreaPage.jsx";
+import StepperPage from "./pages/StepperPage.jsx";
+import AlertPage from "./pages/AlertPage.jsx";
+import ReviewPage from "./pages/ReviewPage.jsx";
+import PopoverPage from "./pages/PopoverPage.jsx";
+import ModalPage from "./pages/ModalPage.jsx";
+import TooltipPage from "./pages/TooltipPage.jsx";
+import TabsPage from "./pages/TabsPage.jsx";
+import PaginationPage from "./pages/PaginationPage.jsx";
+import DatePickerPage from "./pages/DatePickerPage.jsx";
+import FileUploadPage from "./pages/FileUploadPage.jsx";
+import StoreButtonsPage from "./pages/StoreButtonsPage.jsx";
+import FeedbackAlertPage from "./pages/FeedbackAlertPage.jsx";
+import ProgressbarPage from "./pages/ProgressbarPage.jsx";
+import PasswordPage from "./pages/PasswordPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -74,6 +88,20 @@ const router = createBrowserRouter(
         <Route path="button" element={<ButtonPage />} />
         <Route path="carousel" element={<CarouselPage />} />
         <Route path="textArea" element={<TextAreaPage />} />
+        <Route path="stepper" element={<StepperPage />} />
+        <Route path="alert" element={<AlertPage />} />
+        <Route path="review" element={<ReviewPage />} />
+        <Route path="popover" element={<PopoverPage />} />
+        <Route path="modal" element={<ModalPage />} />
+        <Route path="tooltip" element={<TooltipPage />} />
+        <Route path="tabs" element={<TabsPage />} />
+        <Route path="pagination" element={<PaginationPage />} />
+        <Route path="datepicker" element={<DatePickerPage />} />
+        <Route path="fileupload" element={<FileUploadPage />} />
+        <Route path="storebuttons" element={<StoreButtonsPage />} />
+        <Route path="feedbackalert" element={<FeedbackAlertPage />} />
+        <Route path="progressbar" element={<ProgressbarPage />} />
+        <Route path="password" element={<PasswordPage />} />
       </Route>
       <Route path="/docs" element={<DocsPage />} />
       <Route path="/feedback" element={<FeedLayout />} />

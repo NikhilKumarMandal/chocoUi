@@ -8,6 +8,7 @@ import Card7 from "../UIComponents/Card/Card7";
 import Card10 from "../UIComponents/Card/Card10";
 import DollyGatesCard from "../UIComponents/Card/DollyGatesCard";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
+import ProductCard from "../UIComponents/Card/ProductCard";
 
 function CardPage() {
   const cardsVariants = [
@@ -776,6 +777,17 @@ function CardPage() {
           };
           
           export default Card;
+          `,
+        },
+      ],
+    },
+    {
+      title: "Image Background Card (Hitesh Sir Edition)",
+      component: <ProductCard />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `
           `,
         },
       ],

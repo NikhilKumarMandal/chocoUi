@@ -1,12 +1,13 @@
+import React from "react";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import FileUpload1 from "../UIComponents/FileUpload/FileUpload1";
-import FileUpload2 from "../UIComponents/FileUpload/FileUpload2";
+import PlayStore from "../UIComponents/StoreButtons/PlayStore";
+import Window from "../UIComponents/StoreButtons/Window";
 
-function FileUploadPage() {
-  const FileVariants = [
+function StoreButtonsPage() {
+  const StoreButtonVariants = [
     {
-      title: "Calendar",
-      component: <FileUpload1 />,
+      title: "Minimalist Elegance Bento",
+      component: <Window />,
       codeSnippets: [
         {
           language: "jsx",
@@ -15,8 +16,8 @@ function FileUploadPage() {
       ],
     },
     {
-      title: "Calendar",
-      component: <FileUpload2 />,
+      title: "Minimalist Elegance Bento",
+      component: <PlayStore />,
       codeSnippets: [
         {
           language: "jsx",
@@ -27,12 +28,12 @@ function FileUploadPage() {
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
-      <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+      <h1 className="text-3xl font-bold text-[#603F26]">Bento Components</h1>
+      <p className="text-[#1a1a1a] mt-2">
+        Discover modular, grid-based Bento UI components
       </p>
       <div className="mt-6 space-y-6">
-        {FileVariants.map((variant, index) => (
+        {StoreButtonVariants.map((variant, index) => (
           <PreviewComponent
             key={index}
             title={variant.title}
@@ -47,4 +48,4 @@ function FileUploadPage() {
   );
 }
 
-export default FileUploadPage;
+export default StoreButtonsPage;

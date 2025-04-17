@@ -1,5 +1,6 @@
 import Carousel1 from "../UIComponents/Carousel/Carousel1";
 import Carousel2 from "../UIComponents/Carousel/Carousel2";
+import ProfessionalCarousel from "../UIComponents/Carousel/ProfessionalCarousel";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function CarouselPage() {
@@ -17,6 +18,16 @@ function CarouselPage() {
     {
       title: "Calendar",
       component: <Carousel2 />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
+    {
+      title: "Minimalist Elegance Bento",
+      component: <ProfessionalCarousel />,
       codeSnippets: [
         {
           language: "jsx",

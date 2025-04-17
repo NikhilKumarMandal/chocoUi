@@ -1,5 +1,6 @@
 import React from "react";
 import BentoGrid from "../UIComponents/Bento/BentoGrid";
+import ImageGrid from "../UIComponents/Bento/ImageGrid";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function BentoPage() {
@@ -120,6 +121,16 @@ function BentoPage() {
           
           export default BentoGrid;
           `,
+        },
+      ],
+    },
+    {
+      title: "Minimalist Elegance Bento",
+      component: <ImageGrid />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: ``,
         },
       ],
     },
