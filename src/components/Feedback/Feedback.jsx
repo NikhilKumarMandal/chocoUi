@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -12,6 +12,8 @@ const feedbackSchema = z.object({
 });
 
 const FeedbackPage = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const {
     handleSubmit,
     register,
@@ -27,6 +29,7 @@ const FeedbackPage = () => {
   });
 
   const onSubmit = async (data) => {
+    setIsSubmitting(true);
     try {
       await feedback(data);
       toast("🌟 Thanks for your feedback!");
@@ -34,6 +37,8 @@ const FeedbackPage = () => {
     } catch (error) {
       console.error(error);
       toast("Something went wrong. Please try again!");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -48,7 +53,6 @@ const FeedbackPage = () => {
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Name
@@ -63,7 +67,6 @@ const FeedbackPage = () => {
             )}
           </div>
 
-          {/* Email */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Email
@@ -75,13 +78,10 @@ const FeedbackPage = () => {
               placeholder="you@example.com"
             />
             {errors.email && (
-              <p className="text-red-600 text-sm mt-1">
-                {errors.email.message}
-              </p>
+              <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
             )}
           </div>
 
-          {/* Message */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Your Message
@@ -99,12 +99,16 @@ const FeedbackPage = () => {
             )}
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-3 rounded-xl bg-[#603F26] text-[#FFDBB5] font-semibold text-base sm:text-lg shadow-lg hover:bg-[#6C4E31] transition duration-300"
+            disabled={isSubmitting}
+            className={`w-full py-3 rounded-xl font-semibold text-base sm:text-lg shadow-lg transition duration-300 ${
+              isSubmitting
+                ? "bg-gray-400 text-white cursor-not-allowed"
+                : "bg-[#603F26] text-[#FFDBB5] hover:bg-[#6C4E31]"
+            }`}
           >
-            Submit Feedback
+            {isSubmitting ? "Submitting..." : "Submit Feedback"}
           </button>
         </form>
       </div>
@@ -113,3 +117,4 @@ const FeedbackPage = () => {
 };
 
 export default FeedbackPage;
+

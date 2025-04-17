@@ -17,7 +17,7 @@ function InputPage() {
             const [value, setValue] = useState("");
           
             return (
-              <div className="w-96 mx-auto">
+              <div className="w-full max-w-sm mx-auto px-4">
                 <label htmlFor="text" className="text-sm font-normal">
                   Text Input
                 </label>
@@ -60,7 +60,7 @@ const Input = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="w-96 mx-auto">
+    <div className="w-full max-w-sm mx-auto px-4">
       <label htmlFor="search" className="text-sm font-normal">
         Search
       </label>
@@ -98,16 +98,16 @@ export default Input;
       codeSnippets: [
         {
           language: "jsx",
-          code: `"use client";
+          code: `
 import { Check, Mail } from "lucide-react";
 import { useState } from "react";
 
-const Input_03 = () => {
+const Input = () => {
   const [email, setEmail] = useState("");
   const isValid = email.includes("@") && email.includes(".");
 
   return (
-    <div className="w-96 mx-auto">
+    <div className="w-full max-w-sm mx-auto px-4">
       <label htmlFor="email" className="text-sm font-normal">
         Email
       </label>
@@ -132,7 +132,7 @@ const Input_03 = () => {
   );
 };
 
-export default Input_03;
+export default Input;
 `,
         },
       ],

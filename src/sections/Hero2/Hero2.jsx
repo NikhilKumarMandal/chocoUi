@@ -68,6 +68,7 @@ const Hero2 = () => {
   const [animateSuccess, setAnimateSuccess] = React.useState(false);
   const [showSuccess, setShowSuccess] = React.useState(false);
   const [isValidEmail, setIsValidEmail] = React.useState(true);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const {
     handleSubmit,
@@ -85,13 +86,39 @@ const Hero2 = () => {
 
   const onSubmit = async (data) => {
     try {
-      await contact(data);
+      setIsSubmitting(true);
+      
+      
+      
+      // await contact(data);
+      setAnimateSuccess(true);
+      setShowSuccess(true);
+      
+      setTimeout(() => {
+        setAnimateSuccess(false);
+      }, 1000);
+      
       toast("🌟 We will reach out to you!");
       reset();
+      
+      // Keep button disabled for a moment to show success state
+      setTimeout(() => {
+        setIsSubmitting(false);
+      }, 2000);
     } catch (error) {
       toast(error);
+      setIsSubmitting(false);
     }
   };
+
+  React.useEffect(() => {
+    if (errors.email) {
+      setIsValidEmail(false);
+      setShowSuccess(false);
+    } else {
+      setIsValidEmail(true);
+    }
+  }, [errors.email]);
 
   return (
     <section className="relative bg-gradient-to-br from-[#2A1B10] to-[#3C2613] rounded-4xl overflow-hidden py-10 md:py-16">
@@ -132,7 +159,10 @@ const Hero2 = () => {
                 </h3>
 
                 <form
-                  onSubmit={handleSubmit(onSubmit)}
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSubmit(onSubmit)(e);
+                  }}
                   className="flex flex-col sm:flex-row gap-4 max-w-md"
                   noValidate
                 >
@@ -187,7 +217,7 @@ const Hero2 = () => {
                     </AnimatePresence>
 
                     <AnimatePresence>
-                      {!isValidEmail && (
+                      {errors.email && (
                         <motion.div
                           initial={{ opacity: 0, y: -5 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -207,7 +237,7 @@ const Hero2 = () => {
                                 clipRule="evenodd"
                               />
                             </svg>
-                            Please enter a valid email address
+                            {errors.email.message}
                           </p>
                         </motion.div>
                       )}
@@ -216,24 +246,51 @@ const Hero2 = () => {
 
                   <button
                     type="submit"
-                    className="px-6 py-3 bg-[#603F26] text-[#FFDBB5] rounded-xl font-medium hover:bg-[#6C4E31] transition-all duration-300 flex items-center gap-2 group"
+                    disabled={isSubmitting}
+                    className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 group ${
+                      isSubmitting
+                        ? "bg-[#6C4E31]/70 text-[#FFDBB5]/70 cursor-not-allowed"
+                        : "bg-[#603F26] text-[#FFDBB5] hover:bg-[#6C4E31]"
+                    }`}
                   >
-                    Send
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                    >
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
+                    {isSubmitting ? (
+                      <>
+                        Sent
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-green-400"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </>
+                    ) : (
+                      <>
+                        Send
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                        >
+                          <line x1="22" y1="2" x2="11" y2="13"></line>
+                          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                      </>
+                    )}
                   </button>
                 </form>
               </motion.div>

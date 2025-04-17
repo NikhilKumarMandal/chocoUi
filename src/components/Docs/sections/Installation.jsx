@@ -29,7 +29,7 @@ export const Installation = () => (
             npm
           </h3>
           <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
-            npm create vite@latestmy-app
+            npm create vite@latest my-app
           </CodeBlock>
           <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
             cd my-app

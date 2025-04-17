@@ -5,7 +5,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function AvatarPage() {
   const avatarVariants = [
     {
-      title: "Avatar",
+      title: "Avatar Stack",
       component: <Avatar10 />,
       codeSnippets: [
         {
@@ -81,7 +81,7 @@ function AvatarPage() {
     },
 
     {
-      title: "Avatar",
+      title: "Team Showcase",
       component: <Avatar6 />,
       codeSnippets: [
         {
@@ -184,9 +184,9 @@ export default Avatar6;
   ];
   return (
     <div className="max-w-4xl  mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Component Previews</h1>
+      <h1 className="text-3xl font-bold text-black">Avatar Component</h1>
       <p className="text-gray-600 mt-2">
-        Explore different UI components you can use in your project.
+        Visual representations for users, teams, and personas across your platform
       </p>
       <div className="mt-6 space-y-6">
         {avatarVariants.map((variant, index) => (

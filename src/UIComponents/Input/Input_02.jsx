@@ -5,7 +5,7 @@ const Input_02 = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="w-96 mx-auto">
+    <div className="w-full max-w-sm mx-auto px-4">
       <label htmlFor="search" className="text-sm font-normal">
         Search
       </label>
@@ -32,3 +32,4 @@ const Input_02 = () => {
 };
 
 export default Input_02;
+
