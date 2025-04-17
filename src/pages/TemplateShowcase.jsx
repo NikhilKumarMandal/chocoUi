@@ -4,8 +4,10 @@ const templates = [
   {
     id: 1,
     title: "Modern Dashboard",
-    description: "A clean and modern dashboard template with dark mode support.",
-    image: "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "A clean and modern dashboard template with dark mode support.",
+    image:
+      "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     demoUrl: "#",
     downloadUrl: "#",
     techStack: ["React", "Tailwind CSS", "TypeScript"],
@@ -14,7 +16,8 @@ const templates = [
     id: 2,
     title: "E-commerce Store",
     description: "A clean and modern dashboard template with dark mode support",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     demoUrl: "#",
     downloadUrl: "#",
     techStack: ["Next.js", "Tailwind CSS", "Prisma"],
@@ -23,7 +26,8 @@ const templates = [
     id: 3,
     title: "Portfolio Site",
     description: "Showcase your work with this elegant portfolio template.",
-    image: "https://plus.unsplash.com/premium_photo-1673697239984-b089baf7b6e6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://plus.unsplash.com/premium_photo-1673697239984-b089baf7b6e6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     demoUrl: "#",
     downloadUrl: "#",
     techStack: ["React", "Framer Motion", "CSS Modules"],
@@ -32,7 +36,8 @@ const templates = [
     id: 4,
     title: "Blog Platform",
     description: "A feature-rich blog template with markdown support.",
-    image: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     demoUrl: "#",
     downloadUrl: "#",
     techStack: ["Next.js", "MDX", "Tailwind CSS"],
@@ -41,7 +46,8 @@ const templates = [
     id: 5,
     title: "Admin Panel",
     description: "Comprehensive admin panel with charts and data tables.",
-    image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     demoUrl: "#",
     downloadUrl: "#",
     techStack: ["React", "Recharts", "Material UI"],
@@ -50,7 +56,8 @@ const templates = [
     id: 6,
     title: "Landing Page",
     description: "High-converting landing page template with animations.",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     demoUrl: "#",
     downloadUrl: "#",
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -58,14 +65,34 @@ const templates = [
 ];
 
 const ExternalLinkIcon = () => (
-  <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M14 3h7m0 0v7m0-7L10 14m-7 7h7m-7 0v-7m0 7l14-14" />
+  <svg
+    className="h-4 w-4 mr-2"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M14 3h7m0 0v7m0-7L10 14m-7 7h7m-7 0v-7m0 7l14-14"
+    />
   </svg>
 );
 
 const DownloadIcon = () => (
-  <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+  <svg
+    className="h-4 w-4 mr-2"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"
+    />
   </svg>
 );
 

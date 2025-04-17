@@ -37,7 +37,7 @@ import LoaderPage from "./pages/LoaderPage.jsx";
 import FileUpload from "./pages/FileUploadPage.jsx";
 import ButtonPage from "./pages/ButtonPage.jsx";
 import FeedLayout from "./components/Feedback/FeedLayout.jsx";
-import TemplatePage from "./pages/TemplatePage.jsx"
+import TemplatePage from "./pages/TemplatePage.jsx";
 import CarouselPage from "./pages/CarouselPage.jsx";
 import TextAreaPage from "./pages/TextAreaPage.jsx";
 
