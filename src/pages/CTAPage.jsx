@@ -1,43 +1,10 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import CTA1 from "../UIComponents/CTA/CTA1";
-import CTA2 from "../UIComponents/CTA/CTA2";
 import CTA3 from "../UIComponents/CTA/CTA3";
-import CTA4 from "../UIComponents/CTA/CTA4";
 function CTAPage() {
   const CTAVariants = [
     {
       title: "Calendar",
-      component: <CTA1 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Calendar",
-      component: <CTA2 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Calendar",
       component: <CTA3 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
-    {
-      title: "Calendar",
-      component: <CTA4 />,
       codeSnippets: [
         {
           language: "jsx",

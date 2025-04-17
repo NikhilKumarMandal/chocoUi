@@ -12,6 +12,7 @@ import Button_24 from "../UIComponents/Buttons/Button_24";
 import Button_25 from "../UIComponents/Buttons/Button_25";
 import Button_26 from "../UIComponents/Buttons/Button_26";
 import Button_27 from "../UIComponents/Buttons/Button_27";
+import Buttons from "../UIComponents/Buttons/Buttons";
 
 function ButtonPage() {
   const ButtonVariants = [
@@ -524,6 +525,17 @@ export default Button;`,
           };
           
           export default Button;`,
+        },
+      ],
+    },
+
+    {
+      title: "Underline Button",
+      component: <Buttons />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: ``,
         },
       ],
     },

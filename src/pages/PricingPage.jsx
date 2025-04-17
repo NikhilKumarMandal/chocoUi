@@ -1,23 +1,8 @@
-import Pricing1 from "../UIComponents/Pricing/Pricing1";
 import Pricing2 from "../UIComponents/Pricing/Pricing2";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function PricingSection() {
   const PricingVariants = [
-    {
-      title: "Calendar",
-      component: <Pricing1 />,
-      codeSnippets: [
-        {
-          language: "html",
-          code: ``,
-        },
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
     {
       title: "Calendar",
       component: <Pricing2 />,

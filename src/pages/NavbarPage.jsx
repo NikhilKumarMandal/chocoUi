@@ -1,8 +1,6 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import Navbar5 from "../UIComponents/Navbar/Navbar5";
 import Navbar6 from "../UIComponents/Navbar/Navbar6";
-import Navbar7 from "../UIComponents/Navbar/Navbar7";
-import Navbar9 from "../UIComponents/Navbar/Navbar9";
 import Navbar10 from "../UIComponents/Navbar/Navbar10";
 
 export default function NavbarComForUser() {
