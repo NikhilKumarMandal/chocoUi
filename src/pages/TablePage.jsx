@@ -70,7 +70,6 @@ function TablePage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
-            isFullWidth={true}
           >
             {variant.component}
           </PreviewComponent>
