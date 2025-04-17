@@ -33,6 +33,19 @@ const linksData = [
   { name: "Pricing Card", path: "/dashboard/pricing" },
   { name: "Carousel", path: "/dashboard/carousel" },
   { name: "TextArea", path: "/dashboard/textArea" },
+  { name: "Stepper", path: "/dashboard/stepper" },
+  { name: "Alert", path: "/dashboard/alert" },
+  { name: "Review", path: "/dashboard/review" },
+  { name: "Popover", path: "/dashboard/popover" },
+  { name: "Modal", path: "/dashboard/modal" },
+  // { name: "Tooltip", path: "/dashboard/tooltip" },
+  { name: "Tabs", path: "/dashboard/tabs" },
+  { name: "Pagination", path: "/dashboard/pagination" },
+  { name: "File Upload", path: "/dashboard/fileupload" },
+  { name: "Store Buttons", path: "/dashboard/storebuttons" },
+  { name: "Feedback Alert", path: "/dashboard/feedbackalert" },
+  { name: "Progress Bar", path: "/dashboard/progressbar" },
+  { name: "Password", path: "/dashboard/password" },
 ];
 
 const LeftSidebar = () => {

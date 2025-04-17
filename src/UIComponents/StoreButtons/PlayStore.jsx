@@ -1,6 +1,6 @@
 import React from "react";
 
-const GooglePlayButton = () => {
+const PlayStore = () => {
   return (
     <button className="rounded-[10px]">
       <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-gray-900 py-5 pl-8 pr-10 hover:bg-gray-800">
@@ -22,4 +22,4 @@ const GooglePlayButton = () => {
   );
 };
 
-export default GooglePlayButton;
+export default PlayStore;

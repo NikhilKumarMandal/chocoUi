@@ -1,6 +1,6 @@
 import React from "react";
 
-const AppStoreButton = () => {
+const iOS = () => {
   return (
     <button className="flex items-center space-x-5 rounded-lg bg-gray-900 py-5 pl-8 pr-10 backdrop-blur-lg hover:bg-gray-800">
       <svg
@@ -25,4 +25,4 @@ const AppStoreButton = () => {
   );
 };
 
-export default AppStoreButton;
+export default iOS;

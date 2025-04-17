@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useMemo } from "react";
 import { Check, Eye, EyeOff, X } from "lucide-react";
 
