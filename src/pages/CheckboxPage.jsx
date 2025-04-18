@@ -194,8 +194,8 @@ export default Checkbox;
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-[#603F26]">Checkbox Components</h1>
-      <p className="text-[#1a1a1a] mt-2">
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Checkbox Components</h1>
+      <p className="text-gray-700 mt-2 font-['Inter']">
         Enhance user decisions with consistent, responsive checkbox interactions
       </p>
       <div className="mt-6 space-y-6">
