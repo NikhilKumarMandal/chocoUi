@@ -36,7 +36,7 @@ const linksData = [
   { name: "Input", path: "/dashboard/input" },
   { name: "Loader", path: "/dashboard/loader" },
   { name: "Modal", path: "/dashboard/modal" },
-  // { name: "Navbar", path: "/dashboard/navbar" },
+  { name: "Navbar", path: "/dashboard/navbar" },
 
   { name: "Pagination", path: "/dashboard/pagination" },
   { name: "Popover", path: "/dashboard/popover" },

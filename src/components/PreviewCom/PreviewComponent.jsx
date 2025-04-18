@@ -25,10 +25,10 @@ export default function PreviewComponent({
     <div
       className={`w-full ${
         isFullWidth ? "max-w-full p-0" : "max-w-screen-xl px-4 py-2"
-      } mx-auto border rounded-lg shadow-md mt-6 overflow-hidden bg-white`}
+      } mx-auto border rounded-lg shadow-md mt-6 overflow-hidden bg-gradient-to-br from-[#FFEAC5] via-white to-[#FFDBB5]`}
     >
       <div className="px-4 pt-4">
-        <h2 className="text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">
+        <h2 className="text-2xl font-bold font-['Bricolage'] tracking-tight text-gray-900 mb-2 text-center sm:text-left">
           {title}
         </h2>
 
@@ -39,9 +39,9 @@ export default function PreviewComponent({
           ].map(({ label, value, icon }) => (
             <button
               key={value}
-              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-900 hover:text-blue-500 sm:text-base ${
+              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-900 hover:text-[#603F26] hover:font-bold sm:text-base ${
                 activeTab === value
-                  ? "border-b-2 border-blue-500 text-blue-500"
+                  ? "border-b-2 border-[#603F26] text-gray-900"
                   : ""
               }`}
               onClick={() => setActiveTab(value)}
@@ -54,11 +54,15 @@ export default function PreviewComponent({
 
       <div className="p-4 mt-3 relative">
         {activeTab === "preview" ? (
-          <div className="rounded-md border bg-gray-50 overflow-hidden">
+          <div className="rounded-md border overflow-hidden">
             <div
-              className={`max-h-[600px] overflow-y-auto p-4 ${
+              className={`max-h-[600px] overflow-y-auto p-4 ${previewBg} ${
                 isFullWidth ? "" : "flex justify-center"
-              } ${fixPreviewHeight ? "min-h-[300px] overflow-y-auto flex justify-center" : ""}`}
+              } ${
+                fixPreviewHeight
+                  ? "min-h-[300px] overflow-y-auto flex justify-center"
+                  : ""
+              }`}
             >
               <div
                 className={`${isFullWidth ? "w-full" : "flex justify-center"} w-full`}
