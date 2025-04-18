@@ -38,28 +38,25 @@ export const Installation = () => (
             npm install
           </CodeBlock>
           <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
-            npm install -D tailwindcss postcss autoprefixer
-          </CodeBlock>
-          <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
-            npx tailwindcss init -p
+            npm install tailwindcss @tailwindcss/vite
           </CodeBlock>
         </div>
 
         <div>
           <h3 className="font-semibold text-[#603F26] text-xl mb-3 font-['Bricolage']">
-            Configure Tailwind
+            vite.config.ts
           </h3>
           <CodeBlock
             language="js"
             className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md"
           >
-            {`export default {       // tailwind.config.js 
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}`}
+            {`import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})`}
           </CodeBlock>
         </div>
 
@@ -71,10 +68,7 @@ export const Installation = () => (
             language="css"
             className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md"
           >
-            {`@tailwind base;   // src/index.css
-@tailwind components;
-@tailwind utilities;
-`}
+            {`@import "tailwindcss";`}
           </CodeBlock>
         </div>
       </div>
