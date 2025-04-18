@@ -33,7 +33,7 @@ function WaveTextAnimation() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-white">
+    <div className="flex justify-center items-center">
       <h1 className="text-3xl md:text-5xl font-bold">
         {text.split("").map((char, index) => (
           <span

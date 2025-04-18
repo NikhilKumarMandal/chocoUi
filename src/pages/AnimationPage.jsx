@@ -1,5 +1,6 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import Type from "../UIComponents/animations/Type";
+import WaveTextAnimation from "../UIComponents/animations/WaveTextAnimation";
 
 function Animation() {
   const AnimVariants = [
@@ -60,16 +61,26 @@ function Animation() {
         },
       ],
     },
+    {
+      title: "Dynamic Text Effect",
+      component: <WaveTextAnimation />,
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: ``,
+        },
+      ],
+    },
   ];
   return (
     <div className=" mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+      <h1 className="text-3xl font-bold text-[#603F26]">
         Animation Components
       </h1>
-      <p className="text-gray-700 mt-2 font-['Inter']">
+      <p className="text-[#1a1a1a] mt-2">
         Bring your interface to life with smooth, purposeful animations
       </p>
-      <div className="mt-6 space-y-6">
+      <div className="mt-6 space-y-6 rounded-lg">
         {AnimVariants.map((variant, index) => (
           <PreviewComponent
             key={index}

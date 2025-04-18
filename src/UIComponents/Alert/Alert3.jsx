@@ -54,9 +54,7 @@ const Alert3 = () => {
   };
 
   const handleAction = (id) => {
-    // In a real application, this would trigger specific actions based on the notification type
     console.log(`Action triggered for notification ${id}`);
-    // For demo purposes, we'll close the notification after action
     closeNotification(id);
   };
 
