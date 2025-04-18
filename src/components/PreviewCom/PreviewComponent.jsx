@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Highlight } from "prism-react-renderer";
 import { Copy, Check, Code, Eye } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function PreviewComponent({
   title,
@@ -22,10 +23,13 @@ export default function PreviewComponent({
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
       className={`w-full ${
         isFullWidth ? "max-w-full p-0" : "max-w-screen-xl px-4 py-2"
-      } mx-auto border rounded-lg shadow-md mt-6 overflow-hidden bg-gradient-to-br from-[#FFEAC5] via-white to-[#FFDBB5]`}
+      } mx-auto border rounded-lg shadow-md mt-6 overflow-hidden`}
     >
       <div className="px-4 pt-4">
         <h2 className="text-2xl font-bold font-['Bricolage'] tracking-tight text-gray-900 mb-2 text-center sm:text-left">
@@ -115,6 +119,6 @@ export default function PreviewComponent({
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
