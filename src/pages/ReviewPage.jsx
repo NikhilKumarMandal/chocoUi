@@ -3,7 +3,6 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import Review1 from "../UIComponents/Review/Review1";
 import Review3 from "../UIComponents/Review/Review3";
 import Review4 from "../UIComponents/Review/Review4";
-import Review5 from "../UIComponents/Review/Review5";
 
 function ReviewPage() {
   const ReviewVariants = [
@@ -37,20 +36,12 @@ function ReviewPage() {
         },
       ],
     },
-    {
-      title: "Minimalist Elegance Bento",
-      component: <Review5 />,
-      codeSnippets: [
-        {
-          language: "jsx",
-          code: ``,
-        },
-      ],
-    },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Bento Components</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        Bento Components
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
         Discover modular, grid-based Bento UI components
       </p>

@@ -4,11 +4,11 @@ const Modal2 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 p-4">
+    <div className="flex items-center justify-center bg-[#f3f4f6] p-4">
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg shadow-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
+        className="px-6 py-3 bg-white/10 backdrop-blur-sm text-[#6c4e31] rounded-lg shadow-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
       >
         Open Glass Modal
       </button>

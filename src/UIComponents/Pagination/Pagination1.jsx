@@ -10,7 +10,7 @@ const Pagination1 = ({ totalPages = 6 }) => {
   };
 
   return (
-    <div className="flex space-x-1">
+    <div className="flex space-x-1 justify-center items-center">
       <button
         onClick={() => goToPage(currentPage - 1)}
         disabled={currentPage === 1}

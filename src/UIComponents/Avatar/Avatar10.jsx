@@ -30,7 +30,7 @@ function Avatar4() {
   ];
 
   return (
-    <div className="flex justify-center items-center h-100 bg-[#ffebc6] rounded-lg">
+    <div className="flex justify-center items-center h-100">
       <div className="flex -space-x-3.5 rtl:space-x-reverse">
         {avatars.map((avatar, index) => (
           <div key={index} className="group relative">

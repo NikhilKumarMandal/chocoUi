@@ -21,7 +21,7 @@ const Popover1 = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center h-70">
       <div className="relative">
         <button
           ref={buttonRef}
