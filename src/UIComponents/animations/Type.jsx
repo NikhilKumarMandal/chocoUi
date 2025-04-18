@@ -35,14 +35,16 @@ export default function Types() {
     return () => clearTimeout(timer);
   }, [charIndex, isTyping, index, words]);
   return (
-    <p className="text-4xl font-bold m-4">
-      Everyone deserves a{" "}
-      <span className="text-yellow-400">
-        {words[index].substring(0, charIndex)}
-      </span>
-      <span className="cursor border-l-2 border-yellow-400 animate-blink ml-1">
-        &nbsp;
-      </span>
-    </p>
+    <div className="">
+      <p className="text-4xl font-bold m-4">
+        Everyone deserves a{" "}
+        <span className="text-yellow-400">
+          {words[index].substring(0, charIndex)}
+        </span>
+        <span className="cursor border-l-2 border-yellow-400 animate-blink ml-1">
+          &nbsp;
+        </span>
+      </p>
+    </div>
   );
 }

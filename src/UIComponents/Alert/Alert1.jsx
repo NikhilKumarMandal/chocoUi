@@ -2,7 +2,7 @@ import React from "react";
 
 const Alert1 = () => {
   return (
-    <div className="w-100 flex flex-col gap-4 p-8">
+    <div className=" flex flex-col ml-5  gap-4 p-8">
       <div
         className="w-full flex items-center p-4 bg-[#FFEAC5] text-[#603F26] border border-[#FFDBB5] rounded-md"
         role="alert"
