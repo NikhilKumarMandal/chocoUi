@@ -4,18 +4,17 @@ function Breadcrumb2() {
   return (
     <nav
       aria-label="breadcrumb"
-      className="w-full p-4 dark:bg-gray-100 dark:text-gray-800"
+      className="w-full px-4 py-3 bg-white dark:bg-gray-100 dark:text-gray-800"
     >
-      <ol className="flex h-8 space-x-2">
+      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
         <li className="flex items-center">
           <a
-            rel="noopener noreferrer"
             href="#"
             title="Back to homepage"
-            className="hover:underline"
+            className="hover:underline flex items-center"
           >
             <svg
-              className="shrink-0 me-3 size-4"
+              className="shrink-0 size-4"
               xmlns="http://www.w3.org/2000/svg"
               width={24}
               height={24}
@@ -31,59 +30,47 @@ function Breadcrumb2() {
             </svg>
           </a>
         </li>
-        <li className="flex items-center space-x-2">
+
+        <li className="flex items-center gap-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
             aria-hidden="true"
-            fill="currentColor"
-            className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-400"
+            className="w-2 h-2 mt-1 rotate-90 fill-current text-gray-400"
           >
-            <path d="M32 30.031h-32l16-28.061z"></path>
+            <path d="M32 30.031h-32l16-28.061z" />
           </svg>
-          <a
-            rel="noopener noreferrer"
-            href="#"
-            className="flex items-center px-1 capitalize hover:underline"
-          >
+          <a href="#" className="capitalize hover:underline whitespace-nowrap">
             Parent
           </a>
         </li>
-        <li className="flex items-center space-x-2">
+
+        <li className="flex items-center gap-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
             aria-hidden="true"
-            fill="currentColor"
-            className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-400"
+            className="w-2 h-2 mt-1 rotate-90 fill-current text-gray-400"
           >
-            <path d="M32 30.031h-32l16-28.061z"></path>
+            <path d="M32 30.031h-32l16-28.061z" />
           </svg>
-          <a
-            rel="noopener noreferrer"
-            href="#"
-            className="flex items-center px-1 capitalize hover:underline"
-          >
+          <a href="#" className="capitalize hover:underline whitespace-nowrap">
             Parent
           </a>
         </li>
-        <li className="flex items-center space-x-2">
+
+        <li className="flex items-center gap-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
             aria-hidden="true"
-            fill="currentColor"
-            className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-400"
+            className="w-2 h-2 mt-1 rotate-90 fill-current text-gray-400"
           >
-            <path d="M32 30.031h-32l16-28.061z"></path>
+            <path d="M32 30.031h-32l16-28.061z" />
           </svg>
-          <a
-            rel="noopener noreferrer"
-            href="#"
-            className="flex items-center px-1 capitalize hover:underline hover:no-underline cursor-default"
-          >
+          <span className="capitalize text-gray-500 cursor-default whitespace-nowrap">
             Current
-          </a>
+          </span>
         </li>
       </ol>
     </nav>
