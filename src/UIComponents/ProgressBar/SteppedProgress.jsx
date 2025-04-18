@@ -9,7 +9,7 @@ const SteppedProgress = ({ steps = 5, currentStep = 2 }) => {
   );
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-center">
       {[...Array(validatedSteps)].map((_, i) => (
         <React.Fragment key={i}>
           <div

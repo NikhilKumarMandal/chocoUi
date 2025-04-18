@@ -18,7 +18,7 @@ const images = {
 
 const BentoGrid = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <div className="max-w-7xl mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <div className="sm:col-span-2 lg:col-span-2 bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">

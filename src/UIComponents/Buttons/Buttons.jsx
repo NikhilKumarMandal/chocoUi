@@ -3,7 +3,7 @@ const Button = () => {
     "px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95";
 
   return (
-    <div className="flex flex-wrap gap-4 p-8 bg-gradient-to-br from-gray-50 to-white min-h-screen items-center justify-center">
+    <div className="flex flex-wrap gap-4 p-8 bg-gradient-to-br from-gray-50 to-white  items-center justify-center">
       <button
         type="button"
         className={`${baseStyles} bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-500 shadow-md hover:shadow-lg`}

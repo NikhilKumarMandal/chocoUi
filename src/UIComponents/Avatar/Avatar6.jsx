@@ -32,7 +32,7 @@ const Avatar6 = () => {
     },
   ];
 
-  const containerClass = "w-full max-w-4xl mx-auto p-6 bg-[#ffebc6] rounded-lg";
+  const containerClass = "w-full max-w-4xl mx-auto p-6";
   const flexWrapperClass = "flex flex-wrap justify-center gap-6";
   const cardBaseClass =
     "flex flex-col items-center p-6 rounded-lg transition-transform duration-300 hover:scale-105";

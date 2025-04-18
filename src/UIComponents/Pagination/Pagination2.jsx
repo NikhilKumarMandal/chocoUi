@@ -16,7 +16,7 @@ const Pagination2 = ({ totalPages = 10 }) => {
   };
 
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex justify-center items-center gap-8">
       <button
         onClick={handlePrevious}
         disabled={currentPage === 1}

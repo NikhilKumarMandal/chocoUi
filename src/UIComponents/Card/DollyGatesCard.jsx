@@ -2,7 +2,7 @@ import React from "react";
 
 const DollyGatesCard = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center">
       <div className="w-full max-w-md rounded-3xl overflow-hidden bg-white shadow-lg">
         <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80">
           <div className="relative h-full">
