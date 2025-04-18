@@ -10,42 +10,51 @@ import { Link, useLocation } from "react-router-dom";
 import { Search, ChevronRight, Menu, X, GripVertical } from "lucide-react";
 
 const linksData = [
-  { name: "Navbar", path: "/dashboard/navbar" },
-  { name: "Card", path: "/dashboard/card" },
+  { name: "Accordion", path: "/dashboard/accordion" },
+  { name: "Alert", path: "/dashboard/alert" },
+  { name: "Avatar", path: "/dashboard/avatar" },
+  { name: "Animation", path: "/dashboard/animation" },
+
   { name: "Bento", path: "/dashboard/bento" },
   { name: "Breadcrumb", path: "/dashboard/breadcrumb" },
-  { name: "Calendar", path: "/dashboard/calendar" },
-  { name: "Form", path: "/dashboard/form" },
-  { name: "Skeleton", path: "/dashboard/skeleton" },
-  { name: "Toggle", path: "/dashboard/toggle" },
-  { name: "Animation", path: "/dashboard/animation" },
   { name: "Badge", path: "/dashboard/badge" },
+  { name: "Button", path: "/dashboard/button" },
+
+  { name: "Card", path: "/dashboard/card" },
+  { name: "Calendar", path: "/dashboard/calendar" },
   { name: "Checkbox", path: "/dashboard/checkbox" },
+  { name: "Carousel", path: "/dashboard/carousel" },
+  { name: "CTA", path: "/dashboard/cta" },
+
   { name: "Dropdown", path: "/dashboard/dropdown" },
+
+  { name: "File Upload", path: "/dashboard/fileupload" },
+  { name: "Feedback Alert", path: "/dashboard/feedbackalert" },
+  { name: "Form", path: "/dashboard/form" },
+  { name: "Footer", path: "/dashboard/footer" },
+
   { name: "Input", path: "/dashboard/input" },
   { name: "Loader", path: "/dashboard/loader" },
-  { name: "Button", path: "/dashboard/button" },
-  { name: "Avatar", path: "/dashboard/avatar" },
-  { name: "Table", path: "/dashboard/table" },
-  { name: "Accordion", path: "/dashboard/accordion" },
-  { name: "CTA", path: "/dashboard/cta" },
-  { name: "Footer", path: "/dashboard/footer" },
-  { name: "Pricing Card", path: "/dashboard/pricing" },
-  { name: "Carousel", path: "/dashboard/carousel" },
-  { name: "TextArea", path: "/dashboard/textArea" },
-  { name: "Stepper", path: "/dashboard/stepper" },
-  { name: "Alert", path: "/dashboard/alert" },
-  { name: "Review", path: "/dashboard/review" },
-  { name: "Popover", path: "/dashboard/popover" },
   { name: "Modal", path: "/dashboard/modal" },
-  // { name: "Tooltip", path: "/dashboard/tooltip" },
-  { name: "Tabs", path: "/dashboard/tabs" },
+  // { name: "Navbar", path: "/dashboard/navbar" },
+
   { name: "Pagination", path: "/dashboard/pagination" },
-  { name: "File Upload", path: "/dashboard/fileupload" },
-  { name: "Store Buttons", path: "/dashboard/storebuttons" },
-  { name: "Feedback Alert", path: "/dashboard/feedbackalert" },
+  { name: "Popover", path: "/dashboard/popover" },
   { name: "Progress Bar", path: "/dashboard/progressbar" },
   { name: "Password", path: "/dashboard/password" },
+  { name: "Pricing Card", path: "/dashboard/pricing" },
+
+  { name: "Review", path: "/dashboard/review" },
+
+  { name: "Skeleton", path: "/dashboard/skeleton" },
+  { name: "Stepper", path: "/dashboard/stepper" },
+  { name: "Store Buttons", path: "/dashboard/storebuttons" },
+
+  { name: "Toggle", path: "/dashboard/toggle" },
+  { name: "Table", path: "/dashboard/table" },
+  { name: "TextArea", path: "/dashboard/textArea" },
+  { name: "Tabs", path: "/dashboard/tabs" },
+  // { name: "Tooltip", path: "/dashboard/tooltip" },
 ];
 
 const LeftSidebar = () => {
@@ -54,7 +63,7 @@ const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const [, startTransition] = useTransition();
+  const [_, startTransition] = useTransition();
 
   // Resize Handler
   useEffect(() => {

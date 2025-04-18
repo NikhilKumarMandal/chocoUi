@@ -59,48 +59,48 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<LandingPage />} />
       <Route path="/dashboard" element={<App />}>
-        <Route path="navbar" element={<NavbarPage />} />
-        <Route path="bento" element={<BentoPage />} />
-        <Route path="footer" element={<FooterPage />} />
-        <Route path="card" element={<CardPage />} />
-        <Route path="avatar" element={<AvatarPage />} />
-        <Route path="breadcrumb" element={<Breadcrumb />} />
-        <Route path="calendar" element={<CalendarPage />} />
-        <Route path="form" element={<FormPage />} />
-        <Route path="hero" element={<HeroPage />} />
         <Route path="accordion" element={<AccordionPage />} />
+        <Route path="alert" element={<AlertPage />} />
         <Route path="animation" element={<AnimationPage />} />
+        <Route path="avatar" element={<AvatarPage />} />
         <Route path="badge" element={<BadgePage />} />
         <Route path="banner" element={<BannerPage />} />
+        <Route path="bento" element={<BentoPage />} />
+        <Route path="breadcrumb" element={<Breadcrumb />} />
+        <Route path="button" element={<ButtonPage />} />
+        <Route path="calendar" element={<CalendarPage />} />
+        <Route path="card" element={<CardPage />} />
+        <Route path="carousel" element={<CarouselPage />} />
         <Route path="checkbox" element={<CheckboxPage />} />
         <Route path="combobox" element={<ComboboxPage />} />
         <Route path="cta" element={<CTAPage />} />
         <Route path="dropdown" element={<DropdownPage />} />
-        <Route path="pricing" element={<PricingSection />} />
-        <Route path="skeleton" element={<SkeletonPage />} />
-        <Route path="table" element={<TablePage />} />
-        <Route path="toggle" element={<TogglePage />} />
-
+        <Route path="feedbackalert" element={<FeedbackAlertPage />} />
+        <Route path="fileUpload" element={<FileUpload />} />
+        <Route path="fileupload" element={<FileUploadPage />} />
+        <Route path="footer" element={<FooterPage />} />
+        <Route path="form" element={<FormPage />} />
+        <Route path="hero" element={<HeroPage />} />
         <Route path="input" element={<InputPage />} />
         <Route path="loader" element={<LoaderPage />} />
-        <Route path="fileUpload" element={<FileUpload />} />
-        <Route path="button" element={<ButtonPage />} />
-        <Route path="carousel" element={<CarouselPage />} />
-        <Route path="textArea" element={<TextAreaPage />} />
-        <Route path="stepper" element={<StepperPage />} />
-        <Route path="alert" element={<AlertPage />} />
-        <Route path="review" element={<ReviewPage />} />
-        <Route path="popover" element={<PopoverPage />} />
         <Route path="modal" element={<ModalPage />} />
-        <Route path="tooltip" element={<TooltipPage />} />
-        <Route path="tabs" element={<TabsPage />} />
+        <Route path="navbar" element={<NavbarPage />} />
         <Route path="pagination" element={<PaginationPage />} />
-        <Route path="fileupload" element={<FileUploadPage />} />
-        <Route path="storebuttons" element={<StoreButtonsPage />} />
-        <Route path="feedbackalert" element={<FeedbackAlertPage />} />
-        <Route path="progressbar" element={<ProgressbarPage />} />
         <Route path="password" element={<PasswordPage />} />
+        <Route path="popover" element={<PopoverPage />} />
+        <Route path="pricing" element={<PricingSection />} />
+        <Route path="progressbar" element={<ProgressbarPage />} />
+        <Route path="review" element={<ReviewPage />} />
+        <Route path="skeleton" element={<SkeletonPage />} />
+        <Route path="stepper" element={<StepperPage />} />
+        <Route path="storebuttons" element={<StoreButtonsPage />} />
+        <Route path="tabs" element={<TabsPage />} />
+        <Route path="table" element={<TablePage />} />
+        <Route path="textArea" element={<TextAreaPage />} />
+        <Route path="toggle" element={<TogglePage />} />
+        <Route path="tooltip" element={<TooltipPage />} />
       </Route>
+
       <Route path="/docs" element={<DocsPage />} />
       <Route path="/feedback" element={<FeedLayout />} />
       <Route path="/template" element={<TemplatePage />} />
