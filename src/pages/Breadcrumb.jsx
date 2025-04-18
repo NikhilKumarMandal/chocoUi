@@ -348,10 +348,10 @@ export default Breadcrumb;
   ];
   return (
     <div className="mx-auto p-6 max-w-4xl">
-      <h1 className="text-3xl font-bold text-[#603F26]">
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
         Breadcrumb Components
       </h1>
-      <p className="text-[#1a1a1a]  mt-2">
+      <p className="text-gray-700 mt-2 font-['Inter']">
         Keep users oriented with clear navigation paths
       </p>
       <div className="mt-6 space-y-6">

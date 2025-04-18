@@ -298,8 +298,8 @@ function CalendarPage() {
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-[#603F26]">Calendar Components</h1>
-      <p className="text-[#1a1a1a] mt-2">
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Calendar Components</h1>
+      <p className="text-gray-700 mt-2 font-['Inter']">
         Beautifully designed calendars for seamless scheduling
       </p>
 
