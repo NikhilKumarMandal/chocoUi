@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Table_09 = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [filter, setFilter] = useState("all");
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -39,15 +38,6 @@ const Table_09 = () => {
       isCompleted: false,
     },
   ]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleTaskToggle = (taskId) => {
     setTasks(
@@ -125,67 +115,6 @@ const Table_09 = () => {
     }
   });
 
-  const renderMobileCard = (task) => (
-    <div
-      key={task.id}
-      className="bg-white p-4 rounded-lg shadow mb-4 border border-gray-100"
-    >
-      <div className="flex items-center mb-3">
-        <div className="flex-shrink-0 h-5 w-5 mr-3">
-          <input
-            type="checkbox"
-            className="h-4 w-4 text-gray-800 border-gray-300 rounded focus:ring-gray-500"
-            checked={task.isCompleted}
-            onChange={() => handleTaskToggle(task.id)}
-          />
-        </div>
-        <div>
-          <div
-            className={`text-sm font-medium text-gray-900 ${task.isCompleted ? "line-through" : ""}`}
-          >
-            {task.title}
-          </div>
-          <div className="text-xs text-gray-500">{task.description}</div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 gap-2 mt-3">
-        <div>
-          <div className="text-xs text-gray-500">Assignee</div>
-          <div className="flex items-center mt-1">
-            <div className="h-6 w-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xs font-medium">
-              {task.initials}
-            </div>
-            <div className="ml-2 text-sm text-gray-900">{task.assignee}</div>
-          </div>
-        </div>
-        <div>
-          <div className="text-xs text-gray-500">Due Date</div>
-          <div className="text-sm text-gray-900 mt-1">{task.dueDate}</div>
-        </div>
-        <div>
-          <div className="text-xs text-gray-500">Status</div>
-          <div className="mt-1">
-            <span
-              className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(task.status)}`}
-            >
-              {task.status}
-            </span>
-          </div>
-        </div>
-        <div>
-          <div className="text-xs text-gray-500">Priority</div>
-          <div className="flex items-center mt-1">
-            <div
-              className={`h-2 w-2 rounded-full mr-2 ${getPriorityColor(task.priority)}`}
-            ></div>
-            <span className="text-sm text-gray-900">{task.priority}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <div className="container p-4 sm:p-6 max-w-6xl mx-auto">
       <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100">
@@ -225,100 +154,95 @@ const Table_09 = () => {
           </div>
         </div>
 
-        {isMobileView ? (
-          <div className="p-4">
-            {filteredTasks.map((task) => renderMobileCard(task))}
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-100">
-              <thead>
-                <tr className="bg-gray-50">
-                  <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Task
-                  </th>
-                  <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Assignee
-                  </th>
-                  <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Due Date
-                  </th>
-                  <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Status
-                  </th>
-                  <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Priority
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-100">
-                {filteredTasks.map((task) => (
-                  <tr
-                    key={task.id}
-                    className={`transition-all duration-200 ${hoveredRow === task.id ? "bg-gray-50" : ""}`}
-                    onMouseEnter={() => setHoveredRow(task.id)}
-                    onMouseLeave={() => setHoveredRow(null)}
-                  >
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0 h-5 w-5">
-                          <input
-                            type="checkbox"
-                            className="h-4 w-4 text-gray-800 border-gray-300 rounded focus:ring-gray-500"
-                            checked={task.isCompleted}
-                            onChange={() => handleTaskToggle(task.id)}
-                          />
-                        </div>
-                        <div className="ml-3">
-                          <div
-                            className={`text-sm font-medium text-gray-900 ${task.isCompleted ? "line-through" : ""}`}
-                          >
-                            {task.title}
-                          </div>
-                          <div className="text-sm text-gray-500">
-                            {task.description}
-                          </div>
-                        </div>
+        {/* Table with horizontal scroll on all screen sizes */}
+        <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: 'touch' }}>
+          <table className="min-w-full divide-y divide-gray-100">
+            <thead>
+              <tr className="bg-gray-50">
+                <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Task
+                </th>
+                <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Assignee
+                </th>
+                <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Due Date
+                </th>
+                <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Status
+                </th>
+                <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Priority
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-100">
+              {filteredTasks.map((task) => (
+                <tr
+                  key={task.id}
+                  className={`transition-all duration-200 ${hoveredRow === task.id ? "bg-gray-50" : ""}`}
+                  onMouseEnter={() => setHoveredRow(task.id)}
+                  onMouseLeave={() => setHoveredRow(null)}
+                >
+                  <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0 h-5 w-5">
+                        <input
+                          type="checkbox"
+                          className="h-4 w-4 text-gray-800 border-gray-300 rounded focus:ring-gray-500"
+                          checked={task.isCompleted}
+                          onChange={() => handleTaskToggle(task.id)}
+                        />
                       </div>
-                    </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xs font-medium">
-                          {task.initials}
-                        </div>
-                        <div className="ml-3">
-                          <div className="text-sm text-gray-900">
-                            {task.assignee}
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {task.dueDate}
-                    </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                      <span
-                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(task.status)}`}
-                      >
-                        {task.status}
-                      </span>
-                    </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
+                      <div className="ml-3">
                         <div
-                          className={`h-2 w-2 rounded-full ${getPriorityColor(task.priority)} mr-2`}
-                        ></div>
-                        <span className="text-sm text-gray-900">
-                          {task.priority}
-                        </span>
+                          className={`text-sm font-medium text-gray-900 ${task.isCompleted ? "line-through" : ""}`}
+                        >
+                          {task.title}
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {task.description}
+                        </div>
                       </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
+                    </div>
+                  </td>
+                  <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xs font-medium">
+                        {task.initials}
+                      </div>
+                      <div className="ml-3">
+                        <div className="text-sm text-gray-900">
+                          {task.assignee}
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    {task.dueDate}
+                  </td>
+                  <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                    <span
+                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(task.status)}`}
+                    >
+                      {task.status}
+                    </span>
+                  </td>
+                  <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div
+                        className={`h-2 w-2 rounded-full ${getPriorityColor(task.priority)} mr-2`}
+                      ></div>
+                      <span className="text-sm text-gray-900">
+                        {task.priority}
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

@@ -184,8 +184,8 @@ export default Avatar6;
   ];
   return (
     <div className="max-w-4xl  mx-auto p-6">
-      <h1 className="text-3xl font-bold text-black">Avatar Component</h1>
-      <p className="text-gray-600 mt-2">
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Avatar Component</h1>
+      <p className="text-gray-700 mt-2 font-['Inter']">
         Visual representations for users, teams, and personas across your
         platform
       </p>

@@ -5,7 +5,6 @@ const Table_07 = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortColumn, setSortColumn] = useState("name");
   const [sortDirection, setSortDirection] = useState("asc");
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
 
   // Sample data
   const [products, setProducts] = useState([
@@ -87,15 +86,6 @@ const Table_07 = () => {
     },
   ]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const toggleRow = (id) => {
     setExpandedRow(expandedRow === id ? null : id);
   };
@@ -150,124 +140,6 @@ const Table_07 = () => {
       return 0;
     });
 
-  const renderMobileCard = (product) => (
-    <div
-      className="bg-white p-4 rounded-lg shadow mb-4 border border-gray-200"
-      onClick={() => toggleRow(product.id)}
-    >
-      <div className="flex items-center mb-3">
-        <div
-          className={`h-10 w-10 rounded-md ${product.bgColor} flex items-center justify-center`}
-        >
-          <svg
-            className={`h-6 w-6 ${product.iconColor}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={product.icon}
-            />
-          </svg>
-        </div>
-        <div className="ml-4">
-          <div className="text-sm font-medium text-gray-900">
-            {product.name}
-          </div>
-          <div className="text-sm text-gray-500">SKU: {product.sku}</div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 gap-2 mt-3">
-        <div>
-          <div className="text-xs text-gray-500">Category</div>
-          <div className="mt-1">
-            <span
-              className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${product.categoryColor}`}
-            >
-              {product.category}
-            </span>
-          </div>
-        </div>
-        <div>
-          <div className="text-xs text-gray-500">Stock</div>
-          <div className="flex items-center mt-1">
-            <div className="w-16 bg-gray-200 rounded-full h-2.5">
-              <div
-                className={`${product.stockColor} h-2.5 rounded-full`}
-                style={{
-                  width: `${(product.stock / product.maxStock) * 100}%`,
-                }}
-              ></div>
-            </div>
-            <span className="ml-2 text-sm text-gray-500">
-              {product.stock}/{product.maxStock}
-            </span>
-          </div>
-        </div>
-        <div>
-          <div className="text-xs text-gray-500">Price</div>
-          <div className="text-sm text-gray-900 mt-1">
-            ${product.price.toFixed(2)}
-          </div>
-        </div>
-        <div>
-          <div className="text-xs text-gray-500">Status</div>
-          <div className="mt-1">
-            <span
-              className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${product.statusColor}`}
-            >
-              {product.status}
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-3 pt-3 border-t border-gray-200 flex justify-end">
-        <button
-          className="text-blue-600 hover:text-blue-900 mr-3"
-          onClick={(e) => handleEditProduct(e, product.id)}
-        >
-          Edit
-        </button>
-        <button
-          className="text-red-600 hover:text-red-900"
-          onClick={(e) => handleDeleteProduct(e, product.id)}
-        >
-          Delete
-        </button>
-      </div>
-
-      {expandedRow === product.id && (
-        <div className="mt-3 pt-3 border-t border-gray-200">
-          <div className="grid grid-cols-1 gap-3">
-            <div>
-              <h4 className="text-sm font-medium text-gray-900">
-                Product Details
-              </h4>
-              <p className="mt-1 text-sm text-gray-500">{product.details}</p>
-            </div>
-            <div>
-              <h4 className="text-sm font-medium text-gray-900">
-                Last Updated
-              </h4>
-              <p className="mt-1 text-sm text-gray-500">
-                {product.lastUpdated}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-sm font-medium text-gray-900">Supplier</h4>
-              <p className="mt-1 text-sm text-gray-500">{product.supplier}</p>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-
   return (
     <div className="container p-4 sm:p-6 max-w-6xl mx-auto">
       <div className="bg-white rounded-lg shadow overflow-hidden">
@@ -310,261 +182,254 @@ const Table_07 = () => {
           </div>
         </div>
 
-        {isMobileView ? (
-          <div className="p-4">
-            {filteredAndSortedProducts.map((product) =>
-              renderMobileCard(product)
-            )}
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th
-                    className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
-                    onClick={() => toggleSort("name")}
+        {/* Always use table view with horizontal scrolling for all screen sizes */}
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
+              <tr>
+                <th
+                  className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
+                  onClick={() => toggleSort("name")}
+                >
+                  <div className="flex items-center">
+                    <span>Product</span>
+                    {sortColumn === "name" && (
+                      <svg
+                        className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                </th>
+                <th
+                  className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
+                  onClick={() => toggleSort("category")}
+                >
+                  <div className="flex items-center">
+                    <span>Category</span>
+                    {sortColumn === "category" && (
+                      <svg
+                        className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                </th>
+                <th
+                  className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
+                  onClick={() => toggleSort("stock")}
+                >
+                  <div className="flex items-center">
+                    <span>Stock</span>
+                    {sortColumn === "stock" && (
+                      <svg
+                        className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                </th>
+                <th
+                  className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
+                  onClick={() => toggleSort("price")}
+                >
+                  <div className="flex items-center">
+                    <span>Price</span>
+                    {sortColumn === "price" && (
+                      <svg
+                        className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                </th>
+                <th
+                  className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
+                  onClick={() => toggleSort("status")}
+                >
+                  <div className="flex items-center">
+                    <span>Status</span>
+                    {sortColumn === "status" && (
+                      <svg
+                        className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                </th>
+                <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {filteredAndSortedProducts.map((product) => (
+                <React.Fragment key={product.id}>
+                  <tr
+                    className="hover:bg-gray-50 cursor-pointer"
+                    onClick={() => toggleRow(product.id)}
                   >
-                    <div className="flex items-center">
-                      <span>Product</span>
-                      {sortColumn === "name" && (
-                        <svg
-                          className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div
+                          className={`h-10 w-10 rounded-md ${product.bgColor} flex items-center justify-center`}
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                  </th>
-                  <th
-                    className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
-                    onClick={() => toggleSort("category")}
-                  >
-                    <div className="flex items-center">
-                      <span>Category</span>
-                      {sortColumn === "category" && (
-                        <svg
-                          className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                  </th>
-                  <th
-                    className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
-                    onClick={() => toggleSort("stock")}
-                  >
-                    <div className="flex items-center">
-                      <span>Stock</span>
-                      {sortColumn === "stock" && (
-                        <svg
-                          className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                  </th>
-                  <th
-                    className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
-                    onClick={() => toggleSort("price")}
-                  >
-                    <div className="flex items-center">
-                      <span>Price</span>
-                      {sortColumn === "price" && (
-                        <svg
-                          className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                  </th>
-                  <th
-                    className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-600"
-                    onClick={() => toggleSort("status")}
-                  >
-                    <div className="flex items-center">
-                      <span>Status</span>
-                      {sortColumn === "status" && (
-                        <svg
-                          className={`ml-1 h-4 w-4 ${sortDirection === "asc" ? "transform rotate-180" : ""}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                  </th>
-                  <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {filteredAndSortedProducts.map((product) => (
-                  <React.Fragment key={product.id}>
-                    <tr
-                      className="hover:bg-gray-50 cursor-pointer"
-                      onClick={() => toggleRow(product.id)}
-                    >
-                      <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                        <div className="flex items-center">
-                          <div
-                            className={`h-10 w-10 rounded-md ${product.bgColor} flex items-center justify-center`}
+                          <svg
+                            className={`h-6 w-6 ${product.iconColor}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
                           >
-                            <svg
-                              className={`h-6 w-6 ${product.iconColor}`}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d={product.icon}
-                              />
-                            </svg>
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d={product.icon}
+                            />
+                          </svg>
+                        </div>
+                        <div className="ml-4">
+                          <div className="text-sm font-medium text-gray-900">
+                            {product.name}
                           </div>
-                          <div className="ml-4">
-                            <div className="text-sm font-medium text-gray-900">
-                              {product.name}
-                            </div>
-                            <div className="text-sm text-gray-500">
-                              SKU: {product.sku}
-                            </div>
+                          <div className="text-sm text-gray-500">
+                            SKU: {product.sku}
                           </div>
                         </div>
-                      </td>
-                      <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                        <span
-                          className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${product.categoryColor}`}
-                        >
-                          {product.category}
-                        </span>
-                      </td>
-                      <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                        <div className="flex items-center">
-                          <div className="w-16 bg-gray-200 rounded-full h-2.5">
-                            <div
-                              className={`${product.stockColor} h-2.5 rounded-full`}
-                              style={{
-                                width: `${(product.stock / product.maxStock) * 100}%`,
-                              }}
-                            ></div>
-                          </div>
-                          <span className="ml-2 text-sm text-gray-500">
-                            {product.stock}/{product.maxStock}
-                          </span>
+                      </div>
+                    </td>
+                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                      <span
+                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${product.categoryColor}`}
+                      >
+                        {product.category}
+                      </span>
+                    </td>
+                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="w-16 bg-gray-200 rounded-full h-2.5">
+                          <div
+                            className={`${product.stockColor} h-2.5 rounded-full`}
+                            style={{
+                              width: `${(product.stock / product.maxStock) * 100}%`,
+                            }}
+                          ></div>
                         </div>
-                      </td>
-                      <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        ${product.price.toFixed(2)}
-                      </td>
-                      <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                        <span
-                          className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${product.statusColor}`}
-                        >
-                          {product.status}
+                        <span className="ml-2 text-sm text-gray-500">
+                          {product.stock}/{product.maxStock}
                         </span>
-                      </td>
-                      <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <button
-                          className="text-blue-600 hover:text-blue-900 mr-3"
-                          onClick={(e) => handleEditProduct(e, product.id)}
-                        >
-                          Edit
-                        </button>
-                        <button
-                          className="text-red-600 hover:text-red-900"
-                          onClick={(e) => handleDeleteProduct(e, product.id)}
-                        >
-                          Delete
-                        </button>
+                      </div>
+                    </td>
+                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      ${product.price.toFixed(2)}
+                    </td>
+                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                      <span
+                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${product.statusColor}`}
+                      >
+                        {product.status}
+                      </span>
+                    </td>
+                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <button
+                        className="text-blue-600 hover:text-blue-900 mr-3"
+                        onClick={(e) => handleEditProduct(e, product.id)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="text-red-600 hover:text-red-900"
+                        onClick={(e) => handleDeleteProduct(e, product.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  {expandedRow === product.id && (
+                    <tr>
+                      <td
+                        colSpan="6"
+                        className="px-4 sm:px-6 py-4 bg-gray-50"
+                      >
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                          <div>
+                            <h4 className="text-sm font-medium text-gray-900">
+                              Product Details
+                            </h4>
+                            <p className="mt-1 text-sm text-gray-500">
+                              {product.details}
+                            </p>
+                          </div>
+                          <div>
+                            <h4 className="text-sm font-medium text-gray-900">
+                              Last Updated
+                            </h4>
+                            <p className="mt-1 text-sm text-gray-500">
+                              {product.lastUpdated}
+                            </p>
+                          </div>
+                          <div>
+                            <h4 className="text-sm font-medium text-gray-900">
+                              Supplier
+                            </h4>
+                            <p className="mt-1 text-sm text-gray-500">
+                              {product.supplier}
+                            </p>
+                          </div>
+                        </div>
                       </td>
                     </tr>
-                    {expandedRow === product.id && (
-                      <tr>
-                        <td
-                          colSpan="6"
-                          className="px-4 sm:px-6 py-4 bg-gray-50"
-                        >
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div>
-                              <h4 className="text-sm font-medium text-gray-900">
-                                Product Details
-                              </h4>
-                              <p className="mt-1 text-sm text-gray-500">
-                                {product.details}
-                              </p>
-                            </div>
-                            <div>
-                              <h4 className="text-sm font-medium text-gray-900">
-                                Last Updated
-                              </h4>
-                              <p className="mt-1 text-sm text-gray-500">
-                                {product.lastUpdated}
-                              </p>
-                            </div>
-                            <div>
-                              <h4 className="text-sm font-medium text-gray-900">
-                                Supplier
-                              </h4>
-                              <p className="mt-1 text-sm text-gray-500">
-                                {product.supplier}
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    )}
-                  </React.Fragment>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
+                  )}
+                </React.Fragment>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="px-4 sm:px-6 py-4 border-t border-gray-200">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
