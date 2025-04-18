@@ -20,7 +20,7 @@ const Toggle4 = () => {
           <span
             className={
               "inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 " +
-              (enabled ? "translate-x-5" : "translate-x-1")
+              (enabled ? "translate-x-6" : "translate-x-1")
             }
           />
         </button>
