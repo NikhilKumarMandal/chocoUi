@@ -8,7 +8,7 @@ import Alert5 from "../UIComponents/Alert/Alert5";
 function AlertPage() {
   const AlertVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Alert Palette",
       component: <Alert1 />,
       codeSnippets: [
         {
@@ -18,7 +18,7 @@ function AlertPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Notify Hub",
       component: <Alert3 />,
       codeSnippets: [
         {
@@ -28,7 +28,7 @@ function AlertPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Progress Alerts",
       component: <Alert4 />,
       codeSnippets: [
         {
@@ -38,7 +38,7 @@ function AlertPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Alert Dashboard",
       component: <Alert5 />,
       codeSnippets: [
         {

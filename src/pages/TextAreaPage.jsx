@@ -4,7 +4,7 @@ import Textarea from "../UIComponents/Textarea/Textarea6";
 function TextAreaPage() {
   const TextareaVariants = [
     {
-      title: "Calendar",
+      title: "Post Input",
       component: <Textarea />,
       codeSnippets: [
         {

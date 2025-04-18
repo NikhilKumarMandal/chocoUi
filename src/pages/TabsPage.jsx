@@ -7,7 +7,7 @@ import Tab4 from "../UIComponents/Tabs/Tabs4";
 function TabsPage() {
   const TabsVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Simple Tabs",
       component: <Tab1 />,
       codeSnippets: [
         {
@@ -17,7 +17,7 @@ function TabsPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Sidebar Tabs",
       component: <Tab3 />,
       codeSnippets: [
         {
@@ -27,7 +27,7 @@ function TabsPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Segmented Tabs",
       component: <Tab4 />,
       codeSnippets: [
         {

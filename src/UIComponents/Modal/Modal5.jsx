@@ -5,7 +5,6 @@ const Modal5 = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-      {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(true)}
         className="px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-300"
@@ -13,12 +12,9 @@ const Modal5 = () => {
         Open Slide Modal
       </button>
 
-      {/* Modal Overlay */}
       {isOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-end p-4 z-50">
-          {/* Modal Content */}
           <div className="bg-white rounded-l-2xl shadow-xl w-full max-w-md h-full transform transition-all duration-300">
-            {/* Header */}
             <div className="p-6 border-b border-gray-200 flex justify-between items-center">
               <div>
                 <h2 className="text-2xl font-bold text-gray-800">
@@ -46,7 +42,6 @@ const Modal5 = () => {
               </button>
             </div>
 
-            {/* Body */}
             <div className="p-6">
               <p className="text-gray-700">
                 This slide-in modal is perfect for side panels and additional
@@ -55,7 +50,6 @@ const Modal5 = () => {
               </p>
             </div>
 
-            {/* Footer */}
             <div className="p-6 border-t border-gray-200 flex justify-end gap-4">
               <button
                 onClick={() => setIsOpen(false)}

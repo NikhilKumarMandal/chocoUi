@@ -4,7 +4,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function Accordion() {
   const AccordianVariants = [
     {
-      title: "Calendar",
+      title: "Basic Accordion",
       component: <Accordion1 />,
       codeSnippets: [
         {

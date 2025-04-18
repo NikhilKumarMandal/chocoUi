@@ -6,7 +6,6 @@ const ImageGrid = ({ items }) => {
   const gridRef = useRef(null);
 
   useEffect(() => {
-    // Simple intersection observer implementation
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -36,7 +35,6 @@ const ImageGrid = ({ items }) => {
 
   return (
     <div className="container mx-auto p-4">
-      {/* Main Grid */}
       <div
         ref={gridRef}
         className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
@@ -67,7 +65,6 @@ const ImageGrid = ({ items }) => {
         ))}
       </div>
 
-      {/* Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
           <div className="relative max-w-4xl w-full">
@@ -98,7 +95,6 @@ const ImageGrid = ({ items }) => {
   );
 };
 
-// Example usage with sample data
 export default function CreativeGallery() {
   const sampleItems = [
     {

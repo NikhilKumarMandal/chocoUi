@@ -8,7 +8,7 @@ import Popover4 from "../UIComponents/Popover/Popover4";
 function PopoverPage() {
   const PopoverVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Click Popover",
       component: <Popover1 />,
       codeSnippets: [
         {
@@ -18,7 +18,7 @@ function PopoverPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Hover Popover",
       component: <Popover2 />,
       codeSnippets: [
         {
@@ -28,7 +28,7 @@ function PopoverPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Info Popover",
       component: <Popover3 />,
       codeSnippets: [
         {
@@ -38,7 +38,7 @@ function PopoverPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Expandable Info",
       component: <Popover4 />,
       codeSnippets: [
         {

@@ -8,7 +8,7 @@ import Review5 from "../UIComponents/Review/Review5";
 function ReviewPage() {
   const ReviewVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Simple Review",
       component: <Review1 />,
       codeSnippets: [
         {
@@ -18,7 +18,7 @@ function ReviewPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Modern Review",
       component: <Review3 />,
       codeSnippets: [
         {
@@ -28,7 +28,7 @@ function ReviewPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Detailed Review",
       component: <Review4 />,
       codeSnippets: [
         {
@@ -38,7 +38,7 @@ function ReviewPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Single Testimonial",
       component: <Review5 />,
       codeSnippets: [
         {

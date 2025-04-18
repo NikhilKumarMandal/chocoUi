@@ -11,7 +11,7 @@ function FooterPage() {
   const FooterVariants = [
     // Footer - 1
     {
-      title: "Footer1",
+      title: "Footer Hub",
       component: <Footer4 />,
       codeSnippets: [
         {
@@ -295,7 +295,7 @@ function FooterPage() {
 
     // Footer 2
     {
-      title: "Footer 2",
+      title: "Modern Footer",
       component: <Footer6 />,
       codeSnippets: [
         {
@@ -422,7 +422,7 @@ function FooterPage() {
 
     // Footer - 3
     {
-      title: "Footer1",
+      title: "Glass Footer",
       component: <Footer7 />,
       codeSnippets: [
         {
@@ -438,7 +438,7 @@ function FooterPage() {
 
     // Footer - 4
     {
-      title: "Footer9",
+      title: "Centered Footer",
       component: <Footer9 />,
       codeSnippets: [
         {
@@ -454,7 +454,7 @@ function FooterPage() {
 
     // Footer - 5
     {
-      title: "Footer1",
+      title: "Clean Footer",
       component: <Footer10 />,
       codeSnippets: [
         {
@@ -470,7 +470,7 @@ function FooterPage() {
 
     // Footer - 6
     {
-      title: "Footer1",
+      title: "Simple Footer",
       component: <Footer5 />,
       codeSnippets: [
         {

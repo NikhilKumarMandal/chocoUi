@@ -5,7 +5,7 @@ import FileUpload2 from "../UIComponents/FileUpload/FileUpload2";
 function FileUploadPage() {
   const FileVariants = [
     {
-      title: "Calendar",
+      title: "Drag Drop Upload",
       component: <FileUpload1 />,
       codeSnippets: [
         {
@@ -15,7 +15,7 @@ function FileUploadPage() {
       ],
     },
     {
-      title: "Calendar",
+      title: "Image Drop Zone",
       component: <FileUpload2 />,
       codeSnippets: [
         {

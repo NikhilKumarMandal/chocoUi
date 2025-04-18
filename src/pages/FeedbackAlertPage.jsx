@@ -6,7 +6,7 @@ import AlertDemo from "../UIComponents/FeedbackAlert/AlertDemo";
 function FeedbackAlertPage() {
   const FeedbackVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Alert Manager",
       component: <AlertDemo />,
       codeSnippets: [
         {
@@ -16,7 +16,7 @@ function FeedbackAlertPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Feedback Pop Up",
       component: <FeedbackModal />,
       codeSnippets: [
         {
