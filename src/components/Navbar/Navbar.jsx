@@ -14,8 +14,8 @@ function Navbar() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Components", path: "/dashboard/accordion" },
     { name: "Docs", path: "/docs" },
+    { name: "Components", path: "/dashboard/accordion" },
     { name: "Feedback", path: "/feedback" },
     { name: "Template", path: "https://template.chocoui.live", external: true },
   ];

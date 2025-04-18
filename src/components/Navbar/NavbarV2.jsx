@@ -14,8 +14,8 @@ function NavbarV2() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Components", path: "/dashboard/navbar" },
     { name: "Docs", path: "/docs" },
+    { name: "Components", path: "/dashboard/navbar" },
     { name: "Feedback", path: "/feedback" },
   ];
 
