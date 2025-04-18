@@ -32,7 +32,7 @@ const Avatar6 = () => {
     },
   ];
 
-  const containerClass = "w-full max-w-4xl mx-auto p-6";
+  const containerClass = "w-full max-w-4xl mx-auto p-6 bg-[#ffebc6] rounded-lg";
   const flexWrapperClass = "flex flex-wrap justify-center gap-6";
   const cardBaseClass =
     "flex flex-col items-center p-6 rounded-lg transition-transform duration-300 hover:scale-105";
@@ -41,7 +41,7 @@ const Avatar6 = () => {
   const imageClass = "w-20 h-20 rounded-full object-cover";
   const memberNameClass =
     "text-lg font-semibold text-gray-900 dark:text-gray-100";
-  const memberRoleClass = "text-sm text-gray-600 dark:text-gray-300";
+  const memberRoleClass = "text-sm font-bold text-white";
   const socialLinksWrapperClass = "mt-3 flex space-x-2";
   const socialLinkClass =
     "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200";
