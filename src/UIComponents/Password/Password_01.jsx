@@ -6,18 +6,9 @@ const PASSWORD_REQUIREMENTS = [
   { regex: /[0-9]/, text: "At least 1 number" },
   { regex: /[a-z]/, text: "At least 1 lowercase letter" },
   { regex: /[A-Z]/, text: "At least 1 uppercase letter" },
-  { regex: /[!-\/:-@[-`{-~]/, text: "At least 1 special characters" },
 ];
 
 const STRENGTH_CONFIG = {
-  colors: {
-    0: "bg-border",
-    1: "bg-red-500",
-    2: "bg-orange-500",
-    3: "bg-amber-500",
-    4: "bg-amber-700",
-    5: "bg-emerald-500",
-  },
   texts: {
     0: "Enter a password",
     1: "Weak password",
@@ -43,7 +34,7 @@ const Password_01 = () => {
   }, [password]);
 
   return (
-    <div className="w-96 mx-auto ">
+    <div className="max-w-md w-full mx-auto px-4 py-6">
       <form className="space-y-2">
         <label htmlFor="password" className="block text-sm font-medium">
           Password
@@ -57,34 +48,35 @@ const Password_01 = () => {
             placeholder="Password"
             aria-invalid={calculateStrength.score < 4}
             aria-describedby="password-strength"
-            className="w-full p-2 border-2 rounded-md bg-background outline-none focus-within:border-blue-700 transition"
+            className="w-full p-2 border-2 rounded-md bg-background outline-none focus:border-blue-700 transition"
           />
           <button
             type="button"
             onClick={() => setIsVisible((prev) => !prev)}
             aria-label={isVisible ? "Hide password" : "Show password"}
-            className="absolute inset-y-0 right-0 outline-none flex items-center justify-center w-9 text-muted-foreground/80 hover:text-foreground"
+            className="absolute inset-y-0 right-0 flex items-center justify-center w-9 text-muted-foreground/80 hover:text-foreground"
           >
             {isVisible ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>
         </div>
       </form>
+
+      {/* Strength Bar */}
       <div className="flex gap-2 w-full justify-between mt-2">
-        <span
-          className={`${calculateStrength.score >= 1 ? "bg-green-200" : "bg-border"}  p-1 rounded-full w-full`}
-        ></span>
-        <span
-          className={`${calculateStrength.score >= 2 ? "bg-green-300" : "bg-border"}  p-1 rounded-full w-full`}
-        ></span>
-        <span
-          className={`${calculateStrength.score >= 3 ? "bg-green-400" : "bg-border"}  p-1 rounded-full w-full`}
-        ></span>
-        <span
-          className={`${calculateStrength.score >= 4 ? "bg-green-500" : "bg-border"}  p-1 rounded-full w-full`}
-        ></span>
-        <span
-          className={`${calculateStrength.score >= 5 ? "bg-green-600" : "bg-border"}  p-1 rounded-full w-full`}
-        ></span>
+        {[1, 2, 3, 4, 5].map((level) => {
+          const baseClass = "p-1 rounded-full w-full";
+          const isActive = calculateStrength.score >= level;
+          let activeColor = "bg-border";
+          if (isActive) {
+            if (level === 1) activeColor = "bg-green-200";
+            else if (level === 2) activeColor = "bg-green-300";
+            else if (level === 3) activeColor = "bg-green-400";
+            else if (level === 4) activeColor = "bg-green-500";
+            else activeColor = "bg-green-600";
+          }
+          const className = activeColor + " " + baseClass;
+          return <span key={level} className={className}></span>;
+        })}
       </div>
 
       <p
@@ -98,26 +90,37 @@ const Password_01 = () => {
       </p>
 
       <ul className="space-y-1.5" aria-label="Password requirements">
-        {calculateStrength.requirements.map((req, index) => (
-          <li key={index} className="flex items-center space-x-2">
-            {req.met ? (
-              <Check size={16} className="text-emerald-500" />
-            ) : (
-              <X size={16} className="text-muted-foreground/80" />
-            )}
-            <span
-              className={`text-xs ${req.met ? "text-emerald-600" : "text-muted-foreground"}`}
-            >
-              {req.text}
-              <span className="sr-only">
-                {req.met ? " - Requirement met" : " - Requirement not met"}
+        {calculateStrength.requirements.map((req, index) => {
+          const icon = req.met ? (
+            <Check size={16} className="text-emerald-500" />
+          ) : (
+            <X size={16} className="text-muted-foreground/80" />
+          );
+
+          let textClass = "text-xs";
+          if (req.met) {
+            textClass += " text-emerald-600";
+          } else {
+            textClass += " text-muted-foreground";
+          }
+
+          return (
+            <li key={index} className="flex items-center space-x-2">
+              {icon}
+              <span className={textClass}>
+                {req.text}
+                <span className="sr-only">
+                  {req.met ? " - Requirement met" : " - Requirement not met"}
+                </span>
               </span>
-            </span>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 };
 
 export default Password_01;
+
+

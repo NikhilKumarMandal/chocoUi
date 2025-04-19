@@ -1,5 +1,3 @@
-import React from "react";
-
 const Review3 = () => {
   return (
     <div className="max-w-md mx-auto m-4 rounded-xl shadow-lg overflow-hidden">

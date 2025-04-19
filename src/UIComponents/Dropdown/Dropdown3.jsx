@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-const Dropdown3 = () => {
+const Dropdown3 = ({
+  options = ["Option 1", "Option 2", "Option 3", "Option 4"],
+  width = "w-64",
+  color = "indigo" 
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("Select option");
-
-  const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -15,16 +17,17 @@ const Dropdown3 = () => {
     setIsOpen(false);
   };
 
-  const containerClass = "relative w-64 m-4";
-
+  const containerClass = "relative " + width + " m-4";
   const buttonClass =
-    "w-full px-4 py-2 bg-indigo-600 text-white rounded-lg flex items-center justify-between hover:bg-indigo-700 transition-colors duration-200";
+    "w-full px-4 py-2 bg-" +
+    color +
+    "-600 text-white rounded-lg flex items-center justify-between hover:bg-" +
+    color +
+    "-700 transition-colors duration-200";
 
-  const iconBaseClass = "w-5 h-5 transition-transform duration-200";
-  const iconOpenClass = "transform rotate-180";
   const iconClass = isOpen
-    ? iconBaseClass + " " + iconOpenClass
-    : iconBaseClass;
+    ? "w-5 h-5 transition-transform duration-200 transform rotate-180"
+    : "w-5 h-5 transition-transform duration-200";
 
   const dropdownClass =
     "absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg";
@@ -69,3 +72,4 @@ const Dropdown3 = () => {
 };
 
 export default Dropdown3;
+

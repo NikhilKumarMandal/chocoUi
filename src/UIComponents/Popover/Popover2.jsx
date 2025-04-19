@@ -21,7 +21,7 @@ const Popover2 = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center ">
       <div className="relative inline-block">
         <span
           ref={triggerRef}

@@ -21,21 +21,22 @@ const Popover3 = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50">
+    <div className="flex justify-center items-center bg-gray-50">
       <div className="relative">
         <button
           ref={triggerRef}
           onClick={() => setIsOpen(!isOpen)}
-          className="px-6 py-2.5 bg-white text-gray-700 rounded-full
-                   hover:bg-gray-50 transition-all duration-200
-                   shadow-sm hover:shadow border border-gray-100
-                   flex items-center space-x-2 group"
+          className={
+            "px-6 py-2.5 bg-white text-gray-700 rounded-full hover:bg-gray-50 transition-all duration-200 " +
+            "shadow-sm hover:shadow border border-gray-100 flex items-center space-x-2 group"
+          }
         >
           <span className="font-medium">Information</span>
           <svg
-            className={`w-4 h-4 transition-transform duration-200 ${
-              isOpen ? "rotate-180" : ""
-            }`}
+            className={
+              "w-4 h-4 transition-transform duration-200 " +
+              (isOpen ? "rotate-180" : "")
+            }
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -52,9 +53,11 @@ const Popover3 = () => {
         {isOpen && (
           <div
             ref={popoverRef}
-            className="absolute left-1/2 transform -translate-x-1/2 mt-3
-                     w-72 bg-white rounded-2xl shadow-lg border border-gray-100
-                     backdrop-blur-sm transition-all duration-200 z-50"
+            className={
+              "absolute left-1/2 transform -translate-x-1/2 mt-3 " +
+              "w-72 bg-white rounded-2xl shadow-lg border border-gray-100 " +
+              "backdrop-blur-sm transition-all duration-200 z-50"
+            }
           >
             <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
               <div className="w-3 h-3 bg-white rotate-45 border-l border-t border-gray-100" />
@@ -88,8 +91,10 @@ const Popover3 = () => {
               <div className="mt-4 flex justify-end">
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800
-                           transition-colors duration-200"
+                  className={
+                    "px-4 py-2 text-sm text-gray-600 hover:text-gray-800 " +
+                    "transition-colors duration-200"
+                  }
                 >
                   Got it
                 </button>
@@ -103,3 +108,4 @@ const Popover3 = () => {
 };
 
 export default Popover3;
+
