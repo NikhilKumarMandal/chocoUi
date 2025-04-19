@@ -65,16 +65,15 @@ const Alert3 = () => {
           notification.isVisible && (
             <div
               key={notification.id}
-              className={`relative overflow-hidden rounded-lg shadow-md ${getNotificationStyles(notification.type).bg}`}
+              className={"relative overflow-hidden rounded-lg shadow-md " + getNotificationStyles(notification.type).bg}
             >
-              {/* Colored accent bar */}
               <div
-                className={`absolute top-0 left-0 w-1 h-full ${getNotificationStyles(notification.type).accent}`}
+                className={"absolute top-0 left-0 w-1 h-full " + getNotificationStyles(notification.type).accent}
               ></div>
 
               <div className="flex items-start p-4 pl-6">
                 <div
-                  className={`flex-shrink-0 ${getNotificationStyles(notification.type).iconColor}`}
+                  className={"flex-shrink-0 " + getNotificationStyles(notification.type).iconColor}
                 >
                   {getNotificationIcon(notification.type)}
                 </div>
@@ -91,7 +90,14 @@ const Alert3 = () => {
                     <div className="mt-3 flex space-x-3">
                       <button
                         type="button"
-                        className={`inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm ${getNotificationStyles(notification.type).actionBg} ${getNotificationStyles(notification.type).actionText} focus:outline-none focus:ring-2 ${getNotificationStyles(notification.type).actionRing}`}
+                        className={
+                          "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm " + 
+                          getNotificationStyles(notification.type).actionBg + 
+                          " " + 
+                          getNotificationStyles(notification.type).actionText + 
+                          " focus:outline-none focus:ring-2 " + 
+                          getNotificationStyles(notification.type).actionRing
+                        }
                         onClick={() => handleAction(notification.id)}
                       >
                         {notification.actionText}
@@ -136,7 +142,6 @@ const Alert3 = () => {
   );
 };
 
-// Helper functions for styling
 const getNotificationStyles = (type) => {
   switch (type) {
     case "info":

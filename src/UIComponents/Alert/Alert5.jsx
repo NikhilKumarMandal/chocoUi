@@ -138,20 +138,39 @@ const Alert5 = () => {
           alert.isVisible && (
             <div
               key={alert.id}
-              className={`flex items-center justify-between p-4 mb-4 border rounded-lg ${alertStyles[alert.type].bg} ${alertStyles[alert.type].border} ${alertStyles[alert.type].text}`}
+              className={
+                "flex items-center justify-between p-4 mb-4 border rounded-lg " +
+                alertStyles[alert.type].bg +
+                " " +
+                alertStyles[alert.type].border +
+                " " +
+                alertStyles[alert.type].text
+              }
               role="alert"
             >
               <div className="flex items-center">
                 <div
-                  className={`flex-shrink-0 ${alertStyles[alert.type].icon}`}
+                  className={
+                    "flex-shrink-0 " + alertStyles[alert.type].icon
+                  }
                 >
                   {getIcon(alert.type)}
                 </div>
-                <div className="ml-3 text-sm font-medium">{alert.message}</div>
+                <div className="ml-3 text-sm font-medium">
+                  {alert.message}
+                </div>
               </div>
               <button
                 type="button"
-                className={`-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg p-1.5 focus:outline-none focus:ring-2 ${alertStyles[alert.type].bg} ${alertStyles[alert.type].text} ${alertStyles[alert.type].button} transition-colors`}
+                className={
+                  "-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg p-1.5 focus:outline-none focus:ring-2 " +
+                  alertStyles[alert.type].bg +
+                  " " +
+                  alertStyles[alert.type].text +
+                  " " +
+                  alertStyles[alert.type].button +
+                  " transition-colors"
+                }
                 onClick={() => dismissAlert(alert.id)}
                 aria-label="Close"
               >

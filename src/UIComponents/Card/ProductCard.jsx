@@ -47,21 +47,25 @@ const ProductCard = () => {
       <div className="bg-white rounded-lg shadow-sm overflow-hidden">
         <div className="relative aspect-[4/5] sm:aspect-[4/3]">
           <button
-            className={`absolute top-3 right-3 z-10 p-2 rounded-full bg-black/30 transition-transform ${
-              isLiked ? "scale-110" : "scale-100"
-            }`}
+            className={
+              "absolute top-3 right-3 z-10 p-2 rounded-full bg-black/30 transition-transform " +
+              (isLiked ? "scale-110" : "scale-100")
+            }
             onClick={toggleLike}
             aria-label={isLiked ? "Unlike product" : "Like product"}
           >
             <Heart
-              className={`w-5 h-5 ${isLiked ? "fill-red-500 text-red-500" : "text-white"}`}
+              className={
+                "w-5 h-5 " +
+                (isLiked ? "fill-red-500 text-red-500" : "text-white")
+              }
             />
           </button>
 
           <div className="relative h-full overflow-hidden">
             <div
               className="flex h-full transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              style={{ transform: "translateX(-" + currentSlide * 100 + "%)" }}
             >
               {products.map((product) => (
                 <div key={product.id} className="w-full h-full flex-shrink-0">
@@ -81,11 +85,12 @@ const ProductCard = () => {
               {products.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    currentSlide === index ? "bg-blue-500" : "bg-gray-300"
-                  }`}
+                  className={
+                    "w-2 h-2 rounded-full transition-colors " +
+                    (currentSlide === index ? "bg-blue-500" : "bg-gray-300")
+                  }
                   onClick={() => goToSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
+                  aria-label={"Go to slide " + (index + 1)}
                 />
               ))}
             </div>
@@ -98,7 +103,7 @@ const ProductCard = () => {
               {products[currentSlide].name}
             </h2>
             <span className="font-medium text-blue-500">
-              ${products[currentSlide].price}
+              {"$" + products[currentSlide].price}
             </span>
           </div>
 

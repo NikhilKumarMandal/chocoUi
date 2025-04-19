@@ -6,7 +6,6 @@ const ImageGrid = ({ items }) => {
   const gridRef = useRef(null);
 
   useEffect(() => {
-    // Simple intersection observer implementation
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -36,38 +35,41 @@ const ImageGrid = ({ items }) => {
 
   return (
     <div className="container mx-auto p-4">
-      {/* Main Grid */}
       <div
         ref={gridRef}
         className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
       >
-        {items.map((item) => (
-          <div
-            key={item.id}
-            data-id={item.id}
-            className={`grid-item relative rounded-lg overflow-hidden shadow-md transition-all duration-300 ${
-              visibleItems.includes(item.id)
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
-            }`}
-            onClick={() => handleImageClick(item)}
-          >
-            <img
-              src={item.url}
-              alt={item.title}
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-              <h3 className="text-white font-medium text-sm md:text-base">
-                {item.title}
-              </h3>
+        {items.map((item) => {
+          const isVisible = visibleItems.includes(item.id);
+          const baseClass =
+            "grid-item relative rounded-lg overflow-hidden shadow-md transition-all duration-300 ";
+          const animationClass = isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4";
+
+          return (
+            <div
+              key={item.id}
+              data-id={item.id}
+              className={baseClass + animationClass}
+              onClick={() => handleImageClick(item)}
+            >
+              <img
+                src={item.url}
+                alt={item.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <h3 className="text-white font-medium text-sm md:text-base">
+                  {item.title}
+                </h3>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
           <div className="relative max-w-4xl w-full">
@@ -98,7 +100,6 @@ const ImageGrid = ({ items }) => {
   );
 };
 
-// Example usage with sample data
 export default function CreativeGallery() {
   const sampleItems = [
     {
