@@ -4,7 +4,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function PricingSection() {
   const PricingVariants = [
     {
-      title: "Calendar",
+      title: "Subscription Options",
       component: <Pricing2 />,
       codeSnippets: [
         {

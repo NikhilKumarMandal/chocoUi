@@ -8,7 +8,7 @@ import Stepper4 from "../UIComponents/Stepper/Stepper4";
 function StepperPage() {
   const StepperVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Basic Stepper",
       component: <Stepper1 />,
       codeSnippets: [
         {
@@ -18,7 +18,7 @@ function StepperPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Vertical Stepper",
       component: <Stepper2 />,
       codeSnippets: [
         {
@@ -28,7 +28,7 @@ function StepperPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Circular Stepper",
       component: <Stepper3 />,
       codeSnippets: [
         {
@@ -38,7 +38,7 @@ function StepperPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Timeline Stepper",
       component: <Stepper4 />,
       codeSnippets: [
         {

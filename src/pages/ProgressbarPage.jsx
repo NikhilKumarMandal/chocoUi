@@ -8,7 +8,7 @@ import SteppedProgress from "../UIComponents/ProgressBar/SteppedProgress";
 function ProgressbarPage() {
   const ProgressVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Line Progress",
       component: <LinearProgress />,
       codeSnippets: [
         {
@@ -18,7 +18,7 @@ function ProgressbarPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Radial Bar",
       component: <CircularProgress />,
       codeSnippets: [
         {
@@ -28,7 +28,7 @@ function ProgressbarPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Stepped Progress",
       component: <SteppedProgress />,
       codeSnippets: [
         {
@@ -38,7 +38,7 @@ function ProgressbarPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Animated Dots",
       component: <LoadingIndicator />,
       codeSnippets: [
         {
