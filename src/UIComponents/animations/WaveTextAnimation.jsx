@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-function WaveTextAnimation() {
-  const text = "Wave Animation Effect";
+function WaveTextAnimation({text="Wave Animation Effect"}) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
