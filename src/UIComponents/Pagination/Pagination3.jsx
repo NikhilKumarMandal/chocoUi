@@ -89,4 +89,3 @@ const Pagination3 = ({ totalPages = 5 }) => {
 };
 
 export default Pagination3;
-

@@ -418,8 +418,12 @@ export default function NavbarComForUser() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 ">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Navbar Components</h1>
-      <p className="text-gray-700 mt-2 font-['Inter']">A sleek and adaptive navigation bar</p>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        Navbar Components
+      </h1>
+      <p className="text-gray-700 mt-2 font-['Inter']">
+        A sleek and adaptive navigation bar
+      </p>
       <div className="mt-6 space-y-6">
         {navbarVariants.map((variant, index) => (
           <PreviewComponent

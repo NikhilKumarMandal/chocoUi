@@ -6,7 +6,7 @@ const Modal4 = ({
   content = "This full-screen modal provides maximum focus on the content while maintaining a clean and modern design. Perfect for important actions or detailed information.",
   confirmColor = "bg-purple-600",
   confirmHover = "hover:bg-purple-700",
-  triggerText = "Open Full Screen Modal"
+  triggerText = "Open Full Screen Modal",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +19,6 @@ const Modal4 = ({
 
   return (
     <div className="flex items-center justify-center bg-gray-100 p-4">
-
       <button
         onClick={() => setIsOpen(true)}
         className="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors duration-300"
@@ -27,10 +26,8 @@ const Modal4 = ({
         {triggerText}
       </button>
 
-
       {isOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50">
-
           <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full transform transition-all duration-300">
             <div className="p-8 border-b border-gray-200">
               <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
@@ -63,4 +60,3 @@ const Modal4 = ({
 };
 
 export default Modal4;
-

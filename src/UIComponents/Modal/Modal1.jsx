@@ -4,7 +4,7 @@ const Modal1 = ({
   user = "Nikhil",
   title = "This is a modern modal dialog",
   description = "This modal is fully responsive and works great on all screen sizes.",
-  buttonColor = "bg-black"
+  buttonColor = "bg-black",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -58,6 +58,3 @@ const Modal1 = ({
 };
 
 export default Modal1;
-
-
-

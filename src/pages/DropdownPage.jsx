@@ -1,13 +1,16 @@
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import Dropdown2 from "../UIComponents/Dropdown/Dropdown2";
 import Dropdown3 from "../UIComponents/Dropdown/Dropdown3";
-import Dropdown4 from "../UIComponents/Dropdown/Dropdown4";
 
 function DropdownPage() {
   const DropdownVariants = [
     {
       title: "Multi Select Dropdown",
-      component: <Dropdown2 />,
+      component: (
+        <div className="flex  justify-center h-70">
+          <Dropdown2 />
+        </div>
+      ),
       codeSnippets: [
         {
           language: "jsx",
@@ -112,7 +115,11 @@ function DropdownPage() {
     },
     {
       title: "Single Select Dropdown",
-      component: <Dropdown3 />,
+      component: (
+        <div className="flex justify-center h-70">
+          <Dropdown3 />
+        </div>
+      ),
       codeSnippets: [
         {
           language: "jsx",
@@ -197,7 +204,9 @@ function DropdownPage() {
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Dropdown Components</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        Dropdown Components
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
         Elegant, accessible dropdowns for seamless user selections
       </p>
@@ -207,7 +216,11 @@ function DropdownPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
-            fixPreviewHeight={true}
+            isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

@@ -13,7 +13,8 @@ const Tab1 = () => {
     <div className="max-w-md mx-auto p-4">
       <div className="flex border-b border-gray-200">
         {tabs.map((tab, index) => {
-          let buttonClass = "px-4 py-2 text-sm font-medium transition-colors duration-300 ";
+          let buttonClass =
+            "px-4 py-2 text-sm font-medium transition-colors duration-300 ";
           if (activeTab === index) {
             buttonClass += "text-blue-600 border-b-2 border-blue-600";
           } else {
@@ -42,4 +43,3 @@ const Tab1 = () => {
 };
 
 export default Tab1;
-

@@ -40,13 +40,25 @@ function TextAreaPage() {
           export default Textarea;`,
         },
       ],
+      componentProps: [
+        {
+          name: "placeholder",
+          type: "string",
+          default: "undefined",
+          description: "Alert content",
+          example: "",
+        },
+      ],
     },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">TextArea Component</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        TextArea Component
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
-        Textarea component gives you a textarea HTML element that automatically adjusts its height to match the length of the content within.
+        Textarea component gives you a textarea HTML element that automatically
+        adjusts its height to match the length of the content within.
       </p>
       <div className="mt-6 space-y-6">
         {TextareaVariants.map((variant, index) => (
@@ -54,6 +66,11 @@ function TextAreaPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
+            isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

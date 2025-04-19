@@ -175,7 +175,10 @@ const Table_08 = () => {
         </div>
 
         {/* Table with horizontal scroll on all screen sizes */}
-        <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: 'touch' }}>
+        <div
+          className="overflow-x-auto"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           <table className="min-w-full divide-y divide-gray-700">
             <thead className="bg-gray-800">
               <tr>
