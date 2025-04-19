@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -13,6 +13,10 @@ const feedbackSchema = z.object({
 
 const FeedbackPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const {
     handleSubmit,
@@ -49,7 +53,7 @@ const FeedbackPage = () => {
           Share Your Feedback 💬
         </h1>
         <p className="text-center text-gray-600 text-sm sm:text-base md:text-lg mb-8 px-2 mt-6 sm:px-6">
-          We’d love to hear your thoughts and improve your experience.
+          We'd love to hear your thoughts and improve your experience.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
