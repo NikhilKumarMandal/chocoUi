@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect} from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Hero from "../sections/Hero/Hero";
 import Feature from "../sections/Feature/Feature";
@@ -37,6 +37,9 @@ const BetaBanner = () => {
 };
 
 function LandingPage() {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div className="flex flex-col min-h-screen">
       <BetaBanner />
