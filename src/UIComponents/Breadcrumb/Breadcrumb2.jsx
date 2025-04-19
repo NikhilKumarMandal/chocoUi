@@ -1,15 +1,33 @@
 import React from "react";
 
 function Breadcrumb2() {
+  const breadcrumbItems = [
+    { label: "Parent", href: "/parent" },
+    { label: "Child", href: "/parent/child" },
+    { label: "Current" },
+  ];
+
+  const ArrowIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      className="w-2 h-2 mt-1 rotate-90 fill-current text-gray-400"
+    >
+      <path d="M32 30.031h-32l16-28.061z" />
+    </svg>
+  );
+
   return (
     <nav
       aria-label="breadcrumb"
       className="w-full px-4 py-3 bg-white dark:bg-gray-100 dark:text-gray-800"
     >
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+        {/* Home Icon */}
         <li className="flex items-center">
           <a
-            href="#"
+            href="/"
             title="Back to homepage"
             className="hover:underline flex items-center"
           >
@@ -30,48 +48,28 @@ function Breadcrumb2() {
             </svg>
           </a>
         </li>
+        
+        {breadcrumbItems.map((item, index) => {
+          const isLast = index === breadcrumbItems.length - 1;
 
-        <li className="flex items-center gap-x-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-            className="w-2 h-2 mt-1 rotate-90 fill-current text-gray-400"
-          >
-            <path d="M32 30.031h-32l16-28.061z" />
-          </svg>
-          <a href="#" className="capitalize hover:underline whitespace-nowrap">
-            Parent
-          </a>
-        </li>
-
-        <li className="flex items-center gap-x-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-            className="w-2 h-2 mt-1 rotate-90 fill-current text-gray-400"
-          >
-            <path d="M32 30.031h-32l16-28.061z" />
-          </svg>
-          <a href="#" className="capitalize hover:underline whitespace-nowrap">
-            Parent
-          </a>
-        </li>
-
-        <li className="flex items-center gap-x-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-            className="w-2 h-2 mt-1 rotate-90 fill-current text-gray-400"
-          >
-            <path d="M32 30.031h-32l16-28.061z" />
-          </svg>
-          <span className="capitalize text-gray-500 cursor-default whitespace-nowrap">
-            Current
-          </span>
-        </li>
+          return (
+            <li key={index} className="flex items-center gap-x-1">
+              <ArrowIcon />
+              {isLast ? (
+                <span className="capitalize text-gray-500 cursor-default whitespace-nowrap">
+                  {item.label}
+                </span>
+              ) : (
+                <a
+                  href={item.href || "#"}
+                  className="capitalize hover:underline whitespace-nowrap"
+                >
+                  {item.label}
+                </a>
+              )}
+            </li>
+          );
+        })}
       </ol>
     </nav>
   );

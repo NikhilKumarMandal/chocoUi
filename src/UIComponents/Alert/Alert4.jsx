@@ -44,113 +44,110 @@ const Alert4 = () => {
   ]);
 
   const dismissAlert = (id) => {
-    setStatusAlerts(
-      statusAlerts.map((alert) =>
+    setStatusAlerts((prev) =>
+      prev.map((alert) =>
         alert.id === id ? { ...alert, isVisible: false } : alert
       )
     );
   };
 
   const getAlertStyles = (type) => {
-    switch (type) {
-      case "success":
-        return {
-          container: "bg-white dark:bg-gray-800 border-l-4 border-green-500",
-          title: "text-green-800 dark:text-green-400",
-          message: "text-gray-600 dark:text-gray-300",
-          progressBg: "bg-green-100 dark:bg-green-800/30",
-          progressFill: "bg-green-500",
-          icon: (
-            <svg
-              className="w-6 h-6 text-green-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
-          ),
-        };
-      case "processing":
-        return {
-          container: "bg-white dark:bg-gray-800 border-l-4 border-blue-500",
-          title: "text-blue-800 dark:text-blue-400",
-          message: "text-gray-600 dark:text-gray-300",
-          progressBg: "bg-blue-100 dark:bg-blue-800/30",
-          progressFill: "bg-blue-500",
-          icon: (
-            <svg
-              className="w-6 h-6 text-blue-500 animate-spin"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-              ></path>
-            </svg>
-          ),
-        };
-      case "error":
-        return {
-          container: "bg-white dark:bg-gray-800 border-l-4 border-red-500",
-          title: "text-red-800 dark:text-red-400",
-          message: "text-gray-600 dark:text-gray-300",
-          progressBg: "bg-red-100 dark:bg-red-800/30",
-          progressFill: "bg-red-500",
-          icon: (
-            <svg
-              className="w-6 h-6 text-red-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
-          ),
-        };
-      case "neutral":
-      default:
-        return {
-          container: "bg-white dark:bg-gray-800 border-l-4 border-gray-500",
-          title: "text-gray-800 dark:text-gray-200",
-          message: "text-gray-600 dark:text-gray-300",
-          progressBg: "bg-gray-100 dark:bg-gray-700",
-          progressFill: "bg-gray-500",
-          icon: (
-            <svg
-              className="w-6 h-6 text-gray-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
-          ),
-        };
-    }
+    const styles = {
+      success: {
+        container: "bg-white dark:bg-gray-800 border-l-4 border-green-500",
+        title: "text-green-800 dark:text-green-400",
+        message: "text-gray-600 dark:text-gray-300",
+        progressBg: "bg-green-100 dark:bg-green-800/30",
+        progressFill: "bg-green-500",
+        icon: (
+          <svg
+            className="w-6 h-6 text-green-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+        ),
+      },
+      processing: {
+        container: "bg-white dark:bg-gray-800 border-l-4 border-blue-500",
+        title: "text-blue-800 dark:text-blue-400",
+        message: "text-gray-600 dark:text-gray-300",
+        progressBg: "bg-blue-100 dark:bg-blue-800/30",
+        progressFill: "bg-blue-500",
+        icon: (
+          <svg
+            className="w-6 h-6 text-blue-500 animate-spin"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+            ></path>
+          </svg>
+        ),
+      },
+      error: {
+        container: "bg-white dark:bg-gray-800 border-l-4 border-red-500",
+        title: "text-red-800 dark:text-red-400",
+        message: "text-gray-600 dark:text-gray-300",
+        progressBg: "bg-red-100 dark:bg-red-800/30",
+        progressFill: "bg-red-500",
+        icon: (
+          <svg
+            className="w-6 h-6 text-red-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+        ),
+      },
+      neutral: {
+        container: "bg-white dark:bg-gray-800 border-l-4 border-gray-500",
+        title: "text-gray-800 dark:text-gray-200",
+        message: "text-gray-600 dark:text-gray-300",
+        progressBg: "bg-gray-100 dark:bg-gray-700",
+        progressFill: "bg-gray-500",
+        icon: (
+          <svg
+            className="w-6 h-6 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+        ),
+      },
+    };
+
+    return styles[type] || styles.neutral;
   };
 
   return (

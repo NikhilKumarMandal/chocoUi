@@ -1,10 +1,22 @@
 import React from "react";
 
-const Card10 = () => {
+const Card10 = ({
+  productName = "Chocolate Bliss",
+  description = "Premium Selection",
+  price = "12.99",
+  category = "Dark Chocolate",
+  size = "100g",
+  percentage = "70%",
+  origin = "Belgium",
+  imageUrl = "https://images.pexels.com/photos/1739941/pexels-photo-1739941.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+}) => {
   return (
     <div className="group max-w-sm w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
       <div className="relative h-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-600 transform group-hover:scale-110 transition-transform duration-500"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-500"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        ></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <svg
             className="w-20 h-20 text-white opacity-80"
@@ -20,8 +32,8 @@ const Card10 = () => {
       <div className="p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-xl font-bold text-gray-800">Chocolate Bliss</h3>
-            <p className="text-gray-600">Premium Selection</p>
+            <h3 className="text-xl font-bold text-gray-800">{productName}</h3>
+            <p className="text-gray-600">{description}</p>
           </div>
           <div className="bg-amber-100 text-amber-600 px-3 py-1 rounded-full text-sm font-medium">
             New
@@ -30,8 +42,8 @@ const Card10 = () => {
 
         <div className="mt-6 space-y-4">
           <div className="flex justify-between items-center">
-            <span className="text-gray-600">Dark Chocolate</span>
-            <span className="text-gray-800 font-semibold">$12.99</span>
+            <span className="text-gray-600">{category}</span>
+            <span className="text-gray-800 font-semibold">${price}</span>
           </div>
 
           <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
@@ -40,13 +52,13 @@ const Card10 = () => {
 
           <div className="grid grid-cols-3 gap-3">
             <div className="text-center p-2 rounded-lg bg-gray-50 group-hover:bg-amber-50 transition-colors duration-300">
-              <span className="text-sm text-gray-600">100g</span>
+              <span className="text-sm text-gray-600">{size}</span>
             </div>
             <div className="text-center p-2 rounded-lg bg-gray-50 group-hover:bg-amber-50 transition-colors duration-300">
-              <span className="text-sm text-gray-600">70%</span>
+              <span className="text-sm text-gray-600">{percentage}</span>
             </div>
             <div className="text-center p-2 rounded-lg bg-gray-50 group-hover:bg-amber-50 transition-colors duration-300">
-              <span className="text-sm text-gray-600">Belgium</span>
+              <span className="text-sm text-gray-600">{origin}</span>
             </div>
           </div>
 
