@@ -17,7 +17,7 @@ function LoaderPage() {
           language: "jsx",
           code: `import React from "react";
           
-          const Loader1 = () => {
+          const Loader = () => {
             return (
               <div className="flex space-x-2 justify-center m-4">
                 {[...Array(3)].map((_, i) => {
@@ -30,7 +30,7 @@ function LoaderPage() {
             );
           };
           
-          export default Loader1;`,
+          export default Loader;`,
         },
       ],
     },

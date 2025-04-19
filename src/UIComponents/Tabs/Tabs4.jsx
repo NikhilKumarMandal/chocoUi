@@ -9,6 +9,22 @@ const Tab4 = () => {
     { label: "Archived", content: "View archived items" },
   ];
 
+  const getButtonClass = (index) => {
+    const baseClass = "px-4 py-2 text-sm font-medium transition-colors duration-300";
+    const roundClass =
+      index === 0
+        ? "rounded-l-lg"
+        : index === tabs.length - 1
+        ? "rounded-r-lg"
+        : "";
+    const activeClass =
+      activeTab === index
+        ? "bg-blue-600 text-white"
+        : "bg-white text-gray-700 hover:bg-gray-50";
+
+    return [baseClass, roundClass, activeClass].join(" ").trim();
+  };
+
   return (
     <div className="max-w-md mx-auto p-4">
       <div className="inline-flex rounded-lg shadow-sm">
@@ -16,17 +32,7 @@ const Tab4 = () => {
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${
-              index === 0
-                ? "rounded-l-lg"
-                : index === tabs.length - 1
-                  ? "rounded-r-lg"
-                  : ""
-            } ${
-              activeTab === index
-                ? "bg-blue-600 text-white"
-                : "bg-white text-gray-700 hover:bg-gray-50"
-            }`}
+            className={getButtonClass(index)}
           >
             {tab.label}
           </button>
@@ -43,3 +49,4 @@ const Tab4 = () => {
 };
 
 export default Tab4;
+

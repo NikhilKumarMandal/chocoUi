@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-function WaveTextAnimation() {
-  const text = "Wave Animation Effect";
+function WaveTextAnimation({ text = "Wave Animation Effect" }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ function WaveTextAnimation() {
       const waveHeight = [4, 3, 2, 1, 0];
       const translateY = waveHeight[distance];
       return {
-        transform: `translateY(-${translateY * 4}px)`,
+        transform: "translateY(-" + translateY * 4 + "px)",
         color: distance === 0 ? "#3B82F6" : "#000",
         transition: "transform 0.2s ease, color 0.2s ease",
       };

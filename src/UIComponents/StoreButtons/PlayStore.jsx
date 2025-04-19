@@ -1,5 +1,3 @@
-import React from "react";
-
 const PlayStore = () => {
   return (
     <button className="rounded-[10px]">

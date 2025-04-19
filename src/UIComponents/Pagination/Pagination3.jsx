@@ -47,11 +47,12 @@ const Pagination3 = ({ totalPages = 5 }) => {
             <button
               key={page}
               onClick={() => setCurrentPage(page)}
-              className={`inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm min-w-[38px] min-h-[38px] rounded-md ${
-                isActive
+              className={
+                "inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm min-w-[38px] min-h-[38px] rounded-md " +
+                (isActive
                   ? "shadow-sm hover:shadow-md bg-stone-800 border-stone-800 text-stone-50 hover:bg-stone-700 hover:border-stone-700"
-                  : "bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none"
-              }`}
+                  : "bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none")
+              }
             >
               {page}
             </button>
@@ -88,3 +89,4 @@ const Pagination3 = ({ totalPages = 5 }) => {
 };
 
 export default Pagination3;
+

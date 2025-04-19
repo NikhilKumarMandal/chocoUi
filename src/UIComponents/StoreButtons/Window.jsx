@@ -1,5 +1,3 @@
-import React from "react";
-
 const Window = () => {
   return (
     <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-gray-900 py-5 pl-8 pr-10 hover:bg-gray-800 px-">

@@ -13,22 +13,28 @@ function Carousel1() {
   const prev = () => setCurrent((current - 1 + images.length) % images.length);
   const next = () => setCurrent((current + 1) % images.length);
 
+  const containerClass = "relative w-full max-w-3xl mx-auto overflow-hidden rounded-2xl shadow-lg";
+  const imageClass = "w-full object-cover transition duration-500";
+  const buttonBase = "absolute top-1/2 -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-80 text-black p-2 rounded-full transition-all duration-300 shadow-md";
+  const buttonLeft = "left-4";
+  const buttonRight = "right-4";
+
   return (
-    <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-2xl shadow-lg">
+    <div className={containerClass}>
       <img
         src={images[current]}
-        className="w-full object-cover transition duration-500"
-        alt={`Slide ${current + 1}`}
+        className={imageClass}
+        alt={"Slide " + (current + 1)}
       />
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-80 text-black p-2 rounded-full transition-all duration-300 shadow-md"
+        className={[buttonBase, buttonLeft].join(" ")}
       >
         <ArrowLeft size={24} />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-80 text-black p-2 rounded-full transition-all duration-300 shadow-md"
+        className={[buttonBase, buttonRight].join(" ")}
       >
         <ArrowRight size={24} />
       </button>

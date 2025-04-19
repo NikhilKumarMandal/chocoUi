@@ -4,7 +4,7 @@ const CircularProgress = ({ progress = 75 }) => {
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div className="relative w-24 h-24 ml-80">
+    <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 mx-auto">
       <svg className="w-full h-full" viewBox="0 0 100 100">
         <circle
           className="text-gray-200"
@@ -37,3 +37,4 @@ const CircularProgress = ({ progress = 75 }) => {
 };
 
 export default CircularProgress;
+

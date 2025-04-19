@@ -72,20 +72,26 @@ const Tab3 = () => {
   return (
     <div className="flex max-w-4xl mx-auto p-4">
       <div className="w-48 space-y-1">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`flex items-center w-full px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ${
-              activeTab === index
-                ? "bg-blue-600 text-white"
-                : "text-gray-600 hover:bg-gray-100"
-            }`}
-          >
-            <span className="mr-2">{tab.icon}</span>
-            {tab.label}
-          </button>
-        ))}
+        {tabs.map((tab, index) => {
+          let btnClass =
+            "flex items-center w-full px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ";
+          if (activeTab === index) {
+            btnClass += "bg-blue-600 text-white";
+          } else {
+            btnClass += "text-gray-600 hover:bg-gray-100";
+          }
+
+          return (
+            <button
+              key={index}
+              onClick={() => setActiveTab(index)}
+              className={btnClass}
+            >
+              <span className="mr-2">{tab.icon}</span>
+              {tab.label}
+            </button>
+          );
+        })}
       </div>
 
       <div className="flex-1 ml-4">
@@ -98,3 +104,4 @@ const Tab3 = () => {
 };
 
 export default Tab3;
+
