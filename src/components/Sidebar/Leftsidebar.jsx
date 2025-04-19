@@ -18,9 +18,9 @@ const linksData = [
   { name: "Bento", path: "/dashboard/bento" },
   { name: "Breadcrumb", path: "/dashboard/breadcrumb" },
   { name: "Badge", path: "/dashboard/badge" },
-  { name: "Button", path: "/dashboard/button" },
+  { name: "Button", path: "/dashboard/button", hot: true },
 
-  { name: "Card", path: "/dashboard/card" },
+  { name: "Card", path: "/dashboard/card", hot: true },
   { name: "Calendar", path: "/dashboard/calendar" },
   { name: "Checkbox", path: "/dashboard/checkbox" },
   { name: "Carousel", path: "/dashboard/carousel" },
@@ -139,7 +139,7 @@ const LeftSidebar = () => {
           >
             <ul className="space-y-1.5 font-['Inter']">
               {filteredLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="transition-all duration-300 ease-in-out">
                   <Link
                     to={link.path}
                     onClick={handleLinkClick}
@@ -150,7 +150,14 @@ const LeftSidebar = () => {
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <span className="truncate">{link.name}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="truncate">{link.name}</span>
+                        {link.hot && (
+                          <span className="px-2 py-0.5 text-[10px] font-bold bg-[#ffdbb5] text-[#603F26] rounded-full shadow-sm border border-[#603F26]/20">
+                            🔥 Hot
+                          </span>
+                        )}
+                      </div>
                       <ChevronRight
                         className={`w-4 h-4 transition-transform duration-200 ${
                           location.pathname === link.path
@@ -163,7 +170,7 @@ const LeftSidebar = () => {
                 </li>
               ))}
               {filteredLinks.length === 0 && (
-                <li className="px-3 py-2 text-sm text-gray-500/80 italic">
+                <li className="px-3 py-2 text-sm text-gray-500/80 italic transition-opacity duration-300 ease-in-out">
                   No components found
                 </li>
               )}
