@@ -149,6 +149,7 @@ function ButtonPage() {
         },
       ],
     },
+
     {
       title: "The Bloom Button",
       component: (
@@ -217,6 +218,7 @@ function ButtonPage() {
         },
       ],
     },
+
     {
       title: "Slide Reveal Button",
       component: <RevealButton label="Explore" className="ml-80" />,
@@ -317,6 +319,7 @@ export default RevealButton;
         },
       ],
     },
+
     {
       title: "The Beacon Button",
       component: <BeaconButton label="Schedule Call" className="ml-80" />,
@@ -405,6 +408,7 @@ export default BeaconButton;
         },
       ],
     },
+    
     {
       title: "Underline Button",
       component: <Buttons />,

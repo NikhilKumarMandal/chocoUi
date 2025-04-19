@@ -57,6 +57,9 @@ function Carousel() {
 export default Carousel;`,
         },
       ],
+      requiresInstallation: true,
+      dependencies: ["lucide-react"],
+      usageInstructions: "Import the Photo Carousel component.",
     },
     {
       title: "Auto SlideShow",
@@ -111,11 +114,16 @@ export default Carousel;`,
           export default Carousel;`,
         },
       ],
-    }
+      requiresInstallation: true,
+      dependencies: ["lucide-react"],
+      usageInstructions: "Import the Auto SlideShow component.",
+    },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Component Previews</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        Component Previews
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
         Explore different UI components you can use in your project.
       </p>
@@ -125,6 +133,11 @@ export default Carousel;`,
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
+            isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

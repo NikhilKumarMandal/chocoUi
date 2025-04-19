@@ -122,5 +122,3 @@ const Password_01 = () => {
 };
 
 export default Password_01;
-
-

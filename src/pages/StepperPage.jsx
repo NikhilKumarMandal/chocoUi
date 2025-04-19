@@ -3,7 +3,6 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 import Stepper1 from "../UIComponents/Stepper/Stepper1";
 import Stepper2 from "../UIComponents/Stepper/Stepper2";
 import Stepper3 from "../UIComponents/Stepper/Stepper3";
-import Stepper4 from "../UIComponents/Stepper/Stepper4";
 
 function StepperPage() {
   const StepperVariants = [
@@ -108,6 +107,15 @@ function StepperPage() {
           };
           
           export default Stepper;`,
+        },
+      ],
+      componentProps: [
+        {
+          name: "title",
+          type: "string",
+          default: "undefined",
+          description: "Alert content",
+          example: "",
         },
       ],
     },
@@ -253,6 +261,15 @@ function StepperPage() {
           export default Stepper;`,
         },
       ],
+      componentProps: [
+        {
+          name: "title",
+          type: "string",
+          default: "undefined",
+          description: "Alert content",
+          example: "",
+        },
+      ],
     },
     {
       title: "Circular Stepper",
@@ -358,13 +375,25 @@ function StepperPage() {
           export default Stepper;`,
         },
       ],
+      componentProps: [
+        {
+          name: "title",
+          type: "string",
+          default: "undefined",
+          description: "Alert content",
+          example: "",
+        },
+      ],
     },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Stepper Components</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        Stepper Components
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
-        Steppers convey progress through numbered steps. It provides a wizard-like workflow.
+        Steppers convey progress through numbered steps. It provides a
+        wizard-like workflow.
       </p>
       <div className="mt-6 space-y-6">
         {StepperVariants.map((variant, index) => (
@@ -373,6 +402,10 @@ function StepperPage() {
             title={variant.title}
             codeSnippets={variant.codeSnippets}
             isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

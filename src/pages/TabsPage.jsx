@@ -58,6 +58,15 @@ function TabsPage() {
           export default Tab1;`,
         },
       ],
+      componentProps: [
+        {
+          name: "label",
+          type: "string",
+          default: "undefined",
+          description: "Alert content",
+          example: "",
+        },
+      ],
     },
     {
       title: "Sidebar Tabs",
@@ -174,6 +183,15 @@ function TabsPage() {
           `,
         },
       ],
+      componentProps: [
+        {
+          name: "label",
+          type: "string",
+          default: "undefined",
+          description: "Alert content",
+          example: "",
+        },
+      ],
     },
     {
       title: "Segmented Tabs",
@@ -235,11 +253,22 @@ export default Tab4;
 `,
         },
       ],
+      componentProps: [
+        {
+          name: "label",
+          type: "string",
+          default: "undefined",
+          description: "Alert content",
+          example: "",
+        },
+      ],
     },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Tabs Components</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        Tabs Components
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
         Tabs make it easy to explore and switch between different views.
       </p>
@@ -250,6 +279,10 @@ export default Tab4;
             title={variant.title}
             codeSnippets={variant.codeSnippets}
             isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

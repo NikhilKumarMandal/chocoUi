@@ -66,4 +66,3 @@ const Pagination2 = ({ totalPages = 10 }) => {
 };
 
 export default Pagination2;
-

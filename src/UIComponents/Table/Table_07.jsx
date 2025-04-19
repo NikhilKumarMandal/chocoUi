@@ -392,10 +392,7 @@ const Table_07 = () => {
                   </tr>
                   {expandedRow === product.id && (
                     <tr>
-                      <td
-                        colSpan="6"
-                        className="px-4 sm:px-6 py-4 bg-gray-50"
-                      >
+                      <td colSpan="6" className="px-4 sm:px-6 py-4 bg-gray-50">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                           <div>
                             <h4 className="text-sm font-medium text-gray-900">

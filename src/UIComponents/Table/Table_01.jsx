@@ -1,5 +1,3 @@
-
-
 const Table1 = ({
   title = "Heading Title",
   columns = ["ID", "Name", "Age", "Role"],
@@ -46,5 +44,3 @@ const Table1 = ({
 };
 
 export default Table1;
-
-

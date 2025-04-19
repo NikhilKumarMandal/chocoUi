@@ -106,8 +106,7 @@ const Password_03 = () => {
                 )}
                 <span
                   className={
-                    "text-sm " +
-                    (req.met ? "text-green-700" : "text-gray-600")
+                    "text-sm " + (req.met ? "text-green-700" : "text-gray-600")
                   }
                 >
                   {req.text}
@@ -122,6 +121,3 @@ const Password_03 = () => {
 };
 
 export default Password_03;
-
-
-

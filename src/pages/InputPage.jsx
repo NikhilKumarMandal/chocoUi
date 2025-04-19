@@ -46,6 +46,9 @@ function InputPage() {
           `,
         },
       ],
+      requiresInstallation: true,
+      dependencies: ["lucide-react"],
+      usageInstructions: "Import the Clearable Input component.",
     },
     {
       title: "The Search Box",
@@ -90,6 +93,9 @@ export default Input;
 `,
         },
       ],
+      requiresInstallation: true,
+      dependencies: ["lucide-react"],
+      usageInstructions: "Import the Search Box component.",
     },
 
     {
@@ -136,11 +142,16 @@ export default Input;
 `,
         },
       ],
+      requiresInstallation: true,
+      dependencies: ["lucide-react"],
+      usageInstructions: "Import the Mail Box component.",
     },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">Input Components</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        Input Components
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
         Versatile input fields for seamless data collection and user interaction
       </p>
@@ -151,6 +162,10 @@ export default Input;
             title={variant.title}
             codeSnippets={variant.codeSnippets}
             isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

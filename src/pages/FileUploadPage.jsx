@@ -103,6 +103,9 @@ function FileUploadPage() {
           export default FileUpload;`,
         },
       ],
+      requiresInstallation: true,
+      dependencies: ["lucide-react"],
+      usageInstructions: "Import the Drag Drop Upload component.",
     },
     {
       title: "Image Drop Zone",
@@ -232,13 +235,19 @@ const ResponsiveFileUploader = () => {
 export default ResponsiveFileUploader;`,
         },
       ],
+      requiresInstallation: true,
+      dependencies: ["lucide-react"],
+      usageInstructions: "Import the Image Drop zone component.",
     },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">FileUpload Previews</h1>
+      <h1 className="text-3xl font-bold font-['Bricolage'] tracking-tight text-gray-900">
+        FileUpload Previews
+      </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
-        FileUpload is an advanced uploader with dragdrop support, multi file uploads, auto uploading, progress tracking and validations.
+        FileUpload is an advanced uploader with dragdrop support, multi file
+        uploads, auto uploading, progress tracking and validations.
       </p>
       <div className="mt-6 space-y-6">
         {FileVariants.map((variant, index) => (
@@ -247,6 +256,10 @@ export default ResponsiveFileUploader;`,
             title={variant.title}
             codeSnippets={variant.codeSnippets}
             isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-const Stepper3 = ({ steps = ["Setup", "Configuration", "Customization", "Review"] }) => {
+const Stepper3 = ({
+  steps = ["Setup", "Configuration", "Customization", "Review"],
+}) => {
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
@@ -35,7 +37,7 @@ const Stepper3 = ({ steps = ["Setup", "Configuration", "Customization", "Review"
               fill="none"
               stroke="#3B82F6"
               strokeWidth="8"
-              strokeDasharray={(calculateProgress() * 2.83) + " 283"}
+              strokeDasharray={calculateProgress() * 2.83 + " 283"}
               strokeLinecap="round"
               transform="rotate(-90 50 50)"
             />
@@ -58,7 +60,9 @@ const Stepper3 = ({ steps = ["Setup", "Configuration", "Customization", "Review"
               {"Step " + (activeStep + 1) + " of " + steps.length}
             </h2>
             <p className="text-sm sm:text-base text-gray-600 mb-6">
-              {"This is the content for " + steps[activeStep].toLowerCase() + ". Fill in your information here."}
+              {"This is the content for " +
+                steps[activeStep].toLowerCase() +
+                ". Fill in your information here."}
             </p>
             <div className="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0">
               <button
@@ -94,4 +98,3 @@ const Stepper3 = ({ steps = ["Setup", "Configuration", "Customization", "Review"
 };
 
 export default Stepper3;
-

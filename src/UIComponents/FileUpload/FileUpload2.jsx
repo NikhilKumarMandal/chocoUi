@@ -20,7 +20,8 @@ const FileSvgDraw = () => {
         />
       </svg>
       <p className="mb-1 text-sm text-primary">
-        <span className="font-semibold">Click to upload</span>&nbsp; or drag and drop
+        <span className="font-semibold">Click to upload</span>&nbsp; or drag and
+        drop
       </p>
       <p className="text-xs text-primary">SVG, PNG, JPG or GIF</p>
     </>
@@ -118,4 +119,3 @@ const ResponsiveFileUploader = () => {
 };
 
 export default ResponsiveFileUploader;
-

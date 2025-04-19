@@ -10,13 +10,14 @@ const Tab4 = () => {
   ];
 
   const getButtonClass = (index) => {
-    const baseClass = "px-4 py-2 text-sm font-medium transition-colors duration-300";
+    const baseClass =
+      "px-4 py-2 text-sm font-medium transition-colors duration-300";
     const roundClass =
       index === 0
         ? "rounded-l-lg"
         : index === tabs.length - 1
-        ? "rounded-r-lg"
-        : "";
+          ? "rounded-r-lg"
+          : "";
     const activeClass =
       activeTab === index
         ? "bg-blue-600 text-white"
@@ -49,4 +50,3 @@ const Tab4 = () => {
 };
 
 export default Tab4;
-

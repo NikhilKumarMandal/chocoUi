@@ -5,8 +5,8 @@ const Dropdown2 = ({
     { id: 1, label: "Option 1" },
     { id: 2, label: "Option 2" },
     { id: 3, label: "Option 3" },
-    { id: 4, label: "Option 4" }
-  ]
+    { id: 4, label: "Option 4" },
+  ],
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
@@ -94,6 +94,3 @@ const Dropdown2 = ({
 };
 
 export default Dropdown2;
-
-
-

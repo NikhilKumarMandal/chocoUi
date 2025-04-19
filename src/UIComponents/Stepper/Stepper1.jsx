@@ -2,11 +2,14 @@ import React, { useState } from "react";
 
 const Stepper1 = ({
   steps = [
-    { title: "Personal Info", content: "Fill in your personal information here." },
-  { title: "Account Details", content: "Set up your account details here." },
-  { title: "Preferences", content: "Select your preferences here." },
-    { title: "Confirmation", content: "Confirm your information and finish." }
-  ]
+    {
+      title: "Personal Info",
+      content: "Fill in your personal information here.",
+    },
+    { title: "Account Details", content: "Set up your account details here." },
+    { title: "Preferences", content: "Select your preferences here." },
+    { title: "Confirmation", content: "Confirm your information and finish." },
+  ],
 }) => {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -93,4 +96,3 @@ const Stepper1 = ({
 };
 
 export default Stepper1;
-

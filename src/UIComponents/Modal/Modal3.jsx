@@ -5,11 +5,16 @@ const Modal3 = ({
   description = "Perfect for mobile interfaces",
   content = "This bottom sheet modal is optimized for mobile devices with a natural swipe-to-dismiss interaction pattern.",
   confirmColor = "bg-green-600",
-  confirmHover = "hover:bg-green-700"
+  confirmHover = "hover:bg-green-700",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const confirmBtnClass ="px-4 py-2 " + confirmColor + " text-white rounded-lg " + confirmHover + " transition-colors duration-300";
+  const confirmBtnClass =
+    "px-4 py-2 " +
+    confirmColor +
+    " text-white rounded-lg " +
+    confirmHover +
+    " transition-colors duration-300";
 
   return (
     <div className="flex items-center justify-center bg-gray-100 p-4">
@@ -43,7 +48,10 @@ const Modal3 = ({
               >
                 Cancel
               </button>
-              <button onClick={() => setIsOpen(false)} className={confirmBtnClass}>
+              <button
+                onClick={() => setIsOpen(false)}
+                className={confirmBtnClass}
+              >
                 Confirm
               </button>
             </div>
@@ -55,4 +63,3 @@ const Modal3 = ({
 };
 
 export default Modal3;
-

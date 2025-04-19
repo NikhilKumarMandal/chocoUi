@@ -278,7 +278,8 @@ export default Review;`,
         Review Components
       </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
-        Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
+        Ratings provide insight regarding others' opinions and experiences, and
+        can allow the user to submit a rating of their own.
       </p>
       <div className="mt-6 space-y-6">
         {ReviewVariants.map((variant, index) => (

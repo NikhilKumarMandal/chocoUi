@@ -79,7 +79,9 @@ const Table_06 = () => {
 
   const handleDeleteOrder = (e, orderId) => {
     e.stopPropagation();
-    if (window.confirm(`Are you sure you want to delete order ID: ${orderId}?`)) {
+    if (
+      window.confirm(`Are you sure you want to delete order ID: ${orderId}?`)
+    ) {
       setOrders(orders.filter((order) => order.id !== orderId));
     }
   };
