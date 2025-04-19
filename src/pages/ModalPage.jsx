@@ -9,7 +9,7 @@ import Modal5 from "../UIComponents/Modal/Modal5";
 function ModalPage() {
   const ModalVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Responsive Modal",
       component: <Modal1 />,
       codeSnippets: [
         {
@@ -19,7 +19,7 @@ function ModalPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Glass Modal",
       component: <Modal2 />,
       codeSnippets: [
         {
@@ -29,7 +29,7 @@ function ModalPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Reveal Modal",
       component: <Modal3 />,
       codeSnippets: [
         {
@@ -39,7 +39,7 @@ function ModalPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Immersive Dialog",
       component: <Modal4 />,
       codeSnippets: [
         {
@@ -49,7 +49,7 @@ function ModalPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Reveal Side",
       component: <Modal5 />,
       codeSnippets: [
         {

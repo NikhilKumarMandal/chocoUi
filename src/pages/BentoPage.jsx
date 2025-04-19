@@ -125,7 +125,7 @@ function BentoPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Photo Showcase",
       component: <ImageGrid />,
       codeSnippets: [
         {

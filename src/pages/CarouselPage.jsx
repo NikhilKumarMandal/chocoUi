@@ -6,7 +6,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function CarouselPage() {
   const carouselVariants = [
     {
-      title: "Calendar",
+      title: "Photo Carousel",
       component: <Carousel1 />,
       codeSnippets: [
         {
@@ -16,7 +16,7 @@ function CarouselPage() {
       ],
     },
     {
-      title: "Calendar",
+      title: "Auto SlideShow",
       component: <Carousel2 />,
       codeSnippets: [
         {
@@ -26,7 +26,7 @@ function CarouselPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Smooth Slider",
       component: <ProfessionalCarousel />,
       codeSnippets: [
         {

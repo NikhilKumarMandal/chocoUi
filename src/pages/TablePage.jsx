@@ -9,7 +9,7 @@ import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 function TablePage() {
   const TableVariants = [
     {
-      title: "Table 1",
+      title: "Basic Table",
       component: <Table1 />,
       codeSnippets: [
         { language: "html", code: `` },
@@ -18,7 +18,7 @@ function TablePage() {
     },
 
     {
-      title: "Table 6",
+      title: "Interactive Orders",
       component: <Table6 />,
       codeSnippets: [
         { language: "html", code: `` },
@@ -26,7 +26,7 @@ function TablePage() {
       ],
     },
     {
-      title: "Table 7",
+      title: "Sortable Inventory",
       component: <Table7 />,
       codeSnippets: [
         { language: "html", code: `` },
@@ -34,7 +34,7 @@ function TablePage() {
       ],
     },
     {
-      title: "Table 8",
+      title: "Interactive Users",
       component: <Table8 />,
       codeSnippets: [
         { language: "html", code: `` },
@@ -42,7 +42,7 @@ function TablePage() {
       ],
     },
     {
-      title: "Table 9",
+      title: "Project Tasks",
       component: <Table9 />,
       codeSnippets: [
         { language: "html", code: `` },
@@ -50,7 +50,7 @@ function TablePage() {
       ],
     },
     {
-      title: "Table 11",
+      title: "Subscription Features",
       component: <Table11 />,
       codeSnippets: [
         { language: "html", code: `` },

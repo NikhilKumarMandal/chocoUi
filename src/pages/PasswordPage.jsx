@@ -6,7 +6,7 @@ import Password_03 from "../UIComponents/Password/Password_03";
 function PasswordPage() {
   const PasswordVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Password Checker",
       component: <Password_01 />,
       codeSnippets: [
         {
@@ -16,7 +16,7 @@ function PasswordPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Circular Strength",
       component: <Password_03 />,
       codeSnippets: [
         {

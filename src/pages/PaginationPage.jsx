@@ -7,7 +7,7 @@ import Pagination3 from "../UIComponents/Pagination/Pagination3";
 function PaginationPage() {
   const PaginationVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Page Navigation",
       component: <Pagination1 />,
       codeSnippets: [
         {
@@ -17,7 +17,7 @@ function PaginationPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Arrow Paging",
       component: <Pagination2 />,
       codeSnippets: [
         {
@@ -27,7 +27,7 @@ function PaginationPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Styled Pagination",
       component: <Pagination3 />,
       codeSnippets: [
         {

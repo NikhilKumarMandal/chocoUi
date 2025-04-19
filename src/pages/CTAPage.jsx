@@ -3,7 +3,7 @@ import CTA3 from "../UIComponents/CTA/CTA3";
 function CTAPage() {
   const CTAVariants = [
     {
-      title: "Calendar",
+      title: "Go To CTA",
       component: <CTA3 />,
       codeSnippets: [
         {
