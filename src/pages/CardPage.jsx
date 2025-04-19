@@ -547,7 +547,7 @@ function CardPage() {
       ],
     },
     {
-      title: "Image Background Card (Hitesh Sir Edition)",
+      title: "Carousel Card",
       component: <ProductCard />,
       codeSnippets: [
         {
@@ -559,7 +559,7 @@ function CardPage() {
     },
 
     {
-      title: "Image Background Card (Hitesh Sir Edition)",
+      title: "Package Details",
       component: <PricingCard />,
       codeSnippets: [
         {
@@ -571,7 +571,7 @@ function CardPage() {
     },
 
     {
-      title: "Image Background Card (Hitesh Sir Edition)",
+      title: "Expandable Pricing",
       component: <PricingCard2 />,
       codeSnippets: [
         {

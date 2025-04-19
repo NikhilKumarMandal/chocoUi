@@ -6,7 +6,7 @@ import Window from "../UIComponents/StoreButtons/Window";
 function StoreButtonsPage() {
   const StoreButtonVariants = [
     {
-      title: "Minimalist Elegance Bento",
+      title: "Microsoft Download",
       component: <Window />,
       codeSnippets: [
         {
@@ -16,7 +16,7 @@ function StoreButtonsPage() {
       ],
     },
     {
-      title: "Minimalist Elegance Bento",
+      title: "Android Store",
       component: <PlayStore />,
       codeSnippets: [
         {

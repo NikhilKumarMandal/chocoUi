@@ -59,7 +59,7 @@ const FileUpload1 = () => {
             drop
           </p>
           <p className="text-xs text-gray-500">
-            SVG, PNG, JPG or GIF (Max: 4MB)
+            SVG, PNG, JPG or GIF
           </p>
         </div>
       </div>

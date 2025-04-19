@@ -93,7 +93,7 @@ export default Input;
     },
 
     {
-      title: "The Search Box",
+      title: "The Mail Box",
       component: <Input_03 />,
       codeSnippets: [
         {
