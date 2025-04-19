@@ -11,12 +11,14 @@ function ButtonPage() {
     {
       title: "The Fill Button",
       component: (
-        <FillButton
-          label="Click Me"
-          onClick={() => {}}
-          variant="fill"
-          className=" ml-80"
-        />
+        <div className="flex justify-center items-center">
+          <FillButton
+            label="Click Me"
+            onClick={() => {}}
+            variant="fill"
+            className=""
+          />
+        </div>
       ),
       codeSnippets: [
         {
@@ -81,7 +83,9 @@ function ButtonPage() {
     {
       title: "Arrow Slide Button",
       component: (
-        <SideButton label="Click Me" onClick={() => {}} className="ml-80" />
+        <div className="flex justify-center items-center">
+          <SideButton label="Click Me" onClick={() => {}} className="" />
+        </div>
       ),
       codeSnippets: [
         {
@@ -153,7 +157,9 @@ function ButtonPage() {
     {
       title: "The Bloom Button",
       component: (
-        <BloomButton label="Hover Me" onClick={() => {}} className="ml-80" />
+        <div className="flex justify-center items-center">
+          <BloomButton label="Hover Me" onClick={() => {}} className="" />
+        </div>
       ),
       codeSnippets: [
         {
@@ -221,7 +227,11 @@ function ButtonPage() {
 
     {
       title: "Slide Reveal Button",
-      component: <RevealButton label="Explore" className="ml-80" />,
+      component: (
+        <div className="flex justify-center items-center">
+          <RevealButton label="Explore" className="" />
+        </div>
+      ),
       codeSnippets: [
         {
           language: "jsx",
@@ -322,7 +332,11 @@ export default RevealButton;
 
     {
       title: "The Beacon Button",
-      component: <BeaconButton label="Schedule Call" className="ml-80" />,
+      component: (
+        <div className="flex justify-center items-center">
+          <BeaconButton label="Schedule Call" className="" />
+        </div>
+      ),
       codeSnippets: [
         {
           language: "jsx",
@@ -408,7 +422,7 @@ export default BeaconButton;
         },
       ],
     },
-    
+
     {
       title: "Underline Button",
       component: <Buttons />,
