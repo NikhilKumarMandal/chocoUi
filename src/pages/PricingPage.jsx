@@ -8,10 +8,6 @@ function PricingSection() {
       component: <Pricing2 />,
       codeSnippets: [
         {
-          language: "html",
-          code: ``,
-        },
-        {
           language: "jsx",
           code: ``,
         },

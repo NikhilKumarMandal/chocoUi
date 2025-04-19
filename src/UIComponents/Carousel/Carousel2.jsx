@@ -17,24 +17,31 @@ function Carousel2() {
   }, [index]);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl">
+    <div style={{ position: "relative", width: "100%", maxWidth: "960px", margin: "0 auto", overflow: "hidden", borderRadius: "16px" }}>
       <img
         src={slides[index]}
         alt="Slide"
-        className="w-full transition-all duration-700 object-cover"
+        style={{ width: "100%", transition: "all 0.7s", objectFit: "cover" }}
       />
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-        {slides.map((_, i) => (
-          <div
-            key={i}
-            className={`w-3 h-3 rounded-full ${
-              i === index ? "bg-white" : "bg-gray-400"
-            }`}
-          />
-        ))}
+      <div style={{ position: "absolute", bottom: "12px", left: "50%", transform: "translateX(-50%)", display: "flex", gap: "8px" }}>
+        {slides.map((_, i) => {
+          return (
+            <div
+              key={i}
+              style={{
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: i === index ? "white" : "#B0BEC5"
+              }}
+            />
+          );
+        })}
       </div>
     </div>
   );
 }
 
 export default Carousel2;
+
+

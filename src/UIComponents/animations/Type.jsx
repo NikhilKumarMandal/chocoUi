@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 
-export default function Types() {
-  const words = ["Choco", "Prize", "Money"];
-  const typingDelay = 200;
-  const erasingDelay = 200;
-  const newLetterDelay = 800;
+export default function Types({ words = ["Choco", "Prize", "Money"] }) {
+  const typingDelay = 150;
+  const erasingDelay = 100;
+  const newLetterDelay = 1000;
 
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -19,7 +18,7 @@ export default function Types() {
           setCharIndex((prev) => prev + 1);
         }, typingDelay);
       } else {
-        setTimeout(() => setIsTyping(false), newLetterDelay);
+        timer = setTimeout(() => setIsTyping(false), newLetterDelay);
       }
     } else {
       if (charIndex > 0) {
@@ -27,24 +26,24 @@ export default function Types() {
           setCharIndex((prev) => prev - 1);
         }, erasingDelay);
       } else {
-        setIndex((prev) => (prev + 1) % words.length);
         setIsTyping(true);
+        setIndex((prev) => (prev + 1) % words.length);
       }
     }
 
     return () => clearTimeout(timer);
   }, [charIndex, isTyping, index, words]);
+
   return (
-    <div className="">
-      <p className="text-4xl font-bold m-4">
+    <div className="text-4xl font-bold text-black flex items-center">
+      <span>
         Everyone deserves a{" "}
-        <span className="text-yellow-400">
-          {words[index].substring(0, charIndex)}
-        </span>
-        <span className="cursor border-l-2 border-yellow-400 animate-blink ml-1">
-          &nbsp;
-        </span>
-      </p>
+        {words[index].substring(0, charIndex)}
+      </span>
+      <span className="border-l-2 border-yellow-400 animate-blink ml-1">
+        &nbsp;
+      </span>
     </div>
   );
 }
+

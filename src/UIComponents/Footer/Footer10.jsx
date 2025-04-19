@@ -94,7 +94,7 @@ function Footer10() {
 
             <div className="mt-6 pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-xs text-gray-500">
-                © {new Date().getFullYear()} Mono Studio. All rights reserved.
+                © {2025} ChocoUi. All rights reserved.
               </p>
 
               <div className="flex items-center gap-4">
