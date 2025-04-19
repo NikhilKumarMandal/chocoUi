@@ -122,7 +122,7 @@ export default function Footer4() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Company X. All rights reserved.
+              © {2025} Company Choco. All rights reserved.
             </p>
             <div className="flex gap-4">
               {["Privacy Policy", "Terms of Service", "Cookie Settings"].map(

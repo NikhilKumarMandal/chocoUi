@@ -1,5 +1,3 @@
-import React from "react";
-
 const Review4 = () => {
   return (
     <div className="max-w-md mx-auto my-6">

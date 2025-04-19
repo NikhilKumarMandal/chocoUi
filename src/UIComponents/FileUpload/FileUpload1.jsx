@@ -35,12 +35,14 @@ const FileUpload1 = () => {
     setFiles(files.filter((_, index) => index !== indexToRemove));
   };
 
+  const wrapperClass =
+    "relative border-2 border-dashed rounded-lg p-4 transition-colors " +
+    (isDragging ? "border-blue-500 bg-blue-50" : "border-gray-300");
+
   return (
     <div className="w-full max-w-lg mx-auto">
       <div
-        className={`relative border-2 border-dashed rounded-lg p-4 transition-colors ${
-          isDragging ? "border-blue-500 bg-blue-50" : "border-gray-300"
-        }`}
+        className={wrapperClass}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -55,12 +57,9 @@ const FileUpload1 = () => {
         <div className="flex flex-col items-center justify-center py-6 text-center">
           <Upload className="w-10 h-10 mb-3 text-gray-500" />
           <p className="mb-1 text-sm font-medium text-gray-700">
-            <span className="font-semibold">Click to upload</span> or drag and
-            drop
+            <span className="font-semibold">Click to upload</span> or drag and drop
           </p>
-          <p className="text-xs text-gray-500">
-            SVG, PNG, JPG or GIF
-          </p>
+          <p className="text-xs text-gray-500">SVG, PNG, JPG or GIF</p>
         </div>
       </div>
 
@@ -90,3 +89,4 @@ const FileUpload1 = () => {
 };
 
 export default FileUpload1;
+

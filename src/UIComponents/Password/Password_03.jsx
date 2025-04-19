@@ -6,7 +6,6 @@ const PASSWORD_REQUIREMENTS = [
   { regex: /[0-9]/, text: "At least 1 number" },
   { regex: /[a-z]/, text: "At least 1 lowercase letter" },
   { regex: /[A-Z]/, text: "At least 1 uppercase letter" },
-  { regex: /[!-\/:-@[-`{-~]/, text: "At least 1 special characters" },
 ];
 
 const Password_03 = () => {
@@ -18,13 +17,11 @@ const Password_03 = () => {
       met: req.regex.test(password),
       text: req.text,
     }));
+    const metCount = requirements.filter((req) => req.met).length;
     return {
-      score: requirements.filter((req) => req.met).length,
-      requirements,
-      percentage:
-        (requirements.filter((req) => req.met).length /
-          PASSWORD_REQUIREMENTS.length) *
-        100,
+      score: metCount,
+      requirements: requirements,
+      percentage: (metCount / PASSWORD_REQUIREMENTS.length) * 100,
     };
   }, [password]);
 
@@ -33,30 +30,32 @@ const Password_03 = () => {
     if (score === 1) return "#ef4444";
     if (score === 2) return "#f97316";
     if (score === 3) return "#eab308";
-    if (score === 4) return "#22c55e";
     return "#10b981";
   };
 
-  const radius = 40;
+  const radius = 45;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset =
     circumference - (calculateStrength.percentage / 100) * circumference;
 
   return (
-    <div className="w-96 mx-auto py-12">
+    <div className="w-full max-w-md mx-auto px-4 py-12">
       <div className="relative flex items-center justify-center mb-8">
-        <svg className="transform -rotate-90 w-24 h-24">
+        <svg
+          className="w-24 h-24 sm:w-28 sm:h-28 -rotate-90"
+          viewBox="0 0 100 100"
+        >
           <circle
-            cx="48"
-            cy="48"
+            cx="50"
+            cy="50"
             r={radius}
             stroke="#e2e8f0"
             strokeWidth="8"
             fill="none"
           />
           <circle
-            cx="48"
-            cy="48"
+            cx="50"
+            cy="50"
             r={radius}
             stroke={getColor(calculateStrength.score)}
             strokeWidth="8"
@@ -66,8 +65,8 @@ const Password_03 = () => {
             className="transition-all duration-500 ease-out"
           />
         </svg>
-        <div className="absolute text-2xl font-semibold">
-          {calculateStrength.score * 20}%
+        <div className="absolute text-lg sm:text-2xl font-semibold">
+          {calculateStrength.score * 25}%
         </div>
       </div>
 
@@ -78,7 +77,7 @@ const Password_03 = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password"
-            className="w-full px-4 py-3 rounded-lg border-2 bg-transparent outline-none transition-all duration-300"
+            className="w-full px-4 py-3 rounded-lg border-2 bg-transparent outline-none transition-all duration-300 text-sm sm:text-base"
             style={{ borderColor: getColor(calculateStrength.score) }}
           />
           <button
@@ -90,13 +89,14 @@ const Password_03 = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {calculateStrength.requirements.map((req, index) => (
             <div
               key={index}
-              className={`p-3 rounded-lg border transition-all duration-300 ${
-                req.met ? "border-green-500 bg-green-50" : "border-gray-200"
-              }`}
+              className={
+                "p-3 rounded-lg border transition-all duration-300 " +
+                (req.met ? "border-green-500 bg-green-50" : "border-gray-200")
+              }
             >
               <div className="flex items-center space-x-2">
                 {req.met ? (
@@ -105,7 +105,10 @@ const Password_03 = () => {
                   <X size={16} className="text-gray-400" />
                 )}
                 <span
-                  className={`text-sm ${req.met ? "text-green-700" : "text-gray-600"}`}
+                  className={
+                    "text-sm " +
+                    (req.met ? "text-green-700" : "text-gray-600")
+                  }
                 >
                   {req.text}
                 </span>
@@ -119,3 +122,6 @@ const Password_03 = () => {
 };
 
 export default Password_03;
+
+
+

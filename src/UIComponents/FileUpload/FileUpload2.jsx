@@ -20,8 +20,7 @@ const FileSvgDraw = () => {
         />
       </svg>
       <p className="mb-1 text-sm text-primary">
-        <span className="font-semibold">Click to upload</span>
-        &nbsp; or drag and drop
+        <span className="font-semibold">Click to upload</span>&nbsp; or drag and drop
       </p>
       <p className="text-xs text-primary">SVG, PNG, JPG or GIF</p>
     </>
@@ -66,12 +65,14 @@ const ResponsiveFileUploader = () => {
     setFiles(files.filter((_, index) => index !== indexToRemove));
   };
 
+  const dropzoneClass =
+    "relative border-2 border-dashed rounded-lg bg-background " +
+    (isDragging ? "border-primary bg-primary/5" : "border-primary/40");
+
   return (
     <div className="w-full max-w-lg mx-auto">
       <div
-        className={`relative border-2 border-dashed rounded-lg ${
-          isDragging ? "border-primary bg-primary/5" : "border-primary/40"
-        } bg-background`}
+        className={dropzoneClass}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -104,7 +105,7 @@ const ResponsiveFileUploader = () => {
               <button
                 onClick={() => removeFile(index)}
                 className="absolute top-1 right-1 bg-black bg-opacity-50 rounded-full p-1 text-white hover:bg-opacity-70"
-                aria-label={`Remove ${file.name}`}
+                aria-label={"Remove " + file.name}
               >
                 <X className="h-3 w-3" />
               </button>
@@ -117,3 +118,4 @@ const ResponsiveFileUploader = () => {
 };
 
 export default ResponsiveFileUploader;
+
