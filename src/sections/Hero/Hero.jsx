@@ -270,7 +270,7 @@ const Hero = () => {
             {/* Explore Components Button */}
             <div className="relative">
               <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full shadow-xl font-['Inter'] bg-[#FFEAC5] px-6 md:px-8 font-medium text-[#603F26] transition-transform duration-300 hover:scale-105 hover:text-[#FFEAC5]">
-                <Link to={"/dashboard/navbar"}>
+                <Link to={"/dashboard/accordion"}>
                   <span className="relative z-10 flex items-center">
                     Explore Components
                     <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium transition-colors duration-300">
