@@ -238,7 +238,8 @@ const Hero = () => {
           >
             <div className="relative">
               <Link
-                to={""}
+                to="https://template.chocoui.live/"
+                target="_blank"
                 className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#603F26] shadow-xl px-6 md:px-8 font-medium text-white transition-transform duration-300 hover:scale-105"
               >
                 <span className="relative z-10 flex items-center font-['Inter']">
