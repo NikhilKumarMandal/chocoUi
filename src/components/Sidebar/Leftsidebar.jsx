@@ -11,13 +11,13 @@ import { Search, ChevronRight, Menu, X, GripVertical } from "lucide-react";
 
 const linksData = [
   { name: "Accordion", path: "/dashboard/accordion" },
-  { name: "Alert", path: "/dashboard/alert" },
-  { name: "Avatar", path: "/dashboard/avatar" },
+  { name: "Alert", path: "/dashboard/alert", hot: true },
+  { name: "Avatar", path: "/dashboard/avatar", hot: true },
   { name: "Animation", path: "/dashboard/animation" },
 
   { name: "Bento", path: "/dashboard/bento" },
   { name: "Breadcrumb", path: "/dashboard/breadcrumb" },
-  { name: "Badge", path: "/dashboard/badge" },
+  { name: "Badge", path: "/dashboard/badge", hot: true },
   { name: "Button", path: "/dashboard/button", hot: true },
 
   { name: "Card", path: "/dashboard/card", hot: true },
@@ -35,8 +35,8 @@ const linksData = [
 
   { name: "Input", path: "/dashboard/input" },
   { name: "Loader", path: "/dashboard/loader" },
-  { name: "Modal", path: "/dashboard/modal" },
-  { name: "Navbar", path: "/dashboard/navbar" },
+  { name: "Modal", path: "/dashboard/modal", hot: true },
+  { name: "Navbar", path: "/dashboard/navbar", hot: true },
 
   { name: "Pagination", path: "/dashboard/pagination" },
   { name: "Popover", path: "/dashboard/popover" },
@@ -47,13 +47,13 @@ const linksData = [
   { name: "Review", path: "/dashboard/review" },
 
   { name: "Skeleton", path: "/dashboard/skeleton" },
-  { name: "Stepper", path: "/dashboard/stepper" },
+  { name: "Stepper", path: "/dashboard/stepper", hot: true },
   { name: "Store Buttons", path: "/dashboard/storebuttons" },
 
-  { name: "Toggle", path: "/dashboard/toggle" },
+  { name: "Toggle", path: "/dashboard/toggle", hot: true },
   { name: "Table", path: "/dashboard/table" },
   { name: "TextArea", path: "/dashboard/textArea" },
-  { name: "Tabs", path: "/dashboard/tabs" },
+  { name: "Tabs", path: "/dashboard/tabs", hot: true },
   // { name: "Tooltip", path: "/dashboard/tooltip" },
 ];
 
@@ -139,7 +139,10 @@ const LeftSidebar = () => {
           >
             <ul className="space-y-1.5 font-['Inter']">
               {filteredLinks.map((link) => (
-                <li key={link.name} className="transition-all duration-300 ease-in-out">
+                <li
+                  key={link.name}
+                  className="transition-all duration-300 ease-in-out"
+                >
                   <Link
                     to={link.path}
                     onClick={handleLinkClick}

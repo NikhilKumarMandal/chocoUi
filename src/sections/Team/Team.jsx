@@ -17,11 +17,9 @@ const Team = () => {
 
   return (
     <section className="relative py-16 overflow-hidden bg-gradient-to-br from-[#2A1B10] to-[#3C2613] md:py-20 lg:py-28 rounded-3xl">
-      {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-[#FFDBB5]/5 blur-3xl -translate-x-20 -translate-y-20"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#6C4E31]/10 blur-3xl translate-x-20 translate-y-20"></div>
 
-      {/* Sparkles background */}
       <div className="absolute inset-0 opacity-20">
         <Sparkles
           density={100}
@@ -34,7 +32,6 @@ const Team = () => {
         />
       </div>
 
-      {/* Section Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +51,6 @@ const Team = () => {
         </span>
       </motion.h2>
 
-      {/* Team Members Grid */}
       <div className="container px-4 mx-auto sm:px-6 max-w-7xl">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -72,14 +68,11 @@ const Team = () => {
               viewport={{ once: true }}
               className="group relative p-6 rounded-xl bg-[#3C2613]/50 backdrop-blur-sm border border-[#FFDBB5]/10 hover:border-[#FFDBB5]/30 transition-all duration-300"
             >
-              {/* Hover gradient effect */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#FFDBB5]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10 flex flex-col items-center">
-                {/* Profile Image */}
                 <div className="w-32 h-32 rounded-full bg-[#FFDBB5]/10 mb-6 border-2 border-[#FFDBB5]/20" />
 
-                {/* Member Info */}
                 <h3 className="text-xl font-bold text-[#FFDBB5] mb-2 font-['Bricolage']">
                   {member.name}
                 </h3>
@@ -87,7 +80,6 @@ const Team = () => {
                   {member.role}
                 </p>
 
-                {/* Social Links */}
                 <div className="flex gap-4">
                   <a
                     href="#"
@@ -114,11 +106,9 @@ const Team = () => {
         </motion.div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute top-10 right-10 w-32 h-32 border border-[#FFDBB5]/10 rounded-full opacity-30"></div>
       <div className="absolute bottom-20 left-20 w-48 h-48 border border-[#FFDBB5]/10 rounded-full opacity-20"></div>
 
-      {/* Curved decoration at the bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"

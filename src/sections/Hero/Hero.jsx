@@ -11,7 +11,6 @@ import ActionButton from "../../components/floats/NeonButton";
 import ImageHoverButton from "../../components/floats/ImageHover";
 
 const Hero = () => {
-  // Responsive positions for floating component previews
   const floatingElements = [
     {
       left: "5%",
@@ -98,7 +97,6 @@ const Hero = () => {
         className="absolute inset-x-0 bottom-0 h-full w-full "
       />
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {/* Blob elements */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}
@@ -173,7 +171,6 @@ const Hero = () => {
         </motion.div>
       ))}
 
-      {/* Main content */}
       <div className="container mt-12 md:mt-20 mx-auto px-4 md:px-6 py-6 md:py-12 flex flex-col items-center justify-center text-center relative z-10">
         <div className="min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] flex flex-col items-center justify-center w-full max-w-[90%] sm:max-w-[80%] md:max-w-[90%] lg:max-w-[1200px]">
           <motion.div
@@ -233,14 +230,12 @@ const Hero = () => {
             </p>
           </motion.div>
 
-          {/* Modified CTA Section */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-4 md:mt-2 relative"
           >
-            {/* Start Building Button */}
             <div className="relative">
               <Link
                 to={""}
@@ -278,7 +273,7 @@ const Hero = () => {
                   <span className="relative z-10 flex items-center">
                     Explore Components
                     <span className="ml-2 px-2 py-0.5 bg-[#FFEAC5] text-[#603F26] rounded-md text-lg font-medium transition-colors duration-300">
-                      50+
+                      30+
                     </span>
                   </span>
                 </Link>

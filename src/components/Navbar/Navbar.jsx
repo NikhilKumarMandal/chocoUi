@@ -17,22 +17,25 @@ function Navbar() {
     { name: "Docs", path: "/docs" },
     { name: "Components", path: "/dashboard/accordion" },
     { name: "Feedback", path: "/feedback" },
-    { name: "Template", path: "https://template.chocoui.live", external: true },
+    {
+      name: "Templates",
+      path: "https://template.chocoui.live",
+      external: true,
+      special: true,
+    },
   ];
 
   return (
     <>
-
       <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl mt-7  ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl mt-7 ${
           scrolled
-            ? "bg-white/60 backdrop-blur-lg shadow-lg border border-gray-200/80 mt-[-10px] "
+            ? "bg-white/60 backdrop-blur-lg shadow-lg border border-gray-200/80 mt-[-10px]"
             : "bg-white/60 backdrop-blur-md shadow-md border border-gray-200/60"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-16">
-
             <NavLink to="/" className="flex items-center group">
               <img
                 src="/3.png"
@@ -49,15 +52,28 @@ function Navbar() {
                     to={item.path}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={({ isActive }) =>
-                      `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
-                        isActive
-                          ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
-                          : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
-                      }`
-                    }
+                    className={`text-sm font-['Inter'] font-medium transition-all duration-200 relative flex items-center gap-1 ${
+                      item.special
+                        ? "border border-[#603F26]/80 text-[#603F26] hover:bg-[#FFDBB5]/20 px-3 py-1.5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[#FFDBB5]/30 hover:border-[#603F26] hover:scale-[1.02]"
+                        : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
+                    }`}
                   >
                     {item.name}
+                    {item.special && (
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                    )}
                   </Link>
                 ) : (
                   <NavLink
@@ -75,7 +91,10 @@ function Navbar() {
                   </NavLink>
                 )
               )}
-              <button className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300 shadow-sm hover:shadow-md">
+              <button
+                className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-80 hover:cursor-not-allowed"
+                disabled
+              >
                 Github
               </button>
             </div>
@@ -131,10 +150,29 @@ function Navbar() {
                   href={item.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-3 text-sm rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[#603F26]"
+                  className={`flex items-center justify-between px-4 py-3 text-sm rounded-lg transition-all duration-300 ${
+                    item.special
+                      ? "text-[#603F26] bg-[#FFDBB5]/20 border border-[#FFDBB5] hover:border-[#603F26]/50"
+                      : "text-gray-700 hover:bg-gray-100 hover:text-[#603F26]"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
+                  {item.special && (
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                      />
+                    </svg>
+                  )}
                 </a>
               ) : (
                 <NavLink
@@ -155,7 +193,10 @@ function Navbar() {
             )}
           </nav>
 
-          <button className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300">
+          <button
+            className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium transition-all duration-300 hover:opacity-80 hover:cursor-not-allowed"
+            disabled
+          >
             Github
           </button>
         </div>

@@ -42,7 +42,7 @@ function LandingPage() {
     }, []);
   return (
     <div className="flex flex-col min-h-screen">
-      <BetaBanner />
+      {/* <BetaBanner /> */}
       <Navbar />
       <main className="flex-grow">
         <div>

@@ -1,6 +1,5 @@
-import Accordion1 from "../UIComponents/Accordion/Accordion1";
-import AccordionComponent from "../UIComponents/Accordion/AccordionComponent"
-import FAQAccordion from "../UIComponents/Accordion/FAQAccordion"
+import AccordionComponent from "../UIComponents/Accordion/AccordionComponent";
+import FAQAccordion from "../UIComponents/Accordion/FAQAccordion";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
 
 function Accordion() {
@@ -128,8 +127,29 @@ function Accordion() {
           export default AccordionComponent;`,
         },
       ],
+      componentProps: [
+        {
+          name: "accordionData",
+          type: "Array",
+          default: "[]",
+          description:
+            "Accordion content structured in columns. Each column contains an array of items with `id`, `title`, and `content`.",
+          example: `[{
+            id: 'col-1',
+            items: [{ id: 'item-1', title: '...', content: '...' }]
+          }]`,
+        },
+        {
+          name: "activeItems",
+          type: "Array",
+          default: "['item-1', 'item-5']",
+          description: "Array of item IDs which are expanded by default.",
+          example: `['item-1', 'item-3']`,
+          note: "Not directly passed as prop, but you can extract it as a controlled prop if needed.",
+        },
+      ],
     },
-       {
+    {
       title: "Basic Accordion",
       component: <FAQAccordion />,
       codeSnippets: [
@@ -230,6 +250,25 @@ function Accordion() {
           export default Accordion;`,
         },
       ],
+      componentProps: [
+        {
+          name: "accordionData",
+          type: "Array<{ id: string, items: { id: string, title: string, content: string }[] }>",
+          default:
+            "[{ id: 'col-1', items: [...] }, { id: 'col-2', items: [...] }]",
+          description:
+            "Array of columns containing accordion items. Each item should have a unique `id`, `title`, and `content`. Accordion is rendered in a 2-column layout on medium screens and above.",
+          example: `[
+            {
+              id: 'col-1',
+              items: [
+                { id: 'item-1', title: 'What is a UI component?', content: '...' },
+                { id: 'item-2', title: 'Why are components important?', content: '...' }
+              ]
+            }
+          ]`,
+        },
+      ],
     },
   ];
   return (
@@ -247,6 +286,10 @@ function Accordion() {
             title={variant.title}
             codeSnippets={variant.codeSnippets}
             isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

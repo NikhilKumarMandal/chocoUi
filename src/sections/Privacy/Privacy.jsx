@@ -3,27 +3,25 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function Privacy() {
-  // Ensure the page scrolls to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
-    
-    // Force a repaint to ensure everything loads properly
-    document.body.style.display = 'none';
-    document.body.offsetHeight; // Trigger a reflow
-    document.body.style.display = '';
-    
-    // Alternative approach to ensure content loads
+
+    document.body.style.display = "none";
+    document.body.offsetHeight;
+    document.body.style.display = "";
+
     const timer = setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
     }, 100);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
   const privacySections = [
     {
       title: "Cookie Policy",
-      description: "We use cookies to make your experience sweeter than a chocolate chip. By continuing to use our site, you agree to our cookie policy. Don't worry, we don't eat your cookies - we just use them to remember your preferences!",
+      description:
+        "We use cookies to make your experience sweeter than a chocolate chip. By continuing to use our site, you agree to our cookie policy. Don't worry, we don't eat your cookies - we just use them to remember your preferences!",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -52,7 +50,8 @@ function Privacy() {
     },
     {
       title: "Data Collection",
-      description: "We collect data like a chocolate factory collects cocoa beans - with care and precision. Your data is stored in our secure chocolate vault, protected by our trained chocolate security guards.",
+      description:
+        "We collect data like a chocolate factory collects cocoa beans - with care and precision. Your data is stored in our secure chocolate vault, protected by our trained chocolate security guards.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -74,7 +73,8 @@ function Privacy() {
     },
     {
       title: "Third-Party Sharing",
-      description: "We share your data with third parties about as often as we share our secret chocolate recipe - which is never! Your information stays with us, like a chocolate bar in a child's pocket.",
+      description:
+        "We share your data with third parties about as often as we share our secret chocolate recipe - which is never! Your information stays with us, like a chocolate bar in a child's pocket.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -96,7 +96,8 @@ function Privacy() {
     },
     {
       title: "Your Rights",
-      description: "You have the right to access, modify, or delete your data. Just like you have the right to choose between milk chocolate, dark chocolate, or white chocolate. We're here to serve your preferences!",
+      description:
+        "You have the right to access, modify, or delete your data. Just like you have the right to choose between milk chocolate, dark chocolate, or white chocolate. We're here to serve your preferences!",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -135,28 +136,28 @@ function Privacy() {
       <div className="container mx-auto px-4 lg:px-6 max-w-6xl relative z-10">
         {/* Back to Home Button */}
         <div className="mb-8">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center px-4 py-2 bg-[#603F26] text-white rounded-lg hover:bg-[#4A3019] transition-colors duration-300 font-['Inter'] text-sm shadow-md"
           >
-            <svg 
-              className="w-4 h-4 mr-2" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
+            <svg
+              className="w-4 h-4 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
               />
             </svg>
             Back to Home
           </Link>
         </div>
-        
+
         {/* Header */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -176,8 +177,9 @@ function Privacy() {
             Privacy
           </h2>
           <p className="text-sm md:text-base text-gray-700 max-w-lg mx-auto font-['Inter'] leading-relaxed">
-            Our commitment to protecting your data is as strong as our chocolate. 
-            We value your privacy and ensure your information is handled with care.
+            Our commitment to protecting your data is as strong as our
+            chocolate. We value your privacy and ensure your information is
+            handled with care.
           </p>
         </motion.div>
 
@@ -219,10 +221,6 @@ function Privacy() {
         >
           <p className="text-sm text-gray-600 font-['Inter'] italic">
             Last updated: When the chocolate factory's clock struck midnight
-          </p>
-          <p className="text-xs text-gray-500 mt-2 font-['Inter']">
-            Disclaimer: This is a placeholder privacy policy with humorous content. 
-            Please replace with your actual privacy policy before deployment.
           </p>
         </motion.div>
       </div>

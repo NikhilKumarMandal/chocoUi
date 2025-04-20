@@ -17,7 +17,12 @@ function NavbarV2() {
     { name: "Docs", path: "/docs" },
     { name: "Components", path: "/dashboard/accordion" },
     { name: "Feedback", path: "/feedback" },
-    { name: "Template", path: "https://template.chocoui.live", external: true },
+    {
+      name: "Templates",
+      path: "https://template.chocoui.live",
+      external: true,
+      special: true,
+    },
   ];
 
   return (
@@ -44,22 +49,56 @@ function NavbarV2() {
             </NavLink>
 
             <div className="hidden md:flex items-center space-x-8">
-              {menuItems.map((item) => (
-                <NavLink
-                  key={item.name}
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
-                      isActive
-                        ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26] "
+              {menuItems.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm font-['Inter'] font-medium transition-all duration-200 relative flex items-center gap-1 ${
+                      item.special
+                        ? "border border-[#603F26]/80 text-[#603F26] hover:bg-[#FFDBB5]/20 px-3 py-1.5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[#FFDBB5]/30 hover:border-[#603F26] hover:scale-[1.02]"
                         : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
-                    }`
-                  }
-                >
-                  {item.name}
-                </NavLink>
-              ))}
-              <button className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300 shadow-sm hover:shadow-md">
+                    }`}
+                  >
+                    {item.name}
+                    {item.special && (
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                    )}
+                  </a>
+                ) : (
+                  <NavLink
+                    key={item.name}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `text-sm font-['Inter'] font-medium transition-all duration-200 relative ${
+                        isActive
+                          ? "text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#603F26]"
+                          : "text-gray-700 hover:text-[#060606] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#603F26] hover:after:w-full after:transition-all after:duration-300"
+                      }`
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                )
+              )}
+              <button
+                className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-80 hover:cursor-not-allowed"
+                disabled
+              >
                 Github
               </button>
             </div>
@@ -100,7 +139,10 @@ function NavbarV2() {
                 {item.name}
               </NavLink>
             ))}
-            <button className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium hover:bg-[#6C4E31] transition-all duration-300">
+            <button
+              className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium transition-all duration-300 hover:opacity-80 hover:cursor-not-allowed"
+              disabled
+            >
               Github
             </button>
           </div>
