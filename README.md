@@ -61,7 +61,7 @@ function App() {
 ### 3. Explore Templates
 
 Need a full website? Check out our templates section for pre-built designs.
-![ChocoUI Templates](https://template.chocoui.live/)
+[ChocoUI Templates](https://template.chocoui.live/)
 
 ## ❓ Why ChocoUI?
 
@@ -73,12 +73,12 @@ Need a full website? Check out our templates section for pre-built designs.
 ## 📚 Documentation
 
 Visit our _Docs_ for detailed usage guides, examples, and customization options.
-![ChocoUI Docs](https://www.chocoui.live/docs)
+[ChocoUI Docs](https://www.chocoui.live/docs)
 
 ## 🎨 Browse Components
 
 Here’s a glimpse of what ChocoUI offers:
-![ChocoUI Components](https://www.chocoui.live/dashboard/accordion)
+[ChocoUI Components](https://www.chocoui.live/dashboard/accordion)
 
 - _Buttons_ – Primary, secondary, outline, and more.
 - _Cards_ – Sleek content containers.
