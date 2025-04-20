@@ -77,9 +77,9 @@ const Hero = () => {
       right: "5%",
       top: "30%",
       comp: (
-        <a href="#" rel="noopener noreferrer">
+        <Link to="/dashboard/fileupload">
           <FileUpload />
-        </a>
+        </Link>
       ),
       rotate: -3,
       delay: 2,

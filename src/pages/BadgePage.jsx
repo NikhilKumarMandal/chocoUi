@@ -21,7 +21,7 @@ const badges = [
   { label: "Dark", bgColor: "#212529", textColor: "white", border: "1px solid white" },
 ];
 
-const Badge1 = () => {
+const Badge = () => {
   return (
     <div className="w-full p-8">
       <div className="p-6 rounded-lg shadow-md">
@@ -45,7 +45,7 @@ const Badge1 = () => {
   );
 };
 
-export default Badge1;
+export default Badge;
 `,
         },
       ],
@@ -68,7 +68,7 @@ export default Badge1;
           language: "jsx",
           code: `import React from "react";
           
-          const Badge2 = () => {
+          const Badge = () => {
             const badges = [
               {
                 id: 1,
@@ -126,7 +126,7 @@ export default Badge1;
             );
           };
           
-          export default Badge2;
+          export default Badge;
           `,
         },
       ],
