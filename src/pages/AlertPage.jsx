@@ -14,7 +14,7 @@ function AlertPage() {
           language: "jsx",
           code: `import React from "react";
           
-          const Alert1 = () => {
+          const Alert = () => {
             return (
               <div className=" flex flex-col ml-5  gap-4 p-8">
                 <div
@@ -94,7 +94,7 @@ function AlertPage() {
             );
           };
           
-          export default Alert1;
+          export default Alert;
           `,
         },
       ],
@@ -116,7 +116,7 @@ function AlertPage() {
           language: "jsx",
           code: `import React, { useState } from "react";
           
-          const Alert3 = () => {
+          const Alert = () => {
             const [notifications, setNotifications] = useState([
               {
                 id: 1,
@@ -392,7 +392,7 @@ function AlertPage() {
             }
           };
           
-          export default Alert3;
+          export default Alert;
           `,
         },
       ],
@@ -414,7 +414,7 @@ function AlertPage() {
           language: "jsx",
           code: `import React, { useState } from "react";
 
-const Alert5 = () => {
+const Alert = () => {
   const [alerts, setAlerts] = useState([
     {
       id: 1,
@@ -608,7 +608,7 @@ const Alert5 = () => {
   );
 };
 
-export default Alert5;
+export default Alert;
 `,
         },
       ],

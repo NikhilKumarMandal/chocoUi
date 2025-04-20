@@ -15,7 +15,7 @@ function NavbarV2() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Docs", path: "/docs" },
-    { name: "Components", path: "/dashboard" },
+    { name: "Components", path: "/dashboard/accordion" },
     { name: "Feedback", path: "/feedback" },
     { name: "Template", path: "https://template.chocoui.live", external: true },
   ];
@@ -63,7 +63,6 @@ function NavbarV2() {
                 Github
               </button>
             </div>
-            {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2 rounded-md text-gray-600 hover:text-[#603F26] hover:bg-gray-100 transition-all duration-300"
               onClick={() => setIsOpen(!isOpen)}

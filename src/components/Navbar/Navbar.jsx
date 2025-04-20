@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <>
-      {/* Floating Navbar with gap above */}
+
       <nav
         className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl mt-7  ${
           scrolled
@@ -32,7 +32,7 @@ function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-16">
-            {/* Logo - Simplified */}
+
             <NavLink to="/" className="flex items-center group">
               <img
                 src="/3.png"
@@ -41,7 +41,6 @@ function Navbar() {
               />
             </NavLink>
 
-            {/* Desktop Menu - Minimalist */}
             <div className="hidden md:flex items-center space-x-6">
               {menuItems.map((item) =>
                 item.external ? (
@@ -81,7 +80,6 @@ function Navbar() {
               </button>
             </div>
 
-            {/* Mobile Menu Button - Minimal */}
             <button
               className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-all duration-300"
               onClick={() => setIsOpen(!isOpen)}
@@ -96,7 +94,6 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-300 z-40 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -104,7 +101,6 @@ function Navbar() {
         onClick={() => setIsOpen(false)}
       ></div>
 
-      {/* Mobile Menu - Minimalist */}
       <div
         className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-white shadow-2xl transition-transform duration-300 z-50 ${
           isOpen ? "translate-x-0" : "-translate-x-full"

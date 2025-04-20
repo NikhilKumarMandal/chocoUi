@@ -23,7 +23,7 @@ function ButtonPage() {
           language: "jsx",
           code: `import React from "react";
           
-          const Button_03 = ({
+          const Button = ({
             label = "Click Me",
             onClick,
             variant = "outline",
@@ -56,7 +56,7 @@ function ButtonPage() {
             );
           };
           
-          export default Button_03;
+          export default Button;
           `,
         },
       ],

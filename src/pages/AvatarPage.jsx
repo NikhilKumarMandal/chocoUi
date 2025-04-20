@@ -97,7 +97,7 @@ function AvatarPage() {
           language: "jsx",
           code: `import React from "react";
 
-const Avatar6 = () => {
+const Avatar = () => {
   const teamMembers = [
     {
       id: 1,
@@ -185,7 +185,7 @@ const Avatar6 = () => {
   );
 };
 
-export default Avatar6;
+export default Avatar;
           `,
         },
       ],

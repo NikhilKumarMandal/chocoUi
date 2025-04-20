@@ -78,7 +78,6 @@ const router = createBrowserRouter(
         <Route path="cta" element={<CTAPage />} />
         <Route path="dropdown" element={<DropdownPage />} />
         <Route path="feedbackalert" element={<FeedbackAlertPage />} />
-        <Route path="fileUpload" element={<FileUpload />} />
         <Route path="fileupload" element={<FileUploadPage />} />
         <Route path="footer" element={<FooterPage />} />
         <Route path="form" element={<FormPage />} />
