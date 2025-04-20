@@ -65,7 +65,7 @@ function LoaderPage() {
           
           const Loader = () => {
             return (
-              <div className="m-4 h-12 w-12 border-4 border-cyan-400 animate-[spin_1s_linear_infinite] mx-auto"></div>
+              <div className="m-4 h-12 w-12 border-4 border-[#603F26]animate-[spin_1s_linear_infinite] mx-auto"></div>
             );
           };
           
@@ -86,7 +86,7 @@ function LoaderPage() {
               <div className="flex space-x-1 items-end h-10 m-4 justify-center">
                 {[...Array(5)].map((_, i) => {
                   const bounceClass =
-                    "w-2 bg-cyan-500 animate-[bounce_1s_ease-in-out_infinite]";
+                    "w-2 bg-[#603F26] animate-[bounce_1s_ease-in-out_infinite]";
                   const delayStyle = {
                     animationDelay: (i * 0.2).toString() + "s",
                     height: "100%",
@@ -111,7 +111,7 @@ function LoaderPage() {
           language: "jsx",
           code: `import React from "react";
           
-          const Loader = ({ size = "md", color = "blue" }) => {
+          const Loader = ({ size = "md", color = "gray" }) => {
             const sizeClasses = {
               sm: "w-6 h-6",
               md: "w-10 h-10",
@@ -133,7 +133,7 @@ function LoaderPage() {
               teal: "border-teal-500",
               cyan: "border-cyan-500",
               sky: "border-sky-500",
-              gray: "border-gray-500",
+              gray: "border-[#603F26]"
             };
           
             return (
@@ -178,7 +178,7 @@ function LoaderPage() {
           language: "jsx",
           code: `import React from "react";
           
-          const Loader = ({ size = "md", color = "blue" }) => {
+          const Loader = ({ size = "md", color = "gray" }) => {
             const sizeClasses = {
               sm: "w-6 h-6",
               md: "w-10 h-10",
@@ -200,7 +200,7 @@ function LoaderPage() {
               teal: "text-teal-500",
               cyan: "text-cyan-500",
               sky: "text-sky-500",
-              gray: "text-gray-500",
+              gray: "border-[#603F26]",
             };
           
             return (
@@ -261,7 +261,7 @@ function LoaderPage() {
           language: "jsx",
           code: `import React from "react";
           
-          const Loader = ({ size = "md", color = "blue" }) => {
+          const Loader = ({ size = "md", color = "gray" }) => {
             const sizeClasses = {
               sm: "w-6 h-6",
               md: "w-10 h-10",
@@ -283,7 +283,7 @@ function LoaderPage() {
               teal: "border-teal-500",
               cyan: "border-cyan-500",
               sky: "border-sky-500",
-              gray: "border-gray-500",
+              gray: "border-[#603F26]",
             };
           
             return (

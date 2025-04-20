@@ -99,7 +99,7 @@ function ReviewPage() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
               fill="#545454"
-              stroke="#545454"
+              stroke="#603F26"
             >
               <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
             </svg>
@@ -108,7 +108,7 @@ function ReviewPage() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
               fill="#545454"
-              stroke="#545454"
+              stroke="#603F26"
             >
               <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
             </svg>
@@ -117,7 +117,7 @@ function ReviewPage() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
               fill="#545454"
-              stroke="#545454"
+              stroke="#603F26"
             >
               <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
             </svg>
@@ -140,7 +140,7 @@ function ReviewPage() {
             </svg>
           </div>
 
-          <span className="text-xs px-3 py-1 rounded-full bg-gray-200 text-gray-700 font-medium">
+          <span className="text-xs px-3 py-1 rounded-full bg-gray-200 text-[#603F26] font-medium">
             3 hours ago
           </span>
         </div>
@@ -150,11 +150,11 @@ function ReviewPage() {
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-gray-100 font-medium mr-2">
               J
             </div>
-            <h3 className="text-lg font-bold text-gray-800">John Doe</h3>
+            <h3 className="text-lg font-bold text-[#603F26]">John Doe</h3>
           </div>
 
           <div className="relative">
-            <p className="pl-3 mt-1 text-gray-700 italic">
+            <p className="pl-3 mt-1 text-[#603F26] italic">
               The product exceeded all my expectations. The quality is
               outstanding and the customer service was exceptional.
             </p>
@@ -178,8 +178,8 @@ export default Review;`,
           code: `const Review = () => {
   return (
     <div className="max-w-md mx-auto my-6">
-      <div className="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
-        <div className="h-1 bg-gradient-to-r from-gray-400 via-gray-600 to-gray-800"></div>
+      <div className="bg-[#FFEAC5]  rounded-xl shadow-lg overflow-hidden">
+        <div className="h-1 bg-gradient-to-r from-gray-400 via-white-600 to-white"></div>
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
@@ -194,7 +194,7 @@ export default Review;`,
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
                 fill="#545454"
-                stroke="#545454"
+                stroke="#fffff"
               >
                 <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
               </svg>
@@ -203,7 +203,7 @@ export default Review;`,
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
                 fill="#545454"
-                stroke="#545454"
+                stroke="#fffff"
               >
                 <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
               </svg>
@@ -212,7 +212,7 @@ export default Review;`,
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
                 fill="#545454"
-                stroke="#545454"
+                stroke="#ffffff"
               >
                 <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
               </svg>

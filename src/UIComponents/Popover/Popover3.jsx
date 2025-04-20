@@ -27,7 +27,7 @@ const Popover3 = () => {
           ref={triggerRef}
           onClick={() => setIsOpen(!isOpen)}
           className={
-            "px-6 py-2.5 bg-white text-gray-700 rounded-full hover:bg-gray-50 transition-all duration-200 " +
+            "px-6 py-2.5 bg-white text-[#603F26] rounded-full hover:bg-gray-50 transition-all duration-200 " +
             "shadow-sm hover:shadow border border-gray-100 flex items-center space-x-2 group"
           }
         >
@@ -55,19 +55,19 @@ const Popover3 = () => {
             ref={popoverRef}
             className={
               "absolute left-1/2 transform -translate-x-1/2 mt-3 " +
-              "w-72 bg-white rounded-2xl shadow-lg border border-gray-100 " +
+              "w-72 bg-white rounded-2xl shadow-lg border border-[#603F26] " +
               "backdrop-blur-sm transition-all duration-200 z-50"
             }
           >
             <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-              <div className="w-3 h-3 bg-white rotate-45 border-l border-t border-gray-100" />
+              <div className="w-3 h-3 bg-[#603F26] rotate-45 border-l border-t border-gray-100" />
             </div>
 
             <div className="p-4">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="p-2 bg-gray-50 rounded-lg">
                   <svg
-                    className="w-5 h-5 text-gray-600"
+                    className="w-5 h-5 text-[#603F26]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -80,10 +80,10 @@ const Popover3 = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-gray-800 font-medium">Quick Information</h3>
+                <h3 className="text-[#603F26] font-medium">Quick Information</h3>
               </div>
 
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-[#603F26] text-sm leading-relaxed">
                 Here's some helpful information that provides context the user.
                 Keep it brief and meaningful.
               </p>
@@ -92,7 +92,7 @@ const Popover3 = () => {
                 <button
                   onClick={() => setIsOpen(false)}
                   className={
-                    "px-4 py-2 text-sm text-gray-600 hover:text-gray-800 " +
+                    "px-4 py-2 text-sm text-gray-600 hover:text-[#603F26] " +
                     "transition-colors duration-200"
                   }
                 >

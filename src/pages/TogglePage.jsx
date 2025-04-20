@@ -12,28 +12,34 @@ function TogglePage() {
         {
           language: "jsx",
           code: `import { useState } from "react";
-
-const Toggle = () => {
-  const [isOn, setIsOn] = useState(false);
-
-  const toggle = () => setIsOn((prev) => !prev);
-  return (
-    <>
-      <button
-        onClick={toggle}
-        className={"relative w-14 h-8 rounded-full transition-colors duration-300 px-1 " + (isOn ? "bg-yellow-400" : "bg-gray-600")}
-      >
-        <span
-          className={"absolute top-1 left-1 w-6 h-6 rounded-full bg-white shadow-md transition-transform duration-300 flex items-center justify-center text-[16px] " + (isOn ? "translate-x-6" : "")}
-        >
-          {isOn ? "🌞" : "🌙"}
-        </span>
-      </button>
-    </>
-  );
-};
-
-export default Toggle;
+          
+          const Toggle = () => {
+            const [isOn, setIsOn] = useState(false);
+          
+            const toggle = () => setIsOn((prev) => !prev);
+            return (
+              <>
+                <button
+                  onClick={toggle}
+                  className={
+                    "relative w-14 h-8 rounded-full transition-colors duration-300 px-1 " +
+                    (isOn ? "bg-yellow-400" : "bg-[#603F26]")
+                  }
+                >
+                  <span
+                    className={
+                      "absolute top-1 left-1 w-6 h-6 rounded-full bg-white shadow-md transition-transform duration-300 flex items-center justify-center text-[16px] " +
+                      (isOn ? "translate-x-6" : "")
+                    }
+                  >
+                    {isOn ? "🌞" : "🌙"}
+                  </span>
+                </button>
+              </>
+            );
+          };
+          
+          export default Toggle;
 `,
         },
       ],
@@ -52,7 +58,7 @@ const Toggle = () => {
     <>
       <button
         onClick={() => setIsOn(!isOn)}
-        className={"relative w-14 h-8 rounded-full transition-colors duration-300 " + (isOn ? "bg-black" : "bg-gray-300")}
+        className={"relative w-14 h-8 rounded-full transition-colors duration-300 " +  (isOn ? "bg-[#603F26]" : "bg-gray-300")}
       >
         <span
           className={"absolute top-1 left-1 w-6 h-6 rounded-full bg-white transition-transform duration-300 " + (isOn ? "translate-x-6" : "")}
@@ -88,7 +94,7 @@ const Toggle = () => {
 
         <button
           onClick={() => setEnabled(!enabled)}
-          className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 " + (enabled ? "bg-blue-600" : "bg-gray-300")}
+          className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 " + (enabled ? "bg-[#603F26]" : "bg-gray-300")}
         >
           <span
             className={"inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 " + (enabled ? "translate-x-5" : "translate-x-1")}

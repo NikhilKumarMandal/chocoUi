@@ -27,8 +27,8 @@ const Popover4 = () => {
           ref={triggerRef}
           onClick={() => setIsOpen(!isOpen)}
           className={
-            "px-5 py-2 bg-neutral-800 text-neutral-300 rounded-lg " +
-            "hover:bg-neutral-700 transition-all duration-200 " +
+            "px-5 py-2 bg-[#603F26] text-neutral-300 rounded-lg " +
+            "hover:bg-[#be885e] transition-all duration-200 " +
             "border border-neutral-700 flex items-center space-x-2"
           }
         >

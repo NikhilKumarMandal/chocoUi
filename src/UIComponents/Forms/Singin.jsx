@@ -1,4 +1,3 @@
-import React from "react";
 
 export default function Form1() {
   return (
@@ -50,7 +49,7 @@ export default function Form1() {
             <div>
               <button
                 type="button"
-                className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
+                className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#603F26] dark:text-gray-50"
               >
                 Sign in
               </button>
@@ -60,7 +59,7 @@ export default function Form1() {
               <a
                 rel="noopener noreferrer"
                 href="#"
-                className="hover:underline dark:text-violet-600"
+                className="hover:underline dark:text-[#603F26]"
               >
                 Sign up
               </a>

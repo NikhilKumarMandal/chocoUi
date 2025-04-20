@@ -35,7 +35,7 @@ const Stepper3 = ({
               cy="50"
               r="45"
               fill="none"
-              stroke="#3B82F6"
+              stroke="#603F26"
               strokeWidth="8"
               strokeDasharray={calculateProgress() * 2.83 + " 283"}
               strokeLinecap="round"
@@ -44,7 +44,7 @@ const Stepper3 = ({
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-blue-600">
+              <div className="text-3xl sm:text-4xl font-bold text-[#603F26]">
                 {Math.round(calculateProgress())}%
               </div>
               <div className="text-sm sm:text-base text-gray-600 mt-2">
@@ -83,8 +83,8 @@ const Stepper3 = ({
                 className={
                   "px-4 py-2 rounded-md " +
                   (activeStep === steps.length - 1
-                    ? "bg-blue-400 text-white cursor-not-allowed"
-                    : "bg-blue-600 text-white hover:bg-blue-700")
+                    ? "bg-[#603F26] text-white cursor-not-allowed"
+                    : "bg-[#603F26] text-white hover:bg-[#603F26]")
                 }
               >
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}

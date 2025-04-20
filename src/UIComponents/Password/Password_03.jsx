@@ -26,11 +26,11 @@ const Password_03 = () => {
   }, [password]);
 
   const getColor = (score) => {
-    if (score === 0) return "#94a3b8";
-    if (score === 1) return "#ef4444";
-    if (score === 2) return "#f97316";
-    if (score === 3) return "#eab308";
-    return "#10b981";
+    if (score === 0) return "#603F26";
+    if (score === 1) return "#603F26";
+    if (score === 2) return "#603F26";
+    if (score === 3) return "#603F26";
+    return "#603F26";
   };
 
   const radius = 45;
@@ -83,7 +83,7 @@ const Password_03 = () => {
           <button
             type="button"
             onClick={() => setIsVisible((prev) => !prev)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#603F26]"
           >
             {isVisible ? <EyeOff size={20} /> : <Eye size={20} />}
           </button>
@@ -95,18 +95,18 @@ const Password_03 = () => {
               key={index}
               className={
                 "p-3 rounded-lg border transition-all duration-300 " +
-                (req.met ? "border-green-500 bg-green-50" : "border-gray-200")
+                (req.met ? "border-[#603F26] bg-green-50" : "border-gray-200")
               }
             >
               <div className="flex items-center space-x-2">
                 {req.met ? (
-                  <Check size={16} className="text-green-500" />
+                  <Check size={16} className="text-[#603F26]" />
                 ) : (
                   <X size={16} className="text-gray-400" />
                 )}
                 <span
                   className={
-                    "text-sm " + (req.met ? "text-green-700" : "text-gray-600")
+                    "text-sm " + (req.met ? "text-[#603F26]" : "text-gray-600")
                   }
                 >
                   {req.text}

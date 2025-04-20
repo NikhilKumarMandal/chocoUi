@@ -1,6 +1,6 @@
 const Window = () => {
   return (
-    <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-gray-900 py-5 pl-8 pr-10 hover:bg-gray-800 px-">
+    <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-[#603F26] py-5 pl-8 pr-10 hover:bg-gray-800 px-">
       <svg
         width="29"
         height="27"

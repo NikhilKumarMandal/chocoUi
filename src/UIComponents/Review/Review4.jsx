@@ -1,7 +1,7 @@
 const Review4 = () => {
   return (
     <div className="max-w-md mx-auto my-6">
-      <div className="bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+      <div className="bg-[#FFEAC5] rounded-xl shadow-lg overflow-hidden">
         <div className="h-1 bg-gradient-to-r from-gray-400 via-gray-600 to-gray-800"></div>
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">

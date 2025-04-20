@@ -48,7 +48,7 @@ const Password_01 = () => {
             placeholder="Password"
             aria-invalid={calculateStrength.score < 4}
             aria-describedby="password-strength"
-            className="w-full p-2 border-2 rounded-md bg-background outline-none focus:border-blue-700 transition"
+            className="w-full p-2 border-2 rounded-md bg-background outline-none focus:border-[#603F26] transition"
           />
           <button
             type="button"
@@ -68,11 +68,11 @@ const Password_01 = () => {
           const isActive = calculateStrength.score >= level;
           let activeColor = "bg-border";
           if (isActive) {
-            if (level === 1) activeColor = "bg-green-200";
-            else if (level === 2) activeColor = "bg-green-300";
-            else if (level === 3) activeColor = "bg-green-400";
-            else if (level === 4) activeColor = "bg-green-500";
-            else activeColor = "bg-green-600";
+            if (level === 1) activeColor = "bg-[#603F26]";
+            else if (level === 2) activeColor = "bg-[#603F26]";
+            else if (level === 3) activeColor = "bg-[#603F26]";
+            else if (level === 4) activeColor = "bg-[#603F26]";
+            else activeColor = "bg-[#603F26]";
           }
           const className = activeColor + " " + baseClass;
           return <span key={level} className={className}></span>;
@@ -92,14 +92,14 @@ const Password_01 = () => {
       <ul className="space-y-1.5" aria-label="Password requirements">
         {calculateStrength.requirements.map((req, index) => {
           const icon = req.met ? (
-            <Check size={16} className="text-emerald-500" />
+            <Check size={16} className="text-[#603F26]" />
           ) : (
             <X size={16} className="text-muted-foreground/80" />
           );
 
           let textClass = "text-xs";
           if (req.met) {
-            textClass += " text-emerald-600";
+            textClass += " text-[#603F26]";
           } else {
             textClass += " text-muted-foreground";
           }

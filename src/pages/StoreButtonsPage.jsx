@@ -13,7 +13,7 @@ function StoreButtonsPage() {
           language: "jsx",
           code: `const Window = () => {
   return (
-    <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-gray-900 py-5 pl-8 pr-10 hover:bg-gray-800 px-">
+    <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-[#603F26] py-5 pl-8 pr-10 hover:bg-gray-800 px-">
       <svg
         width="29"
         height="27"
@@ -47,7 +47,7 @@ export default Window;`,
           code: `const PlayStore = () => {
   return (
     <button className="rounded-[10px]">
-      <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-gray-900 py-5 pl-8 pr-10 hover:bg-gray-800">
+      <div className="flex w-fit cursor-pointer items-center justify-center gap-6 rounded-[10px] bg-[#603F26] py-5 pl-8 pr-10 hover:bg-gray-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"

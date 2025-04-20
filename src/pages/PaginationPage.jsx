@@ -17,57 +17,59 @@ function PaginationPage() {
         {
           language: "jsx",
           code: `import React, { useState } from "react";
-
-const Pagination = ({ totalPages = 6 }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const goToPage = (page) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-    }
-  };
-
-  return (
-    <div className="flex space-x-1 justify-center items-center">
-      <button
-        onClick={() => goToPage(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="rounded-full border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
-      >
-        Prev
-      </button>
-
-      {[...Array(totalPages)].map((_, index) => {
-        const page = index + 1;
-        const isActive = page === currentPage;
-
-        return (
-          <button
-            key={page}
-            onClick={() => goToPage(page)}
-            className={"min-w-9 rounded-full py-2 px-3.5 text-center text-sm transition-all ml-2 " + 
-              (isActive 
-                ? "bg-slate-800 text-white border border-transparent shadow-md hover:bg-slate-700 focus:bg-slate-700" 
-                : "border border-slate-300 text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800") +
-              " hover:shadow-lg focus:shadow-none active:shadow-none active:bg-slate-700 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"}
-          >
-            {page}
-          </button>
-        );
-      })}
-
-      <button
-        onClick={() => goToPage(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className="rounded-full border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
-      >
-        Next
-      </button>
-    </div>
-  );
-};
-
-export default Pagination;
+          
+          const Pagination = ({ totalPages = 6 }) => {
+            const [currentPage, setCurrentPage] = useState(1);
+          
+            const goToPage = (page) => {
+              if (page >= 1 && page <= totalPages) {
+                setCurrentPage(page);
+              }
+            };
+          
+            return (
+              <div className="flex space-x-1 justify-center items-center">
+                <button
+                  onClick={() => goToPage(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="rounded-full border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-[#603F26] hover:text-white hover:bg-[#603F26] hover:border-[#603F26] focus:text-white focus:bg-[#603F26] focus:border-[#603F26] active:border-[#603F26] active:text-white active:bg-[#603F26] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+                >
+                  Prev
+                </button>
+          
+                {[...Array(totalPages)].map((_, index) => {
+                  const page = index + 1;
+                  const isActive = page === currentPage;
+          
+                  return (
+                    <button
+                      key={page}
+                      onClick={() => goToPage(page)}
+                      className={
+                        "min-w-9 rounded-full py-2 px-3.5 text-center text-sm transition-all ml-2 " +
+                        (isActive
+                          ? "bg-[#603F26] text-white border border-transparent shadow-md hover:bg-[#603F26] focus:bg-[#603F26]"
+                          : "border border-slate-300 text-[#603F26] hover:text-white hover:bg-[#603F26] hover:border-[#603F26] focus:text-white focus:bg-[#603F26] focus:border-[#603F26]") +
+                        " hover:shadow-lg focus:shadow-none active:shadow-none active:bg-[#603F26] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                      }
+                    >
+                      {page}
+                    </button>
+                  );
+                })}
+          
+                <button
+                  onClick={() => goToPage(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="rounded-full border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-[#603F26] hover:text-white hover:bg-[#603F26] hover:border-[#603F26] focus:text-white focus:bg-[#603F26] focus:border-[#603F26] active:border-[#603F26] active:text-white active:bg-[#603F26] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+                >
+                  Next
+                </button>
+              </div>
+            );
+          };
+          
+          export default Pagination;
 `,
         },
       ],
@@ -113,7 +115,7 @@ export default Pagination;
                 <button
                   onClick={handlePrevious}
                   disabled={currentPage === 1}
-                  className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-[#603F26] hover:text-white hover:bg-[#603F26] hover:border-[#603F26] focus:text-white focus:bg-[#603F26] focus:border-[#603F26] active:border-[#603F26] active:text-white active:bg-[#603F26] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
                   <svg
@@ -131,14 +133,14 @@ export default Pagination;
                 </button>
           
                 <p className="text-slate-600">
-                  Page <strong className="text-slate-800">{currentPage}</strong> of&nbsp;
-                  <strong className="text-slate-800">{totalPages}</strong>
+                  Page <strong className="text-[#603F26]">{currentPage}</strong> of&nbsp;
+                  <strong className="text-[#603F26]">{totalPages}</strong>
                 </p>
           
                 <button
                   onClick={handleNext}
                   disabled={currentPage === totalPages}
-                  className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-[#603F26] hover:text-white hover:bg-[#603F26] hover:border-[#603F26] focus:text-white focus:bg-[#603F26] focus:border-[#603F26] active:border-[#603F26] active:text-white active:bg-[#603F26] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
                   <svg
@@ -200,7 +202,7 @@ export default Pagination;
                   <button
                     onClick={handlePrev}
                     disabled={currentPage === 1}
-                    className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none"
+                    className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-[#111111] hover:bg-[#603F26] hover:border-[#603F26] shadow-none hover:shadow-none"
                   >
                     <svg
                       width="1.5em"
@@ -233,7 +235,7 @@ export default Pagination;
                         className={
                           "inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm min-w-[38px] min-h-[38px] rounded-md " +
                           (isActive
-                            ? "shadow-sm hover:shadow-md bg-stone-800 border-stone-800 text-stone-50 hover:bg-stone-700 hover:border-stone-700"
+                            ? "shadow-sm hover:shadow-md bg-[#603F26] border-stone-800 text-stone-50 hover:bg-stone-700 hover:border-stone-700"
                             : "bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none")
                         }
                       >
@@ -245,7 +247,7 @@ export default Pagination;
                   <button
                     onClick={handleNext}
                     disabled={currentPage === totalPages}
-                    className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none"
+                    className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-[#111111] hover:bg-[#603F26] hover:border-[#603F26] shadow-none hover:shadow-none"
                   >
                     Next
                     <svg
@@ -271,7 +273,8 @@ export default Pagination;
             );
           };
           
-          export default Pagination;`,
+          export default Pagination;
+          `,
         },
       ],
       componentProps: [

@@ -17,7 +17,7 @@ function ProgressbarPage() {
   return (
     <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
       <div
-        className="h-full bg-blue-500 transition-all duration-300"
+        className="h-full bg-[#603F26]  transition-all duration-300"
         style={{ width: progress + "%" }}
       ></div>
     </div>
@@ -52,7 +52,7 @@ export default LinearProgress;`,
           cy="50"
         />
         <circle
-          className="text-blue-500"
+          className="text-[#603F26]"
           strokeWidth="8"
           strokeDasharray={circumference}
           strokeDashoffset={offset}

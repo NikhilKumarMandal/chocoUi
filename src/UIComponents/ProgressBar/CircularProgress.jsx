@@ -16,7 +16,7 @@ const CircularProgress = ({ progress = 75 }) => {
           cy="50"
         />
         <circle
-          className="text-blue-500"
+          className="text-[#603F26] "
           strokeWidth="8"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
