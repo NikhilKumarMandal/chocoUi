@@ -28,7 +28,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl mt-7 ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl ${
           scrolled
             ? "bg-white/60 backdrop-blur-lg shadow-lg border border-gray-200/80 mt-[-10px]"
             : "bg-white/60 backdrop-blur-md shadow-md border border-gray-200/60"
