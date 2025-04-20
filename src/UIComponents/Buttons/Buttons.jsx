@@ -2,11 +2,11 @@ import React from "react";
 
 const Button = () => {
   return (
-    <div className="flex flex-wrap gap-4 p-8 bg-gradient-to-br from-gray-50 to-white items-center justify-center">
+    <div className="flex flex-wrap gap-4 p-8 bg-gradient-to-br from-[#FFF8F2] to-[#FCEEE3] items-center justify-center rounded-md">
       <button
         type="button"
         aria-label="Primary Button"
-        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-500 shadow-md hover:shadow-lg"
+        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 bg-[#7A4D28] text-[#FCD9B8] hover:bg-[#5C371B] focus-visible:ring-[#A05F37] shadow-md hover:shadow-lg"
       >
         Primary
       </button>
@@ -14,7 +14,7 @@ const Button = () => {
       <button
         type="button"
         aria-label="Outline Button"
-        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 border border-blue-500 text-blue-600 bg-white/60 backdrop-blur-md hover:bg-blue-100 focus-visible:ring-blue-400 shadow-sm hover:shadow-md"
+        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 border border-[#A05F37] text-[#7A4D28] bg-white/60 backdrop-blur-md hover:bg-[#FFF2E3] focus-visible:ring-[#A05F37] shadow-sm hover:shadow-md"
       >
         Outline
       </button>
@@ -22,7 +22,7 @@ const Button = () => {
       <button
         type="button"
         aria-label="Ghost Button"
-        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 text-blue-600 bg-white/30 backdrop-blur-md hover:bg-blue-50 focus-visible:ring-blue-300 hover:shadow-inner"
+        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 text-[#7A4D28] bg-[#FFF8F2]/30 backdrop-blur-md hover:bg-[#FAE4D1] focus-visible:ring-[#A05F37] hover:shadow-inner"
       >
         Ghost
       </button>
@@ -30,7 +30,7 @@ const Button = () => {
       <button
         type="button"
         aria-label="Delete Button"
-        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-500 shadow-md hover:shadow-lg"
+        className="px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 bg-[#D8573B] text-white hover:bg-[#B5422A] focus-visible:ring-[#E46B4F] shadow-md hover:shadow-lg"
       >
         Delete
       </button>
@@ -39,7 +39,7 @@ const Button = () => {
         type="button"
         aria-label="Add Item Button"
         title="Add Item"
-        className="flex items-center gap-2 px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 bg-gray-100 text-gray-700 hover:bg-gray-200 focus-visible:ring-gray-400 shadow-sm hover:shadow-md"
+        className="flex items-center gap-2 px-6 py-2 rounded-xl text-base font-semibold transition-all duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 bg-[#FCEEE3] text-[#7A4D28] hover:bg-[#F5E2D3] focus-visible:ring-[#D6A88A] shadow-sm hover:shadow-md"
       >
         <svg
           className="w-5 h-5"

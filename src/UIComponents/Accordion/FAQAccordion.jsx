@@ -1,33 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Accordion = ({ items=[{
-      id: 'item-1',
-      title: 'What is a UI component?',
-      content: 'A UI (User Interface) component is a modular, reusable element that serves a specific function within a graphical user interface. Examples include buttons, input fields, dropdown menus, sliders, and checkboxes.'
+const Accordion = ({
+  items = [
+    {
+      id: "item-1",
+      title: "What is a UI component?",
+      content:
+        "A UI (User Interface) component is a modular, reusable element that serves a specific function within a graphical user interface. Examples include buttons, input fields, dropdown menus, sliders, and checkboxes.",
     },
     {
-      id: 'item-2',
-      title: 'Why are UI components important?',
-      content: 'UI components promote consistency, efficiency, and scalability in software development. They allow developers to reuse code, maintain a consistent look and feel across an application, and easily make updates or modifications without affecting the entire system.'
+      id: "item-2",
+      title: "Why are UI components important?",
+      content:
+        "UI components promote consistency, efficiency, and scalability in software development. They allow developers to reuse code, maintain a consistent look and feel across an application, and easily make updates or modifications without affecting the entire system.",
     },
     {
-      id: 'item-3',
-      title: 'Key characteristics of UI components?',
-      content: 'Well-designed UI components should be modular, customizable, and accessible. They should have clear and intuitive functionality, be easily styled to match the overall design language of the application.'
-    }], allowMultiple }) => {
+      id: "item-3",
+      title: "Key characteristics of UI components?",
+      content:
+        "Well-designed UI components should be modular, customizable, and accessible. They should have clear and intuitive functionality, be easily styled to match the overall design language of the application.",
+    },
+  ],
+  allowMultiple,
+}) => {
   const [activeItems, setActiveItems] = useState([]);
 
   const toggleItem = (itemId) => {
     if (allowMultiple) {
-      setActiveItems(prev =>
+      setActiveItems((prev) =>
         prev.includes(itemId)
-          ? prev.filter(id => id !== itemId)
+          ? prev.filter((id) => id !== itemId)
           : [...prev, itemId]
       );
     } else {
-      setActiveItems(prev =>
-        prev.includes(itemId) ? [] : [itemId]
-      );
+      setActiveItems((prev) => (prev.includes(itemId) ? [] : [itemId]));
     }
   };
 
@@ -36,18 +42,21 @@ const Accordion = ({ items=[{
       {items.map((item) => {
         const isActive = activeItems.includes(item.id);
         const buttonClass =
-          'w-full flex justify-between items-center py-5 px-6 text-left hover:bg-gray-50 transition-colors duration-200 ' +
-          (isActive ? 'text-blue-600' : 'text-gray-800');
+          "w-full flex justify-between items-center py-5 px-6 text-left hover:bg-gray-50 transition-colors duration-200 " +
+          (isActive ? "text-blue-600" : "text-gray-800");
         const iconClass =
-          'ml-4 transition-transform duration-200 ' +
-          (isActive ? 'rotate-180' : '');
-        const panelId = 'panel-' + item.id;
+          "ml-4 transition-transform duration-200 " +
+          (isActive ? "rotate-180" : "");
+        const panelId = "panel-" + item.id;
         const panelClass =
-          'overflow-hidden transition-all duration-300 ' +
-          (isActive ? 'max-h-96' : 'max-h-0');
+          "overflow-hidden transition-all duration-300 " +
+          (isActive ? "max-h-96" : "max-h-0");
 
         return (
-          <div key={item.id} className="border-b border-gray-200 last:border-b-0">
+          <div
+            key={item.id}
+            className="border-b border-gray-200 last:border-b-0"
+          >
             <button
               className={buttonClass}
               onClick={() => toggleItem(item.id)}
@@ -74,14 +83,8 @@ const Accordion = ({ items=[{
                 </svg>
               </span>
             </button>
-            <div
-              id={panelId}
-              className={panelClass}
-              role="region"
-            >
-              <div className="pb-5 px-6 text-gray-600">
-                {item.content}
-              </div>
+            <div id={panelId} className={panelClass} role="region">
+              <div className="pb-5 px-6 text-gray-600">{item.content}</div>
             </div>
           </div>
         );

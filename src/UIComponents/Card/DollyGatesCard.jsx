@@ -9,7 +9,7 @@ const DollyGatesCard = ({ image, title, subtitle, description, label }) => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="w-full max-w-md rounded-3xl overflow-hidden bg-white shadow-lg">
+      <div className="w-full max-w-md rounded-3xl overflow-hidden bg-[#FFF8F2] shadow-xl border border-[#F1E6D9]">
         <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80">
           <div className="relative h-full">
             <img
@@ -17,26 +17,28 @@ const DollyGatesCard = ({ image, title, subtitle, description, label }) => {
               alt={title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#3b2a20] opacity-50"></div>
             <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
               <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">
                 {title}
               </h3>
-              <p className="text-xs sm:text-sm opacity-90">{subtitle}</p>
+              <p className="text-xs sm:text-sm text-[#FCD9B8] opacity-90">
+                {subtitle}
+              </p>
             </div>
           </div>
         </div>
 
         <div className="relative p-4 sm:p-6">
-          <span className="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs mb-3 sm:mb-4">
+          <span className="inline-block bg-[#F5EDE6] text-[#7A4D28] px-3 py-1 rounded-full text-xs font-medium mb-3 sm:mb-4">
             {label}
           </span>
 
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3">
+          <h2 className="text-xl sm:text-2xl font-semibold text-[#5C371B] mb-2 sm:mb-3">
             {title}
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-5">
+          <p className="text-sm sm:text-base text-[#7A4D28] leading-relaxed mb-4 sm:mb-5">
             {description}
           </p>
 
@@ -44,14 +46,12 @@ const DollyGatesCard = ({ image, title, subtitle, description, label }) => {
             {iconPaths.map((path, index) => (
               <button
                 key={index}
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-100 flex items-center justify-center"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#F3E3D3] hover:bg-[#EAD5C4] text-[#5C371B] flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  sm:width="20"
-                  sm:height="20"
+                  width="18"
+                  height="18"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
