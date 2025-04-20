@@ -8,7 +8,7 @@ const Toggle2 = () => {
         onClick={() => setIsOn(!isOn)}
         className={
           "relative w-14 h-8 rounded-full transition-colors duration-300 " +
-          (isOn ? "bg-black" : "bg-gray-300")
+          (isOn ? "bg-[#603F26]" : "bg-gray-300")
         }
       >
         <span

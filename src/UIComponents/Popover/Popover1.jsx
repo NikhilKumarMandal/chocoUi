@@ -26,7 +26,7 @@ const Popover1 = () => {
         <button
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
-          className="px-4 py-2 bg-gray-800 text-white rounded-lg 
+          className="px-4 py-2 bg-[#603F26] text-white rounded-lg 
                    hover:bg-gray-700 transition-colors duration-200 
                    focus:outline-none focus:ring-2 focus:ring-gray-500 
                    focus:ring-offset-2"
@@ -48,7 +48,7 @@ const Popover1 = () => {
             </div>
 
             <div className="px-4 py-3 border-b border-gray-200">
-              <h3 className="text-lg font-medium text-gray-800">
+              <h3 className="text-lg font-medium text-[#603F26]">
                 Popover Title
               </h3>
             </div>
@@ -67,13 +67,13 @@ const Popover1 = () => {
               <div className="flex justify-end space-x-2">
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="px-3 py-1.5 bg-gray-200 text-gray-700 rounded 
+                  className="px-3 py-1.5 bg-gray-200 text-[#603F26]rounded 
                            hover:bg-gray-300 transition-colors duration-200"
                 >
                   Close
                 </button>
                 <button
-                  className="px-3 py-1.5 bg-gray-800 text-white rounded 
+                  className="px-3 py-1.5 bg-[#603F26] text-white rounded 
                            hover:bg-gray-700 transition-colors duration-200"
                 >
                   Action

@@ -7,8 +7,8 @@ const Modal5 = ({
   triggerText = "Open Slide Modal",
   confirmText = "Confirm",
   cancelText = "Cancel",
-  confirmColor = "bg-red-600",
-  confirmHover = "hover:bg-red-700",
+  confirmColor = "bg-[#603F26]",
+  confirmHover = "hover:bg-[#8c6446]",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +23,7 @@ const Modal5 = ({
     <div className="flex items-center justify-center bg-gray-100 p-4">
       <button
         onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-300"
+        className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#8c6446] transition-colors duration-300"
       >
         {triggerText}
       </button>

@@ -19,7 +19,7 @@ function ModalPage() {
             user = "Nikhil",
             title = "This is a modern modal dialog",
             description = "This modal is fully responsive and works great on all screen sizes.",
-            buttonColor = "bg-black"
+            buttonColor = "bg-black",
           }) => {
             const [isOpen, setIsOpen] = useState(false);
           
@@ -32,7 +32,7 @@ function ModalPage() {
               <div className="flex items-center justify-center bg-gray-100 p-4">
                 <button
                   onClick={() => setIsOpen(true)}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
+                  className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#976c4a] transition-colors duration-300"
                 >
                   Open Modal
                 </button>
@@ -41,7 +41,7 @@ function ModalPage() {
                   <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
                     <div className="bg-white rounded-2xl shadow-xl max-w-md w-full transform transition-all duration-300">
                       <div className="p-6 border-b border-gray-200">
-                        <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+                        <h2 className="text-2xl font-bold text-[#603F26]">{title}</h2>
                         <p className="text-gray-600 mt-2">{description}</p>
                       </div>
           
@@ -88,18 +88,23 @@ function ModalPage() {
             title = "Bottom Sheet",
             description = "Perfect for mobile interfaces",
             content = "This bottom sheet modal is optimized for mobile devices with a natural swipe-to-dismiss interaction pattern.",
-            confirmColor = "bg-green-600",
-            confirmHover = "hover:bg-green-700"
+            confirmColor = "bg-[#603F26]",
+            confirmHover = "hover:bg-[#603F26]",
           }) => {
             const [isOpen, setIsOpen] = useState(false);
           
-            const confirmBtnClass ="px-4 py-2 " + confirmColor + " text-white rounded-lg " + confirmHover + " transition-colors duration-300";
+            const confirmBtnClass =
+              "px-4 py-2 " +
+              confirmColor +
+              " text-white rounded-lg " +
+              confirmHover +
+              " transition-colors duration-300";
           
             return (
-              <div className="flex items-center justify-center bg-gray-100 p-4">
+              <div className="flex items-center justify-center bg-[#603F26]-100 p-4">
                 <button
                   onClick={() => setIsOpen(true)}
-                  className="px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition-colors duration-300"
+                  className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#886143] transition-colors duration-300"
                 >
                   Open Bottom Sheet
                 </button>
@@ -127,7 +132,10 @@ function ModalPage() {
                         >
                           Cancel
                         </button>
-                        <button onClick={() => setIsOpen(false)} className={confirmBtnClass}>
+                        <button
+                          onClick={() => setIsOpen(false)}
+                          className={confirmBtnClass}
+                        >
                           Confirm
                         </button>
                       </div>
@@ -155,9 +163,9 @@ function ModalPage() {
             title = "Full Screen Modal",
             description = "A modern take on full-screen dialogs",
             content = "This full-screen modal provides maximum focus on the content while maintaining a clean and modern design. Perfect for important actions or detailed information.",
-            confirmColor = "bg-purple-600",
-            confirmHover = "hover:bg-purple-700",
-            triggerText = "Open Full Screen Modal"
+            confirmColor = "bg-[#603F26]",
+            confirmHover = "hover:bg-[#8c6446]",
+            triggerText = "Open Full Screen Modal",
           }) => {
             const [isOpen, setIsOpen] = useState(false);
           
@@ -170,18 +178,15 @@ function ModalPage() {
           
             return (
               <div className="flex items-center justify-center bg-gray-100 p-4">
-          
                 <button
                   onClick={() => setIsOpen(true)}
-                  className="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors duration-300"
+                  className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#8c6446] transition-colors duration-300"
                 >
                   {triggerText}
                 </button>
           
-          
                 {isOpen && (
                   <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50">
-          
                     <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full transform transition-all duration-300">
                       <div className="p-8 border-b border-gray-200">
                         <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
@@ -223,7 +228,7 @@ function ModalPage() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `import  { useState } from "react";
+          code: `import { useState } from "react";
           
           const Modal = ({
             title = "Slide Modal",
@@ -232,8 +237,8 @@ function ModalPage() {
             triggerText = "Open Slide Modal",
             confirmText = "Confirm",
             cancelText = "Cancel",
-            confirmColor = "bg-red-600",
-            confirmHover = "hover:bg-red-700"
+            confirmColor = "bg-[#603F26]",
+            confirmHover = "hover:bg-[#8c6446]",
           }) => {
             const [isOpen, setIsOpen] = useState(false);
           
@@ -248,14 +253,13 @@ function ModalPage() {
               <div className="flex items-center justify-center bg-gray-100 p-4">
                 <button
                   onClick={() => setIsOpen(true)}
-                  className="px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-300"
+                  className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#8c6446] transition-colors duration-300"
                 >
                   {triggerText}
                 </button>
           
                 {isOpen && (
                   <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-end p-4 z-50">
-          
                     <div className="bg-white rounded-l-2xl shadow-xl w-full max-w-md h-full transform transition-all duration-300">
                       <div className="p-6 border-b border-gray-200 flex justify-between items-center">
                         <div>

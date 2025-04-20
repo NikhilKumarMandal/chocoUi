@@ -59,7 +59,7 @@ const Stepper2 = ({
           <div className="relative">
             <div className="absolute left-5 top-0 h-full w-0.5 bg-gray-200">
               <div
-                className="absolute top-0 left-0 h-full bg-blue-600 transition-all duration-300"
+                className="absolute top-0 left-0 h-full bg-[#603F26] transition-all duration-300"
                 style={{
                   height: (activeStep / (steps.length - 1)) * 100 + "%",
                 }}
@@ -70,7 +70,7 @@ const Stepper2 = ({
                 <div
                   className={
                     index <= activeStep
-                      ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-600 text-white"
+                      ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#603F26] text-white"
                       : "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 text-gray-600"
                   }
                 >
@@ -80,7 +80,7 @@ const Stepper2 = ({
                   <div
                     className={
                       index <= activeStep
-                        ? "text-xs sm:text-sm font-medium text-blue-600"
+                        ? "text-xs sm:text-sm font-medium text-[#603F26]"
                         : "text-xs sm:text-sm font-medium text-gray-600"
                     }
                   >
@@ -121,8 +121,8 @@ const Stepper2 = ({
                 disabled={activeStep === steps.length - 1}
                 className={
                   activeStep === steps.length - 1
-                    ? "px-4 py-2 rounded-md bg-blue-400 text-white cursor-not-allowed"
-                    : "px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                    ? "px-4 py-2 rounded-md bg-[#603F26] text-white cursor-not-allowed"
+                    : "px-4 py-2 rounded-md bg-[#603F26] text-white hover:bg-[#603F26]"
                 }
               >
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}

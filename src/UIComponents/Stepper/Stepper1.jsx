@@ -29,7 +29,7 @@ const Stepper1 = ({
             <div
               className={
                 index <= activeStep
-                  ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-600 text-white"
+                  ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#603F26] text-white"
                   : "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 text-gray-600"
               }
             >
@@ -39,7 +39,7 @@ const Stepper1 = ({
               <div
                 className={
                   index <= activeStep
-                    ? "text-xs sm:text-sm font-medium text-blue-600"
+                    ? "text-xs sm:text-sm font-medium text-[#603F26]"
                     : "text-xs sm:text-sm font-medium text-gray-600"
                 }
               >
@@ -50,7 +50,7 @@ const Stepper1 = ({
               <div
                 className={
                   index < activeStep
-                    ? "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-blue-600"
+                    ? "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-[#603F26]"
                     : "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-gray-200"
                 }
               />
@@ -83,8 +83,8 @@ const Stepper1 = ({
             disabled={activeStep === steps.length - 1}
             className={
               activeStep === steps.length - 1
-                ? "px-4 py-2 rounded-md bg-blue-400 text-white cursor-not-allowed"
-                : "px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                ? "px-4 py-2 rounded-md bg-[#603F26] text-white cursor-not-allowed"
+                : "px-4 py-2 rounded-md bg-[#603F26] text-white hover:bg-[#603F26]"
             }
           >
             {activeStep === steps.length - 1 ? "Finish" : "Next"}

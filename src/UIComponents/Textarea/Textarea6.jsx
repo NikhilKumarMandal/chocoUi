@@ -17,7 +17,7 @@ function Textarea6() {
           placeholder="What's on your mind?"
         ></textarea>
         <div class="flex md:justify-end justify-center mt-2">
-          <button class="bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600">
+          <button class="bg-[#603F26] text-white px-4 py-2 rounded-lg ">
             Post
           </button>
         </div>

@@ -14,7 +14,7 @@ function Login() {
             name="username"
             id="username"
             placeholder="Username"
-            className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-600"
+            className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#603F26]"
           />
         </div>
         <div className="space-y-1 text-sm">
@@ -26,7 +26,7 @@ function Login() {
             name="password"
             id="password"
             placeholder="Password"
-            className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-600"
+            className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#603F26]"
           />
           <div className="flex justify-end text-xs text-gray-600">
             <a href="#" className="hover:underline">
@@ -36,7 +36,7 @@ function Login() {
         </div>
         <button
           type="button"
-          className="block w-full p-3 text-center rounded-sm text-white bg-green-600 hover:bg-green-700"
+          className="block w-full p-3 text-center rounded-sm text-white bg-[#603F26] hover:bg-[#926848]"
         >
           Sign in
         </button>

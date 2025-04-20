@@ -12,15 +12,18 @@ function StepperPage() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `import { useState } from "react";
+          code: `import React, { useState } from "react";
           
           const Stepper = ({
             steps = [
-              { title: "Personal Info", content: "Fill in your personal information here." },
-            { title: "Account Details", content: "Set up your account details here." },
-            { title: "Preferences", content: "Select your preferences here." },
-              { title: "Confirmation", content: "Confirm your information and finish." }
-            ]
+              {
+                title: "Personal Info",
+                content: "Fill in your personal information here.",
+              },
+              { title: "Account Details", content: "Set up your account details here." },
+              { title: "Preferences", content: "Select your preferences here." },
+              { title: "Confirmation", content: "Confirm your information and finish." },
+            ],
           }) => {
             const [activeStep, setActiveStep] = useState(0);
           
@@ -40,7 +43,7 @@ function StepperPage() {
                       <div
                         className={
                           index <= activeStep
-                            ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-600 text-white"
+                            ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#603F26] text-white"
                             : "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 text-gray-600"
                         }
                       >
@@ -50,7 +53,7 @@ function StepperPage() {
                         <div
                           className={
                             index <= activeStep
-                              ? "text-xs sm:text-sm font-medium text-blue-600"
+                              ? "text-xs sm:text-sm font-medium text-[#603F26]"
                               : "text-xs sm:text-sm font-medium text-gray-600"
                           }
                         >
@@ -61,7 +64,7 @@ function StepperPage() {
                         <div
                           className={
                             index < activeStep
-                              ? "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-blue-600"
+                              ? "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-[#603F26]"
                               : "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-gray-200"
                           }
                         />
@@ -94,8 +97,8 @@ function StepperPage() {
                       disabled={activeStep === steps.length - 1}
                       className={
                         activeStep === steps.length - 1
-                          ? "px-4 py-2 rounded-md bg-blue-400 text-white cursor-not-allowed"
-                          : "px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                          ? "px-4 py-2 rounded-md bg-[#603F26] text-white cursor-not-allowed"
+                          : "px-4 py-2 rounded-md bg-[#603F26] text-white hover:bg-[#603F26]"
                       }
                     >
                       {activeStep === steps.length - 1 ? "Finish" : "Next"}
@@ -125,48 +128,50 @@ function StepperPage() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `import { useState } from "react";
+          code: `import React, { useState } from "react";
           
-          const Stepper = ({ steps = [
-            {
-              title: "Personal Info",
-              description: "Enter your personal details",
-              icon: (
-                <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-              ),
-            },
-            {
-              title: "Account Details",
-              description: "Set up your account",
-              icon: (
-                <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  />
-                </svg>
-              ),
-            },
-          ] }) => {
+          const Stepper = ({
+            steps = [
+              {
+                title: "Personal Info",
+                description: "Enter your personal details",
+                icon: (
+                  <svg
+                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Account Details",
+                description: "Set up your account",
+                icon: (
+                  <svg
+                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
+                  </svg>
+                ),
+              },
+            ],
+          }) => {
             const [activeStep, setActiveStep] = useState(0);
           
             const handleNext = () => {
@@ -184,9 +189,9 @@ function StepperPage() {
                     <div className="relative">
                       <div className="absolute left-5 top-0 h-full w-0.5 bg-gray-200">
                         <div
-                          className="absolute top-0 left-0 h-full bg-blue-600 transition-all duration-300"
+                          className="absolute top-0 left-0 h-full bg-[#603F26] transition-all duration-300"
                           style={{
-                            height: (activeStep / (steps.length - 1)) * 100 + '%',
+                            height: (activeStep / (steps.length - 1)) * 100 + "%",
                           }}
                         />
                       </div>
@@ -195,7 +200,7 @@ function StepperPage() {
                           <div
                             className={
                               index <= activeStep
-                                ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-600 text-white"
+                                ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#603F26] text-white"
                                 : "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 text-gray-600"
                             }
                           >
@@ -205,13 +210,15 @@ function StepperPage() {
                             <div
                               className={
                                 index <= activeStep
-                                  ? "text-xs sm:text-sm font-medium text-blue-600"
+                                  ? "text-xs sm:text-sm font-medium text-[#603F26]"
                                   : "text-xs sm:text-sm font-medium text-gray-600"
                               }
                             >
                               {step.title}
                             </div>
-                            <div className="text-xs text-gray-500">{step.description}</div>
+                            <div className="text-xs text-gray-500">
+                              {step.description}
+                            </div>
                           </div>
                         </div>
                       ))}
@@ -244,8 +251,8 @@ function StepperPage() {
                           disabled={activeStep === steps.length - 1}
                           className={
                             activeStep === steps.length - 1
-                              ? "px-4 py-2 rounded-md bg-blue-400 text-white cursor-not-allowed"
-                              : "px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                              ? "px-4 py-2 rounded-md bg-[#603F26] text-white cursor-not-allowed"
+                              : "px-4 py-2 rounded-md bg-[#603F26] text-white hover:bg-[#603F26]"
                           }
                         >
                           {activeStep === steps.length - 1 ? "Finish" : "Next"}
@@ -277,9 +284,11 @@ function StepperPage() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `import { useState } from "react";
+          code: `import React, { useState } from "react";
           
-          const Stepper = ({ steps = ["Setup", "Configuration", "Customization", "Review"] }) => {
+          const Stepper = ({
+            steps = ["Setup", "Configuration", "Customization", "Review"],
+          }) => {
             const [activeStep, setActiveStep] = useState(0);
           
             const handleNext = () => {
@@ -312,16 +321,16 @@ function StepperPage() {
                         cy="50"
                         r="45"
                         fill="none"
-                        stroke="#3B82F6"
+                        stroke="#603F26"
                         strokeWidth="8"
-                        strokeDasharray={(calculateProgress() * 2.83) + " 283"}
+                        strokeDasharray={calculateProgress() * 2.83 + " 283"}
                         strokeLinecap="round"
                         transform="rotate(-90 50 50)"
                       />
                     </svg>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-3xl sm:text-4xl font-bold text-blue-600">
+                        <div className="text-3xl sm:text-4xl font-bold text-[#603F26]">
                           {Math.round(calculateProgress())}%
                         </div>
                         <div className="text-sm sm:text-base text-gray-600 mt-2">
@@ -337,7 +346,9 @@ function StepperPage() {
                         {"Step " + (activeStep + 1) + " of " + steps.length}
                       </h2>
                       <p className="text-sm sm:text-base text-gray-600 mb-6">
-                        {"This is the content for " + steps[activeStep].toLowerCase() + ". Fill in your information here."}
+                        {"This is the content for " +
+                          steps[activeStep].toLowerCase() +
+                          ". Fill in your information here."}
                       </p>
                       <div className="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0">
                         <button
@@ -358,8 +369,8 @@ function StepperPage() {
                           className={
                             "px-4 py-2 rounded-md " +
                             (activeStep === steps.length - 1
-                              ? "bg-blue-400 text-white cursor-not-allowed"
-                              : "bg-blue-600 text-white hover:bg-blue-700")
+                              ? "bg-[#603F26] text-white cursor-not-allowed"
+                              : "bg-[#603F26] text-white hover:bg-[#603F26]")
                           }
                         >
                           {activeStep === steps.length - 1 ? "Finish" : "Next"}
