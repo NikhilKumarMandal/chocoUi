@@ -8,7 +8,7 @@ const ProductCard = () => {
   const products = [
     {
       id: 1,
-      img: "https://images.unsplash.com/photo-1664651205193-bfb6bfdd3b09?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 39,
       name: "Modern Smartphone",
       description:
@@ -16,7 +16,7 @@ const ProductCard = () => {
     },
     {
       id: 2,
-      img: "https://images.unsplash.com/photo-1564931768869-c66430fe1162?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 45,
       name: "Wireless Headphones",
       description:
@@ -24,7 +24,7 @@ const ProductCard = () => {
     },
     {
       id: 3,
-      img: "https://images.unsplash.com/photo-1696834137489-74a760ff8240?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?q=80&w=2226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 55,
       name: "Smart Watch",
       description:

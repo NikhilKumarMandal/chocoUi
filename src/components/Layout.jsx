@@ -1,8 +1,11 @@
-import React from "react";
+import {useEffect} from "react";
 import LeftSidebar from "./Sidebar/Leftsidebar";
 import { motion } from "framer-motion";
 
 const Layout = ({ children }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex w-full h-full  bg-gradient-to-b from-white via-[#fcedd2] to-white ">
       <div className="mr-3">{<LeftSidebar />}</div>
