@@ -460,7 +460,7 @@ export default Card;
           language: "jsx",
           code: `import React from "react";
           
-          export default function Card({ imageUrl, date, title, description }) {
+          export default function Card7({ imageUrl, date, title, description }) {
             return (
               <article className="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg max-w-96 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <img
@@ -487,7 +487,7 @@ export default Card;
               </article>
             );
           }
-          `,
+                    `,
         },
       ],
       componentProps: [

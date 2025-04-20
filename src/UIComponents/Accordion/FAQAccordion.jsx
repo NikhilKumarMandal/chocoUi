@@ -38,24 +38,26 @@ const Accordion = ({
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="w-full max-w-3xl mx-auto bg-[#fefaf5] rounded-2xl shadow-sm border border-[#e6d5c2]">
       {items.map((item) => {
         const isActive = activeItems.includes(item.id);
         const buttonClass =
-          "w-full flex justify-between items-center py-5 px-6 text-left hover:bg-gray-50 transition-colors duration-200 " +
-          (isActive ? "text-blue-600" : "text-gray-800");
+          "w-full flex justify-between items-center py-5 px-6 text-left transition-colors duration-200 " +
+          (isActive
+            ? "bg-[#fefaf5] text-[#3e2712]"
+            : "bg-white text-[#3e2712] hover:bg-[#fdf3e5]");
         const iconClass =
-          "ml-4 transition-transform duration-200 " +
+          "ml-4 transition-transform duration-300 text-[#7c6f66] " +
           (isActive ? "rotate-180" : "");
         const panelId = "panel-" + item.id;
         const panelClass =
-          "overflow-hidden transition-all duration-300 " +
+          "overflow-hidden transition-all duration-300 bg-white " +
           (isActive ? "max-h-96" : "max-h-0");
 
         return (
           <div
             key={item.id}
-            className="border-b border-gray-200 last:border-b-0"
+            className="border-b border-[#e6d5c2] last:border-b-0"
           >
             <button
               className={buttonClass}
@@ -84,7 +86,9 @@ const Accordion = ({
               </span>
             </button>
             <div id={panelId} className={panelClass} role="region">
-              <div className="pb-5 px-6 text-gray-600">{item.content}</div>
+              <div className="pb-5 px-6 text-[#7c6f66] text-sm 2xl:text-base">
+                {item.content}
+              </div>
             </div>
           </div>
         );

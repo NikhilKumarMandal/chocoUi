@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer7() {
+function Footer() {
   return (
     <>
       <footer className="w-full bg-white py-12 border-t border-gray-100">
@@ -163,4 +163,4 @@ function Footer7() {
   );
 }
 
-export default Footer7;
+export default Footer;

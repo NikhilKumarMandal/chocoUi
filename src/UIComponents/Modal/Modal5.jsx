@@ -20,7 +20,7 @@ const Modal5 = ({
     " transition-colors duration-300";
 
   return (
-    <div className="flex items-center justify-center bg-gray-100 p-4">
+    <div className="flex items-center justify-center bg-[#F5EEE7] p-4">
       <button
         onClick={() => setIsOpen(true)}
         className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#8c6446] transition-colors duration-300"
@@ -29,16 +29,16 @@ const Modal5 = ({
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-end p-4 z-50">
-          <div className="bg-white rounded-l-2xl shadow-xl w-full max-w-md h-full transform transition-all duration-300">
-            <div className="p-6 border-b border-gray-200 flex justify-between items-center">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-end p-4 z-50">
+          <div className="bg-[#FFF9F5] rounded-l-2xl shadow-xl w-full max-w-md h-full transform transition-all duration-300">
+            <div className="p-6 border-b border-[#E4D4C6] flex justify-between items-start">
               <div>
-                <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
-                <p className="text-gray-600 mt-2">{description}</p>
+                <h2 className="text-2xl font-bold text-[#3C2B21]">{title}</h2>
+                <p className="text-[#6B4E3B] mt-2">{description}</p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-gray-600"
+                className="text-[#A3876C] hover:text-[#3C2B21] transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -57,13 +57,13 @@ const Modal5 = ({
             </div>
 
             <div className="p-6">
-              <p className="text-gray-700">{content}</p>
+              <p className="text-[#4E3A2A]">{content}</p>
             </div>
 
-            <div className="p-6 border-t border-gray-200 flex justify-end gap-4">
+            <div className="p-6 border-t border-[#E4D4C6] flex justify-end gap-4">
               <button
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-300"
+                className="px-4 py-2 text-[#7B5236] hover:bg-[#F2E6DD] rounded-lg transition-colors duration-300"
               >
                 {cancelText}
               </button>
