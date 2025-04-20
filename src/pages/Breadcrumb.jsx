@@ -11,7 +11,7 @@ function Breadcrumb() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `function Breadcrumb1() {
+          code: `function Breadcrumb() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Parent", href: "/parent" },
@@ -52,7 +52,7 @@ function Breadcrumb() {
   );
 }
 
-export default Breadcrumb1;
+export default Breadcrumb;
 `,
         },
       ],
@@ -75,7 +75,7 @@ export default Breadcrumb1;
           language: "jsx",
           code: `import React from "react";
           
-          function Breadcrumb2() {
+          function Breadcrumb() {
             const breadcrumbItems = [
               { label: "Parent", href: "/parent" },
               { label: "Child", href: "/parent/child" },
@@ -150,7 +150,7 @@ export default Breadcrumb1;
             );
           }
           
-          export default Breadcrumb2;
+          export default Breadcrumb;
           `,
         },
       ],
@@ -173,7 +173,7 @@ export default Breadcrumb1;
           language: "jsx",
           code: `import React from "react";
           
-          function Breadcrumb3() {
+          function Breadcrumb() {
             const breadcrumbItems = [
               {
                 label: "ChocoUI",
@@ -275,7 +275,7 @@ export default Breadcrumb1;
             );
           }
           
-          export default Breadcrumb3;
+          export default Breadcrumb;
            `,
         },
       ],

@@ -155,7 +155,7 @@ function CardPage() {
           language: "jsx",
           code: `import React from "react";
 
-const Card1 = ({
+const Card = ({
   title = "Choco UI",
   description = "Here are the full information of choco ui and tech-wizard team",
   buttonText = "Read more",
@@ -205,7 +205,7 @@ const Card1 = ({
   );
 };
 
-export default Card1;
+export default Card;
           `,
         },
       ],
@@ -270,7 +270,7 @@ export default Card1;
           language: "jsx",
           code: `import React from "react";
           
-          function Card2({
+          function Card({
             imageUrl = "https://plus.unsplash.com/premium_photo-1683120880375-074c4ba3f775?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             imageAlt = "Sunset in the mountains",
             title = "Rich, velvety brown chocolate flows smoothly, melting into a decadent treat",
@@ -302,7 +302,7 @@ export default Card1;
             );
           }
           
-          export default Card2;
+          export default Card;
                     `,
         },
       ],
@@ -361,7 +361,7 @@ export default Card1;
           language: "jsx",
           code: `import React from "react";
 
-function Card5({ name, jobTitle, imageUrl, className }) {
+function Card({ name, jobTitle, imageUrl, className }) {
   const handleAddFriend = () => {
     alert("Friend added!");
   };
@@ -407,7 +407,7 @@ function Card5({ name, jobTitle, imageUrl, className }) {
   );
 }
 
-export default Card5;
+export default Card;
           `,
         },
       ],
@@ -460,7 +460,7 @@ export default Card5;
           language: "jsx",
           code: `import React from "react";
           
-          export default function Card7({ imageUrl, date, title, description }) {
+          export default function Card({ imageUrl, date, title, description }) {
             return (
               <article className="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg max-w-96 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4">
                 <img
