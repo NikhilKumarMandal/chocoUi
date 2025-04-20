@@ -40,7 +40,7 @@ export default function PreviewComponent({
     <div
       className={`w-full ${
         isFullWidth ? "max-w-full p-0" : "max-w-screen-xl px-4 py-2"
-      } mx-auto border rounded-lg shadow-md mt-6 overflow-hidden bg-gradient-to-b from-white to-[#fcedd2]/10`}
+      } mx-auto border border-[#3C2613]/20 rounded-lg shadow-md mt-6 overflow-hidden bg-gradient-to-b from-white to-[#fcedd2]/10`}
     >
       <div className="px-4 pt-4">
         <div className="flex justify-between items-center">
@@ -74,7 +74,7 @@ export default function PreviewComponent({
 
         {/* Installation Information */}
         {showInfo && requiresInstallation && (
-          <div className="mb-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
+          <div className="mb-4 p-4 bg-[#fcedd2]/30 rounded-lg border border-[#6C4E31]/30">
             <h3 className="font-bold text-[#3C2613] flex items-center gap-2 mb-2">
               <Package size={18} /> Installation Required
             </h3>
@@ -99,7 +99,7 @@ export default function PreviewComponent({
 
         {/* Component Usage Guide */}
         {showUsage && componentProps.length > 0 && (
-          <div className="mb-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="mb-4 p-4 bg-[#fcedd2]/30 rounded-lg border border-[#6C4E31]/30">
             <div className="mt-4">
               <h4 className="font-medium text-[#3C2613] mb-2">
                 Example Usage:
@@ -126,16 +126,16 @@ export default function PreviewComponent({
           </div>
         )}
 
-        <div className="flex border-b border-gray-200 flex-wrap">
+        <div className="flex border-b border-[#3C2613]/20 flex-wrap">
           {[
             { label: "Preview", value: "preview", icon: <Eye size={18} /> },
             { label: "Code", value: "code", icon: <Code size={18} /> },
           ].map(({ label, value, icon }) => (
             <button
               key={value}
-              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-gray-900 hover:text-[#603F26] hover:font-bold sm:text-base ${
+              className={`flex-1 py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all text-[#3C2613] hover:text-[#6C4E31] hover:font-bold sm:text-base ${
                 activeTab === value
-                  ? "border-b-2 border-[#603F26] text-gray-900"
+                  ? "border-b-2 border-[#6C4E31] text-[#3C2613]"
                   : ""
               }`}
               onClick={() => setActiveTab(value)}
@@ -148,7 +148,7 @@ export default function PreviewComponent({
 
       <div className="p-4 mt-3  relative">
         {activeTab === "preview" ? (
-          <div className="rounded-md border overflow-hidden">
+          <div className="rounded-md border border-[#3C2613]/20 overflow-hidden">
             <div
               className={`max-h-[600px] overflow-y-auto p-4  ${previewBg} ${
                 isFullWidth ? "" : "flex justify-center "
@@ -170,12 +170,12 @@ export default function PreviewComponent({
             </div>
           </div>
         ) : (
-          <div className="w-full rounded-md border bg-gray-900 overflow-hidden">
+          <div className="w-full rounded-md border border-[#3C2613]/20 bg-[#1a1a1a] overflow-hidden">
             <div className="max-h-[550px] overflow-auto p-2 sm:p-4">
               <div className="mb-4 flex justify-end">
                 <button
                   onClick={handleCopy}
-                  className="bg-gray-700 text-gray-200 px-3 py-1.5 rounded-md text-sm flex items-center gap-1 hover:bg-gray-600"
+                  className="bg-[#3C2613] text-[#FFDBB5] px-3 py-1.5 rounded-md text-sm flex items-center gap-1 hover:bg-[#6C4E31]"
                 >
                   {copied ? <Check size={16} /> : <Copy size={16} />}
                 </button>
@@ -187,7 +187,7 @@ export default function PreviewComponent({
                   language={codeSnippet.language}
                 >
                   {({ tokens, getLineProps, getTokenProps }) => (
-                    <pre className="rounded-lg overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed bg-gray-900 text-white border border-gray-700 w-full p-4">
+                    <pre className="rounded-lg overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed bg-[#1a1a1a] text-white border border-[#3C2613]/20 w-full p-4">
                       {tokens.map((line, i) => (
                         <div
                           key={i}
