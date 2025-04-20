@@ -27,7 +27,7 @@ const Dropdown2 = ({
     <div className="relative w-72 m-4">
       <button
         onClick={toggleDropdown}
-        className="w-full px-4 py-3 bg-[#155DFC] text-white rounded-lg flex items-center justify-between hover:bg-purple-700 transition-colors duration-200 shadow-md"
+        className="w-full px-4 py-3 bg-[#4B2E2B] text-white rounded-lg flex items-center justify-between hover:bg-[#3C241F] transition-colors duration-200 shadow-md"
       >
         <span>
           {selectedItems.length === 0
@@ -35,11 +35,9 @@ const Dropdown2 = ({
             : selectedItems.length + " Selected"}
         </span>
         <svg
-          className={
-            isOpen
-              ? "w-5 h-5 transition-transform duration-200 transform rotate-180"
-              : "w-5 h-5 transition-transform duration-200"
-          }
+          className={`w-5 h-5 transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -54,11 +52,11 @@ const Dropdown2 = ({
       </button>
 
       {isOpen && (
-        <div className="absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg divide-y divide-gray-100">
+        <div className="absolute w-full mt-2 bg-[#F5ECE4] border border-[#D7C2B4] rounded-lg shadow-lg divide-y divide-[#E8D7C7] z-10">
           {options.map((option) => (
             <div
               key={option.id}
-              className="flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150"
+              className="flex items-center px-4 py-3 hover:bg-[#EADFD3] cursor-pointer transition-colors duration-150"
               onClick={() => toggleOption(option.id)}
             >
               <div className="relative flex items-center">
@@ -66,7 +64,7 @@ const Dropdown2 = ({
                   type="checkbox"
                   checked={selectedItems.includes(option.id)}
                   onChange={() => {}}
-                  className="w-4 h-4 border-2 border-gray-300 rounded focus:ring-purple-500 text-purple-600 cursor-pointer"
+                  className="w-4 h-4 border-2 border-[#C6A27E] rounded focus:ring-[#C6A27E] text-[#C6A27E] cursor-pointer"
                 />
                 {selectedItems.includes(option.id) && (
                   <svg
@@ -84,7 +82,7 @@ const Dropdown2 = ({
                   </svg>
                 )}
               </div>
-              <span className="ml-3 text-gray-700">{option.label}</span>
+              <span className="ml-3 text-[#4B2E2B]">{option.label}</span>
             </div>
           ))}
         </div>

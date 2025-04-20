@@ -11,13 +11,13 @@ function PricingSection() {
           language: "jsx",
           code: `function Pricing2() {
   return (
-    <div className="bg-gray-900 min-h-screen flex items-center justify-center p-4 py-12">
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-1  gap-8">
-        <div className="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-[#FFFFFF] min-h-screen flex items-center justify-center p-4 py-12">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-1 gap-8">
+        <div className="bg-[#7F6450] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-8">
-            <div className="p-2 bg-indigo-500 rounded-lg">
+            <div className="p-2 bg-[#FFEAC5] rounded-lg">
               <svg
-                className="w-6 h-6 text-white"
+                className="w-6 h-6 text-[#603F26]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -30,16 +30,16 @@ function PricingSection() {
                 />
               </svg>
             </div>
-            <h2 className="text-[0.2px]  md:text-2xl font-bold text-white">
+            <h2 className="text-[0.2px] md:text-2xl font-bold text-[#FFEAC5]">
               For Individuals
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 text-[9px] sm:text-xl">
-            <div className="bg-gray-900 rounded-lg p-6 hover:border-indigo-400 border border-gray-800 transition-all duration-200 hover:scale-[1.02]">
-              <div className="flex items-center  gap-2 mb-3 text-gray-300">
+            <div className="bg-[#603F26] rounded-lg p-6 hover:border-[#FFEAC5] border border-[#7F6450] transition-all duration-200 hover:scale-[1.02]">
+              <div className="flex items-center gap-2 mb-3 text-[#FFEAC5]">
                 <svg
-                  className="w-4 h-4 text-yellow-400"
+                  className="w-4 h-4 text-[#FFEAC5]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -54,18 +54,20 @@ function PricingSection() {
                 <span>Monthly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className="text-xl ls:text-4xl font-bold text-white">
+                <span className="text-xl ls:text-4xl font-bold text-[#FFEAC5]">
                   $39
                 </span>
-                <span className="text-sm text-gray-400 ml-1 mb-1">/month</span>
+                <span className="text-sm text-[#FFEAC5]/80 ml-1 mb-1">
+                  /month
+                </span>
               </div>
 
-              <div className="border-t border-gray-700 my-5"></div>
+              <div className="border-t border-[#7F6450] my-5"></div>
 
-              <ul className="text-gray-300 mb-8 space-y-3">
+              <ul className="text-[#FFEAC5] mb-8 space-y-3">
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -81,7 +83,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -97,7 +99,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -113,7 +115,7 @@ function PricingSection() {
                 </li>
               </ul>
 
-              <button className="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center justify-center gap-2 mb-4">
+              <button className="w-full py-3 bg-[#FFEAC5] text-[#603F26] rounded-lg hover:bg-[#FFEAC5]/90 transition-colors font-medium flex items-center justify-center gap-2 mb-4">
                 Start Learning
                 <svg
                   className="h-4 w-4"
@@ -132,14 +134,14 @@ function PricingSection() {
 
               <a
                 href="#"
-                className="block text-center text-indigo-400 hover:text-indigo-300 text-sm font-medium"
+                className="block text-center text-[#FFEAC5] hover:text-[#FFEAC5]/80 text-sm font-medium"
               >
                 Try a free 7-Day trial →
               </a>
             </div>
 
-            <div className="bg-gray-900 rounded-lg p-6 border-2 border-green-500 relative hover:scale-[1.02] transition-all duration-200">
-              <div className="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-bold flex items-center gap-1">
+            <div className="bg-[#603F26] rounded-lg p-6 border-2 border-[#FFEAC5] relative hover:scale-[1.02] transition-all duration-200">
+              <div className="absolute top-4 right-4 bg-[#FFEAC5] text-[#603F26] text-xs px-3 py-1 rounded-full font-bold flex items-center gap-1">
                 <svg
                   className="w-3 h-3"
                   fill="none"
@@ -156,9 +158,9 @@ function PricingSection() {
                 <span>Save 17%</span>
               </div>
 
-              <div className="flex items-center gap-2 mb-3 text-gray-300">
+              <div className="flex items-center gap-2 mb-3 text-[#FFEAC5]">
                 <svg
-                  className="w-4 h-4 text-yellow-400"
+                  className="w-4 h-4 text-[#FFEAC5]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -173,20 +175,24 @@ function PricingSection() {
                 <span>Yearly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className=" text-2xl ls:text-4xl font-bold text-white">
+                <span className="text-2xl ls:text-4xl font-bold text-[#FFEAC5]">
                   $390
                 </span>
-                <span className="text-sm text-gray-400 ml-1 mb-1">/year</span>
+                <span className="text-sm text-[#FFEAC5]/80 ml-1 mb-1">
+                  /year
+                </span>
               </div>
 
-              <div className="text-sm text-gray-400 mb-4">($32.50/month)</div>
+              <div className="text-sm text-[#FFEAC5]/80 mb-4">
+                ($32.50/month)
+              </div>
 
-              <div className="border-t border-gray-700 my-5"></div>
+              <div className="border-t border-[#7F6450] my-5"></div>
 
-              <ul className="text-gray-300 mb-8 space-y-3">
+              <ul className="text-[#FFEAC5] mb-8 space-y-3">
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -202,7 +208,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -218,7 +224,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -234,7 +240,7 @@ function PricingSection() {
                 </li>
               </ul>
 
-              <button className="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium flex items-center justify-center gap-2 mb-4">
+              <button className="w-full py-3 bg-[#FFEAC5] text-[#603F26] rounded-lg hover:bg-[#FFEAC5]/90 transition-colors font-medium flex items-center justify-center gap-2 mb-4">
                 Get Yearly Access
                 <svg
                   className="h-4 w-4"
@@ -253,7 +259,7 @@ function PricingSection() {
 
               <a
                 href="#"
-                className="block text-center text-indigo-400 hover:text-indigo-300 text-sm font-medium"
+                className="block text-center text-[#FFEAC5] hover:text-[#FFEAC5]/80 text-sm font-medium"
               >
                 Try a free 7-Day trial →
               </a>
@@ -261,11 +267,11 @@ function PricingSection() {
           </div>
         </div>
 
-        <div className="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-[#7F6450] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-8">
-            <div className="p-2 bg-purple-500 rounded-lg">
+            <div className="p-2 bg-[#FFEAC5] rounded-lg">
               <svg
-                className="w-6 h-6 text-white"
+                className="w-6 h-6 text-[#603F26]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -278,14 +284,14 @@ function PricingSection() {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-white">For Teams</h2>
+            <h2 className="text-2xl font-bold text-[#FFEAC5]">For Teams</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 text-[9px] sm:text-xl">
-            <div className="bg-gray-900 rounded-lg p-6 hover:border-purple-400 border border-gray-800 transition-all duration-200 hover:scale-[1.02]">
-              <div className="flex items-center flex-wrap gap-2 mb-3 text-gray-300">
+            <div className="bg-[#603F26] rounded-lg p-6 hover:border-[#FFEAC5] border border-[#7F6450] transition-all duration-200 hover:scale-[1.02]">
+              <div className="flex items-center flex-wrap gap-2 mb-3 text-[#FFEAC5]">
                 <svg
-                  className="w-4 h-4 text-yellow-400"
+                  className="w-4 h-4 text-[#FFEAC5]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -300,22 +306,24 @@ function PricingSection() {
                 <span>Monthly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className=" text-xl ls:text-4xl font-bold text-white">
+                <span className="text-xl ls:text-4xl font-bold text-[#FFEAC5]">
                   $24.50
                 </span>
-                <span className="text-[9px] sm:text-sm text-gray-400 ml-1 mb-1">
+                <span className="text-[9px] sm:text-sm text-[#FFEAC5]/80 ml-1 mb-1">
                   /month
                 </span>
               </div>
 
-              <div className="text-sm text-gray-400 mb-1">Minimum 10 seats</div>
+              <div className="text-sm text-[#FFEAC5]/80 mb-1">
+                Minimum 10 seats
+              </div>
 
-              <div className="border-t border-gray-700 my-5"></div>
+              <div className="border-t border-[#7F6450] my-5"></div>
 
-              <ul className="text-gray-300 mb-8 space-y-3">
+              <ul className="text-[#FFEAC5] mb-8 space-y-3">
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -331,7 +339,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -347,7 +355,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -363,7 +371,7 @@ function PricingSection() {
                 </li>
               </ul>
 
-              <button className="w-full py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium flex items-center justify-center gap-2">
+              <button className="w-full py-3 bg-[#FFEAC5] text-[#603F26] rounded-lg hover:bg-[#FFEAC5]/90 transition-colors font-medium flex items-center justify-center gap-2">
                 Get Team Access
                 <svg
                   className="h-4 w-4"
@@ -381,8 +389,8 @@ function PricingSection() {
               </button>
             </div>
 
-            <div className="bg-gray-900 rounded-lg p-6 border-2 border-green-500 relative hover:scale-[1.02] transition-all duration-200">
-              <div className="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-bold flex items-center gap-1">
+            <div className="bg-[#603F26] rounded-lg p-6 border-2 border-[#FFEAC5] relative hover:scale-[1.02] transition-all duration-200">
+              <div className="absolute top-4 right-4 bg-[#FFEAC5] text-[#603F26] text-xs px-3 py-1 rounded-full font-bold flex items-center gap-1">
                 <svg
                   className="w-3 h-3"
                   fill="none"
@@ -399,9 +407,9 @@ function PricingSection() {
                 <span>Save 37%</span>
               </div>
 
-              <div className="flex items-center gap-2 mb-3 text-gray-300">
+              <div className="flex items-center gap-2 mb-3 text-[#FFEAC5]">
                 <svg
-                  className="w-4 h-4 text-yellow-400"
+                  className="w-4 h-4 text-[#FFEAC5]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -416,20 +424,24 @@ function PricingSection() {
                 <span>Yearly</span>
               </div>
               <div className="flex items-end mb-1">
-                <span className="text-xl ls:text-4xl font-bold text-white">
+                <span className="text-xl ls:text-4xl font-bold text-[#FFEAC5]">
                   $245
                 </span>
-                <span className="text-sm text-gray-400 ml-1 mb-1">/year</span>
+                <span className="text-sm text-[#FFEAC5]/80 ml-1 mb-1">
+                  /year
+                </span>
               </div>
 
-              <div className="text-sm text-gray-400 mb-4">($20.42/month)</div>
+              <div className="text-sm text-[#FFEAC5]/80 mb-4">
+                ($20.42/month)
+              </div>
 
-              <div className="border-t border-gray-700 my-5"></div>
+              <div className="border-t border-[#7F6450] my-5"></div>
 
-              <ul className="text-gray-300 mb-8 space-y-3">
+              <ul className="text-[#FFEAC5] mb-8 space-y-3">
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -445,7 +457,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -461,7 +473,7 @@ function PricingSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
-                    className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 text-[#FFEAC5] mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -477,7 +489,7 @@ function PricingSection() {
                 </li>
               </ul>
 
-              <button className="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium flex items-center justify-center gap-2">
+              <button className="w-full py-3 bg-[#FFEAC5] text-[#603F26] rounded-lg hover:bg-[#FFEAC5]/90 transition-colors font-medium flex items-center justify-center gap-2">
                 Get Yearly Team Access
                 <svg
                   className="h-4 w-4"
@@ -496,11 +508,11 @@ function PricingSection() {
             </div>
           </div>
 
-          <div className="text-center text-gray-400 text-sm mt-6">
+          <div className="text-center text-[#FFEAC5]/80 text-sm mt-6">
             Need custom enterprise solutions? Email{" "}
             <a
               href="mailto:support@chocoui.com"
-              className="text-white font-medium hover:text-purple-300 transition-colors"
+              className="text-[#FFEAC5] font-medium hover:text-[#FFEAC5]/80 transition-colors"
             >
               support@chocoui.com
             </a>

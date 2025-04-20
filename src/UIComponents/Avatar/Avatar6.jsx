@@ -7,44 +7,42 @@ const Avatar6 = () => {
       name: "Alex Morgan",
       role: "CEO & Founder",
       imageUrl: "https://randomuser.me/api/portraits/women/32.jpg",
-      bgColor: "bg-blue-100 dark:bg-blue-900/30",
+      bgColor: "bg-[#FFEAC5]",
     },
     {
       id: 2,
       name: "James Wilson",
       role: "CTO",
       imageUrl: "https://randomuser.me/api/portraits/men/22.jpg",
-      bgColor: "bg-green-100 dark:bg-green-900/30",
+      bgColor: "bg-[#FFEAC5]",
     },
     {
       id: 3,
       name: "Sophia Chen",
       role: "Lead Designer",
       imageUrl: "https://randomuser.me/api/portraits/women/28.jpg",
-      bgColor: "bg-purple-100 dark:bg-purple-900/30",
+      bgColor: "bg-[#FFEAC5]",
     },
     {
       id: 4,
       name: "Robert Lee",
       role: "Marketing Director",
       imageUrl: "https://randomuser.me/api/portraits/men/42.jpg",
-      bgColor: "bg-amber-100 dark:bg-amber-900/30",
+      bgColor: "bg-[#FFEAC5]",
     },
   ];
 
   const containerClass = "w-full max-w-4xl mx-auto p-6";
   const flexWrapperClass = "flex flex-wrap justify-center gap-6";
   const cardBaseClass =
-    "flex flex-col items-center p-6 rounded-lg transition-transform duration-300 hover:scale-105";
+    "flex flex-col items-center p-6 rounded-lg transition-transform duration-300 hover:scale-105 border border-[#7F6450]";
   const imageWrapperClass =
-    "mb-4 p-1 rounded-full bg-white dark:bg-gray-800 shadow-md";
+    "mb-4 p-1 rounded-full bg-white shadow-md border border-[#7F6450]";
   const imageClass = "w-20 h-20 rounded-full object-cover";
-  const memberNameClass =
-    "text-lg font-semibold text-gray-900 dark:text-gray-100";
-  const memberRoleClass = "text-sm font-bold text-white";
+  const memberNameClass = "text-lg font-semibold text-[#603F26]";
+  const memberRoleClass = "text-sm font-bold text-[#7F6450]";
   const socialLinksWrapperClass = "mt-3 flex space-x-2";
-  const socialLinkClass =
-    "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200";
+  const socialLinkClass = "text-[#7F6450] hover:text-[#603F26]";
   const svgClass = "w-5 h-5";
 
   return (

@@ -44,39 +44,39 @@ const Alert5 = () => {
 
   const alertStyles = {
     info: {
-      bg: "bg-blue-100 dark:bg-blue-900/80",
-      border: "border-blue-300 dark:border-blue-700",
-      text: "text-blue-900 dark:text-blue-50",
-      icon: "text-blue-600 dark:text-blue-300",
-      button: "hover:bg-blue-200 dark:hover:bg-blue-800",
+      bg: "bg-[#FFEAC5]",
+      border: "border-[#7F6450]",
+      text: "text-[#603F26]",
+      icon: "text-[#603F26]",
+      button: "hover:bg-[#FFEAC5]/80",
     },
     success: {
-      bg: "bg-emerald-100 dark:bg-emerald-900/80",
-      border: "border-emerald-300 dark:border-emerald-700",
-      text: "text-emerald-900 dark:text-emerald-50",
-      icon: "text-emerald-600 dark:text-emerald-300",
-      button: "hover:bg-emerald-200 dark:hover:bg-emerald-800",
+      bg: "bg-[#FFEAC5]",
+      border: "border-[#7F6450]",
+      text: "text-[#603F26]",
+      icon: "text-[#603F26]",
+      button: "hover:bg-[#FFEAC5]/80",
     },
     warning: {
-      bg: "bg-amber-100 dark:bg-amber-900/80",
-      border: "border-amber-300 dark:border-amber-700",
-      text: "text-amber-900 dark:text-amber-50",
-      icon: "text-amber-600 dark:text-amber-300",
-      button: "hover:bg-amber-200 dark:hover:bg-amber-800",
+      bg: "bg-[#FFEAC5]",
+      border: "border-[#7F6450]",
+      text: "text-[#603F26]",
+      icon: "text-[#603F26]",
+      button: "hover:bg-[#FFEAC5]/80",
     },
     error: {
-      bg: "bg-red-100 dark:bg-red-900/80",
-      border: "border-red-300 dark:border-red-700",
-      text: "text-red-900 dark:text-red-50",
-      icon: "text-red-600 dark:text-red-300",
-      button: "hover:bg-red-200 dark:hover:bg-red-800",
+      bg: "bg-[#FFEAC5]",
+      border: "border-[#7F6450]",
+      text: "text-[#603F26]",
+      icon: "text-[#603F26]",
+      button: "hover:bg-[#FFEAC5]/80",
     },
     neutral: {
-      bg: "bg-gray-100 dark:bg-gray-800/80",
-      border: "border-gray-300 dark:border-gray-700",
-      text: "text-gray-900 dark:text-gray-50",
-      icon: "text-gray-600 dark:text-gray-300",
-      button: "hover:bg-gray-200 dark:hover:bg-gray-700",
+      bg: "bg-[#FFEAC5]",
+      border: "border-[#7F6450]",
+      text: "text-[#603F26]",
+      icon: "text-[#603F26]",
+      button: "hover:bg-[#FFEAC5]/80",
     },
   };
 
@@ -150,15 +150,11 @@ const Alert5 = () => {
             >
               <div className="flex items-center">
                 <div
-                  className={
-                    "flex-shrink-0 " + alertStyles[alert.type].icon
-                  }
+                  className={"flex-shrink-0 " + alertStyles[alert.type].icon}
                 >
                   {getIcon(alert.type)}
                 </div>
-                <div className="ml-3 text-sm font-medium">
-                  {alert.message}
-                </div>
+                <div className="ml-3 text-sm font-medium">{alert.message}</div>
               </div>
               <button
                 type="button"
