@@ -1,10 +1,10 @@
 const Checkbox = () => (
-  <div className="space-y-6 p-6 max-w-md mx-auto bg-white/70 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200">
+  <div className="space-y-6 p-6 max-w-md mx-auto bg-[#FDF9F4]/70 backdrop-blur-md rounded-2xl shadow-xl border border-[#E8DCCF]">
     <label className="flex items-center gap-3 group cursor-pointer">
       <div className="relative">
         <input
           type="checkbox"
-          className="peer appearance-none w-5 h-5 rounded-md border-2 border-gray-300 transition-colors duration-200 checked:bg-blue-600 checked:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          className="peer appearance-none w-5 h-5 rounded-md border-2 border-[#D7C3AE] transition-colors duration-200 checked:bg-[#A9745A] checked:border-[#A9745A] focus:outline-none focus:ring-2 focus:ring-[#EFDAC5]"
         />
         <svg
           className="absolute inset-0 w-5 h-5 text-white pointer-events-none hidden peer-checked:block"
@@ -16,7 +16,7 @@ const Checkbox = () => (
           <path d="M5 12l5 5L20 7" />
         </svg>
       </div>
-      <span className="text-gray-700 group-hover:text-blue-600 transition-colors">
+      <span className="text-[#5B4634] group-hover:text-[#A9745A] transition-colors">
         Default checkbox
       </span>
     </label>
@@ -26,7 +26,7 @@ const Checkbox = () => (
         <input
           type="checkbox"
           defaultChecked
-          className="peer appearance-none w-5 h-5 rounded-md border-2 border-blue-500 bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          className="peer appearance-none w-5 h-5 rounded-md border-2 border-[#A9745A] bg-[#A9745A] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#EFDAC5]"
         />
         <svg
           className="absolute inset-0 w-5 h-5 text-white pointer-events-none peer-checked:block"
@@ -38,7 +38,7 @@ const Checkbox = () => (
           <path d="M5 12l5 5L20 7" />
         </svg>
       </div>
-      <span className="text-blue-700 font-medium group-hover:text-blue-800 transition-colors">
+      <span className="text-[#A9745A] font-medium group-hover:text-[#8A5C47] transition-colors">
         Pre-checked
       </span>
     </label>
@@ -48,10 +48,10 @@ const Checkbox = () => (
         <input
           type="checkbox"
           disabled
-          className="w-5 h-5 rounded-md border-2 border-gray-300 bg-gray-200"
+          className="w-5 h-5 rounded-md border-2 border-[#DCCFC3] bg-[#F2ECE6]"
         />
         <svg
-          className="absolute inset-0 w-5 h-5 text-gray-400 pointer-events-none"
+          className="absolute inset-0 w-5 h-5 text-[#BFAF9D] pointer-events-none"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -60,7 +60,7 @@ const Checkbox = () => (
           <path d="M5 12l5 5L20 7" />
         </svg>
       </div>
-      <span className="text-gray-600">Disabled checkbox</span>
+      <span className="text-[#9D8975]">Disabled checkbox</span>
     </label>
   </div>
 );

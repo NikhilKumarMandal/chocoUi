@@ -8,7 +8,7 @@ const ProductCard = () => {
   const products = [
     {
       id: 1,
-      img: "https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=2232&auto=format&fit=crop",
       price: 39,
       name: "Modern Smartphone",
       description:
@@ -16,7 +16,7 @@ const ProductCard = () => {
     },
     {
       id: 2,
-      img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2340&auto=format&fit=crop",
       price: 45,
       name: "Wireless Headphones",
       description:
@@ -24,7 +24,7 @@ const ProductCard = () => {
     },
     {
       id: 3,
-      img: "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?q=80&w=2226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?q=80&w=2226&auto=format&fit=crop",
       price: 55,
       name: "Smart Watch",
       description:
@@ -44,28 +44,26 @@ const ProductCard = () => {
 
   return (
     <div className="w-full max-w-sm mx-auto px-2 sm:px-0">
-      <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div className="bg-[#2D1B0E] rounded-lg shadow-md overflow-hidden">
         <div className="relative aspect-[4/5] sm:aspect-[4/3]">
           <button
-            className={
-              "absolute top-3 right-3 z-10 p-2 rounded-full bg-black/30 transition-transform " +
-              (isLiked ? "scale-110" : "scale-100")
-            }
+            className={`absolute top-3 right-3 z-10 p-2 rounded-full bg-[#00000066] transition-transform ${
+              isLiked ? "scale-110" : "scale-100"
+            }`}
             onClick={toggleLike}
             aria-label={isLiked ? "Unlike product" : "Like product"}
           >
             <Heart
-              className={
-                "w-5 h-5 " +
-                (isLiked ? "fill-red-500 text-red-500" : "text-white")
-              }
+              className={`w-5 h-5 ${
+                isLiked ? "fill-[#D85C5C] text-[#D85C5C]" : "text-[#FBEEDC]"
+              }`}
             />
           </button>
 
           <div className="relative h-full overflow-hidden">
             <div
               className="flex h-full transition-transform duration-300 ease-in-out"
-              style={{ transform: "translateX(-" + currentSlide * 100 + "%)" }}
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {products.map((product) => (
                 <div key={product.id} className="w-full h-full flex-shrink-0">
@@ -85,33 +83,32 @@ const ProductCard = () => {
               {products.map((_, index) => (
                 <button
                   key={index}
-                  className={
-                    "w-2 h-2 rounded-full transition-colors " +
-                    (currentSlide === index ? "bg-blue-500" : "bg-gray-300")
-                  }
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    currentSlide === index ? "bg-[#FBEEDC]" : "bg-[#6D4C41]"
+                  }`}
                   onClick={() => goToSlide(index)}
-                  aria-label={"Go to slide " + (index + 1)}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>
           </div>
         </div>
 
-        <div className="p-4">
+        <div className="p-4 text-[#EEDFC7]">
           <div className="flex justify-between items-center mb-2">
-            <h2 className="font-medium text-lg text-blue-500">
+            <h2 className="font-semibold text-lg text-[#FBEEDC]">
               {products[currentSlide].name}
             </h2>
-            <span className="font-medium text-blue-500">
+            <span className="font-semibold text-[#FBEEDC]">
               {"$" + products[currentSlide].price}
             </span>
           </div>
 
-          <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+          <p className="text-sm text-[#D2BA9B] mb-4 line-clamp-2">
             {products[currentSlide].description}
           </p>
 
-          <button className="w-full bg-blue-600 text-white py-2 rounded font-medium hover:bg-blue-700 transition-colors">
+          <button className="w-full bg-[#6D4C41] text-[#FBEEDC] py-2 rounded font-medium hover:bg-[#5D3A2F] transition-colors">
             Add to cart
           </button>
         </div>

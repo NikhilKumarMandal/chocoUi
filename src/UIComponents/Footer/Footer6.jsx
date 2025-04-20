@@ -2,175 +2,75 @@ import React from "react";
 
 function Footer6() {
   return (
-    <footer className="w-screen bg-black text-white py-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_50%,rgba(50,50,50,0.4),rgba(0,0,0,0)_70%)]"></div>
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
-
-      <div className="w-full px-0 relative z-10">
+    <footer className="w-screen bg-[#FFEAC5] text-[#603F26] py-6 border-t border-[#7F6450]/30">
+      <div className="w-full px-0">
         <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-            <div className="lg:w-1/3 space-y-8">
-              <div>
-                <a href="#" className="text-2xl font-bold tracking-tighter">
-                  Choco<span className="text-gray-500">UI</span>
-                </a>
-              </div>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="flex items-center">
+              <a href="#" className="font-bold text-lg tracking-tight">
+                CHOCO
+              </a>
+            </div>
 
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Create stunning interfaces with our glass morphism inspired UI
-                components. Perfect for modern web applications.
-              </p>
-
-              <div className="pt-2">
+            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              {["Home", "Work", "About", "Contact", "Blog"].map((item) => (
                 <a
+                  key={item}
                   href="#"
-                  className="inline-flex items-center text-sm font-medium text-white hover:text-gray-300 transition-colors"
+                  className="text-sm text-[#7F6450] hover:text-[#603F26] transition-colors"
                 >
-                  <span>Explore Documentation</span>
-                  <svg
-                    className="ml-1 w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
+                  {item}
                 </a>
-              </div>
-            </div>
+              ))}
+            </nav>
 
-            <div className="lg:w-2/3">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                  <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-5">
-                    Products
-                  </h3>
-                  <ul className="space-y-3">
-                    {["Components", "Templates", "Pricing", "FAQ"].map(
-                      (item) => (
-                        <li key={item}>
-                          <a
-                            href="#"
-                            className="text-base text-white hover:text-gray-300 transition-colors"
-                          >
-                            {item}
-                          </a>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-5">
-                    Company
-                  </h3>
-                  <ul className="space-y-3">
-                    {["About", "Blog", "Jobs", "Partners"].map((item) => (
-                      <li key={item}>
-                        <a
-                          href="#"
-                          className="text-base text-white hover:text-gray-300 transition-colors"
-                        >
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-5">
-                    Resources
-                  </h3>
-                  <ul className="space-y-3">
-                    {["Docs", "Learn", "Showcase", "GitHub"].map((item) => (
-                      <li key={item}>
-                        <a
-                          href="#"
-                          className="text-base text-white hover:text-gray-300 transition-colors"
-                        >
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-5">
-                    Legal
-                  </h3>
-                  <ul className="space-y-3">
-                    {["Privacy", "Terms", "License", "Cookies"].map((item) => (
-                      <li key={item}>
-                        <a
-                          href="#"
-                          className="text-base text-white hover:text-gray-300 transition-colors"
-                        >
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {2025} ChocoUI. All rights reserved.
-            </p>
-
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex items-center space-x-4">
               {[
                 {
                   name: "Twitter",
-                  icon: (
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                  ),
+                  path: "M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z",
                 },
                 {
-                  name: "GitHub",
-                  icon: (
-                    <path
-                      fillRule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                      clipRule="evenodd"
-                    />
-                  ),
+                  name: "Instagram",
+                  path: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z",
                 },
                 {
                   name: "Dribbble",
-                  icon: (
-                    <path
-                      fillRule="evenodd"
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                      clipRule="evenodd"
-                    />
-                  ),
+                  path: "M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4.01-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.175.15.35.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z",
                 },
               ].map((social) => (
                 <a
                   key={social.name}
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-[#7F6450] hover:text-[#603F26] transition-colors"
+                  aria-label={social.name}
                 >
-                  <span className="sr-only">{social.name}</span>
                   <svg
-                    className="h-6 w-6"
+                    width="16"
+                    height="16"
                     fill="currentColor"
                     viewBox="0 0 24 24"
-                    aria-hidden="true"
                   >
-                    {social.icon}
+                    <path d={social.path} />
                   </svg>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-[#7F6450]/30 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-[#7F6450]">
+              Â© {new Date().getFullYear()} ChocoUi. All rights reserved.
+            </p>
+
+            <div className="flex items-center gap-4">
+              {["Privacy", "Terms", "Cookies"].map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="text-xs text-[#7F6450] hover:text-[#603F26] transition-colors"
+                >
+                  {item}
                 </a>
               ))}
             </div>

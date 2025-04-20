@@ -9,8 +9,8 @@ const SideButton = ({
 }) => {
   var baseClasses =
     "group inline-flex h-11 m-4 items-center justify-center gap-2 rounded-md " +
-    "bg-white px-5 text-sm font-medium text-gray-700 shadow-sm transition-all " +
-    "hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 ";
+    "bg-[#6c4e31] px-5 text-sm font-medium text-gray-700 shadow-sm transition-all " +
+    "hover:bg-gray-100  dark:text-gray-300 dark:hover:bg-gray-800 ";
 
   var wrapperClasses = center
     ? "flex items-center justify-center min-h-screen"

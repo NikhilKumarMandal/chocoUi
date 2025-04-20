@@ -19,13 +19,13 @@ const ResponsiveCTA = () => {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl shadow-sm">
+    <div className="w-full max-w-6xl mx-auto px-4 py-16 bg-gradient-to-r from-[#FDF9F4] to-[#F7EFE7] rounded-xl shadow-sm border border-[#E8DCCF]">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#4B3621] mb-4">
           Take the next step with confidence
         </h2>
 
-        <p className="text-gray-600 mb-8 md:text-lg">
+        <p className="text-[#7D6651] mb-8 md:text-lg">
           Join thousands of satisfied customers who've transformed their
           experience. Start your journey today.
         </p>
@@ -41,7 +41,7 @@ const ResponsiveCTA = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition duration-200"
+              className="w-full px-4 py-3 rounded-lg border border-[#D7C3AE] focus:ring-2 focus:ring-[#D9B99B] focus:border-transparent outline-none transition duration-200 bg-white text-[#4B3621] placeholder:text-[#BBAA99]"
             />
           </div>
 
@@ -51,8 +51,8 @@ const ResponsiveCTA = () => {
             className={
               "px-6 py-3 font-medium rounded-lg transition duration-200 " +
               (isSubmitting
-                ? "bg-blue-400 text-white cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700 text-white")
+                ? "bg-[#B08968] text-white cursor-not-allowed"
+                : "bg-[#7C4E3C] hover:bg-[#5C3B2E] text-white")
             }
           >
             {isSubmitting ? "Submitting..." : "Get Started"}
@@ -60,12 +60,12 @@ const ResponsiveCTA = () => {
         </form>
 
         {submitted && (
-          <div className="mt-4 text-green-600 font-medium animate-fade-in">
+          <div className="mt-4 text-green-700 font-medium animate-fade-in">
             Thank you! We'll be in touch soon.
           </div>
         )}
 
-        <div className="mt-6 flex flex-wrap justify-center gap-8 text-sm text-gray-500">
+        <div className="mt-6 flex flex-wrap justify-center gap-8 text-sm text-[#7D6651]">
           <div className="flex items-center">
             <svg
               className="w-5 h-5 mr-2 text-green-500"
@@ -112,13 +112,13 @@ const ResponsiveCTA = () => {
           </div>
         </div>
 
-        <p className="mt-6 text-xs text-gray-400">
+        <p className="mt-6 text-xs text-[#BCAFA2]">
           By signing up, you agree to our{" "}
-          <a href="#" className="underline hover:text-gray-600">
+          <a href="#" className="underline hover:text-[#7C4E3C]">
             Terms
           </a>{" "}
           and{" "}
-          <a href="#" className="underline hover:text-gray-600">
+          <a href="#" className="underline hover:text-[#7C4E3C]">
             Privacy Policy
           </a>
         </p>

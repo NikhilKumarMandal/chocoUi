@@ -4,43 +4,44 @@ import { ArrowRight } from "lucide-react";
 const RevealButton = ({
   label = "Explore",
   onClick,
-  colorFrom = "teal-600",
-  colorTo = "blue-800",
   icon = true,
   className = "",
   center = false,
 }) => {
-  var baseClasses =
-    "group relative isolate h-12 w-32 m-4 cursor-pointer overflow-hidden rounded-full " +
-    "border border-gray-200 bg-white p-1 text-center font-medium shadow-sm " +
-    "transition-all duration-500 hover:border-transparent hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 ";
+  const baseClasses = `
+    group relative isolate h-12 w-36 m-4 cursor-pointer overflow-hidden rounded-full 
+    border border-[#C4A484] bg-[#FFF8F2] p-1 text-center font-medium shadow-sm 
+    transition-all duration-500 hover:border-transparent hover:shadow-lg 
+    dark:border-[#BFA88F] dark:bg-[#3B2A1A] ${className}
+  `;
 
-  var textClasses =
-    "absolute inset-0 z-10 flex translate-x-0 items-center justify-center text-gray-800 opacity-100 " +
-    "transition-all duration-500 ease-out group-hover:-translate-x-full group-hover:opacity-0 dark:text-gray-200";
+  const textClasses = `
+    absolute inset-0 z-10 flex translate-x-0 items-center justify-center text-[#edcaa5] opacity-100 
+    transition-all duration-500 ease-out group-hover:-translate-x-full group-hover:opacity-0
+  `;
 
-  var iconClasses =
-    "absolute inset-0 z-10 flex translate-x-full items-center justify-center gap-2 text-white opacity-0 " +
-    "transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100";
+  const iconClasses = `
+    absolute inset-0 z-10 flex translate-x-full items-center justify-center gap-2 text-white opacity-0 
+    transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100
+  `;
 
-  var gradientClasses =
-    "absolute inset-0 -z-0 h-full w-0 rounded-full bg-gradient-to-r from-" +
-    colorFrom +
-    " to-" +
-    colorTo +
-    " transition-all duration-500 ease-out group-hover:w-full";
+  const gradientClasses = `
+    absolute inset-0 -z-0 h-full w-0 rounded-full bg-gradient-to-r 
+    from-[#7A4D28] to-[#B78B61] transition-all duration-500 ease-out group-hover:w-full
+  `;
 
-  var shimmerClasses =
-    "absolute inset-0 -z-10 opacity-0 transition-opacity duration-700 group-hover:opacity-100 " +
-    "group-hover:animate-shimmer";
+  const shimmerClasses = `
+    absolute inset-0 -z-10 opacity-0 transition-opacity duration-700 group-hover:opacity-100 
+    group-hover:animate-shimmer
+  `;
 
-  var centerWrapper = center
+  const centerWrapper = center
     ? "flex items-center justify-center min-h-screen"
     : "";
 
   return (
     <div className={centerWrapper}>
-      <div onClick={onClick} className={baseClasses + className}>
+      <div onClick={onClick} className={baseClasses}>
         <span className={textClasses}>{label}</span>
 
         <div className={iconClasses}>

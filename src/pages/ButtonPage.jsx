@@ -158,7 +158,7 @@ function ButtonPage() {
       title: "The Bloom Button",
       component: (
         <div className="flex justify-center items-center">
-          <BloomButton label="Hover Me" onClick={() => {}} className="" />
+          <BloomButton label="Send" onClick={() => alert("Sent!")} center />
         </div>
       ),
       codeSnippets: [
@@ -334,7 +334,11 @@ export default RevealButton;
       title: "The Beacon Button",
       component: (
         <div className="flex justify-center items-center">
-          <BeaconButton label="Schedule Call" className="" />
+          <BeaconButton
+            label="Book Now"
+            onClick={() => console.log("Clicked!")}
+            center
+          />
         </div>
       ),
       codeSnippets: [

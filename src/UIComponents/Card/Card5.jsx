@@ -11,35 +11,32 @@ function Card5({ name, jobTitle, imageUrl, className }) {
 
   return (
     <div
-      className={`w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto m-4 sm:m-4 md:m-4 lg:m-4 xl:m-4 ${className}`}
+      className={`w-full max-w-sm bg-[#FFF8F2] border border-[#F1E6D9] rounded-3xl shadow-md mx-auto m-4 p-6 ${className}`}
     >
-      <div className="flex flex-col items-center pb-10 mt-9">
+      <div className="flex flex-col items-center text-center">
         <img
-          className="w-24 h-24 mb-3 rounded-full shadow-lg"
+          className="w-24 h-24 mb-4 rounded-full shadow-md border-4 border-[#F3E3D3]"
           src={imageUrl}
           alt={`${name} image`}
         />
-        <h5 className="mb-1 text-xl font-sans text-gray-900 dark:text-white">
-          {name}
-        </h5>
-        <span className="text-sm text-gray-500 dark:text-gray-400">
-          {jobTitle}
-        </span>
-        <div className="flex mt-4 md:mt-6">
-          <a
-            href="#"
+
+        <h5 className="text-xl font-semibold text-[#5C371B] mb-1">{name}</h5>
+
+        <span className="text-sm text-[#A3775C]">{jobTitle}</span>
+
+        <div className="flex gap-2 mt-5">
+          <button
             onClick={handleAddFriend}
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="px-4 py-2 rounded-lg bg-[#7B3F00] text-white text-sm font-medium hover:bg-[#5C371B] transition-all duration-200"
           >
-            Add friend
-          </a>
-          <a
-            href="#"
+            Add Friend
+          </button>
+          <button
             onClick={handleMessage}
-            className="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            className="px-4 py-2 rounded-lg bg-[#F3E3D3] text-[#5C371B] text-sm font-medium hover:bg-[#E7D2C0] transition-all duration-200"
           >
             Message
-          </a>
+          </button>
         </div>
       </div>
     </div>
