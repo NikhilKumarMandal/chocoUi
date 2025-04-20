@@ -16,7 +16,7 @@ const Input_01 = () => {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Type something..."
-          className="bg-background w-full outline-none focus-within:border-blue-700 rounded-md p-2 border-2"
+          className="bg-background w-full outline-none focus-within:border-[#603F26] rounded-md p-2 border-2"
         />
         {value && (
           <X

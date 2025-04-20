@@ -13,11 +13,11 @@ const Navbar10 = () => {
 
   return (
     <>
-      <header className="bg-white border-b border-gray-100">
+      <header className="bg-[#603F26] border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <a href="#" className="text-gray-900 text-xl font-bold">
+              <a href="#" className="text-white text-xl font-bold">
                 Choco
               </a>
             </div>
@@ -25,7 +25,7 @@ const Navbar10 = () => {
             <nav className="hidden md:flex items-center space-x-6">
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors flex items-center"
+                className="text-white  transition-colors flex items-center"
               >
                 <svg
                   className="w-5 h-5 mr-1"
@@ -44,7 +44,7 @@ const Navbar10 = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors flex items-center"
+                className="text-white transition-colors flex items-center"
               >
                 <svg
                   className="w-5 h-5 mr-1"
@@ -63,7 +63,7 @@ const Navbar10 = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors flex items-center"
+                className="text-white transition-colors flex items-center"
               >
                 <svg
                   className="w-5 h-5 mr-1"
@@ -82,7 +82,7 @@ const Navbar10 = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors flex items-center"
+                className="text-white transition-colors flex items-center"
               >
                 <svg
                   className="w-5 h-5 mr-1"

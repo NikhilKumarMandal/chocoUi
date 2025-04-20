@@ -17,7 +17,7 @@ const Pagination3 = ({ totalPages = 5 }) => {
         <button
           onClick={handlePrev}
           disabled={currentPage === 1}
-          className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none"
+          className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-[#111111] hover:bg-[#603F26] hover:border-[#603F26] shadow-none hover:shadow-none"
         >
           <svg
             width="1.5em"
@@ -50,7 +50,7 @@ const Pagination3 = ({ totalPages = 5 }) => {
               className={
                 "inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm min-w-[38px] min-h-[38px] rounded-md " +
                 (isActive
-                  ? "shadow-sm hover:shadow-md bg-stone-800 border-stone-800 text-stone-50 hover:bg-stone-700 hover:border-stone-700"
+                  ? "shadow-sm hover:shadow-md bg-[#603F26] border-stone-800 text-stone-50 hover:bg-stone-700 hover:border-stone-700"
                   : "bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none")
               }
             >
@@ -62,7 +62,7 @@ const Pagination3 = ({ totalPages = 5 }) => {
         <button
           onClick={handleNext}
           disabled={currentPage === totalPages}
-          className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-stone-800 hover:bg-stone-800/5 hover:border-stone-800/5 shadow-none hover:shadow-none"
+          className="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm rounded-md py-2 px-4 bg-transparent border-transparent text-[#111111] hover:bg-[#603F26] hover:border-[#603F26] shadow-none hover:shadow-none"
         >
           Next
           <svg

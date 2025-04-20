@@ -76,7 +76,7 @@ const Tab3 = () => {
           let btnClass =
             "flex items-center w-full px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300 ";
           if (activeTab === index) {
-            btnClass += "bg-blue-600 text-white";
+            btnClass += "bg-[#603F26] text-white";
           } else {
             btnClass += "text-gray-600 hover:bg-gray-100";
           }

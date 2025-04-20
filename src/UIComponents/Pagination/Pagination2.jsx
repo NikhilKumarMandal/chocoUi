@@ -20,7 +20,7 @@ const Pagination2 = ({ totalPages = 10 }) => {
       <button
         onClick={handlePrevious}
         disabled={currentPage === 1}
-        className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-[#603F26] hover:text-white hover:bg-[#603F26] hover:border-[#603F26] focus:text-white focus:bg-[#603F26] focus:border-[#603F26] active:border-[#603F26] active:text-white active:bg-[#603F26] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button"
       >
         <svg
@@ -38,14 +38,14 @@ const Pagination2 = ({ totalPages = 10 }) => {
       </button>
 
       <p className="text-slate-600">
-        Page <strong className="text-slate-800">{currentPage}</strong> of&nbsp;
-        <strong className="text-slate-800">{totalPages}</strong>
+        Page <strong className="text-[#603F26]">{currentPage}</strong> of&nbsp;
+        <strong className="text-[#603F26]">{totalPages}</strong>
       </p>
 
       <button
         onClick={handleNext}
         disabled={currentPage === totalPages}
-        className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        className="rounded-md border border-slate-300 p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-[#603F26] hover:text-white hover:bg-[#603F26] hover:border-[#603F26] focus:text-white focus:bg-[#603F26] focus:border-[#603F26] active:border-[#603F26] active:text-white active:bg-[#603F26] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button"
       >
         <svg

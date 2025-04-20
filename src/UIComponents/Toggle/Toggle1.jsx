@@ -10,7 +10,7 @@ const Toggle1 = () => {
         onClick={toggle}
         className={
           "relative w-14 h-8 rounded-full transition-colors duration-300 px-1 " +
-          (isOn ? "bg-yellow-400" : "bg-gray-600")
+          (isOn ? "bg-yellow-400" : "bg-[#603F26]")
         }
       >
         <span

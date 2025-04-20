@@ -2,7 +2,7 @@ function Pricing2() {
   return (
     <div className="bg-gray-900 min-h-screen flex items-center justify-center p-4 py-12">
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-1  gap-8">
-        <div className="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-[#603F26] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-8">
             <div className="p-2 bg-indigo-500 rounded-lg">
               <svg

@@ -20,7 +20,7 @@ const Tab4 = () => {
           : "";
     const activeClass =
       activeTab === index
-        ? "bg-blue-600 text-white"
+        ? "bg-[#603F26] text-white"
         : "bg-white text-gray-700 hover:bg-gray-50";
 
     return [baseClass, roundClass, activeClass].join(" ").trim();

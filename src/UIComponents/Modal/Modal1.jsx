@@ -17,7 +17,7 @@ const Modal1 = ({
     <div className="flex items-center justify-center bg-gray-100 p-4">
       <button
         onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
+        className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#976c4a] transition-colors duration-300"
       >
         Open Modal
       </button>
@@ -26,7 +26,7 @@ const Modal1 = ({
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl shadow-xl max-w-md w-full transform transition-all duration-300">
             <div className="p-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+              <h2 className="text-2xl font-bold text-[#603F26]">{title}</h2>
               <p className="text-gray-600 mt-2">{description}</p>
             </div>
 

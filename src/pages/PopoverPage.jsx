@@ -41,7 +41,7 @@ function PopoverPage() {
                   <button
                     ref={buttonRef}
                     onClick={() => setIsOpen(!isOpen)}
-                    className="px-4 py-2 bg-gray-800 text-white rounded-lg 
+                    className="px-4 py-2 bg-[#603F26] text-white rounded-lg 
                              hover:bg-gray-700 transition-colors duration-200 
                              focus:outline-none focus:ring-2 focus:ring-gray-500 
                              focus:ring-offset-2"
@@ -63,7 +63,7 @@ function PopoverPage() {
                       </div>
           
                       <div className="px-4 py-3 border-b border-gray-200">
-                        <h3 className="text-lg font-medium text-gray-800">
+                        <h3 className="text-lg font-medium text-[#603F26]">
                           Popover Title
                         </h3>
                       </div>
@@ -82,13 +82,13 @@ function PopoverPage() {
                         <div className="flex justify-end space-x-2">
                           <button
                             onClick={() => setIsOpen(false)}
-                            className="px-3 py-1.5 bg-gray-200 text-gray-700 rounded 
+                            className="px-3 py-1.5 bg-gray-200 text-[#603F26]rounded 
                                      hover:bg-gray-300 transition-colors duration-200"
                           >
                             Close
                           </button>
                           <button
-                            className="px-3 py-1.5 bg-gray-800 text-white rounded 
+                            className="px-3 py-1.5 bg-[#603F26] text-white rounded 
                                      hover:bg-gray-700 transition-colors duration-200"
                           >
                             Action
@@ -141,7 +141,7 @@ function PopoverPage() {
                     ref={triggerRef}
                     onClick={() => setIsOpen(!isOpen)}
                     className={
-                      "px-6 py-2.5 bg-white text-gray-700 rounded-full hover:bg-gray-50 transition-all duration-200 " +
+                      "px-6 py-2.5 bg-white text-[#603F26] rounded-full hover:bg-gray-50 transition-all duration-200 " +
                       "shadow-sm hover:shadow border border-gray-100 flex items-center space-x-2 group"
                     }
                   >
@@ -169,19 +169,19 @@ function PopoverPage() {
                       ref={popoverRef}
                       className={
                         "absolute left-1/2 transform -translate-x-1/2 mt-3 " +
-                        "w-72 bg-white rounded-2xl shadow-lg border border-gray-100 " +
+                        "w-72 bg-white rounded-2xl shadow-lg border border-[#603F26] " +
                         "backdrop-blur-sm transition-all duration-200 z-50"
                       }
                     >
                       <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-                        <div className="w-3 h-3 bg-white rotate-45 border-l border-t border-gray-100" />
+                        <div className="w-3 h-3 bg-[#603F26] rotate-45 border-l border-t border-gray-100" />
                       </div>
           
                       <div className="p-4">
                         <div className="flex items-center space-x-3 mb-3">
                           <div className="p-2 bg-gray-50 rounded-lg">
                             <svg
-                              className="w-5 h-5 text-gray-600"
+                              className="w-5 h-5 text-[#603F26]"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -194,10 +194,10 @@ function PopoverPage() {
                               />
                             </svg>
                           </div>
-                          <h3 className="text-gray-800 font-medium">Quick Information</h3>
+                          <h3 className="text-[#603F26] font-medium">Quick Information</h3>
                         </div>
           
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-[#603F26] text-sm leading-relaxed">
                           Here's some helpful information that provides context the user.
                           Keep it brief and meaningful.
                         </p>
@@ -206,7 +206,7 @@ function PopoverPage() {
                           <button
                             onClick={() => setIsOpen(false)}
                             className={
-                              "px-4 py-2 text-sm text-gray-600 hover:text-gray-800 " +
+                              "px-4 py-2 text-sm text-gray-600 hover:text-[#603F26] " +
                               "transition-colors duration-200"
                             }
                           >
@@ -221,7 +221,7 @@ function PopoverPage() {
             );
           };
           
-          export default Popover`,
+          export default Popover;`,
         },
       ],
     },
@@ -260,8 +260,8 @@ function PopoverPage() {
                     ref={triggerRef}
                     onClick={() => setIsOpen(!isOpen)}
                     className={
-                      "px-5 py-2 bg-neutral-800 text-neutral-300 rounded-lg " +
-                      "hover:bg-neutral-700 transition-all duration-200 " +
+                      "px-5 py-2 bg-[#603F26] text-neutral-300 rounded-lg " +
+                      "hover:bg-[#be885e] transition-all duration-200 " +
                       "border border-neutral-700 flex items-center space-x-2"
                     }
                   >

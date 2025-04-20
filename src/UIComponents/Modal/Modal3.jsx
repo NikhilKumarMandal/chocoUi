@@ -4,8 +4,8 @@ const Modal3 = ({
   title = "Bottom Sheet",
   description = "Perfect for mobile interfaces",
   content = "This bottom sheet modal is optimized for mobile devices with a natural swipe-to-dismiss interaction pattern.",
-  confirmColor = "bg-green-600",
-  confirmHover = "hover:bg-green-700",
+  confirmColor = "bg-[#603F26]",
+  confirmHover = "hover:bg-[#603F26]",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,10 +17,10 @@ const Modal3 = ({
     " transition-colors duration-300";
 
   return (
-    <div className="flex items-center justify-center bg-gray-100 p-4">
+    <div className="flex items-center justify-center bg-[#603F26]-100 p-4">
       <button
         onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition-colors duration-300"
+        className="px-6 py-3 bg-[#603F26] text-white rounded-lg shadow-lg hover:bg-[#886143] transition-colors duration-300"
       >
         Open Bottom Sheet
       </button>
