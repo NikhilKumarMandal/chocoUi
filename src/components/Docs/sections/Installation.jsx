@@ -1,77 +1,95 @@
+import { motion } from "framer-motion";
 import { CodeBlock } from "../components/CodeBlock";
 
 export const Installation = () => (
-  <section>
-    <h2 className="text-3xl font-bold text-[#603F26] mb-2 font-['Bricolage']">
-      Get Started
-    </h2>
-    <p className="text-[#6C4E31] text-lg leading-relaxed font-['Inter'] text-[1.1rem]  space-y-8 mb-8">
-      Start by checking our Installation Guide and then dive into Components.
-    </p>
-
-    <h2 className="text-3xl font-bold text-[#603F26] mb-6 font-['Bricolage']">
-      Installation
-    </h2>
-    <div className="space-y-8 text-[#6C4E31] font-['Inter']">
-      <p className="text-lg leading-relaxed">
-        ChocoUI doesn't require installation. All components are copy-paste
-        ready. But make sure your project is setup with{" "}
-        <span className="font-semibold">Tailwind CSS + Vite</span>.
+  <motion.section
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true }}
+    className="space-y-8"
+  >
+    {/* Section Header */}
+    <div className="mb-12">
+      <h2 className="text-3xl font-bold text-[#603F26] mb-3 font-['Bricolage'] border-l-4 border-[#603F26]/90 pl-4">
+        Installation Guide
+      </h2>
+      <p className="text-[#6C4E31]/90 font-['Inter'] text-lg max-w-3xl">
+        Get started with ChocoUI in minutes. All components are copy-paste ready, but ensure your project is configured with 
+        <span className="font-semibold text-[#603F26]"> Tailwind CSS + Vite</span>.
       </p>
+    </div>
 
-      <p className="text-lg leading-relaxed mb-1 font-bold">
-        If you're starting fresh:
-      </p>
+    {/* Fresh Start Section */}
+    <div className="space-y-8">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-xl font-bold text-[#603F26] mb-4 font-['Bricolage']">
+          New Project Setup
+        </h3>
+        
+        <div className="space-y-5">
+          <div>
+            <h4 className="font-['Bricolage'] text-[#6C4E31] mb-2">Create Vite App</h4>
+            <CodeBlock language="bash">
+              npm create vite@latest my-app
+            </CodeBlock>
+          </div>
 
-      <div className="space-y-6">
-        <div>
-          <h3 className="font-semibold text-[#603F26] text-xl mb-3 font-['Bricolage']">
-            npm
-          </h3>
-          <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
-            npm create vite@latest my-app
-          </CodeBlock>
-          <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
-            cd my-app
-          </CodeBlock>
-          <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
-            npm install
-          </CodeBlock>
-          <CodeBlock className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md">
-            npm install tailwindcss @tailwindcss/vite
-          </CodeBlock>
+          <div>
+            <h4 className="font-['Bricolage'] text-[#6C4E31] mb-2">Navigate & Install</h4>
+            <div className="space-y-3">
+              <CodeBlock language="bash">cd my-app</CodeBlock>
+              <CodeBlock language="bash">npm install</CodeBlock>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-['Bricolage'] text-[#6C4E31] mb-2">Add Tailwind</h4>
+            <CodeBlock language="bash">
+              npm install tailwindcss @tailwindcss/vite
+            </CodeBlock>
+          </div>
         </div>
+      </motion.div>
 
-        <div>
-          <h3 className="font-semibold text-[#603F26] text-xl mb-3 font-['Bricolage']">
-            vite.config.ts
-          </h3>
-          <CodeBlock
-            language="js"
-            className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md"
-          >
-            {`import { defineConfig } from 'vite'
+      {/* Vite Configuration */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        viewport={{ once: true }}
+        className="pt-6"
+      >
+        <h3 className="text-xl font-bold text-[#603F26] mb-4 font-['Bricolage']">
+          Vite Configuration
+        </h3>
+        
+        <div className="space-y-5">
+          <div>
+            <h4 className="font-['Bricolage'] text-[#6C4E31] mb-2">vite.config.ts</h4>
+            <CodeBlock language="js">
+              {`import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+
 export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
 })`}
-          </CodeBlock>
-        </div>
+            </CodeBlock>
+          </div>
 
-        <div>
-          <h3 className="font-semibold text-[#603F26] text-xl mb-3 font-['Bricolage']">
-            Add Tailwind to CSS
-          </h3>
-          <CodeBlock
-            language="css"
-            className="bg-[#FFEAC5]/30 border border-[#FFDBB5] rounded-xl shadow-md"
-          >
-            {`@import "tailwindcss";`}
-          </CodeBlock>
+          <div>
+            <h4 className="font-['Bricolage'] text-[#6C4E31] mb-2">CSS Import</h4>
+            <CodeBlock language="css">@import "tailwindcss";</CodeBlock>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
-  </section>
+  </motion.section>
 );

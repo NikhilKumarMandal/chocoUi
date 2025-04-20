@@ -51,7 +51,7 @@ export const Documentation = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white via-[#fcedd2] to-white overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-b from-white via-[#fcedd2]/30 to-white overflow-hidden">
       <Sparkles
         density={200}
         speed={1}
@@ -62,44 +62,44 @@ export const Documentation = () => {
         className="absolute inset-x-0 bottom-0 h-full w-full"
       />
 
-      <div className="max-w-7xl mx-auto px-4 py-8 pt-35 relative z-10">
-        <div className="flex flex-col md:flex-row gap-12">
-          {/* Sidebar - only visible on md and above */}
-          <nav
-            className={`hidden md:block fixed md:w-64 flex-shrink-0 transition-all duration-300 ${
-              isLastSection ? "md:top-8" : "md:top-32"
-            }`}
-          >
-            <div className="space-y-2 bg-white/50 backdrop-blur-sm p-4 rounded-xl shadow-md border border-[#FFDBB5]">
-              <h3 className="text-[#603F26] font-semibold mb-4 font-['Bricolage']">
-                Contents
-              </h3>
-              <SidebarLink
-                active={activeTab === "introduction"}
-                onClick={() => scrollToSection("introduction")}
-              >
-                Introduction
-              </SidebarLink>
-              <SidebarLink
-                active={activeTab === "installation"}
-                onClick={() => scrollToSection("installation")}
-              >
-                Installation
-              </SidebarLink>
-              <SidebarLink
-                active={activeTab === "usage"}
-                onClick={() => scrollToSection("usage")}
-              >
-                Basic Usage
-              </SidebarLink>
-            </div>
-          </nav>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Sidebar */}
+          <nav className="lg:w-60 flex-shrink-0 fixed top-24 self-start hidden lg:block">
+  <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-[#FFDBB5]/20 lg:mr-8 transform transition-all duration-300 hover:shadow-md">
+    
+
+    {/* Navigation Links */}
+    <div className="space-y-2">
+      <SidebarLink
+        active={activeTab === "introduction"}
+        onClick={() => scrollToSection("introduction")}
+      >
+        Introduction
+      </SidebarLink>
+      <SidebarLink
+        active={activeTab === "installation"}
+        onClick={() => scrollToSection("installation")}
+      >
+        Installation
+      </SidebarLink>
+      <SidebarLink
+        active={activeTab === "usage"}
+        onClick={() => scrollToSection("usage")}
+      >
+        Components Guide
+      </SidebarLink>
+    </div>
+  </div>
+</nav>
+
 
           {/* Main Content */}
-          <main className="flex-1 md:ml-[50vh] space-y-24 pb-24">
+          <main className="flex-1 lg:ml-[50vh] space-y-16 pb-24">
+            {/* Introduction Section */}
             <motion.section
               id="introduction"
-              className="scroll-mt-24"
+              className="scroll-mt-24 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[#FFDBB5]/50"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -108,9 +108,10 @@ export const Documentation = () => {
               <Introduction />
             </motion.section>
 
+            {/* Installation Section */}
             <motion.section
               id="installation"
-              className="scroll-mt-24"
+              className="scroll-mt-24 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[#FFDBB5]/50"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -119,9 +120,10 @@ export const Documentation = () => {
               <Installation />
             </motion.section>
 
+            {/* Usage Section */}
             <motion.section
               id="usage"
-              className="scroll-mt-24"
+              className="scroll-mt-24 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[#FFDBB5]/50"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -129,15 +131,6 @@ export const Documentation = () => {
             >
               <Usage />
             </motion.section>
-
-            <motion.section
-              id="theming"
-              className="scroll-mt-24"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            ></motion.section>
           </main>
         </div>
       </div>
