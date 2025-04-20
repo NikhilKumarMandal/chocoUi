@@ -3,7 +3,7 @@ import ResponsiveCTA from "../UIComponents/CTA/ResponsiveCTA";
 function CTAPage() {
   const CTAVariants = [
     {
-      title: "Go To CTA",
+      title: "CTA",
       component: <ResponsiveCTA />,
       codeSnippets: [
         {

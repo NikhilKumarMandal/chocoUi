@@ -10,12 +10,12 @@ import { Link, useLocation } from "react-router-dom";
 import { Search, ChevronRight, Menu, X, GripVertical } from "lucide-react";
 
 const linksData = [
-  { name: "Accordion", path: "/dashboard/accordion" },
+  { name: "Accordion", path: "/dashboard/accordion", hot: true },
   { name: "Alert", path: "/dashboard/alert", hot: true },
   { name: "Avatar", path: "/dashboard/avatar", hot: true },
   { name: "Animation", path: "/dashboard/animation" },
 
-  { name: "Bento", path: "/dashboard/bento" },
+  { name: "Bento", path: "/dashboard/bento", hot: true },
   { name: "Breadcrumb", path: "/dashboard/breadcrumb" },
   { name: "Badge", path: "/dashboard/badge", hot: true },
   { name: "Button", path: "/dashboard/button", hot: true },
@@ -28,13 +28,13 @@ const linksData = [
 
   { name: "Dropdown", path: "/dashboard/dropdown" },
 
-  { name: "File Upload", path: "/dashboard/fileupload" },
+  { name: "File Upload", path: "/dashboard/fileupload", hot: true },
   { name: "Feedback Alert", path: "/dashboard/feedbackalert" },
   { name: "Form", path: "/dashboard/form" },
   { name: "Footer", path: "/dashboard/footer" },
 
   { name: "Input", path: "/dashboard/input" },
-  { name: "Loader", path: "/dashboard/loader" },
+  { name: "Loader", path: "/dashboard/loader", hot: true },
   { name: "Modal", path: "/dashboard/modal", hot: true },
   { name: "Navbar", path: "/dashboard/navbar", hot: true },
 
@@ -44,11 +44,11 @@ const linksData = [
   { name: "Password", path: "/dashboard/password" },
   { name: "Pricing Card", path: "/dashboard/pricing" },
 
-  { name: "Review", path: "/dashboard/review" },
+  { name: "Review", path: "/dashboard/review", hot: true },
 
-  { name: "Skeleton", path: "/dashboard/skeleton" },
+  { name: "Skeleton", path: "/dashboard/skeleton", hot: true },
   { name: "Stepper", path: "/dashboard/stepper", hot: true },
-  { name: "Store Buttons", path: "/dashboard/storebuttons" },
+  { name: "Store Button", path: "/dashboard/storebuttons" },
 
   { name: "Toggle", path: "/dashboard/toggle", hot: true },
   { name: "Table", path: "/dashboard/table" },

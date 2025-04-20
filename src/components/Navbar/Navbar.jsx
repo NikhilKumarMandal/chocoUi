@@ -28,7 +28,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl mt-7 ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-6xl z-50 transition-all duration-300 rounded-4xl ${
           scrolled
             ? "bg-white/60 backdrop-blur-lg shadow-lg border border-gray-200/80 mt-[-10px]"
             : "bg-white/60 backdrop-blur-md shadow-md border border-gray-200/60"
@@ -91,12 +91,15 @@ function Navbar() {
                   </NavLink>
                 )
               )}
-              <button
-                className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-80 hover:cursor-not-allowed"
-                disabled
+              <a
+                href="https://github.com/NikhilKumarMandal/chocoUi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-80"
+                // disabled
               >
                 Github
-              </button>
+              </a>
             </div>
 
             <button
@@ -193,12 +196,15 @@ function Navbar() {
             )}
           </nav>
 
-          <button
-            className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium transition-all duration-300 hover:opacity-80 hover:cursor-not-allowed"
-            disabled
+          <a
+            href="https://github.com/NikhilKumarMandal/chocoUi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium transition-all duration-300 hover:opacity-80"
+            // disabled
           >
             Github
-          </button>
+          </a>
         </div>
       </div>
     </>

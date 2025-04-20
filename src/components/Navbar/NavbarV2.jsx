@@ -95,12 +95,15 @@ function NavbarV2() {
                   </NavLink>
                 )
               )}
-              <button
-                className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-80 hover:cursor-not-allowed"
-                disabled
+              <a
+                href="https://github.com/NikhilKumarMandal/chocoUi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-80"
+                // disabled
               >
                 Github
-              </button>
+              </a>
             </div>
             <button
               className="md:hidden p-2 rounded-md text-gray-600 hover:text-[#603F26] hover:bg-gray-100 transition-all duration-300"
@@ -139,12 +142,15 @@ function NavbarV2() {
                 {item.name}
               </NavLink>
             ))}
-            <button
-              className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium transition-all duration-300 hover:opacity-80 hover:cursor-not-allowed"
-              disabled
+            <a
+              href="https://github.com/NikhilKumarMandal/chocoUi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium transition-all duration-300 hover:opacity-80"
+              // disabled
             >
               Github
-            </button>
+            </a>
           </div>
         </div>
       </nav>

@@ -48,7 +48,7 @@ function Footer() {
 
             <div className="flex mt-4 space-x-4">
               <motion.a
-                href="#"
+                href="https://github.com/NikhilKumarMandal/chocoUi"
                 className="p-2 text-[#603F26]/80 hover:text-[#603F26] bg-[#6C4E31]/10 rounded-lg transition-all duration-300 hover:bg-[#6C4E31]/20"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.9 }}
@@ -66,7 +66,9 @@ function Footer() {
                 <Twitter size={18} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=chocoui001@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 text-[#603F26]/80 hover:text-[#603F26] bg-[#6C4E31]/10 rounded-lg transition-all duration-300 hover:bg-[#6C4E31]/20"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.9 }}
@@ -155,8 +157,10 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/"
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=chocoui001@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#603F26]/80 hover:text-[#603F26] text-sm flex items-center gap-2 transition-all duration-300 relative group font-['Inter']"
                 >
                   <Mail
@@ -165,7 +169,7 @@ function Footer() {
                   />
                   <span>Contact Us</span>
                   <span className="absolute -bottom-0.5 left-0 h-0.5 bg-[#603F26] w-0 group-hover:w-full transition-all duration-500"></span>
-                </Link>
+                </a>
               </li>
             </ul>
           </motion.div>
@@ -179,7 +183,7 @@ function Footer() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm text-[#603F26]/70 hover:text-[#603F26] transition-colors duration-300 font-['Inter']"
           >
-            © {new Date().getFullYear()} ChocoUI. All rights reserved.
+            Â© {new Date().getFullYear()} ChocoUI. All rights reserved.
           </motion.div>
 
           <motion.p
