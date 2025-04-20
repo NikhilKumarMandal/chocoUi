@@ -27,7 +27,7 @@ const Dropdown2 = ({
     <div className="relative w-72 m-4">
       <button
         onClick={toggleDropdown}
-        className="w-full px-4 py-3 bg-purple-600 text-white rounded-lg flex items-center justify-between hover:bg-purple-700 transition-colors duration-200 shadow-md"
+        className="w-full px-4 py-3 bg-[#155DFC] text-white rounded-lg flex items-center justify-between hover:bg-purple-700 transition-colors duration-200 shadow-md"
       >
         <span>
           {selectedItems.length === 0
