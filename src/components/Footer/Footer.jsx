@@ -49,6 +49,7 @@ function Footer() {
             <div className="flex mt-4 space-x-4">
               <motion.a
                 href="https://github.com/NikhilKumarMandal/chocoUi"
+                target="_blank"
                 className="p-2 text-[#603F26]/80 hover:text-[#603F26] bg-[#6C4E31]/10 rounded-lg transition-all duration-300 hover:bg-[#6C4E31]/20"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.9 }}
@@ -58,6 +59,7 @@ function Footer() {
               </motion.a>
               <motion.a
                 href="https://x.com/chocoui001"
+                target="_blank"
                 className="p-2 text-[#603F26]/80 hover:text-[#603F26] bg-[#6C4E31]/10 rounded-lg transition-all duration-300 hover:bg-[#6C4E31]/20"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.9 }}
@@ -183,7 +185,7 @@ function Footer() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm text-[#603F26]/70 hover:text-[#603F26] transition-colors duration-300 font-['Inter']"
           >
-            Â© {new Date().getFullYear()} ChocoUI. All rights reserved.
+            © {new Date().getFullYear()} ChocoUI. All rights reserved.
           </motion.div>
 
           <motion.p
