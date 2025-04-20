@@ -66,7 +66,6 @@ function TextAreaPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
-            isFullWidth={true}
             requiresInstallation={variant.requiresInstallation}
             dependencies={variant.dependencies}
             usageInstructions={variant.usageInstructions}

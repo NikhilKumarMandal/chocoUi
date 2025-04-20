@@ -53,6 +53,8 @@ import StoreButtonsPage from "./pages/StoreButtonsPage.jsx";
 import FeedbackAlertPage from "./pages/FeedbackAlertPage.jsx";
 import ProgressbarPage from "./pages/ProgressbarPage.jsx";
 import PasswordPage from "./pages/PasswordPage.jsx";
+import Privacy from "./sections/Privacy/Privacy.jsx";
+import Terms from "./sections/Terms/Terms.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -76,7 +78,6 @@ const router = createBrowserRouter(
         <Route path="cta" element={<CTAPage />} />
         <Route path="dropdown" element={<DropdownPage />} />
         <Route path="feedbackalert" element={<FeedbackAlertPage />} />
-        <Route path="fileUpload" element={<FileUpload />} />
         <Route path="fileupload" element={<FileUploadPage />} />
         <Route path="footer" element={<FooterPage />} />
         <Route path="form" element={<FormPage />} />
@@ -104,6 +105,8 @@ const router = createBrowserRouter(
       <Route path="/docs" element={<DocsPage />} />
       <Route path="/feedback" element={<FeedLayout />} />
       <Route path="/template" element={<TemplatePage />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
     </>
   )
 );

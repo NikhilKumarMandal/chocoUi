@@ -123,15 +123,6 @@ function BentoPage() {
           `,
         },
       ],
-      componentProps: [
-        {
-          name: "images",
-          type: "string",
-          default: "undefined",
-          description: "Alert content",
-          example: "''",
-        },
-      ],
     },
     {
       title: "Image Grid",
@@ -328,6 +319,7 @@ export default function CreativeGallery() {
             dependencies={variant.dependencies}
             usageInstructions={variant.usageInstructions}
             componentProps={variant.componentProps}
+            fixPreviewHeight={true}
           >
             {variant.component}
           </PreviewComponent>

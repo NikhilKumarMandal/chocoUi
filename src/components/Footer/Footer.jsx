@@ -57,7 +57,7 @@ function Footer() {
                 <Github size={18} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://x.com/chocoui001"
                 className="p-2 text-[#603F26]/80 hover:text-[#603F26] bg-[#6C4E31]/10 rounded-lg transition-all duration-300 hover:bg-[#6C4E31]/20"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.9 }}
@@ -130,7 +130,7 @@ function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/"
+                  to="/privacy"
                   className="text-[#603F26]/80 hover:text-[#603F26] text-sm flex items-center gap-2 transition-all duration-300 relative group font-['Inter']"
                 >
                   <Shield
@@ -143,7 +143,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/terms"
                   className="text-[#603F26]/80 hover:text-[#603F26] text-sm flex items-center gap-2 transition-all duration-300 relative group font-['Inter']"
                 >
                   <FileText
