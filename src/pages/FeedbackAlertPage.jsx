@@ -1,6 +1,5 @@
 import React from "react";
 import PreviewComponent from "../components/PreviewCom/PreviewComponent";
-import FeedbackModal from "../UIComponents/FeedbackAlert/FeedbackModal";
 import AlertDemo from "../UIComponents/FeedbackAlert/AlertDemo";
 
 function FeedbackAlertPage() {
@@ -177,7 +176,40 @@ function FeedbackAlertPage() {
           export default AlertDemo`,
         },
       ],
-    }
+      componentProps: [
+        {
+          name: "message",
+          type: "string",
+          default: "''",
+          description: "The message text displayed inside the alert box.",
+          example: `"Action completed successfully!"`,
+        },
+        {
+          name: "type",
+          type: `'success' | 'error' | 'warning' | 'info'`,
+          default: `"success"`,
+          description:
+            "The visual style of the alert, which also determines the icon and color scheme.",
+          example: `"error"`,
+        },
+        {
+          name: "duration",
+          type: "number",
+          default: "3000",
+          description:
+            "Time in milliseconds after which the alert auto-dismisses.",
+          example: `5000`,
+        },
+        {
+          name: "onClose",
+          type: "() => void",
+          default: "undefined",
+          description:
+            "Callback function called when the alert is dismissed (either automatically or manually).",
+          example: `() => console.log('Alert closed')`,
+        },
+      ],
+    },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
@@ -193,6 +225,11 @@ function FeedbackAlertPage() {
             key={index}
             title={variant.title}
             codeSnippets={variant.codeSnippets}
+            isFullWidth={true}
+            requiresInstallation={variant.requiresInstallation}
+            dependencies={variant.dependencies}
+            usageInstructions={variant.usageInstructions}
+            componentProps={variant.componentProps}
           >
             {variant.component}
           </PreviewComponent>

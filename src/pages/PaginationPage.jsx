@@ -8,7 +8,11 @@ function PaginationPage() {
   const PaginationVariants = [
     {
       title: "Page Navigation",
-      component: <Pagination1 />,
+      component: (
+        <div className="flex justify-center items-center">
+          <Pagination1 />
+        </div>
+      ),
       codeSnippets: [
         {
           language: "jsx",
@@ -79,7 +83,11 @@ export default Pagination;
     },
     {
       title: "Arrow Paging",
-      component: <Pagination2 />,
+      component: (
+        <div className="flex justify-center items-center">
+          <Pagination2 />
+        </div>
+      ),
       codeSnippets: [
         {
           language: "jsx",
@@ -165,7 +173,11 @@ export default Pagination;
     },
     {
       title: "Styled Pagination",
-      component: <Pagination3 />,
+      component: (
+        <div className="flex justify-center items-center">
+          <Pagination3 />
+        </div>
+      ),
       codeSnippets: [
         {
           language: "jsx",

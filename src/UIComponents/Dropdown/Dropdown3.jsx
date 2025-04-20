@@ -3,7 +3,7 @@ import { useState } from "react";
 const Dropdown3 = ({
   options = ["Option 1", "Option 2", "Option 3", "Option 4"],
   width = "w-64",
-  color = "indigo",
+  color = "purple",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("Select option");

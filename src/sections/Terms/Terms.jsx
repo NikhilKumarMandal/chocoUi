@@ -3,27 +3,25 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function Terms() {
-  // Ensure the page scrolls to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
-    
-    // Force a repaint to ensure everything loads properly
-    document.body.style.display = 'none';
-    document.body.offsetHeight; // Trigger a reflow
-    document.body.style.display = '';
-    
-    // Alternative approach to ensure content loads
+
+    document.body.style.display = "none";
+    document.body.offsetHeight;
+    document.body.style.display = "";
+
     const timer = setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
     }, 100);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
   const termsSections = [
     {
       title: "Acceptance of Terms",
-      description: "By accessing our chocolate factory of components, you agree to these terms faster than a kid spotting a candy bar. If you don't agree, please exit through the gift shop and leave the chocolate for the rest of us.",
+      description:
+        "By accessing our chocolate factory of components, you agree to these terms faster than a kid spotting a candy bar. If you don't agree, please exit through the gift shop and leave the chocolate for the rest of us.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -38,7 +36,8 @@ function Terms() {
     },
     {
       title: "License & Usage",
-      description: "Our components are licensed like a chocolate recipe - you can use them to create your own delicious creations, but you can't claim they're your original recipe. Attribution is required, just like giving credit to the chocolatier.",
+      description:
+        "Our components are licensed like a chocolate recipe - you can use them to create your own delicious creations, but you can't claim they're your original recipe. Attribution is required, just like giving credit to the chocolatier.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -53,7 +52,8 @@ function Terms() {
     },
     {
       title: "Prohibited Uses",
-      description: "Don't use our components for anything illegal, harmful, or that would make Willy Wonka cry. No creating chocolate-covered malware or cocoa-flavored scams. We reserve the right to revoke access faster than a chocolate bar melts in summer.",
+      description:
+        "Don't use our components for anything illegal, harmful, or that would make Willy Wonka cry. No creating chocolate-covered malware or cocoa-flavored scams. We reserve the right to revoke access faster than a chocolate bar melts in summer.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -68,7 +68,8 @@ function Terms() {
     },
     {
       title: "Modifications",
-      description: "We may update these terms as often as we update our chocolate recipes. We'll notify you of significant changes, but it's your responsibility to check back occasionally. Think of it as checking if there's a new flavor at your favorite chocolate shop.",
+      description:
+        "We may update these terms as often as we update our chocolate recipes. We'll notify you of significant changes, but it's your responsibility to check back occasionally. Think of it as checking if there's a new flavor at your favorite chocolate shop.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -83,7 +84,8 @@ function Terms() {
     },
     {
       title: "Limitation of Liability",
-      description: "We're not responsible for any chocolate-related accidents, sugar rushes, or component-induced coding euphoria. Use our components at your own risk, just like eating an entire box of chocolates in one sitting.",
+      description:
+        "We're not responsible for any chocolate-related accidents, sugar rushes, or component-induced coding euphoria. Use our components at your own risk, just like eating an entire box of chocolates in one sitting.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -98,7 +100,8 @@ function Terms() {
     },
     {
       title: "Termination",
-      description: "We reserve the right to terminate your access to our chocolate factory of components if you violate these terms. Don't worry, we'll give you a golden ticket to return once you've learned your lesson.",
+      description:
+        "We reserve the right to terminate your access to our chocolate factory of components if you violate these terms. Don't worry, we'll give you a golden ticket to return once you've learned your lesson.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
@@ -137,28 +140,28 @@ function Terms() {
       <div className="container mx-auto px-4 lg:px-6 max-w-6xl relative z-10">
         {/* Back to Home Button */}
         <div className="mb-8">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center px-4 py-2 bg-[#603F26] text-white rounded-lg hover:bg-[#4A3019] transition-colors duration-300 font-['Inter'] text-sm shadow-md"
           >
-            <svg 
-              className="w-4 h-4 mr-2" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
+            <svg
+              className="w-4 h-4 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
               />
             </svg>
             Back to Home
           </Link>
         </div>
-        
+
         {/* Header */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -178,8 +181,8 @@ function Terms() {
             Terms
           </h2>
           <p className="text-sm md:text-base text-gray-700 max-w-lg mx-auto font-['Inter'] leading-relaxed">
-            Our terms are as clear as a chocolate bar wrapper. 
-            Please read them carefully before using our components.
+            Our terms are as clear as a chocolate bar wrapper. Please read them
+            carefully before using our components.
           </p>
         </motion.div>
 
@@ -223,13 +226,20 @@ function Terms() {
             Governing Law
           </h3>
           <p className="text-[#6C4E31]/90 text-sm font-['Inter'] leading-relaxed mb-4">
-            These terms shall be governed by the laws of the Chocolate Republic, where disputes will be settled by a panel of expert chocolatiers. Any legal proceedings will take place in the Court of Cocoa, where justice is as sweet as it is fair.
+            These terms shall be governed by the laws of the Chocolate Republic,
+            where disputes will be settled by a panel of expert chocolatiers.
+            Any legal proceedings will take place in the Court of Cocoa, where
+            justice is as sweet as it is fair.
           </p>
           <h3 className="text-xl font-bold text-[#603F26] mb-4 font-['Bricolage']">
             Contact Information
           </h3>
           <p className="text-[#6C4E31]/90 text-sm font-['Inter'] leading-relaxed">
-            If you have any questions about these terms, please contact our chocolate concierge at <span className="font-medium">support@chocoui.com</span>. We aim to respond within 24 hours, or the time it takes to temper a batch of chocolate.
+            If you have any questions about these terms, please contact our
+            chocolate concierge at{" "}
+            <span className="font-medium">support@chocoui.com</span>. We aim to
+            respond within 24 hours, or the time it takes to temper a batch of
+            chocolate.
           </p>
         </motion.div>
 
@@ -243,14 +253,10 @@ function Terms() {
           <p className="text-sm text-gray-600 font-['Inter'] italic">
             Last updated: When the chocolate factory's clock struck midnight
           </p>
-          <p className="text-xs text-gray-500 mt-2 font-['Inter']">
-            Disclaimer: This is a placeholder terms of service with humorous content. 
-            Please replace with your actual terms before deployment.
-          </p>
         </motion.div>
       </div>
     </section>
   );
 }
 
-export default Terms; 
+export default Terms;
