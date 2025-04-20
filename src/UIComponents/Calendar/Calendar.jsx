@@ -67,7 +67,7 @@ const Calendar = () => {
         key={day}
         className={
           "p-2 text-center cursor-pointer rounded-full transition-all " +
-          (isToday ? "bg-blue-500 text-white " : "") +
+          (isToday ? "bg-[#603F26] text-white " : "") +
           (isSelected ? "bg-green-500 text-white " : "") +
           "hover:bg-gray-200 hover:text-black"
         }
