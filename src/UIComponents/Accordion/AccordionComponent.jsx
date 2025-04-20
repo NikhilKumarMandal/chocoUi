@@ -61,7 +61,7 @@ const AccordionComponent = ({
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#fefaf5]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {accordionData.map((column) => {
           return (
@@ -69,10 +69,10 @@ const AccordionComponent = ({
               {column.items.map((item) => {
                 const isActive = activeItems.includes(item.id);
                 const buttonClass =
-                  "w-full flex justify-between items-center p-5 text-left " +
-                  (isActive ? "bg-gray-50" : "bg-white");
+                  "w-full flex justify-between items-center p-5 text-left transition-colors duration-200 " +
+                  (isActive ? "bg-[#fefaf5]" : "bg-white");
                 const iconClass =
-                  "w-5 h-5 text-gray-500 transition-transform duration-200 " +
+                  "w-5 h-5 text-[#7c6f66] transition-transform duration-200 " +
                   (isActive ? "rotate-180" : "");
                 const contentClass =
                   "transition-all duration-300 overflow-hidden " +
@@ -81,14 +81,14 @@ const AccordionComponent = ({
                 return (
                   <div
                     key={item.id}
-                    className="border border-[#6c4e31] rounded-lg overflow-hidden shadow-sm transition-all duration-200 hover:shadow-md"
+                    className="border border-[#d8bfa4] rounded-xl overflow-hidden shadow-sm transition-all duration-200 hover:shadow-md bg-white"
                   >
                     <button
                       className={buttonClass}
                       onClick={() => toggleItem(item.id)}
                       aria-expanded={isActive}
                     >
-                      <h3 className="text-sm 2xl:text-base font-medium text-[#101828]">
+                      <h3 className="text-sm 2xl:text-base font-semibold text-[#3e2712]">
                         {item.title}
                       </h3>
                       <svg
@@ -106,7 +106,7 @@ const AccordionComponent = ({
                       </svg>
                     </button>
                     <div className={contentClass}>
-                      <div className="p-5 pt-0 text-sm 2xl:text-base text-gray-600">
+                      <div className="p-5 pt-0 text-sm 2xl:text-base text-[#7c6f66]">
                         {item.content}
                       </div>
                     </div>

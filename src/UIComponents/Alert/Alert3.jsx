@@ -65,24 +65,33 @@ const Alert3 = () => {
           notification.isVisible && (
             <div
               key={notification.id}
-              className={"relative overflow-hidden rounded-lg shadow-md " + getNotificationStyles(notification.type).bg}
+              className={
+                "relative overflow-hidden rounded-lg shadow-md " +
+                getNotificationStyles(notification.type).bg
+              }
             >
               <div
-                className={"absolute top-0 left-0 w-1 h-full " + getNotificationStyles(notification.type).accent}
+                className={
+                  "absolute top-0 left-0 w-1 h-full " +
+                  getNotificationStyles(notification.type).accent
+                }
               ></div>
 
               <div className="flex items-start p-4 pl-6">
                 <div
-                  className={"flex-shrink-0 " + getNotificationStyles(notification.type).iconColor}
+                  className={
+                    "flex-shrink-0 " +
+                    getNotificationStyles(notification.type).iconColor
+                  }
                 >
                   {getNotificationIcon(notification.type)}
                 </div>
 
                 <div className="ml-3 w-0 flex-1 pt-0.5">
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  <p className="text-sm font-medium text-[#603F26]">
                     {notification.title}
                   </p>
-                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  <p className="mt-1 text-sm text-[#7F6450]">
                     {notification.message}
                   </p>
 
@@ -91,11 +100,11 @@ const Alert3 = () => {
                       <button
                         type="button"
                         className={
-                          "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm " + 
-                          getNotificationStyles(notification.type).actionBg + 
-                          " " + 
-                          getNotificationStyles(notification.type).actionText + 
-                          " focus:outline-none focus:ring-2 " + 
+                          "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm " +
+                          getNotificationStyles(notification.type).actionBg +
+                          " " +
+                          getNotificationStyles(notification.type).actionText +
+                          " focus:outline-none focus:ring-2 " +
                           getNotificationStyles(notification.type).actionRing
                         }
                         onClick={() => handleAction(notification.id)}
@@ -104,7 +113,7 @@ const Alert3 = () => {
                       </button>
                       <button
                         type="button"
-                        className="inline-flex items-center px-3 py-2 border border-gray-300 dark:border-gray-600 text-sm leading-4 font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                        className="inline-flex items-center px-3 py-2 border border-[#7F6450] text-sm leading-4 font-medium rounded-md text-[#603F26] bg-[#FFEAC5] hover:bg-[#FFEAC5]/80 focus:outline-none focus:ring-2 focus:ring-[#7F6450]"
                         onClick={() => closeNotification(notification.id)}
                       >
                         Dismiss
@@ -115,7 +124,7 @@ const Alert3 = () => {
 
                 <div className="ml-4 flex-shrink-0 flex">
                   <button
-                    className="bg-transparent rounded-md inline-flex text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none"
+                    className="bg-transparent rounded-md inline-flex text-[#7F6450] hover:text-[#603F26] focus:outline-none"
                     onClick={() => closeNotification(notification.id)}
                   >
                     <span className="sr-only">Close</span>
@@ -146,53 +155,48 @@ const getNotificationStyles = (type) => {
   switch (type) {
     case "info":
       return {
-        bg: "bg-white dark:bg-gray-800",
-        accent: "bg-blue-500",
-        iconColor: "text-blue-500",
-        actionBg:
-          "bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600",
-        actionText: "text-white",
-        actionRing: "focus:ring-blue-500",
+        bg: "bg-[#FFEAC5]",
+        accent: "bg-[#603F26]",
+        iconColor: "text-[#603F26]",
+        actionBg: "bg-[#603F26] hover:bg-[#7F6450]",
+        actionText: "text-[#FFEAC5]",
+        actionRing: "focus:ring-[#603F26]",
       };
     case "success":
       return {
-        bg: "bg-white dark:bg-gray-800",
-        accent: "bg-green-500",
-        iconColor: "text-green-500",
-        actionBg:
-          "bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600",
-        actionText: "text-white",
-        actionRing: "focus:ring-green-500",
+        bg: "bg-[#FFEAC5]",
+        accent: "bg-[#603F26]",
+        iconColor: "text-[#603F26]",
+        actionBg: "bg-[#603F26] hover:bg-[#7F6450]",
+        actionText: "text-[#FFEAC5]",
+        actionRing: "focus:ring-[#603F26]",
       };
     case "warning":
       return {
-        bg: "bg-white dark:bg-gray-800",
-        accent: "bg-yellow-500",
-        iconColor: "text-yellow-500",
-        actionBg:
-          "bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-500 dark:hover:bg-yellow-600",
-        actionText: "text-white",
-        actionRing: "focus:ring-yellow-500",
+        bg: "bg-[#FFEAC5]",
+        accent: "bg-[#603F26]",
+        iconColor: "text-[#603F26]",
+        actionBg: "bg-[#603F26] hover:bg-[#7F6450]",
+        actionText: "text-[#FFEAC5]",
+        actionRing: "focus:ring-[#603F26]",
       };
     case "error":
       return {
-        bg: "bg-white dark:bg-gray-800",
-        accent: "bg-red-500",
-        iconColor: "text-red-500",
-        actionBg:
-          "bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600",
-        actionText: "text-white",
-        actionRing: "focus:ring-red-500",
+        bg: "bg-[#FFEAC5]",
+        accent: "bg-[#603F26]",
+        iconColor: "text-[#603F26]",
+        actionBg: "bg-[#603F26] hover:bg-[#7F6450]",
+        actionText: "text-[#FFEAC5]",
+        actionRing: "focus:ring-[#603F26]",
       };
     default:
       return {
-        bg: "bg-white dark:bg-gray-800",
-        accent: "bg-gray-500",
-        iconColor: "text-gray-500",
-        actionBg:
-          "bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600",
-        actionText: "text-white",
-        actionRing: "focus:ring-gray-500",
+        bg: "bg-[#FFEAC5]",
+        accent: "bg-[#603F26]",
+        iconColor: "text-[#603F26]",
+        actionBg: "bg-[#603F26] hover:bg-[#7F6450]",
+        actionText: "text-[#FFEAC5]",
+        actionRing: "focus:ring-[#603F26]",
       };
   }
 };

@@ -10,61 +10,70 @@ function Accordion() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `import React, { useState } from 'react';
+          code: `import React, { useState } from "react";
           
-          
-          const AccordionComponent = ({ accordionData = [    {
-                id: 'col-1',
+          const AccordionComponent = ({
+            accordionData = [
+              {
+                id: "col-1",
                 items: [
                   {
-                    id: 'item-1',
-                    title: 'What is a UI component?',
-                    content: 'A UI (User Interface) component is a modular, reusable element that serves a specific function within a graphical user interface. Examples include buttons, input fields, dropdown menus, sliders.'
+                    id: "item-1",
+                    title: "What is a UI component?",
+                    content:
+                      "A UI (User Interface) component is a modular, reusable element that serves a specific function within a graphical user interface. Examples include buttons, input fields, dropdown menus, sliders.",
                   },
                   {
-                    id: 'item-2',
-                    title: 'Why are components important?',
-                    content: 'UI components promote consistency, efficiency, and scalability in software development. They allow developers to reuse code, maintain a consistent look and feel across an application.'
+                    id: "item-2",
+                    title: "Why are components important?",
+                    content:
+                      "UI components promote consistency, efficiency, and scalability in software development. They allow developers to reuse code, maintain a consistent look and feel across an application.",
                   },
                   {
-                    id: 'item-3',
-                    title: 'UI Component Traits',
-                    content: 'Well-designed UI components should be modular, customizable, and accessible. They should have clear and intuitive functionality, be easily styled to match the overall design language.'
-                  }
-                ]
+                    id: "item-3",
+                    title: "UI Component Traits",
+                    content:
+                      "Well-designed UI components should be modular, customizable, and accessible. They should have clear and intuitive functionality, be easily styled to match the overall design language.",
+                  },
+                ],
               },
               {
-                id: 'col-2',
+                id: "col-2",
                 items: [
                   {
-                    id: 'item-4',
-                    title: 'Does Component Improve UX?',
-                    content: 'UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application by using recognizable patterns.'
+                    id: "item-4",
+                    title: "Does Component Improve UX?",
+                    content:
+                      "UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application by using recognizable patterns.",
                   },
                   {
-                    id: 'item-5',
-                    title: 'Component design challenges?',
-                    content: 'Some common challenges include maintaining consistency across different devices and screen sizes, ensuring compatibility with various browsers and assistive technologies with ease of use.'
+                    id: "item-5",
+                    title: "Component design challenges?",
+                    content:
+                      "Some common challenges include maintaining consistency across different devices and screen sizes, ensuring compatibility with various browsers and assistive technologies with ease of use.",
                   },
                   {
-                    id: 'item-6',
-                    title: 'Ensure Responsiveness',
-                    content: 'Developers can ensure the responsiveness of UI components by using techniques such as fluid layouts, flexible grids, and media queries to adapt the components to different screen sizes.'
-                  }
-                ]
-              }] }) => {
-            const [activeItems, setActiveItems] = useState(['item-1', 'item-5']);
+                    id: "item-6",
+                    title: "Ensure Responsiveness",
+                    content:
+                      "Developers can ensure the responsiveness of UI components by using techniques such as fluid layouts, flexible grids, and media queries to adapt the components to different screen sizes.",
+                  },
+                ],
+              },
+            ],
+          }) => {
+            const [activeItems, setActiveItems] = useState(["item-1", "item-5"]);
           
             const toggleItem = (itemId) => {
-              setActiveItems(prev =>
+              setActiveItems((prev) =>
                 prev.includes(itemId)
-                  ? prev.filter(id => id !== itemId)
+                  ? prev.filter((id) => id !== itemId)
                   : [...prev, itemId]
               );
             };
           
             return (
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#fefaf5]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {accordionData.map((column) => {
                     return (
@@ -72,26 +81,26 @@ function Accordion() {
                         {column.items.map((item) => {
                           const isActive = activeItems.includes(item.id);
                           const buttonClass =
-                            'w-full flex justify-between items-center p-5 text-left ' +
-                            (isActive ? 'bg-gray-50' : 'bg-white');
+                            "w-full flex justify-between items-center p-5 text-left transition-colors duration-200 " +
+                            (isActive ? "bg-[#fefaf5]" : "bg-white");
                           const iconClass =
-                            'w-5 h-5 text-gray-500 transition-transform duration-200 ' +
-                            (isActive ? 'rotate-180' : '');
+                            "w-5 h-5 text-[#7c6f66] transition-transform duration-200 " +
+                            (isActive ? "rotate-180" : "");
                           const contentClass =
-                            'transition-all duration-300 overflow-hidden ' +
-                            (isActive ? 'max-h-96' : 'max-h-0');
+                            "transition-all duration-300 overflow-hidden " +
+                            (isActive ? "max-h-96" : "max-h-0");
           
                           return (
-                            <div 
-                              key={item.id} 
-                              className="border border-gray-200 rounded-lg overflow-hidden shadow-sm transition-all duration-200 hover:shadow-md"
+                            <div
+                              key={item.id}
+                              className="border border-[#d8bfa4] rounded-xl overflow-hidden shadow-sm transition-all duration-200 hover:shadow-md bg-white"
                             >
                               <button
                                 className={buttonClass}
                                 onClick={() => toggleItem(item.id)}
                                 aria-expanded={isActive}
                               >
-                                <h3 className="text-sm 2xl:text-base font-medium text-gray-900">
+                                <h3 className="text-sm 2xl:text-base font-semibold text-[#3e2712]">
                                   {item.title}
                                 </h3>
                                 <svg
@@ -109,7 +118,7 @@ function Accordion() {
                                 </svg>
                               </button>
                               <div className={contentClass}>
-                                <div className="p-5 pt-0 text-sm 2xl:text-base text-gray-600">
+                                <div className="p-5 pt-0 text-sm 2xl:text-base text-[#7c6f66]">
                                   {item.content}
                                 </div>
                               </div>
@@ -124,7 +133,8 @@ function Accordion() {
             );
           };
           
-          export default AccordionComponent;`,
+          export default AccordionComponent;
+          `,
         },
       ],
       componentProps: [
@@ -155,56 +165,67 @@ function Accordion() {
       codeSnippets: [
         {
           language: "jsx",
-          code: `import React, { useState } from 'react';
+          code: `import React, { useState } from "react";
           
-          const Accordion = ({ items=[{
-                id: 'item-1',
-                title: 'What is a UI component?',
-                content: 'A UI (User Interface) component is a modular, reusable element that serves a specific function within a graphical user interface. Examples include buttons, input fields, dropdown menus, sliders, and checkboxes.'
+          const Accordion = ({
+            items = [
+              {
+                id: "item-1",
+                title: "What is a UI component?",
+                content:
+                  "A UI (User Interface) component is a modular, reusable element that serves a specific function within a graphical user interface. Examples include buttons, input fields, dropdown menus, sliders, and checkboxes.",
               },
               {
-                id: 'item-2',
-                title: 'Why are UI components important?',
-                content: 'UI components promote consistency, efficiency, and scalability in software development. They allow developers to reuse code, maintain a consistent look and feel across an application, and easily make updates or modifications without affecting the entire system.'
+                id: "item-2",
+                title: "Why are UI components important?",
+                content:
+                  "UI components promote consistency, efficiency, and scalability in software development. They allow developers to reuse code, maintain a consistent look and feel across an application, and easily make updates or modifications without affecting the entire system.",
               },
               {
-                id: 'item-3',
-                title: 'Key characteristics of UI components?',
-                content: 'Well-designed UI components should be modular, customizable, and accessible. They should have clear and intuitive functionality, be easily styled to match the overall design language of the application.'
-              }], allowMultiple }) => {
+                id: "item-3",
+                title: "Key characteristics of UI components?",
+                content:
+                  "Well-designed UI components should be modular, customizable, and accessible. They should have clear and intuitive functionality, be easily styled to match the overall design language of the application.",
+              },
+            ],
+            allowMultiple,
+          }) => {
             const [activeItems, setActiveItems] = useState([]);
           
             const toggleItem = (itemId) => {
               if (allowMultiple) {
-                setActiveItems(prev =>
+                setActiveItems((prev) =>
                   prev.includes(itemId)
-                    ? prev.filter(id => id !== itemId)
+                    ? prev.filter((id) => id !== itemId)
                     : [...prev, itemId]
                 );
               } else {
-                setActiveItems(prev =>
-                  prev.includes(itemId) ? [] : [itemId]
-                );
+                setActiveItems((prev) => (prev.includes(itemId) ? [] : [itemId]));
               }
             };
           
             return (
-              <div className="w-full max-w-3xl mx-auto">
+              <div className="w-full max-w-3xl mx-auto bg-[#fefaf5] rounded-2xl shadow-sm border border-[#e6d5c2]">
                 {items.map((item) => {
                   const isActive = activeItems.includes(item.id);
                   const buttonClass =
-                    'w-full flex justify-between items-center py-5 px-6 text-left hover:bg-gray-50 transition-colors duration-200 ' +
-                    (isActive ? 'text-blue-600' : 'text-gray-800');
+                    "w-full flex justify-between items-center py-5 px-6 text-left transition-colors duration-200 " +
+                    (isActive
+                      ? "bg-[#fefaf5] text-[#3e2712]"
+                      : "bg-white text-[#3e2712] hover:bg-[#fdf3e5]");
                   const iconClass =
-                    'ml-4 transition-transform duration-200 ' +
-                    (isActive ? 'rotate-180' : '');
-                  const panelId = 'panel-' + item.id;
+                    "ml-4 transition-transform duration-300 text-[#7c6f66] " +
+                    (isActive ? "rotate-180" : "");
+                  const panelId = "panel-" + item.id;
                   const panelClass =
-                    'overflow-hidden transition-all duration-300 ' +
-                    (isActive ? 'max-h-96' : 'max-h-0');
+                    "overflow-hidden transition-all duration-300 bg-white " +
+                    (isActive ? "max-h-96" : "max-h-0");
           
                   return (
-                    <div key={item.id} className="border-b border-gray-200 last:border-b-0">
+                    <div
+                      key={item.id}
+                      className="border-b border-[#e6d5c2] last:border-b-0"
+                    >
                       <button
                         className={buttonClass}
                         onClick={() => toggleItem(item.id)}
@@ -231,12 +252,8 @@ function Accordion() {
                           </svg>
                         </span>
                       </button>
-                      <div
-                        id={panelId}
-                        className={panelClass}
-                        role="region"
-                      >
-                        <div className="pb-5 px-6 text-gray-600">
+                      <div id={panelId} className={panelClass} role="region">
+                        <div className="pb-5 px-6 text-[#7c6f66] text-sm 2xl:text-base">
                           {item.content}
                         </div>
                       </div>
@@ -247,7 +264,8 @@ function Accordion() {
             );
           };
           
-          export default Accordion;`,
+          export default Accordion;
+          `,
         },
       ],
       componentProps: [
