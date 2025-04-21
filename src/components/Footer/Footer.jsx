@@ -48,7 +48,7 @@ function Footer() {
 
             <div className="flex mt-4 space-x-4">
               <motion.a
-                href="https://github.com/NikhilKumarMandal/chocoUi"
+                href="https://github.com/NikhilKumarMandal"
                 target="_blank"
                 className="p-2 text-[#603F26]/80 hover:text-[#603F26] bg-[#6C4E31]/10 rounded-lg transition-all duration-300 hover:bg-[#6C4E31]/20"
                 whileHover={{ y: -3 }}

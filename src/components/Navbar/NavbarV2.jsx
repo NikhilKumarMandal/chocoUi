@@ -143,7 +143,7 @@ function NavbarV2() {
               </NavLink>
             ))}
             <a
-              href="https://github.com/NikhilKumarMandal/chocoUi"
+              href="https://github.com/NikhilKumarMandal"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 w-full py-2.5 bg-[#603F26] text-[#FFDBB5] rounded-lg text-sm font-medium transition-all duration-300 hover:opacity-80"
