@@ -92,7 +92,7 @@ function Navbar() {
                 )
               )}
               <a
-                href="https://github.com/NikhilKumarMandal/chocoUi"
+                href="https://github.com/NikhilKumarMandal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2 bg-[#603F26] text-[#FFDBB5] rounded-3xl font-['Inter'] text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-80"
