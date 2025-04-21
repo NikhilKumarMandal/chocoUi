@@ -13,34 +13,35 @@ const Stepper1 = ({
 }) => {
   const [activeStep, setActiveStep] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = () =>
     setActiveStep((prevStep) => Math.min(prevStep + 1, steps.length - 1));
-  };
 
-  const handleBack = () => {
+  const handleBack = () =>
     setActiveStep((prevStep) => Math.max(prevStep - 1, 0));
-  };
 
   return (
     <div className="max-w-2xl mx-auto p-4 sm:p-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 space-y-4 sm:space-y-0">
+      <div className="flex flex-col sm:flex-row sm:justify-between mb-8 space-y-4 sm:space-y-0">
         {steps.map((step, index) => (
-          <div key={step.title} className="flex items-center">
+          <div
+            key={step.title}
+            className="flex items-center w-full sm:w-1/4 space-x-2"
+          >
             <div
               className={
-                index <= activeStep
-                  ? "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#603F26] text-white"
-                  : "flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 text-gray-600"
+                "flex items-center justify-center aspect-square w-8 sm:w-10 rounded-full shrink-0 " +
+                (index <= activeStep
+                  ? "bg-[#603F26] text-white"
+                  : "bg-gray-200 text-gray-600")
               }
             >
               {index + 1}
             </div>
-            <div className="ml-2">
+            <div>
               <div
                 className={
-                  index <= activeStep
-                    ? "text-xs sm:text-sm font-medium text-[#603F26]"
-                    : "text-xs sm:text-sm font-medium text-gray-600"
+                  "text-xs sm:text-sm font-medium " +
+                  (index <= activeStep ? "text-[#603F26]" : "text-gray-600")
                 }
               >
                 {step.title}
@@ -49,9 +50,8 @@ const Stepper1 = ({
             {index < steps.length - 1 && (
               <div
                 className={
-                  index < activeStep
-                    ? "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-[#603F26]"
-                    : "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 bg-gray-200"
+                  "hidden sm:block h-0.5 w-8 sm:w-16 mx-2 " +
+                  (index < activeStep ? "bg-[#603F26]" : "bg-gray-200")
                 }
               />
             )}
@@ -84,7 +84,7 @@ const Stepper1 = ({
             className={
               activeStep === steps.length - 1
                 ? "px-4 py-2 rounded-md bg-[#603F26] text-white cursor-not-allowed"
-                : "px-4 py-2 rounded-md bg-[#603F26] text-white hover:bg-[#603F26]"
+                : "px-4 py-2 rounded-md bg-[#603F26] text-white hover:bg-[#603F26]/90"
             }
           >
             {activeStep === steps.length - 1 ? "Finish" : "Next"}
