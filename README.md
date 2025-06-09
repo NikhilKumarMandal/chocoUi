@@ -1,7 +1,5 @@
 # ChocoUI - Sleek, Modern UI Components Library for Your Web Projects
 
-![ChocoUI Banner](https://cdn.discordapp.com/attachments/1354548459402821827/1363474813796094052/Screenshot_703.png?ex=68062a5f&is=6804d8df&hm=70cd24b77bedb3d5b9c4f098154245976787cdaf9982302579c1f963855ec338)
-
 **ChocoUI** is a professional, minimal, and sleek UI component library designed to help developers build beautiful web applications in seconds. With ready-to-use components, templates, and comprehensive documentation, you can focus on functionality while we handle the design.
 
 ## ✨ Features
