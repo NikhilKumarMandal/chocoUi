@@ -10,4 +10,3 @@ const LinearProgress = ({ progress = 60 }) => {
 };
 
 export default LinearProgress;
-

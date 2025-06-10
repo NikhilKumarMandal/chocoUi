@@ -1,7 +1,6 @@
 import React from "react";
 
 const SteppedProgress = ({ steps = 5, currentStep = 2 }) => {
-
   const validatedSteps = Math.max(1, Math.min(steps, 10));
   const validatedCurrentStep = Math.max(
     0,
@@ -18,8 +17,8 @@ const SteppedProgress = ({ steps = 5, currentStep = 2 }) => {
               (i < validatedCurrentStep
                 ? "bg-green-500 border-green-500 text-white"
                 : i === validatedCurrentStep
-                ? "border-blue-500"
-                : "border-gray-300")
+                  ? "border-blue-500"
+                  : "border-gray-300")
             }
           >
             {i < validatedCurrentStep ? (
@@ -36,7 +35,8 @@ const SteppedProgress = ({ steps = 5, currentStep = 2 }) => {
           {i < validatedSteps - 1 && (
             <div
               className={
-                "h-1 w-8 " + (i < validatedCurrentStep ? "bg-green-500" : "bg-gray-200")
+                "h-1 w-8 " +
+                (i < validatedCurrentStep ? "bg-green-500" : "bg-gray-200")
               }
             ></div>
           )}
@@ -47,4 +47,3 @@ const SteppedProgress = ({ steps = 5, currentStep = 2 }) => {
 };
 
 export default SteppedProgress;
-

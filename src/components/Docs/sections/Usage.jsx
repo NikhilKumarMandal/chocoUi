@@ -15,7 +15,8 @@ export const Usage = () => (
         Component Usage
       </h2>
       <p className="text-[#6C4E31]/90 font-['Inter'] text-lg max-w-3xl">
-        Integrate ChocoUI components seamlessly into your React application with simple copy-paste functionality.
+        Integrate ChocoUI components seamlessly into your React application with
+        simple copy-paste functionality.
       </p>
     </div>
 

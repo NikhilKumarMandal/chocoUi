@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const CodeBlock = ({ children, language = "bash", className = "" }) => {
   const [copied, setCopied] = useState(false);
-  const codeLines = children.split('\n');
+  const codeLines = children.split("\n");
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(children);
@@ -11,14 +11,16 @@ export const CodeBlock = ({ children, language = "bash", className = "" }) => {
   };
 
   return (
-    <div className={`relative group rounded-xl overflow-hidden shadow-2xl ${className}`}>
+    <div
+      className={`relative group rounded-xl overflow-hidden shadow-2xl ${className}`}
+    >
       <div className="bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A] border border-[#3C2613]/50">
         {/* Header with language and copy button */}
         <div className="flex items-center justify-between px-5 py-3 bg-[#2A2A2A] border-b border-[#3C2613]/30">
           <span className="font-['Bricolage'] text-sm text-[#FFDBB5] font-medium">
             {language}
           </span>
-          
+
           <button
             onClick={copyToClipboard}
             className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#3C2613]/40 hover:bg-[#603F26] transition-all duration-200 group/copy"
@@ -38,7 +40,9 @@ export const CodeBlock = ({ children, language = "bash", className = "" }) => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-xs font-['Inter'] text-[#FFDBB5]">Copied!</span>
+                <span className="text-xs font-['Inter'] text-[#FFDBB5]">
+                  Copied!
+                </span>
               </>
             ) : (
               <>
@@ -74,7 +78,7 @@ export const CodeBlock = ({ children, language = "bash", className = "" }) => {
                 </div>
               ))}
             </div>
-            
+
             {/* Actual code */}
             <pre className="flex-1 py-4 pr-5">
               <code className="font-mono text-sm text-[#E0E0E0] leading-relaxed">
@@ -86,8 +90,6 @@ export const CodeBlock = ({ children, language = "bash", className = "" }) => {
               </code>
             </pre>
           </div>
-
-          
         </div>
       </div>
 

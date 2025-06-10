@@ -75,7 +75,7 @@ export default LinearProgress;`,
 export default CircularProgress;`,
         },
       ],
-    }
+    },
   ];
   return (
     <div className="max-w-4xl mx-auto p-6">
@@ -83,7 +83,8 @@ export default CircularProgress;`,
         ProgressBar Components
       </h1>
       <p className="text-gray-700 mt-2 font-['Inter']">
-        Progress indicators commonly known as spinners, express an unspecified wait time or display the length of a process.
+        Progress indicators commonly known as spinners, express an unspecified
+        wait time or display the length of a process.
       </p>
       <div className="mt-6 space-y-6">
         {ProgressVariants.map((variant, index) => (

@@ -48,7 +48,7 @@ function Breadcrumb2() {
             </svg>
           </a>
         </li>
-        
+
         {breadcrumbItems.map((item, index) => {
           const isLast = index === breadcrumbItems.length - 1;
 

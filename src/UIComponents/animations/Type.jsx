@@ -36,14 +36,10 @@ export default function Types({ words = ["Choco", "Prize", "Money"] }) {
 
   return (
     <div className="text-4xl font-bold text-black flex items-center">
-      <span>
-        Everyone deserves a{" "}
-        {words[index].substring(0, charIndex)}
-      </span>
+      <span>Everyone deserves a {words[index].substring(0, charIndex)}</span>
       <span className="border-l-2 border-yellow-400 animate-blink ml-1">
         &nbsp;
       </span>
     </div>
   );
 }
-

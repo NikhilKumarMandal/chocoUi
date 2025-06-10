@@ -66,33 +66,30 @@ export const Documentation = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar */}
           <nav className="lg:w-60 flex-shrink-0 fixed top-24 self-start hidden lg:block">
-  <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-[#FFDBB5]/20 lg:mr-8 transform transition-all duration-300 hover:shadow-md">
-    
-
-    {/* Navigation Links */}
-    <div className="space-y-2">
-      <SidebarLink
-        active={activeTab === "introduction"}
-        onClick={() => scrollToSection("introduction")}
-      >
-        Introduction
-      </SidebarLink>
-      <SidebarLink
-        active={activeTab === "installation"}
-        onClick={() => scrollToSection("installation")}
-      >
-        Installation
-      </SidebarLink>
-      <SidebarLink
-        active={activeTab === "usage"}
-        onClick={() => scrollToSection("usage")}
-      >
-        Components Guide
-      </SidebarLink>
-    </div>
-  </div>
-</nav>
-
+            <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-[#FFDBB5]/20 lg:mr-8 transform transition-all duration-300 hover:shadow-md">
+              {/* Navigation Links */}
+              <div className="space-y-2">
+                <SidebarLink
+                  active={activeTab === "introduction"}
+                  onClick={() => scrollToSection("introduction")}
+                >
+                  Introduction
+                </SidebarLink>
+                <SidebarLink
+                  active={activeTab === "installation"}
+                  onClick={() => scrollToSection("installation")}
+                >
+                  Installation
+                </SidebarLink>
+                <SidebarLink
+                  active={activeTab === "usage"}
+                  onClick={() => scrollToSection("usage")}
+                >
+                  Components Guide
+                </SidebarLink>
+              </div>
+            </div>
+          </nav>
 
           {/* Main Content */}
           <main className="flex-1 lg:ml-[50vh] space-y-16 pb-24">
