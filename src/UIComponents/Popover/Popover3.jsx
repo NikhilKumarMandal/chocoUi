@@ -80,7 +80,9 @@ const Popover3 = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-[#603F26] font-medium">Quick Information</h3>
+                <h3 className="text-[#603F26] font-medium">
+                  Quick Information
+                </h3>
               </div>
 
               <p className="text-[#603F26] text-sm leading-relaxed">

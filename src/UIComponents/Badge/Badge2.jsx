@@ -12,14 +12,14 @@ const Badge2 = () => {
     {
       id: 2,
       label: "In Stock",
-      bg: "#DAD7CD", 
+      bg: "#DAD7CD",
       text: "#3E3E3E",
       description: "Product is available for immediate shipping",
     },
     {
       id: 3,
       label: "20% Off",
-      bg: "#F2D0A7", 
+      bg: "#F2D0A7",
       text: "#5C2E00",
       description: "Limited time discount on selected items",
     },

@@ -22,7 +22,7 @@ const Loader_12 = ({ size = "md", color = "gray" }) => {
     teal: "border-teal-500",
     cyan: "border-cyan-500",
     sky: "border-sky-500",
-    gray: "border-[#603F26]"
+    gray: "border-[#603F26]",
   };
 
   return (

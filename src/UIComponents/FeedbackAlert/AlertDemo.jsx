@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 
-const FeedbackAlert = ({ message, type = "success", duration = 3000, onClose }) => {
+const FeedbackAlert = ({
+  message,
+  type = "success",
+  duration = 3000,
+  onClose,
+}) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -107,10 +112,10 @@ const AlertDemo = () => {
         type === "success"
           ? "Action completed successfully!"
           : type === "error"
-          ? "Something went wrong! Please try again."
-          : type === "warning"
-          ? "This action requires your attention."
-          : "Here is some information for you.",
+            ? "Something went wrong! Please try again."
+            : type === "warning"
+              ? "This action requires your attention."
+              : "Here is some information for you.",
     };
 
     setAlerts((prev) => [...prev, newAlert]);
@@ -162,6 +167,3 @@ const AlertDemo = () => {
 };
 
 export default AlertDemo;
-
-
-

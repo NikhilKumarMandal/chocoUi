@@ -37,4 +37,3 @@ const CircularProgress = ({ progress = 75 }) => {
 };
 
 export default CircularProgress;
-

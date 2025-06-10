@@ -17,13 +17,31 @@ function Carousel2() {
   }, [index]);
 
   return (
-    <div style={{ position: "relative", width: "100%", maxWidth: "960px", margin: "0 auto", overflow: "hidden", borderRadius: "16px" }}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        maxWidth: "960px",
+        margin: "0 auto",
+        overflow: "hidden",
+        borderRadius: "16px",
+      }}
+    >
       <img
         src={slides[index]}
         alt="Slide"
         style={{ width: "100%", transition: "all 0.7s", objectFit: "cover" }}
       />
-      <div style={{ position: "absolute", bottom: "12px", left: "50%", transform: "translateX(-50%)", display: "flex", gap: "8px" }}>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "12px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          gap: "8px",
+        }}
+      >
         {slides.map((_, i) => {
           return (
             <div
@@ -32,7 +50,7 @@ function Carousel2() {
                 width: "12px",
                 height: "12px",
                 borderRadius: "50%",
-                backgroundColor: i === index ? "white" : "#B0BEC5"
+                backgroundColor: i === index ? "white" : "#B0BEC5",
               }}
             />
           );
@@ -43,5 +61,3 @@ function Carousel2() {
 }
 
 export default Carousel2;
-
-
