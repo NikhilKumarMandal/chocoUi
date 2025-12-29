@@ -23,6 +23,7 @@ const linksData = [
   { name: "Card", path: "/dashboard/card", hot: true },
   { name: "Calendar", path: "/dashboard/calendar" },
   { name: "Checkbox", path: "/dashboard/checkbox" },
+  { name: "Code Typer", path: "/dashboard/codetyper", hot: true },
   { name: "Carousel", path: "/dashboard/carousel" },
   { name: "CTA", path: "/dashboard/cta" },
 

@@ -55,6 +55,7 @@ import ProgressbarPage from "./pages/ProgressbarPage.jsx";
 import PasswordPage from "./pages/PasswordPage.jsx";
 import Privacy from "./sections/Privacy/Privacy.jsx";
 import Terms from "./sections/Terms/Terms.jsx";
+import CodeTyperPage from "./pages/CodeTyper.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -100,6 +101,7 @@ const router = createBrowserRouter(
         <Route path="textArea" element={<TextAreaPage />} />
         <Route path="toggle" element={<TogglePage />} />
         <Route path="tooltip" element={<TooltipPage />} />
+        <Route path="codetyper" element={<CodeTyperPage />} />
       </Route>
 
       <Route path="/docs" element={<DocsPage />} />

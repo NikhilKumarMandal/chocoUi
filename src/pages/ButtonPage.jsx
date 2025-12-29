@@ -4,6 +4,7 @@ import SideButton from "../UIComponents/Buttons/SideButton";
 import BloomButton from "../UIComponents/Buttons/BloomButton";
 import RevealButton from "../UIComponents/Buttons/RevealButton";
 import BeaconButton from "../UIComponents/Buttons/BeaconButton";
+import NeoButton from "../UIComponents/Buttons/NeoButton";
 import Buttons from "../UIComponents/Buttons/Buttons";
 
 function ButtonPage() {
@@ -498,6 +499,47 @@ export default BeaconButton;
           
           export default Button;
           `,
+        },
+      ],
+    },
+    {
+      title: "Neo-Brutalist Button",
+      component: (
+        <div className="flex justify-center items-center p-8 bg-yellow-50">
+          <NeoButton label="CLICK ME" />
+        </div>
+      ),
+      codeSnippets: [
+        {
+          language: "jsx",
+          code: `import React from 'react';
+
+const NeoButton = ({ 
+  label = "Neo Button", 
+  onClick, 
+  className = "" 
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      className={\`
+        relative px-8 py-3 font-bold text-black transition-all duration-200 
+        bg-[#FF90E8] border-4 border-black 
+        shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
+        hover:translate-x-[2px] hover:translate-y-[2px] 
+        hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] 
+        active:translate-x-[4px] active:translate-y-[4px] 
+        active:shadow-none 
+        uppercase tracking-wider
+        \${className}
+      \`}
+    >
+      {label}
+    </button>
+  );
+};
+
+export default NeoButton;`,
         },
       ],
     },
