@@ -301,8 +301,8 @@ import { ChevronDown } from "lucide-react";
 const ResponsiveAccordion = () => {
   const accordionItems = [
     { title: "Who is nikhil?", content: "Nikhil is Nikhil" },
-    { title: "What is chocoUi", content: "ChocoUi is modern ui liabry " },
-    { title: "How ti use choco ui", content: "if you want to use choco ui simple copy and paste component" }
+    { title: "What is chocoUi", content: "ChocoUi is a modern ui liabry " },
+    { title: "How to use choco ui", content: "if you want to use choco ui simple copy and paste component" }
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
