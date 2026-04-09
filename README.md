@@ -59,7 +59,7 @@ function App() {
 ### 3. Explore Templates
 
 Need a full website? Check out our templates section for pre-built designs.
-[ChocoUI Templates](https://template.chocoui.live/)
+[ChocoUI Templates](https://template.chocoui.xyz)
 
 ## ❓ Why ChocoUI?
 

@@ -19,7 +19,7 @@ function Navbar() {
     { name: "Feedback", path: "/feedback" },
     {
       name: "Templates",
-      path: "https://template.chocoui.live",
+      path: "https://template.chocoui.xyz",
       external: true,
       special: true,
     },
